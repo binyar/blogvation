@@ -1,0 +1,75 @@
+.dp-hide {
+  display: none !important;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  overflow: hidden;
+}
+body {
+  position: relative;
+  margin: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a {
+  outline: none;
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+textarea {
+  resize: none;
+}
+img {
+  border: 0;
+  outline: none;
+}
+button {
+  outline: none;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+
+/*基础色*/
+/*黑白灰*/
+/*辅助色*/
+/*彩色*/
+/*类型区分*/
+/*基础函数库*/
+.demo {
+  color: red;
+}
