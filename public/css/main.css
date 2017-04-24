@@ -1,6 +1,3 @@
-.dp-hide {
-  display: none !important;
-}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -70,6 +67,3 @@ th {
 /*彩色*/
 /*类型区分*/
 /*基础函数库*/
-.demo {
-  color: red;
-}

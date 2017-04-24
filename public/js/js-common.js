@@ -4,7 +4,7 @@
  * Time: 10:42
  */
 ;(function () {
-    console.log('utilsasdf')
+
 })();
 /**
  * Coder: fmd
@@ -12,5 +12,5 @@
  * Time: 10:43
  */
 ;(function () {
-    console.log('text')
+
 })();

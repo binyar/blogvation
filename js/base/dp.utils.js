@@ -4,5 +4,5 @@
  * Time: 10:42
  */
 ;(function () {
-    console.log('utilsasdf')
+
 })();

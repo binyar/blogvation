@@ -4,5 +4,5 @@
  * Time: 10:43
  */
 ;(function () {
-    console.log('text')
+
 })();

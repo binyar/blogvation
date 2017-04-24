@@ -4,7 +4,7 @@
 
 demo:[https://binyar.github.io/dp-ui/](https://binyar.github.io/dp-ui/)
 
-纯新人基于jquery的组件开发学习练手，基于gulp的自动化构建，启动命令：
+杂七杂八的不成体系的页面，反正好看的，有空就撸过来。
 
 首先安装依赖包：
 
