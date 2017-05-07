@@ -3,87 +3,112 @@
  * Date: 2017/3/20
  * Time: 10:29
  */
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     gls = require('gulp-live-server'),
     less = require('gulp-less'),
     path = require('path'),
     cssmin = require('gulp-minify-css');
-var cssPath = ['less/base/core.less', 'less/components/*.less'],
+const cssPath = ['less/base/core.less', 'less/components/*.less'],
     jsLibPath = ['js/lib/*.js'],
-    jsCommonPath = ['js/base/*.js', 'js/components/*.js'],
-    jsAllPath = jsLibPath.concat(jsCommonPath);
+    jsCommonPath = ['js/base/*.js', 'js/components/*.js'];
+
+const jsDest = 'public/js';
+const cssDest = './public/css';
+
+const jsDevConfig = {
+    modules: [{
+        src: jsLibPath,
+        rename: 'js-lib.js'
+    }, {
+        src: jsCommonPath,
+        rename: 'js-common.js'
+    }],
+    uglify: false,
+    watch: true
+};
+
+const cssDevConfig = {
+    modules: [{
+        src: cssPath,
+        rename: 'main.css'
+    }],
+    uglify: false,
+    watch: true
+};
+
+const jsProConfig = Object.assign({}, jsDevConfig, {
+    uglify: true,
+    watch: false
+});
+const cssProConfig = Object.assign({}, cssDevConfig, {
+    uglify: true,
+    watch: false
+});
+
+const buildJs = (config) => {
+    config.modules.forEach((module) => {
+        const bundle = () => {
+            // 基础拼接
+            let stream = gulp
+                .src(module.src)
+                .pipe(concat(module.rename));
+
+            // 是否压缩
+            if (config.uglify) {
+                stream.pipe(uglify());
+            }
+            stream.pipe(gulp.dest(jsDest));
+        };
+
+        // 是否监听变动
+        if (config.watch) {
+            gulp.watch(module.src, () => bundle());
+        }
+        bundle();
+    });
+};
+
+const buildCss = (config) => {
+    config.modules.forEach((module) => {
+        const bundle = () => {
+            // 基础拼接
+            let stream = gulp
+                .src(module.src)
+                .pipe(less({
+                    paths: [path.join(__dirname, 'less', 'includes')]
+                }))
+                .pipe(concat(module.rename));
+
+            // 是否压缩
+            if (config.uglify) {
+                stream.pipe(cssmin());
+            }
+            stream.pipe(gulp.dest(cssDest));
+        };
+        // 是否监听变动
+        if (config.watch) {
+            gulp.watch(module.src, () => bundle());
+        }
+        bundle();
+    });
+};
+
 /**
  * 服务器启动
  */
 gulp.task('serve', function () {
-    var server = gls.static('public', 8888);
+    const server = gls.static('public', 8888);
     server.start();
 });
-/**
- * js类库
- */
-gulp.task('js-lib', function () {
-    return gulp.src(jsLibPath)
-        .pipe(concat('js-lib.js'))
-        .pipe(gulp.dest('public/js'))
-});
-/**
- * js公共组件库
- */
-gulp.task('js-common', function () {
-    gulp.watch(jsCommonPath, ['js-common']);
-    return gulp.src(jsCommonPath)
-        .pipe(concat('js-common.js'))
-        .pipe(gulp.dest('public/js'))
-});
-/**
- * less打包处理
- */
-gulp.task('less', function () {
-    gulp.watch(cssPath, ['less']);
-    return gulp.src(cssPath)
-        .pipe(less({
-            paths: [path.join(__dirname, 'less', 'includes')]
-        }))
-        .pipe(concat('main.css'))
-        .pipe(gulp.dest('./public/css'))
+
+gulp.task('dev', () => {
+    buildJs(jsDevConfig);
+    buildCss(cssDevConfig);
 });
 
-/**
- * js代码压缩处理
- */
-gulp.task('js-ugl', function () {
-    return gulp.src(jsAllPath)
-        .pipe(concat('main.min.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('public/js'))
-});
-
-/**
- * css代码压缩
- */
-gulp.task('less-ugl', function () {
-    return gulp.src(cssPath)
-        .pipe(less({
-            paths: [path.join(__dirname, 'less', 'includes')]
-        }))
-        .pipe(cssmin())
-        .pipe(concat('core.min.css'))
-        .pipe(gulp.dest('./public/css'))
-});
-
-/**
- * 默认执行
- */
-gulp.task('default', function () {
-    gulp.start('serve', 'js-lib', 'js-common', 'less')
-});
-
-/**
- * 代码压缩
- */
-gulp.task('pro', function () {
-    gulp.start('js-ugl', 'less-ugl')
+gulp.task('proc', () => {
+    buildJs(jsProConfig);
+    buildCss(cssProConfig);
 });

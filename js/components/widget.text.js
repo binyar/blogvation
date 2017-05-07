@@ -3,6 +3,18 @@
  * Date: 2017/3/20
  * Time: 10:43
  */
-;(function () {
+;(function ($) {
+    var Plugin = function (opt) {
+        this.options = $.extend({
+            a: 'xx'
+        }, opt)
+    };
 
-})();
+    Plugin.prototype = {
+        init: function () {
+            console.log(this.options)
+        }
+    };
+
+    window.Plugin = Plugin;
+})(jQuery);
