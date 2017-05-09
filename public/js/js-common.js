@@ -16,12 +16,11 @@
         this.options = $.extend({
             a: 'xx'
         }, opt)
-        this.init();
     };
 
     Plugin.prototype = {
         init: function () {
-            console.log(this.options);
+            console.log(this.options)
         }
     };
 

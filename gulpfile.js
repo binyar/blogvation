@@ -99,7 +99,7 @@ const buildCss = (config) => {
  * 服务器启动
  */
 gulp.task('serve', function () {
-    const server = gls.static('public', 8888);
+    const server = gls.static('/', 8888);
     server.start();
 });
 
