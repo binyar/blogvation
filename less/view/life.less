@@ -1,1 +1,75 @@
-@import "../base/core";
+@import "../lib/core";
+
+@dp-life: dp-life;
+@bg-color: #efefef;
+@font-color: #565656;
+@font-color-deep: #070707;
+.@{dp-life} {
+  background: #fff;
+  .position-leftTop(0, 0);
+  right: 0;
+  bottom: 0;
+  padding: 0 30px;
+  overflow: auto;
+  &-menu {
+    .position-rightTop(50px, 50px);
+    font-size: 25px;
+    color: @font-color-deep;
+    z-index: 2;
+    > i {
+      font-size: 35px;
+      cursor: pointer;
+    }
+  }
+  &-content {
+    .size(100%, 850px);
+    background: @bg-color;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+    .content-water-mark {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      font-size: 1300px;
+      color: #e3e3e3;
+      line-height: 850px;
+      font-family: cursive;
+      &.for-left {
+        left: 0;
+      }
+      &.for-right {
+        right: 0;
+      }
+    }
+    .content-text-wrapper {
+      position: absolute;
+      top: 250px;
+      &.for-left {
+        left: 10%;
+        right: 50%;
+      }
+      &.for-right {
+        right: 10%;
+        left: 50%;
+      }
+      .text-title {
+        font-size: 60px;
+        font-weight: lighter;
+        color: @font-color;
+        line-height: 60px;
+        padding-bottom: 40px;
+        .bold {
+          font-weight: bold;
+          color: @font-color-deep;
+        }
+      }
+      .text-description {
+        color: @font-color-deep;
+        line-height: 30px;
+        font-size: 18px;
+        font-family: monospace;
+      }
+    }
+  }
+}

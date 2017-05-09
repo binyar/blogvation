@@ -75,6 +75,9 @@ th {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-weibo:before {
+  content: "\e63b";
+}
 .icon-all:before {
   content: "\e696";
 }
@@ -150,6 +153,48 @@ th {
 .icon-success:before {
   content: "\e6b1";
 }
+.icon-gifts:before {
+  content: "\e6db";
+}
+.icon-3:before {
+  content: "\e617";
+}
+.icon-rfq1:before {
+  content: "\e6eb";
+}
+.icon-wechat:before {
+  content: "\e64b";
+}
+.icon-filter:before {
+  content: "\e6f1";
+}
+.icon-dollar:before {
+  content: "\e702";
+}
+.icon-menu:before {
+  content: "\e665";
+}
+.icon-icondownload:before {
+  content: "\e714";
+}
+.icon-map:before {
+  content: "\e715";
+}
+.icon-bad:before {
+  content: "\e716";
+}
+.icon-good:before {
+  content: "\e717";
+}
+.icon-skip:before {
+  content: "\e718";
+}
+.icon-iconfontplay2:before {
+  content: "\e719";
+}
+.icon-security:before {
+  content: "\e71c";
+}
 
 /*基础色*/
 /*黑白灰*/
@@ -157,3 +202,162 @@ th {
 /*彩色*/
 /*类型区分*/
 /*基础函数库*/
+.dp-ui-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.dp-ui-carousel-main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: transform 200ms;
+  -moz-transition: transform 200ms;
+  -o-transition: transform 200ms;
+  transition: transform 200ms;
+}
+.dp-ui-carousel-main .content-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #444;
+}
+.dp-ui-carousel-main .content-wrapper .paper-image {
+  width: 100%;
+  height: 100%;
+}
+.dp-ui-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  background: #fff;
+  cursor: pointer;
+  z-index: 2;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  width: 60px;
+  height: 60px;
+  opacity: 0.5;
+  -webkit-transition: all 218ms;
+  -moz-transition: all 218ms;
+  -o-transition: all 218ms;
+  transition: all 218ms;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.dp-ui-carousel-arrow.left {
+  left: 40px;
+}
+.dp-ui-carousel-arrow.right {
+  right: 40px;
+}
+.dp-ui-carousel-arrow:hover {
+  opacity: 1;
+}
+.dp-ui-carousel-arrow > i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 55px;
+  color: #979daa;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/*基础色*/
+/*黑白灰*/
+/*辅助色*/
+/*彩色*/
+/*类型区分*/
+/*基础函数库*/
+
+/*基础色*/
+/*黑白灰*/
+/*辅助色*/
+/*彩色*/
+/*类型区分*/
+/*基础函数库*/
+.dp-life {
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 30px;
+  overflow: auto;
+}
+.dp-life-menu {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 25px;
+  color: #070707;
+  z-index: 2;
+}
+.dp-life-menu > i {
+  font-size: 35px;
+  cursor: pointer;
+}
+.dp-life-content {
+  width: 100%;
+  height: 850px;
+  background: #efefef;
+  margin: 30px auto;
+  position: relative;
+  overflow: hidden;
+}
+.dp-life-content .content-water-mark {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  font-size: 1300px;
+  color: #e3e3e3;
+  line-height: 850px;
+  font-family: cursive;
+}
+.dp-life-content .content-water-mark.for-left {
+  left: 0;
+}
+.dp-life-content .content-water-mark.for-right {
+  right: 0;
+}
+.dp-life-content .content-text-wrapper {
+  position: absolute;
+  top: 250px;
+}
+.dp-life-content .content-text-wrapper.for-left {
+  left: 10%;
+  right: 50%;
+}
+.dp-life-content .content-text-wrapper.for-right {
+  right: 10%;
+  left: 50%;
+}
+.dp-life-content .content-text-wrapper .text-title {
+  font-size: 60px;
+  font-weight: lighter;
+  color: #565656;
+  line-height: 60px;
+  padding-bottom: 40px;
+}
+.dp-life-content .content-text-wrapper .text-title .bold {
+  font-weight: bold;
+  color: #070707;
+}
+.dp-life-content .content-text-wrapper .text-description {
+  color: #070707;
+  line-height: 30px;
+  font-size: 18px;
+  font-family: monospace;
+}

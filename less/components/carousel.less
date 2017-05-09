@@ -1,0 +1,51 @@
+@import "../lib/core";
+
+@dp-ui-carousel: dp-ui-carousel;
+
+.@{dp-ui-carousel} {
+  .position-leftTop(0, 0);
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  &-main {
+    position: relative;
+    .size(100%, 100%);
+    .transition(transform 200ms);
+    .content-wrapper {
+      position: absolute;
+      top: 0;
+      .size(100%, 100%);
+      background: #444;
+      .paper-image {
+        .size(100%, 100%);
+      }
+    }
+  }
+  &-arrow {
+    position: absolute;
+    top: 50%;
+    background: #fff;
+    cursor: pointer;
+    z-index: 2;
+    .translate(0, -50%);
+    .size(60px, 60px);
+    .opacity(0.5);
+    .transition(all 218ms);
+    .border-radius(4px);
+    &.left {
+      left: 40px;
+    }
+    &.right {
+      right: 40px;
+    }
+    &:hover {
+      .opacity(1);
+    }
+    > i {
+      .position-leftTop(50%, 50%);
+      font-size: 55px;
+      color: #979daa;
+      .translate(-50%, -50%);
+    }
+  }
+}

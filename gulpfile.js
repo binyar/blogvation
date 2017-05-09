@@ -10,9 +10,9 @@ const gulp = require('gulp'),
     less = require('gulp-less'),
     path = require('path'),
     cssmin = require('gulp-minify-css');
-const cssPath = ['less/base/core.less', 'less/components/*.less'],
+const cssPath = ['less/base/core.less', 'less/components/*.less','less/view/*.less'],
     jsLibPath = ['js/lib/*.js'],
-    jsCommonPath = ['js/base/*.js', 'js/components/*.js'];
+    jsCommonPath = ['js/base/*.js', 'js/components/*.js','js/plugin/*.js'];
 
 const jsDest = 'public/js';
 const cssDest = './public/css';
