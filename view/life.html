@@ -75,6 +75,31 @@
 </div>
 <div class="dp-life-content">
     <div class="content-water-mark for-right">I</div>
+    <div class="dp-ui-carousel" id="life-zoom-carousel-photo">
+        <div class="dp-ui-carousel-arrow left">
+            <i class="iconfont icon-back"></i>
+        </div>
+        <div class="dp-ui-carousel-arrow right">
+            <i class="iconfont icon-more"></i>
+        </div>
+        <div class="dp-ui-carousel-main modal-zoom">
+            <div class="content-wrapper prev">
+                <img class="paper-image" src="../public/images/demo.jpg"/>
+            </div>
+            <div class="content-wrapper current">
+                <img class="paper-image" src="../public/images/beauty.png"/>
+            </div>
+            <div class="content-wrapper next">
+                <img class="paper-image" src="../public/images/demo3.png"/>
+            </div>
+            <div class="content-wrapper ">
+                <img class="paper-image" src="../public/images/demo4.png"/>
+            </div>
+            <div class="content-wrapper ">
+                <img class="paper-image" src="../public/images/demo5.png"/>
+            </div>
+        </div>
+    </div>
 </div>
 </body>
 <script src="../public/js/js-lib.js"></script>
@@ -82,6 +107,9 @@
 <script>
     $('#life-carousel-photo').carousel({
         auto: true
+    });
+    $('#life-zoom-carousel-photo').carousel({
+        modal: 'zoom'
     })
 </script>
 </html>

@@ -10,7 +10,39 @@
   &-main {
     position: relative;
     .size(100%, 100%);
-    .transition(transform 200ms);
+    .transition(transform 500ms);
+    &.modal-zoom {
+      .content-wrapper {
+        .size(auto, auto);
+        top: 20%;
+        bottom: 20%;
+        left: 30%;
+        right: 30%;
+        .scale(0.7);
+        .opacity(0);
+        .transition(all 400ms);
+        &.prev {
+          left: 5%;
+          right: 50%;
+          .scale(0.7);
+          .opacity(1);
+        }
+        &.current {
+          z-index: 2;
+          .scale(1);
+          .opacity(1);
+          &:hover {
+            .scale(1.1);
+          }
+        }
+        &.next {
+          left: 50%;
+          right: 5%;
+          .scale(0.7);
+          .opacity(1);
+        }
+      }
+    }
     .content-wrapper {
       position: absolute;
       top: 0;

@@ -15,7 +15,8 @@
     var pluginName = "carousel",
         defaults = {
             auto: false,
-            gap: 3000
+            gap: 3000,
+            modal: 'default'
         };
 
     // 构造函数
@@ -23,7 +24,6 @@
         this.element = element;
         // 将默认属性对象和传递的参数对象合并到第一个空对象中
         this.options = $.extend({}, defaults, options);
-        this.index = 0;
         this.init();
         this.bindEvent();
     }
@@ -35,31 +35,53 @@
             // 你可以在这里直接使用this.element或者this.options
             var o = this.options, self = this;
             this.$main = $('.dp-ui-carousel-main', this.element);
-            var $contents = $('.content-wrapper', this.$main);
-            $contents.each(function (i) {
-                $(this).css('left', i * 100 + '%')
-            });
-            this.length = $contents.length;
-            //自动切换
-            if (o.auto) {
-                setInterval(function () {
-                    self.switchWrapper('move')
-                }, o.gap)
+            this.$contents = $('.content-wrapper', this.$main);
+            this.length = this.$contents.length;
+            switch (o.modal) {
+                case 'default':
+                    this.index = 0;
+                    this.$contents.each(function (i) {
+                        $(this).css('left', i * 100 + '%')
+                    });
+                    //自动切换
+                    if (o.auto) {
+                        setInterval(function () {
+                            self.switchDefaultWrapper('move')
+                        }, o.gap)
+                    }
+                    break;
+                case 'zoom':
+                    this.index = this.$contents.index($('.current', this.$main));
+                    break;
+                default:
+                    break;
             }
         },
         bindEvent: function () {
-            var self = this;
+            var self = this, o = this.options;
             $('.dp-ui-carousel-arrow')
                 .on('click', function (e) {
-                    if ($(e.currentTarget).hasClass('left')) {
-                        self.switchWrapper('back');
-                    } else if ($(e.currentTarget).hasClass('right')) {
-                        self.switchWrapper('move');
+                    switch (o.modal) {
+                        case 'default':
+                            if ($(e.currentTarget).hasClass('left')) {
+                                self.switchDefaultWrapper('back');
+                            } else if ($(e.currentTarget).hasClass('right')) {
+                                self.switchDefaultWrapper('move');
+                            }
+                            break;
+                        case 'zoom':
+                            if ($(e.currentTarget).hasClass('left')) {
+                                self.switchZoomWrapper('back');
+                            } else if ($(e.currentTarget).hasClass('right')) {
+                                self.switchZoomWrapper('move');
+                            }
+                            break;
+                        default:
+                            break;
                     }
-                    self.switchWrapper();
                 });
         },
-        switchWrapper: function (action) {
+        switchDefaultWrapper: function (action) {
             switch (action) {
                 case 'move':
                     if (this.index === 0) {
@@ -85,6 +107,52 @@
                 '-ms-transform': 'translate(-' + this.index * 100 + '%,0)',
                 '-o-transform': 'translate(-' + this.index * 100 + '%,0)',
             })
+        },
+        switchZoomWrapper: function (action) {
+            switch (action) {
+                case 'move':
+                    if (this.index === 0) {
+                        this.index = this.length - 1;
+                    } else {
+                        this.index--;
+                    }
+                    $('.next', this.$main)
+                        .removeClass('next');
+                    $('.current', this.$main)
+                        .removeClass('current')
+                        .addClass('next');
+                    $('.prev', this.$main)
+                        .removeClass('prev')
+                        .addClass('current');
+                    if (this.index === 0) {
+                        this.$contents.eq(this.length - 1).addClass('prev');
+                    }  else {
+                        this.$contents.eq(this.index - 1).addClass('prev');
+                    }
+                    break;
+                case 'back':
+                    if (this.index + 1 === this.length) {
+                        this.index = 0;
+                    } else {
+                        this.index++;
+                    }
+                    $('.prev', this.$main)
+                        .removeClass('prev');
+                    $('.current', this.$main)
+                        .removeClass('current')
+                        .addClass('prev');
+                    $('.next', this.$main)
+                        .removeClass('next')
+                        .addClass('current');
+                    if (this.index === this.length-1) {
+                        this.$contents.eq(0).addClass('next');
+                    }  else {
+                        this.$contents.eq(this.index + 1).addClass('next');
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
     });
 
@@ -96,7 +164,6 @@
                 $.data(this, "plugin_" + pluginName, new Carousel(this, options));
             }
         });
-
         // 方便链式调用
         return this;
     };
