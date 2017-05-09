@@ -4,5 +4,7 @@
  * Time: 10:42
  */
 ;(function () {
+    window.Utils = {
 
+    }
 })();

@@ -4,7 +4,9 @@
  * Time: 10:42
  */
 ;(function () {
+    window.Utils = {
 
+    }
 })();
 /**
  * Coder: fmd
@@ -12,17 +14,23 @@
  * Time: 10:43
  */
 ;(function ($) {
-    var Plugin = function (opt) {
+    /**
+     * 轮播控件
+     * @param opt
+     * @constructor
+     */
+    var Carousel = function (opt) {
         this.options = $.extend({
             a: 'xx'
-        }, opt)
+        }, opt);
+        this.init();
     };
 
-    Plugin.prototype = {
+    Carousel.prototype = {
         init: function () {
             console.log(this.options)
         }
     };
 
-    window.Plugin = Plugin;
+    window.Carousel = Carousel;
 })(jQuery);
