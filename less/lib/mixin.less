@@ -11,6 +11,13 @@
   border-radius: @radius;
 }
 
+.background-size(@width:100%,@height:100%) {
+  background-size: @width @height;
+  -moz-background-size: @width @height;
+  -webkit-background-size: @width @height;
+  -o-background-size: @width @height;
+}
+
 .background-size-cover() {
   background-size: cover;
   -moz-background-size: cover;
@@ -299,13 +306,15 @@
   display: -webkit-flex;
   display: flex;
 }
-.flexflow(@flow){
+
+.flexflow(@flow) {
   -webkit-box-flex-flow: @flow;
   -moz-box-flex-flow: @flow;
   -webkit-flex-flow: @flow;
   -ms-flex-flow: @flow;
   flex-flow: @flow;
 }
+
 .justify-content(@jc) {
   -webkit-box-pack: @jc;
   -ms-flex-pack: @jc;

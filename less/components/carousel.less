@@ -20,12 +20,17 @@
         right: 30%;
         .scale(0.7);
         .opacity(0);
-        .transition(all 400ms);
+        &.for-left {
+          .animation(fadeOutPrevLeft 4000ms);
+        }
         &.prev {
           left: 5%;
           right: 50%;
           .scale(0.7);
           .opacity(1);
+          &.for-left {
+            .animation(fadeOutPrevLeft 4000ms);
+          }
         }
         &.current {
           z-index: 2;
@@ -34,12 +39,18 @@
           &:hover {
             .scale(1.1);
           }
+          &.for-left {
+            .animation(fadeInCurrentLeft 4000ms);
+          }
         }
         &.next {
           left: 50%;
           right: 5%;
           .scale(0.7);
           .opacity(1);
+          &.for-left {
+            .animation(fadeInNextLeft 4000ms)
+          }
         }
       }
     }
@@ -78,6 +89,76 @@
       font-size: 55px;
       color: #979daa;
       .translate(-50%, -50%);
+    }
+  }
+  @keyframes fadeOutPrevLeft {
+    0% {
+      left: 30%;
+      right: 30%;
+      .opacity(1);
+      .scale(1);
+    }
+
+    65% {
+      left: 30%;
+      right: 30%;
+      .opacity(0.3);
+      .scale(0.7);
+    }
+
+    100% {
+      .opacity(1);
+      .scale(0.7);
+      left: 5%;
+      right: 50%;
+    }
+  }
+  @keyframes fadeInCurrentLeft {
+    0% {
+      left: 50%;
+      right: 5%;
+      .opacity(1);
+      .scale(0.7);
+    }
+
+    65% {
+      left: 30%;
+      right: 30%;
+      .opacity(0.7);
+      .scale(0.7);
+    }
+
+    100% {
+      .opacity(1);
+      .scale(1);
+      left: 30%;
+      right: 30%;
+    }
+  }
+  @keyframes fadeInNextLeft {
+    0% {
+      left: 30%;
+      right: 30%;
+      .opacity(0);
+    }
+
+    100% {
+      .opacity(1);
+      left: 50%;
+      right: 5%;
+    }
+  }
+  @keyframes fadeOutPrevLeft {
+    0% {
+      left: 5%;
+      right: 50%;
+      .opacity(1);
+    }
+
+    100% {
+      .opacity(0);
+      left: 30%;
+      right: 3%;
     }
   }
 }

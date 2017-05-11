@@ -126,7 +126,7 @@
                         .addClass('current');
                     if (this.index === 0) {
                         this.$contents.eq(this.length - 1).addClass('prev');
-                    }  else {
+                    } else {
                         this.$contents.eq(this.index - 1).addClass('prev');
                     }
                     break;
@@ -137,17 +137,29 @@
                         this.index++;
                     }
                     $('.prev', this.$main)
+                        .removeClass('for-left')
+                        .removeClass('for-right')
                         .removeClass('prev');
                     $('.current', this.$main)
+                        .removeClass('for-right')
+                        .addClass('for-left')
                         .removeClass('current')
                         .addClass('prev');
                     $('.next', this.$main)
+                        .removeClass('for-right')
+                        .addClass('for-left')
                         .removeClass('next')
                         .addClass('current');
-                    if (this.index === this.length-1) {
-                        this.$contents.eq(0).addClass('next');
-                    }  else {
-                        this.$contents.eq(this.index + 1).addClass('next');
+                    if (this.index === this.length - 1) {
+                        this.$contents.eq(0)
+                            .removeClass('for-right')
+                            .addClass('for-left')
+                            .addClass('next');
+                    } else {
+                        this.$contents.eq(this.index + 1)
+                            .removeClass('for-right')
+                            .addClass('for-left')
+                            .addClass('next');
                     }
                     break;
                 default:
