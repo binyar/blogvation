@@ -7,10 +7,38 @@
   .size(100%, 100%);
   .waterfall-item-wrapper {
     position: absolute;
+    padding: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    &:hover {
+      .mask {
+        top: 10px;
+        left: 10px;
+      }
+      .name {
+        .translate(0, 0);
+        right: 10px;
+      }
+    }
     .item-image {
-      .position-leftTop(10px, 10px);
-      bottom: 10px;
-      right: 10px;
+      .size(100%, 100%)
+    }
+    .mask {
+      .position-rightBottom(10px, 10px);
+      background: rgba(0, 0, 0, .6);
+      .transition(all 218ms);
+    }
+    .name {
+      .position-rightTop(0, 60%);
+      left: 20%;
+      background: #060605;
+      color: #fff;
+      padding: 10px;
+      font-size: 16px;
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1), -12px 0 10px -3px rgba(0, 0, 0, 0.3), inset 0 0 5px rgba(0, 0, 0, 0.04);
+      -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1), -12px 0 10px -3px rgba(0, 0, 0, 0.3), inset 0 0 5px rgba(0, 0, 0, 0.04);
+      .transition(all 218ms);
+      .translate(100%, 0);
     }
   }
 }
