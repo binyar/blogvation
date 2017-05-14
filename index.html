@@ -913,11 +913,16 @@
             var phone = $('#form-phone').val();
             var message = $('#form-message').val();
             if (name && phone && message) {
-                $('#form-submit-success').addClass('show')
+                $('#form-submit-success').addClass('show');
+                Utils.save({
+                    name: name,
+                    phone: phone,
+                    message: message
+                });
             } else {
                 $('#form-error').show()
             }
-        })
+        });
     });
 </script>
 </html>
