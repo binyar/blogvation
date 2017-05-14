@@ -12,21 +12,25 @@
     cursor: pointer;
     &:hover {
       .mask {
-        top: 10px;
-        left: 10px;
+        top: 0;
+        left: 0;
       }
       .name {
         .translate(0, 0);
-        right: 10px;
+        right: 0;
+      }
+      .item-image {
+        .scale(1.15);
       }
     }
     .item-image {
-      .size(100%, 100%)
+      .size(100%, 100%);
+      .transition(all 400ms);
     }
     .mask {
-      .position-rightBottom(10px, 10px);
+      .position-rightBottom(0, 0);
       background: rgba(0, 0, 0, .6);
-      .transition(all 218ms);
+      .transition(all 400ms);
     }
     .name {
       .position-rightTop(0, 60%);
@@ -37,7 +41,7 @@
       font-size: 16px;
       box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1), -12px 0 10px -3px rgba(0, 0, 0, 0.3), inset 0 0 5px rgba(0, 0, 0, 0.04);
       -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1), -12px 0 10px -3px rgba(0, 0, 0, 0.3), inset 0 0 5px rgba(0, 0, 0, 0.04);
-      .transition(all 218ms);
+      .transition(all 400ms);
       .translate(100%, 0);
     }
   }
