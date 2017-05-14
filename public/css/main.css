@@ -496,6 +496,119 @@ th {
 /*彩色*/
 /*类型区分*/
 /*基础函数库*/
+.dp-ui-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: #fff;
+}
+.dp-ui-loader .loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #4c4c4e;
+  -webkit-animation: huxi 2000ms infinite;
+  -o-animation: huxi 2000ms infinite;
+  animation: huxi 2000ms infinite;
+  opacity: 0;
+}
+.dp-ui-loader .loader.inner {
+  -webkit-animation-delay: 500ms;
+  -moz-animation-delay: 500ms;
+  animation-delay: 500ms;
+}
+.dp-ui-loader .loader.inner2 {
+  -webkit-animation-delay: 1000ms;
+  -moz-animation-delay: 1000ms;
+  animation-delay: 1000ms;
+}
+@keyframes huxi {
+  0% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+    border: 3px solid #4c4c4e;
+    -webkit-box-shadow: 0 0 5px 5px #9c9c9d;
+    box-shadow: 0 0 5px 5px #9c9c9d;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 0;
+    border: 6px solid #4c4c4e;
+    -webkit-box-shadow: 0 0 10px 10px #9c9c9d;
+    box-shadow: 0 0 10px 10px #9c9c9d;
+  }
+}
+@keyframes translateLeft {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+@-moz-keyframes translateLeft {
+  /* Firefox */
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+@-webkit-keyframes mymove {
+  /* Safari 和 Chrome */
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+@-o-keyframes translateLeft {
+  /* Opera */
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+/*基础色*/
+/*黑白灰*/
+/*辅助色*/
+/*彩色*/
+/*类型区分*/
+/*基础函数库*/
 
 /*基础色*/
 /*黑白灰*/
@@ -709,6 +822,17 @@ th {
   right: 0;
   z-index: 10;
 }
+.dp-home-menu .menu-logo {
+  position: relative;
+  float: left;
+  left: 30px;
+  font-size: 35px;
+  color: #fff;
+  line-height: 80px;
+}
+.dp-home-menu .menu-logo .special {
+  color: #EC572C;
+}
 .dp-home-menu .menu-wrapper {
   position: relative;
   float: right;
@@ -886,11 +1010,12 @@ th {
   right: 0;
   left: 0;
   bottom: 0;
-  -webkit-animation: translateLeft 15s;
-  -o-animation: translateLeft 15s;
-  animation: translateLeft 15s;
-  animation-iteration-count: infinite;
+  -webkit-animation: translateLeft 15s infinite;
+  -o-animation: translateLeft 15s infinite;
+  animation: translateLeft 15s infinite;
   animation-timing-function: linear;
+  -webkit-animation-delay: initial;
+  -moz-animation-delay: initial;
   animation-delay: initial;
   animation-direction: initial;
   animation-fill-mode: initial;
@@ -1459,6 +1584,41 @@ th {
   border-bottom: 1px solid #AAAAAA;
 }
 @keyframes translateLeft {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+@keyframes translateLeft {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+@-moz-keyframes translateLeft {
+  /* Firefox */
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+@-webkit-keyframes mymove {
+  /* Safari 和 Chrome */
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+@-o-keyframes translateLeft {
+  /* Opera */
   from {
     background-position: 0 0;
   }

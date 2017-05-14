@@ -1,0 +1,81 @@
+@import "../lib/core";
+
+@dp-ui-loader: dp-ui-loader;
+.@{dp-ui-loader} {
+  .fixed-leftTop(0, 0);
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: #fff;
+  .loader {
+    .position-leftTop(50%, 50%);
+    .translate(-50%, -50%);
+    .size(60px, 60px);
+    .scale(1);
+    .border-radius(50%);
+    border: 1px solid #4c4c4e;
+    .animation(huxi 2000ms infinite);
+    .opacity(0);
+    &.inner {
+      .animation-delay(500ms);
+    }
+    &.inner2 {
+      .animation-delay(1000ms);
+    }
+  }
+  @keyframes huxi {
+    0% {
+      .scale(0);
+      .opacity(0.2);
+    }
+    50% {
+      .opacity(0.5);
+      border: 3px solid #4c4c4e;
+      .box-shadow(0 0 5px 5px #9c9c9d);
+    }
+    100% {
+      .scale(1);
+      .opacity(0);
+      border: 6px solid #4c4c4e;
+      .box-shadow(0 0 10px 10px #9c9c9d);
+    }
+  }
+  @keyframes translateLeft {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -100% 0;
+    }
+  }
+
+  @-moz-keyframes translateLeft /* Firefox */
+  {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -100% 0;
+    }
+  }
+
+  @-webkit-keyframes mymove /* Safari 和 Chrome */
+  {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -100% 0;
+    }
+  }
+
+  @-o-keyframes translateLeft /* Opera */
+  {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -100% 0;
+    }
+  }
+}

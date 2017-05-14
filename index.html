@@ -10,7 +10,7 @@
     <title>DP-DESIGN HOME</title>
 </head>
 <link rel="stylesheet" type="text/css" href="./public/css/main.css"/>
-<body class="dp-home">
+<body class="dp-home" onload="onload();">
 <div id="main-container">
     <div class="dp-home-section-home">
         <div class="wall-wrapper show"
@@ -31,6 +31,7 @@
         </div>
     </div>
     <div class="dp-home-menu" id="dp-home-menu">
+        <div class="menu-logo">DP-<span class="special">D</span>ESIGN</div>
         <div class="menu-wrapper">
             <a class="menu-item" href="#about_us">About Us</a>
             <a class="menu-item" href="#the_team">The Team</a>
@@ -867,6 +868,11 @@
         </div>
     </div>
 </div>
+<div class="dp-ui-loader" id="loading">
+    <div class="loader"></div>
+    <div class="loader inner"></div>
+    <div class="loader inner2"></div>
+</div>
 </body>
 <script src="./public/js/js-lib.js"></script>
 <script src="./public/js/js-common.js"></script>
@@ -929,5 +935,8 @@
             }
         });
     });
+    function onload() {
+        $('#loading').remove();
+    }
 </script>
 </html>

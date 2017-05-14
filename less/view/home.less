@@ -92,6 +92,15 @@
       right: 0;
       z-index: 10;
     }
+    .menu-logo {
+      .float-left(30px);
+      font-size: 35px;
+      color: #fff;
+      line-height: 80px;
+      .special {
+        color: #EC572C;
+      }
+    }
     .menu-wrapper {
       .float-right(0);
       .menu-item {
@@ -237,10 +246,9 @@
       .position-rightTop(0, 0);
       left: 0;
       bottom: 0;
-      .animation(translateLeft 15s);
-      animation-iteration-count: infinite;
+      .animation(translateLeft 15s infinite);
       animation-timing-function: linear;
-      animation-delay: initial;
+      .animation-delay(initial);
       animation-direction: initial;
       animation-fill-mode: initial;
       animation-play-state: initial;
@@ -741,6 +749,44 @@
     }
   }
   @keyframes translateLeft {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -100% 0;
+    }
+  }
+  @keyframes translateLeft {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -100% 0;
+    }
+  }
+
+  @-moz-keyframes translateLeft /* Firefox */
+  {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -100% 0;
+    }
+  }
+
+  @-webkit-keyframes mymove /* Safari 和 Chrome */
+  {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -100% 0;
+    }
+  }
+
+  @-o-keyframes translateLeft /* Opera */
+  {
     from {
       background-position: 0 0;
     }
