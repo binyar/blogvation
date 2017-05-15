@@ -4,25 +4,25 @@
     <meta charset="utf-8"/>
     <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
-    <meta name="keywords" content="DP-UI,DP-LIFE,DP-VIDEO"/>
-    <meta name="description" content="a pure beautify front end ui project"/>
+    <meta name="keywords" content="DP-DESIGN,DP-UI,DP-LIFE,DP,DP-LIFE"/>
+    <meta name="description" content="DP-Design,A GROUP OF EXPERIENCED DESIGNERS AND DEVELOPERS"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>DP-UI DP-LIFE</title>
+    <title>DP-Design DP-Life</title>
     <link rel="stylesheet" type="text/css" href="../public/css/main.css"/>
 </head>
-<body class="dp-life">
+<body class="dp-life" onload="onload();">
 <div class="dp-life-menu">MENU <i class="iconfont icon-menu"></i></div>
 <div class="dp-life-content">
     <div class="content-water-mark for-left">D</div>
     <div class="content-text-wrapper for-left">
         <div class="text-title">
-            <span class="bold">Applo</span>
-            <span>PSD Template</span>
+            <span class="bold">DP-Design</span>
+            <span>Web Template</span>
         </div>
         <div class="text-description">
-            What do ESL and EFL mean? ESL stands for English as a Second
-            Language. EFL stands for English as a Foreign Language.
-            ESL is used when people learn English in an English speaking country. EFL is used when
+            What do DP-Design and DP-Design mean? ESL stands for English as a Second
+            Language. DP-Design stands for English as a Foreign Language.
+            ESL is used when people learn English in an English speaking country. DP-Design is used when
         </div>
     </div>
 </div>
@@ -31,12 +31,12 @@
     <div class="content-text-wrapper for-right">
         <div class="text-title">
             <span class="bold">——My name is</span>
-            <span>Applo</span>
+            <span>DP-Design</span>
         </div>
         <div class="text-description">
-            What do ESL and EFL mean? ESL stands for English as a Second
-            Language. EFL stands for English as a Foreign Language.
-            ESL is used when people learn English in an English speaking country. EFL is used when
+            What do DP-Design and DP-Design mean? ESL stands for English as a Second
+            Language. DP-Design stands for English as a Foreign Language.
+            ESL is used when people learn English in an English speaking country. DP-Design is used when
         </div>
     </div>
 </div>
@@ -51,10 +51,16 @@
         </div>
         <div class="dp-ui-carousel-main">
             <div class="content-wrapper">
-                <img class="paper-image" src="../public/images/demo.jpg"/>
+                <img class="paper-image" src="http://opxdpusgg.bkt.clouddn.com/life_bg_04.jpg"/>
             </div>
             <div class="content-wrapper">
-                <img class="paper-image" src="../public/images/beauty.png"/>
+                <img class="paper-image" src="http://opxdpusgg.bkt.clouddn.com/life_bg_05.jpg"/>
+            </div>
+            <div class="content-wrapper">
+                <img class="paper-image" src="http://opxdpusgg.bkt.clouddn.com/life_bg_06.jpg"/>
+            </div>
+            <div class="content-wrapper">
+                <img class="paper-image" src="http://opxdpusgg.bkt.clouddn.com/life_bg_07.jpg"/>
             </div>
         </div>
     </div>
@@ -63,13 +69,13 @@
     <div class="content-water-mark for-left">U</div>
     <div class="content-text-wrapper for-left">
         <div class="text-title">
-            <span class="bold">DP-UI</span>
-            <span>Pure Template</span>
+            <span class="bold">DP-Design</span>
+            <span>Pure Web Design</span>
         </div>
         <div class="text-description">
-            What do ESL and EFL mean? ESL stands for English as a Second
-            Language. EFL stands for English as a Foreign Language.
-            ESL is used when people learn English in an English speaking country. EFL is used when
+            What do DP-Design and DP-Design mean? ESL stands for English as a Second
+            Language. DP-Design stands for English as a Foreign Language.
+            ESL is used when people learn English in an English speaking country. DP-Design is used when
         </div>
     </div>
 </div>
@@ -84,22 +90,27 @@
         </div>
         <div class="dp-ui-carousel-main modal-zoom">
             <div class="content-wrapper prev">
-                <img class="paper-image" src="../public/images/demo.jpg"/>
+                <img class="paper-image" src="http://opxdpusgg.bkt.clouddn.com/life_bg_08.jpg"/>
             </div>
             <div class="content-wrapper current">
-                <img class="paper-image" src="../public/images/beauty.png"/>
+                <img class="paper-image" src="http://opxdpusgg.bkt.clouddn.com/life_bg_09.jpg"/>
             </div>
             <div class="content-wrapper next">
-                <img class="paper-image" src="../public/images/demo3.png"/>
+                <img class="paper-image" src="http://opxdpusgg.bkt.clouddn.com/life_bg_10.jpg"/>
             </div>
             <div class="content-wrapper ">
-                <img class="paper-image" src="../public/images/demo4.png"/>
+                <img class="paper-image" src="http://opxdpusgg.bkt.clouddn.com/life_bg_11.jpg"/>
             </div>
             <div class="content-wrapper ">
-                <img class="paper-image" src="../public/images/demo5.png"/>
+                <img class="paper-image" src="http://opxdpusgg.bkt.clouddn.com/life_bg_12.jpg"/>
             </div>
         </div>
     </div>
+</div>
+<div class="dp-ui-loader" id="loading">
+    <div class="loader"></div>
+    <div class="loader inner"></div>
+    <div class="loader inner2"></div>
 </div>
 </body>
 <script src="../public/js/js-lib.js"></script>
@@ -110,6 +121,10 @@
     });
     $('#life-zoom-carousel-photo').carousel({
         modal: 'zoom'
-    })
+    });
+    function onload() {
+        $('#loading').remove();
+        $('#home-waterfall').waterfall();
+    }
 </script>
 </html>
