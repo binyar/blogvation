@@ -59,6 +59,7 @@
         },
         bindEvent: function () {
             var self = this, o = this.options;
+            this.moving = false;
             $('.dp-ui-carousel-arrow')
                 .on('click', function (e) {
                     switch (o.modal) {
@@ -70,6 +71,14 @@
                             }
                             break;
                         case 'zoom':
+                            if (self.moving) {
+                                e.preventDefault();
+                                return false;
+                            }
+                            self.moving = true;
+                            setTimeout(function () {
+                                self.moving = false;
+                            }, 1250);
                             if ($(e.currentTarget).hasClass('left')) {
                                 self.switchZoomWrapper('back');
                             } else if ($(e.currentTarget).hasClass('right')) {
@@ -117,17 +126,29 @@
                         this.index--;
                     }
                     $('.next', this.$main)
-                        .removeClass('next');
+                        .removeClass('for-left')
+                        .removeClass('next')
+                        .addClass('for-right');
                     $('.current', this.$main)
+                        .removeClass('for-left')
+                        .addClass('for-right')
                         .removeClass('current')
                         .addClass('next');
                     $('.prev', this.$main)
+                        .removeClass('for-left')
+                        .addClass('for-right')
                         .removeClass('prev')
                         .addClass('current');
                     if (this.index === 0) {
-                        this.$contents.eq(this.length - 1).addClass('prev');
+                        this.$contents.eq(this.length - 1)
+                            .removeClass('for-left')
+                            .addClass('for-right')
+                            .addClass('prev');
                     } else {
-                        this.$contents.eq(this.index - 1).addClass('prev');
+                        this.$contents.eq(this.index - 1)
+                            .removeClass('for-left')
+                            .addClass('for-right')
+                            .addClass('prev');
                     }
                     break;
                 case 'back':
@@ -137,9 +158,9 @@
                         this.index++;
                     }
                     $('.prev', this.$main)
-                        .removeClass('for-left')
                         .removeClass('for-right')
-                        .removeClass('prev');
+                        .removeClass('prev')
+                        .addClass('for-left');
                     $('.current', this.$main)
                         .removeClass('for-right')
                         .addClass('for-left')

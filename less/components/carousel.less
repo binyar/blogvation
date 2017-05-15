@@ -21,7 +21,10 @@
         .scale(0.7);
         .opacity(0);
         &.for-left {
-          .animation(fadeOutPrevLeft 4000ms);
+          .animation(fadeOutPrevLeft 1250ms);
+        }
+        &.for-right {
+          .animation(fadeOutNextRight 1250ms);
         }
         &.prev {
           left: 5%;
@@ -29,7 +32,10 @@
           .scale(0.7);
           .opacity(1);
           &.for-left {
-            .animation(fadeOutPrevLeft 4000ms);
+            .animation(fadeOutCurrentLeft 1250ms);
+          }
+          &.for-right {
+            .animation(fadeInInnerRight 1250ms);
           }
         }
         &.current {
@@ -39,8 +45,12 @@
           &:hover {
             .scale(1.1);
           }
+          .transition(transform 400ms);
           &.for-left {
-            .animation(fadeInCurrentLeft 4000ms);
+            .animation(fadeInNextLeft 1250ms);
+          }
+          &.for-right {
+            .animation(fadeInPrevRight 1250ms);
           }
         }
         &.next {
@@ -49,7 +59,10 @@
           .scale(0.7);
           .opacity(1);
           &.for-left {
-            .animation(fadeInNextLeft 4000ms)
+            .animation(fadeInInnerLeft 1250ms)
+          }
+          &.for-right {
+            .animation(fadeOutCurrentRight 1250ms)
           }
         }
       }
@@ -90,7 +103,7 @@
       .translate(-50%, -50%);
     }
   }
-  @keyframes fadeOutPrevLeft {
+  @keyframes fadeOutCurrentLeft {
     0% {
       left: 30%;
       right: 30%;
@@ -98,11 +111,8 @@
       .scale(1);
     }
 
-    65% {
-      left: 30%;
-      right: 30%;
+    50% {
       .opacity(0.3);
-      .scale(0.7);
     }
 
     100% {
@@ -110,37 +120,33 @@
       .scale(0.7);
       left: 5%;
       right: 50%;
-    }
-  }
-  @keyframes fadeInCurrentLeft {
-    0% {
-      left: 50%;
-      right: 5%;
-      .opacity(1);
-      .scale(0.7);
-    }
-
-    65% {
-      left: 30%;
-      right: 30%;
-      .opacity(0.7);
-      .scale(0.7);
-    }
-
-    100% {
-      .opacity(1);
-      .scale(1);
-      left: 30%;
-      right: 30%;
     }
   }
   @keyframes fadeInNextLeft {
     0% {
+      left: 50%;
+      right: 5%;
+      .opacity(1);
+      .scale(0.7);
+    }
+
+    50% {
+      .opacity(0.7);
+    }
+
+    100% {
+      .opacity(1);
+      .scale(1);
+      left: 30%;
+      right: 30%;
+    }
+  }
+  @keyframes fadeInInnerLeft {
+    0% {
       left: 30%;
       right: 30%;
       .opacity(0);
     }
-
     100% {
       .opacity(1);
       left: 50%;
@@ -153,11 +159,71 @@
       right: 50%;
       .opacity(1);
     }
-
     100% {
-      .opacity(0);
       left: 30%;
       right: 3%;
+    }
+  }
+
+  @keyframes fadeOutCurrentRight {
+    0% {
+      left: 30%;
+      right: 30%;
+      .opacity(1);
+      .scale(1);
+    }
+
+    50% {
+      .opacity(0.3);
+    }
+
+    100% {
+      .opacity(1);
+      .scale(0.7);
+      right: 5%;
+      left: 50%;
+    }
+  }
+  @keyframes fadeInPrevRight {
+    0% {
+      right: 50%;
+      left: 5%;
+      .opacity(1);
+      .scale(0.7);
+    }
+
+    50% {
+      .opacity(0.7);
+    }
+
+    100% {
+      .opacity(1);
+      .scale(1);
+      left: 30%;
+      right: 30%;
+    }
+  }
+  @keyframes fadeInInnerRight {
+    0% {
+      left: 30%;
+      right: 30%;
+      .opacity(0);
+    }
+    100% {
+      .opacity(1);
+      right: 50%;
+      left: 5%;
+    }
+  }
+  @keyframes fadeOutNextRight {
+    0% {
+      right: 5%;
+      left: 50%;
+      .opacity(1);
+    }
+    100% {
+      right: 30%;
+      left: 3%;
     }
   }
 }

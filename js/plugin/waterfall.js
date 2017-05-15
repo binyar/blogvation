@@ -24,13 +24,15 @@
             // 你可以在这里直接使用this.element或者this.options
             var self = this;
             var cols = this.options.cols;
-            var gap = this.options.gap;
             var $items = $('.waterfall-item-wrapper', this.element);
             this.imageMap = {};
             var width = 100 / cols;
             var maxHeight = 0;
+            var containerWidth = $(this.element).width();
             $items.each(function (index) {
-                var height = $('.item-image', this).height() / cols;
+                var height = $('.item-image', this).height();
+                var itemWidth = $('.item-image', this).width();
+                var realHeight = height / itemWidth * (containerWidth * width * 0.01);
                 index++;
                 var row = parseInt((index) / cols, 10);
                 var top = 0;
@@ -42,7 +44,7 @@
                         if (i !== 0) {
                             arr.push(self.imageMap[index - i].height)
                         } else {
-                            arr.push(height)
+                            arr.push(realHeight)
                         }
                     }
                     maxHeight += self.getMax(arr);
@@ -53,7 +55,7 @@
                     top = parent.top + parent.height;
                 }
                 self.imageMap[index] = {
-                    height: height,
+                    height: realHeight,
                     top: top
                 };
                 var left = (index - 1) % cols * width;
@@ -61,7 +63,7 @@
                     width: width + '%',
                     left: left + '%',
                     top: top,
-                    height: height
+                    height: realHeight
                 });
 
             });
