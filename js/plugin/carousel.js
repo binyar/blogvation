@@ -78,7 +78,7 @@
                             self.moving = true;
                             setTimeout(function () {
                                 self.moving = false;
-                            }, 1250);
+                            }, 500);
                             if ($(e.currentTarget).hasClass('left')) {
                                 self.switchZoomWrapper('back');
                             } else if ($(e.currentTarget).hasClass('right')) {

@@ -21,10 +21,10 @@
         .scale(0.7);
         .opacity(0);
         &.for-left {
-          .animation(fadeOutPrevLeft 1250ms);
+          .animation(fadeOutPrevLeft 500ms);
         }
         &.for-right {
-          .animation(fadeOutNextRight 1250ms);
+          .animation(fadeOutNextRight 500ms);
         }
         &.prev {
           left: 5%;
@@ -32,10 +32,10 @@
           .scale(0.7);
           .opacity(1);
           &.for-left {
-            .animation(fadeOutCurrentLeft 1250ms);
+            .animation(fadeOutCurrentLeft 500ms);
           }
           &.for-right {
-            .animation(fadeInInnerRight 1250ms);
+            .animation(fadeInInnerRight 500ms);
           }
         }
         &.current {
@@ -47,10 +47,10 @@
           }
           .transition(transform 400ms);
           &.for-left {
-            .animation(fadeInNextLeft 1250ms);
+            .animation(fadeInNextLeft 500ms);
           }
           &.for-right {
-            .animation(fadeInPrevRight 1250ms);
+            .animation(fadeInPrevRight 500ms);
           }
         }
         &.next {
@@ -59,10 +59,10 @@
           .scale(0.7);
           .opacity(1);
           &.for-left {
-            .animation(fadeInInnerLeft 1250ms)
+            .animation(fadeInInnerLeft 500ms)
           }
           &.for-right {
-            .animation(fadeOutCurrentRight 1250ms)
+            .animation(fadeOutCurrentRight 500ms)
           }
         }
       }
@@ -71,8 +71,11 @@
       position: absolute;
       top: 0;
       .size(100%, 100%);
+      overflow: hidden;
       .paper-image {
-        .size(100%, 100%);
+        .size(100%, auto);
+        .position-leftTop(50%, 50%);
+        .translate(-50%, -50%);
       }
     }
   }
@@ -129,7 +132,6 @@
       .opacity(1);
       .scale(0.7);
     }
-
 
     100% {
       .opacity(1);
