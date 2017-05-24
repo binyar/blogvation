@@ -10,9 +10,10 @@ const gulp = require('gulp'),
     less = require('gulp-less'),
     path = require('path'),
     cssmin = require('gulp-minify-css');
-const cssPath = ['less/base/core.less', 'less/components/*.less','less/view/*.less'],
+const cssPath = ['less/base/core.less', 'less/components/*.less', 'less/view/*.less'],
     jsLibPath = ['js/lib/*.js'],
-    jsCommonPath = ['js/base/*.js', 'js/components/*.js','js/plugin/*.js'];
+    jsCommonPath = ['js/base/*.js', 'js/components/*.js', 'js/plugin/*.js'],
+    jsAppPath = ['js/app/*.js'];
 
 const jsDest = 'public/js';
 const cssDest = './public/css';
@@ -20,10 +21,15 @@ const cssDest = './public/css';
 const jsDevConfig = {
     modules: [{
         src: jsLibPath,
-        rename: 'js-lib.js'
+        rename: 'js-lib.js',
+        concat: true
     }, {
         src: jsCommonPath,
-        rename: 'js-common.js'
+        rename: 'js-common.js',
+        concat: true
+    }, {
+        src: jsAppPath,
+        concat: false
     }],
     uglify: false,
     watch: true
@@ -51,10 +57,15 @@ const buildJs = (config) => {
     config.modules.forEach((module) => {
         const bundle = () => {
             // 基础拼接
-            let stream = gulp
-                .src(module.src)
-                .pipe(concat(module.rename));
-
+            let stream;
+            if (module.concat) {
+                stream = gulp
+                    .src(module.src)
+                    .pipe(concat(module.rename));
+            } else {
+                stream = gulp
+                    .src(module.src);
+            }
             // 是否压缩
             if (config.uglify) {
                 stream.pipe(uglify());
