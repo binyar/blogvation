@@ -4,5 +4,14 @@
  * Time: 11:31
  */
 ;(function () {
-    console.log('activation.....')
+    page('/', function () {
+
+    });
+    page('/home', function () {
+        console.log('..home')
+    });
+    page({
+        hashbang: true
+    });
+    page.redirect();
 })();
