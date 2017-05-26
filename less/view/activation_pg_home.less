@@ -1,0 +1,96 @@
+@import "../lib/core";
+
+.dp-activation-page-home {
+  @black: #1c1c1c;
+  @black-light: #2d2d2d;
+  @grey: #666;
+  @grey-light: #999;
+  padding-top: 100px;
+  .home-header {
+    .position-leftTop(0, 0);
+    right: 0;
+    background: #fff;
+    .header-menu {
+      max-width: 1600px;
+      margin: 0 auto;
+      .flexbox();
+      .justify-content(center);
+      .align-items(center);
+      color: @black;
+      height: 100px;
+      line-height: 100px;
+      .menu-item {
+        text-transform: uppercase;
+        position: relative;
+        &.logo {
+          .flex(4);
+          .transition(all 400ms);
+          cursor: pointer;
+          font-size: 18px;
+          font-weight: bold;
+          &:hover {
+            color: @grey-light;
+          }
+          .right {
+            color: @grey;
+            margin-left: 10px;
+          }
+        }
+        &.init {
+          .flex(2);
+          .transition(all 400ms);
+          cursor: pointer;
+          &:hover {
+            color: @grey-light;
+          }
+        }
+        &.item {
+          .flex(1);
+          .flexbox();
+          .justify-content(center);
+          .align-items(center);
+          .item-menu {
+            .flex(1);
+            .transition(all 400ms);
+            cursor: pointer;
+            &:hover {
+              color: @grey-light;
+            }
+          }
+        }
+      }
+    }
+  }
+  .home-footer {
+    background: @black;
+    .footer-content {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 80px 0 30px;
+      .content-line {
+        margin-bottom: 50px;
+        .flexbox();
+        .line-item {
+          .flex(1);
+          font-size: 12px;
+          padding-right: 5%;
+          .title {
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #ddd;
+            &.large {
+              font-size: 16px;
+            }
+          }
+          .info {
+            line-height: 16px;
+            color: #777;
+            > a {
+              color: #ddd;
+            }
+          }
+        }
+      }
+    }
+  }
+}

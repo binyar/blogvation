@@ -815,12 +815,6 @@ th {
   position: relative;
   margin-top: -2px;
 }
-.dp-activation .x-icon-menu.white .menu-line {
-  background: #fff;
-}
-.dp-activation .x-icon-menu.black .menu-line {
-  background: #3f3f3f;
-}
 .dp-activation .x-icon-menu .menu-line {
   -webkit-transition: all 500ms;
   -moz-transition: all 500ms;
@@ -859,6 +853,164 @@ th {
   -moz-transition-delay: 180ms;
   -o-transition-delay: 180ms;
   transition-delay: 180ms;
+}
+.dp-activation .x-icon-menu.white .menu-line {
+  background: #fff;
+}
+.dp-activation .x-icon-menu.black .menu-line {
+  background: #3f3f3f;
+}
+.dp-activation .x-icon-menu.black:hover .menu-line {
+  background: #666;
+}
+
+/*基础色*/
+/*黑白灰*/
+/*辅助色*/
+/*彩色*/
+/*类型区分*/
+/*基础函数库*/
+.dp-activation-page-home {
+  padding-top: 100px;
+}
+.dp-activation-page-home .home-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+}
+.dp-activation-page-home .home-header .header-menu {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  color: #1c1c1c;
+  height: 100px;
+  line-height: 100px;
+}
+.dp-activation-page-home .home-header .header-menu .menu-item {
+  text-transform: uppercase;
+  position: relative;
+}
+.dp-activation-page-home .home-header .header-menu .menu-item.logo {
+  -webkit-box-flex: 4;
+  -moz-box-flex: 4;
+  -webkit-flex: 4;
+  -ms-flex: 4;
+  flex: 4;
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+.dp-activation-page-home .home-header .header-menu .menu-item.logo:hover {
+  color: #999;
+}
+.dp-activation-page-home .home-header .header-menu .menu-item.logo .right {
+  color: #666;
+  margin-left: 10px;
+}
+.dp-activation-page-home .home-header .header-menu .menu-item.init {
+  -webkit-box-flex: 2;
+  -moz-box-flex: 2;
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms;
+  cursor: pointer;
+}
+.dp-activation-page-home .home-header .header-menu .menu-item.init:hover {
+  color: #999;
+}
+.dp-activation-page-home .home-header .header-menu .menu-item.item {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.dp-activation-page-home .home-header .header-menu .menu-item.item .item-menu {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms;
+  cursor: pointer;
+}
+.dp-activation-page-home .home-header .header-menu .menu-item.item .item-menu:hover {
+  color: #999;
+}
+.dp-activation-page-home .home-footer {
+  background: #1c1c1c;
+}
+.dp-activation-page-home .home-footer .footer-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 80px 0 30px;
+}
+.dp-activation-page-home .home-footer .footer-content .content-line {
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.dp-activation-page-home .home-footer .footer-content .content-line .line-item {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: 12px;
+  padding-right: 5%;
+}
+.dp-activation-page-home .home-footer .footer-content .content-line .line-item .title {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+.dp-activation-page-home .home-footer .footer-content .content-line .line-item .title.large {
+  font-size: 16px;
+}
+.dp-activation-page-home .home-footer .footer-content .content-line .line-item .info {
+  line-height: 16px;
+  color: #777;
+}
+.dp-activation-page-home .home-footer .footer-content .content-line .line-item .info > a {
+  color: #ddd;
 }
 
 /*基础色*/
@@ -936,6 +1088,7 @@ th {
   height: 80px;
   line-height: 80px;
   text-transform: uppercase;
+  position: relative;
 }
 .dp-activation-page-init .init-menu-wrapper .init-menu .footer-menu-item.logo {
   -webkit-box-flex: 4;
