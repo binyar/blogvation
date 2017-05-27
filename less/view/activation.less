@@ -7,15 +7,19 @@
   @grey: #666;
   @grey-light: #999;
   background: @black;
+  @font-face {
+    font-family: dp-activation;
+    src: url('../../public/fonts/CenturyGothic.woff')
+  }
+  font-family: dp-activation;
   .position-leftTop(0, 0);
+  .user-select(none);
   right: 0;
   bottom: 0;
-  overflow: hidden;
   &-page {
     .position-leftTop(0, 0);
     right: 0;
     bottom: 0;
-    overflow: hidden;
   }
   .x-icon-menu {
     .size(20px, 12px);
