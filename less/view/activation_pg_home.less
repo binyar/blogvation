@@ -82,6 +82,15 @@
       letter-spacing: 2px;
       color: #fff;
       font-weight: bold;
+      .sub {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .home-max-image {
+    > img {
+      .size(100%, auto);
     }
   }
   .home-banner {
@@ -268,6 +277,14 @@
                 }
               }
             }
+            &.detail {
+              .content-title {
+                font-size: 20px;
+                margin-bottom: 20px;
+                font-weight: bold;
+                line-height: 30px;
+              }
+            }
           }
         }
         .content-right {
@@ -366,6 +383,18 @@
                 .content-title {
                   width: 100%;
                 }
+              }
+            }
+            &.detail {
+              background: #2d2d2d;
+              .content-title-super {
+                color: #ddd;
+                font-size: 100px;
+                margin-top: -50px;
+                font-weight: bold;
+              }
+              .content-title, .content-info {
+                color: #ddd;
               }
             }
           }
@@ -834,6 +863,27 @@
               .rotate(-45deg);
             }
           }
+          &.prev {
+            .page-arrow-wrapper {
+              .page-arrow {
+                .rotate(45deg);
+              }
+            }
+          }
+        }
+        &.prev {
+          .page-arrow-wrapper {
+            .page-arrow {
+              &:after {
+                .position-leftTop(0, 8px);
+                .size(16px, 8px);
+              }
+              &:before {
+                .position-leftTop(0, 0);
+                .size(8px, 16px);
+              }
+            }
+          }
         }
       }
       .page-info {
@@ -847,6 +897,13 @@
         .info-info {
           font-size: 12px;
           margin-top: 10px;
+        }
+      }
+    }
+    .section-show {
+      .show-wrapper {
+        > img {
+          .size(100%, auto);
         }
       }
     }
