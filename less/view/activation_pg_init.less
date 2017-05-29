@@ -5,6 +5,14 @@
   @black-light: #2d2d2d;
   @grey: #666;
   @grey-light: #999;
+  .init-bg {
+    .position-leftTop(0, 0);
+    right: 0;
+    bottom: 0;
+    .background-size-cover();
+    background-position: center center;
+    background-image: url('http://activation-group.com/Upload/2016060320133014115.png');
+  }
   .init-menu-wrapper {
     position: absolute;
     left: 0;
@@ -32,20 +40,25 @@
         &:before {
           content: '';
           .position-leftTop(0, 0);
-          right: 0;
+          right: 100%;
           height: 5px;
           background: #fff;
+          .transition(all 1s);
         }
         &:after {
           content: '';
           .position-leftBottom(0, 0);
-          right: 0;
+          right: 100%;
           height: 1px;
           background: #fff;
+          .transition(all 1s);
         }
         &:hover {
           color: @grey-light;
           text-decoration: line-through;
+          &:before, &:after {
+            right: 0;
+          }
         }
       }
       .footer-menu-item {
@@ -69,10 +82,16 @@
         }
         &.init {
           .flex(2);
-          .transition(all 400ms);
+
           cursor: pointer;
+          > a {
+            .transition(all 400ms);
+            color: #fff;
+          }
           &:hover {
-            color: @grey-light;
+            > a {
+              color: @grey-light;
+            }
           }
         }
         &.item {
@@ -82,10 +101,17 @@
           .align-items(center);
           .item-menu {
             .flex(1);
-            .transition(all 400ms);
+
             cursor: pointer;
+            text-align: center;
             &:hover {
-              color: @grey-light;
+              > a {
+                color: @grey-light;
+              }
+            }
+            > a {
+              .transition(all 400ms);
+              color: #fff;
             }
           }
         }
@@ -112,58 +138,10 @@
         }
       }
       .text-wrapper {
-        .position-leftTop(0, 0);
-        overflow: hidden;
         .text-main {
-          .translate(-100%, 0);
-          .animation(textMove 200ms);
-          .animation-delay(1000ms);
-        }
-        .wrapper-mask {
-          .position-leftTop(0, 0);
-          right: 0;
-          bottom: 0;
-          &:before {
-            content: "";
-            .position-leftTop(0, 50%);
-            .translate(0, -50%);
-            height: 5px;
-            background: #fff;
-            width: 20%;
-            .animation(textLineMove 2s)
-          }
-          .animation(textMaskMove 200ms);
-          .animation-delay(1000ms)
+
         }
       }
-    }
-  }
-  @keyframes textLineMove {
-    from {
-      width: 20%;
-      .animation-timing-function(cubic-bezier(.87, .36, .99, .87));
-    }
-    50% {
-      width: 100%;
-    }
-    to {
-      width: 100%;
-    }
-  }
-  @keyframes textMaskMove {
-    from {
-      .translate(0, 0);
-    }
-    to {
-      .translate(100%, 0);
-    }
-  }
-  @keyframes textMove {
-    from {
-      .translate(-100%, 0);
-    }
-    to {
-      .translate(0, 0);
     }
   }
 }

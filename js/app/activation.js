@@ -4,14 +4,5 @@
  * Time: 11:31
  */
 ;(function () {
-    page('/', function () {
 
-    });
-    page('/home', function () {
-        console.log('..home')
-    });
-    page({
-        hashbang: true
-    });
-    page.redirect();
 })();

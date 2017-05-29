@@ -31,19 +31,31 @@
           font-size: 18px;
           font-weight: bold;
           &:hover {
-            color: @grey-light;
+            > a {
+              color: @grey-light;
+            }
           }
           .right {
             color: @grey;
             margin-left: 10px;
           }
+          > a {
+            .transition(all 400ms);
+            color: @grey;
+          }
         }
         &.init {
           .flex(2);
-          .transition(all 400ms);
+
           cursor: pointer;
           &:hover {
-            color: @grey-light;
+            > a {
+              color: @grey-light;
+            }
+          }
+          > a {
+            .transition(all 400ms);
+            color: @black;
           }
         }
         &.item {
@@ -53,10 +65,16 @@
           .align-items(center);
           .item-menu {
             .flex(1);
-            .transition(all 400ms);
             cursor: pointer;
+            text-align: center;
+            > a {
+              .transition(all 400ms);
+              color: @black;
+            }
             &:hover {
-              color: @grey-light;
+              > a {
+                color: @grey-light;
+              }
             }
           }
         }
