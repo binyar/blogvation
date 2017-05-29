@@ -881,11 +881,12 @@ th {
   background: #f5f5f5;
 }
 .dp-activation-page-home .home-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background: #fff;
+  z-index: 999;
 }
 .dp-activation-page-home .home-header .header-menu {
   max-width: 1600px;
@@ -1032,6 +1033,10 @@ th {
   margin-bottom: 25px;
   font-weight: bold;
 }
+.dp-activation-page-home .home-banner .banner-content .content-title.size-middle {
+  font-size: 50px;
+  line-height: 60px;
+}
 .dp-activation-page-home .home-banner .banner-content .content-info {
   width: 70%;
   font-size: 12px;
@@ -1051,6 +1056,30 @@ th {
 .dp-activation-page-home .home-main {
   max-width: 1600px;
   margin: 0 auto;
+}
+.dp-activation-page-home .home-main .section-welcome .welcome-banner {
+  overflow: hidden;
+}
+.dp-activation-page-home .home-main .section-welcome .welcome-banner .header-item {
+  position: relative;
+  float: right;
+  right: 0;
+  height: 60px;
+  line-height: 60px;
+  background: #2d2d2d;
+  color: #fff;
+  padding-left: 30px;
+  font-weight: bold;
+  font-size: 12px;
+  width: 30%;
+}
+.dp-activation-page-home .home-main .section-welcome .welcome-banner .header-item.size-small {
+  width: 25%;
+}
+.dp-activation-page-home .home-main .section-welcome .welcome-banner .header-item.for-left {
+  position: relative;
+  float: left;
+  left: 0;
 }
 .dp-activation-page-home .home-main .section-welcome .welcome-content {
   display: -webkit-box;
@@ -1140,11 +1169,13 @@ th {
 }
 .dp-activation-page-home .home-main .section-welcome .welcome-content .content-left.for-content.agency .content-title {
   font-size: 120px;
+  font-weight: bold;
 }
 .dp-activation-page-home .home-main .section-welcome .welcome-content .content-left.for-content.agency .content-sub-title {
   font-size: 26px;
   line-height: 32px;
   margin-bottom: 25px;
+  font-weight: bold;
 }
 .dp-activation-page-home .home-main .section-welcome .welcome-content .content-left.for-content.agency .content-info {
   color: #aaa;
@@ -1153,6 +1184,14 @@ th {
 .dp-activation-page-home .home-main .section-welcome .welcome-content .content-left.for-content.agency .content-info.label {
   margin-bottom: 5px;
   color: #f2f2f2;
+}
+.dp-activation-page-home .home-main .section-welcome .welcome-content .content-left.for-content.agency.team {
+  background: rgba(102, 102, 102, 0.09);
+  color: #3f3f3f;
+  height: 630px;
+}
+.dp-activation-page-home .home-main .section-welcome .welcome-content .content-left.for-content.agency.team .content-info {
+  color: #666;
 }
 .dp-activation-page-home .home-main .section-welcome .welcome-content .content-right {
   -webkit-box-flex: 3;
@@ -1193,6 +1232,11 @@ th {
   color: #666;
   line-height: 18px;
   font-size: 12px;
+}
+.dp-activation-page-home .home-main .section-welcome .welcome-content .content-right .for-content .content-sub-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 50px;
 }
 .dp-activation-page-home .home-main .section-welcome .welcome-content .content-right .for-content .content-footer {
   position: absolute;
@@ -1266,6 +1310,20 @@ th {
   letter-spacing: 2px;
   margin-bottom: 60px;
   width: 75%;
+}
+.dp-activation-page-home .home-main .section-welcome .welcome-content .content-right .for-content.agency.team {
+  height: 630px;
+}
+.dp-activation-page-home .home-main .section-welcome .welcome-content .content-right .for-content.agency.team .content-title {
+  width: 100%;
+}
+.dp-activation-page-home .home-main .section-welcome .welcome-footer {
+  padding: 65px 0 100px 75px;
+  background: #fff;
+  font-size: 12px;
+}
+.dp-activation-page-home .home-main .section-welcome .welcome-footer .footer-info {
+  margin-top: 75px;
 }
 .dp-activation-page-home .home-main .section-items {
   height: 590px;
@@ -1788,6 +1846,171 @@ th {
 }
 .dp-activation-page-home .home-group .group-main.style-dark .content-item .item-big:after {
   background: #f2f2f2;
+}
+.dp-activation-page-home .home-person {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.dp-activation-page-home .home-person .person-line {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.dp-activation-page-home .home-person .person-line .person {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  color: #3f3f3f;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.dp-activation-page-home .home-person .person-line .person .person-title {
+  font-size: 39px;
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  font-weight: bold;
+}
+.dp-activation-page-home .home-person .person-line .person .person-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  background-position: center center;
+}
+.dp-activation-page-home .home-person .person-line .person .person-name {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
+  z-index: 2;
+}
+.dp-activation-page-home .home-person .person-line .person .person-role {
+  position: absolute;
+  bottom: 100px;
+  left: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  opacity: 0;
+  z-index: 2;
+}
+.dp-activation-page-home .home-person .person-line .person .person-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  background: rgba(255, 255, 255, 0.7);
+  opacity: 0;
+}
+.dp-activation-page-home .home-person .person-line .person:hover .person-photo {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.dp-activation-page-home .home-person .person-line .person:hover .person-role,
+.dp-activation-page-home .home-person .person-line .person:hover .person-name {
+  opacity: 1;
+}
+.dp-activation-page-home .home-person .person-line .person:hover .person-mask {
+  opacity: 0.6;
+}
+.dp-activation-page-home .home-person .person-line .person.dark {
+  color: #fff;
+}
+.dp-activation-page-home .home-person .person-line .person.dark .person-mask {
+  background: #3f3f3f;
+}
+.dp-activation-page-home .home-person .person-line .person.style-white {
+  background: #fff;
+}
+.dp-activation-page-home .home-person .person-line .person-max {
+  background: #1b1b1b;
+  color: #f2f2f2;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
+}
+.dp-activation-page-home .home-person .person-line .person-max .max-content {
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  right: 100px;
+}
+.dp-activation-page-home .home-person .person-line .person-max .max-content .content-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.dp-activation-page-home .home-person .person-line .person-max .max-content .content-main {
+  font-size: 12px;
+  margin-bottom: 70px;
+}
+.dp-activation-page-home .home-person .person-line .person-max .max-content .content-email {
+  display: block;
+  width: 36px;
+  height: 36px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #999;
+  position: relative;
+}
+.dp-activation-page-home .home-person .person-line .person-max .max-content .content-email > i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #f2f2f2;
+  font-size: 18px;
+}
+.dp-activation-page-home .home-person .person-line .person-max .max-content .content-email:hover > i {
+  color: #999;
 }
 .dp-activation-page-home .home-group-footer {
   max-width: 1600px;
