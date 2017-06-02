@@ -9,28 +9,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Title</title>
     <style>
-        .demo {
-            width: 900px;
-            height: 500px;
-            border: 1px solid red;
-            margin: 100px auto;
-            overflow: auto;
-        }
 
-        .demo-a {
-            width: 80%;
-            height: 400px;
-            border: 1px solid black;
-        }
     </style>
 </head>
 <body>
 <div class="demo">
-    <div class="demo-a"></div>
-    <div class="demo-a"></div>
-    <div class="demo-a"></div>
+    <canvas id="demo" width="1000" height="800" style="background:black"></canvas>
+    <select>
+        <option>s</option>
+        <option>s2</option>
+    </select>
 </div>
 </body>
 <script src="../public/js/js-lib.js"></script>
 <script src="../public/js/js-common.js"></script>
+<script>
+    var canvas = document.getElementById('demo')
+    var context = canvas.getContext('2d');
+
+
+    var sColor = '#b484d9';
+    var eColor = '#835ca2';
+
+    area(100, 100, 500, 100);
+    function area(startX, startY, endX, endY) {
+        for (var i = 0; i < 1; i++) {
+            var randomX1 = createRandom(startX - 20, startX + 20);
+            var randomX2 = createRandom(endX - 20, endX + 20);
+            line(startX, createRandom(startY - 10, startY + 10), endX, createRandom(endY - 10, endY + 10));
+        }
+    }
+
+    function line(startX, startY, endX, endY) {
+        context.moveTo(startX, startY);
+        createLine(startX, startY, endX, endY);
+        /*function doP(stepX) {
+         var stepY = getY();
+         if (context.isPointInPath(stepX, stepY)) {
+         createLine(stepX, stepY, endX, endY);
+         } else {
+         doP(stepX)
+         }
+         }
+
+         for (var i = 0; i < 10; i++) {
+         var stepX = parseInt(createRandom(startX, endX));
+         doP(stepX);
+         }
+         function getY() {
+         return parseInt(createRandom(startY, endY))
+         }*/
+    }
+
+    function createLine(startX, startY, endX, endY) {
+        var controlX1 = createRandom(startX, endX);
+        var controlX2 = createRandom(controlX1, endX);
+        var controlY1 = createRandom(startY - 4, startY + 4);
+        var controlY2 = createRandom(endY - 4, endY + 4);
+        context.bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endX, endY);
+        context.strokeStyle = createGl(startX, startY, endX, endY);
+        context.stroke();
+    }
+    function createGl(startX, startY, endX, endY) {
+        var gl = context.createLinearGradient(parseInt(startX), parseInt(startY), parseInt(endX), parseInt(endY));
+        gl.addColorStop(0, sColor);
+        gl.addColorStop(0.5, '#fff');
+        gl.addColorStop(1, eColor);
+        return gl;
+    }
+
+    function createRandom(Min, Max) {
+        Min = parseInt(Min);
+        Max = parseInt(Max);
+        var Range = Max - Min;
+        var Rand = parseFloat(Math.random()).toFixed(2);
+        var num = Min + Math.round(Rand * Range); //四舍五入
+        return parseFloat(num).toFixed(2);
+    }
+</script>
 </html>

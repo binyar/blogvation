@@ -2645,7 +2645,33 @@ th {
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-position: center center;
-  background-image: url('http://activation-group.com/Upload/2016060320133014115.png');
+  opacity: 0;
+  z-index: 0;
+  -webkit-transition: all 4s;
+  -moz-transition: all 4s;
+  -o-transition: all 4s;
+  transition: all 4s;
+  -webkit-transform: translate(20px, -20px);
+  -moz-transform: translate(20px, -20px);
+  -ms-transform: translate(20px, -20px);
+  -o-transform: translate(20px, -20px);
+  transform: translate(20px, -20px);
+}
+.dp-activation-page-init .init-bg.fadeIn {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.dp-activation-page-init .init-bg.fadeOut {
+  opacity: 0;
+  -webkit-transform: translate(-20px, 20px);
+  -moz-transform: translate(-20px, 20px);
+  -ms-transform: translate(-20px, 20px);
+  -o-transform: translate(-20px, 20px);
+  transform: translate(-20px, 20px);
 }
 .dp-activation-page-init .init-menu-wrapper {
   position: absolute;
@@ -2684,10 +2710,10 @@ th {
   height: 80px;
   line-height: 80px;
   position: relative;
-  -webkit-transition: all 400ms;
-  -moz-transition: all 400ms;
-  -o-transition: all 400ms;
-  transition: all 400ms;
+  -webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  -o-transition: all 2s;
+  transition: all 2s;
   cursor: pointer;
 }
 .dp-activation-page-init .init-menu-wrapper .init-menu .header-menu-item:before {
@@ -2698,10 +2724,10 @@ th {
   right: 100%;
   height: 5px;
   background: #fff;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 4s;
+  -moz-transition: all 4s;
+  -o-transition: all 4s;
+  transition: all 4s;
 }
 .dp-activation-page-init .init-menu-wrapper .init-menu .header-menu-item:after {
   content: '';
@@ -2711,17 +2737,20 @@ th {
   right: 100%;
   height: 1px;
   background: #fff;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 4s;
+  -moz-transition: all 4s;
+  -o-transition: all 4s;
+  transition: all 4s;
 }
-.dp-activation-page-init .init-menu-wrapper .init-menu .header-menu-item:hover {
+.dp-activation-page-init .init-menu-wrapper .init-menu .header-menu-item:hover,
+.dp-activation-page-init .init-menu-wrapper .init-menu .header-menu-item.active {
   color: #999;
   text-decoration: line-through;
 }
 .dp-activation-page-init .init-menu-wrapper .init-menu .header-menu-item:hover:before,
-.dp-activation-page-init .init-menu-wrapper .init-menu .header-menu-item:hover:after {
+.dp-activation-page-init .init-menu-wrapper .init-menu .header-menu-item.active:before,
+.dp-activation-page-init .init-menu-wrapper .init-menu .header-menu-item:hover:after,
+.dp-activation-page-init .init-menu-wrapper .init-menu .header-menu-item.active:after {
   right: 0;
 }
 .dp-activation-page-init .init-menu-wrapper .init-menu .footer-menu-item {

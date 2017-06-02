@@ -11,7 +11,18 @@
     bottom: 0;
     .background-size-cover();
     background-position: center center;
-    background-image: url('http://activation-group.com/Upload/2016060320133014115.png');
+    .opacity(0);
+    z-index: 0;
+    .transition(all 4s);
+    .translate(20px, -20px);
+    &.fadeIn {
+      .opacity(1);
+      .translate(0, 0);
+    }
+    &.fadeOut {
+      .opacity(0);
+      .translate(-20px, 20px);
+    }
   }
   .init-menu-wrapper {
     position: absolute;
@@ -35,7 +46,7 @@
         height: 80px;
         line-height: 80px;
         position: relative;
-        .transition(all 400ms);
+        .transition(all 2s);
         cursor: pointer;
         &:before {
           content: '';
@@ -43,7 +54,7 @@
           right: 100%;
           height: 5px;
           background: #fff;
-          .transition(all 1s);
+          .transition(all 4s);
         }
         &:after {
           content: '';
@@ -51,9 +62,9 @@
           right: 100%;
           height: 1px;
           background: #fff;
-          .transition(all 1s);
+          .transition(all 4s);
         }
-        &:hover {
+        &:hover, &.active {
           color: @grey-light;
           text-decoration: line-through;
           &:before, &:after {
@@ -101,7 +112,6 @@
           .align-items(center);
           .item-menu {
             .flex(1);
-
             cursor: pointer;
             text-align: center;
             &:hover {

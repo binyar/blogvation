@@ -13,7 +13,16 @@
 <body class="dp-activation">
 <div class="dp-activation-page">
     <div class="dp-activation-page-init">
-        <div class="init-bg"></div>
+        <div class="init-bg"
+             style="background-image: url('http://activation-group.com/Upload/2016060320133014115.png');"></div>
+        <div class="init-bg"
+             style="background-image: url('http://activation-group.com/Upload/2016060320133014115.png');"></div>
+        <div class="init-bg"
+             style="background-image: url('http://activation-group.com/Upload/2016060320133014115.png');"></div>
+        <div class="init-bg"
+             style="background-image: url('http://activation-group.com/Upload/2016060320133014115.png');"></div>
+        <div class="init-bg"
+             style="background-image: url('http://activation-group.com/Upload/2016060320133014115.png');"></div>
         <div class="init-menu-wrapper header">
             <div class="init-menu">
                 <div class="header-menu-item">EVENT</div>
@@ -71,4 +80,23 @@
 <script src="../public/js/js-lib.js"></script>
 <script src="../public/js/js-common.js"></script>
 <script src="../public/js/activation.js"></script>
+<script>
+    var $menus = $('.header-menu-item');
+    var $bgs = $('.init-bg');
+    function animate(i) {
+        if (i === $menus.length) {
+            //跳转逻辑
+            return;
+        }
+        $menus.eq(i).addClass('active').siblings().removeClass('active');
+        $('.fadeIn', $bgs).removeClass('fadeIn').addClass('fadeOut');
+        $bgs.eq(i).removeClass('fadeOut').addClass('fadeIn').siblings().removeClass('fadeIn');
+        setTimeout(function () {
+            animate(i + 1)
+        }, 4000)
+    }
+    setTimeout(function () {
+        animate(0)
+    }, 100)
+</script>
 </html>
