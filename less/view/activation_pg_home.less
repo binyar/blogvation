@@ -12,6 +12,13 @@
     right: 0;
     background: #fff;
     z-index: 999;
+    .transition(all 600ms);
+    .opacity(0);
+    .translate(0, -20px);
+    &.fadeIn {
+      .translate(0, 0);
+      .opacity(1);
+    }
     .header-menu {
       max-width: 1600px;
       margin: 0 auto;
@@ -79,6 +86,15 @@
           }
         }
       }
+    }
+  }
+  .home-main-body {
+    .transition(all 600ms);
+    .opacity(0);
+    .translate(0, 20px);
+    &.fadeIn {
+      .translate(0, 0);
+      .opacity(1);
     }
   }
   .home-max {

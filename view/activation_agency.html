@@ -10,7 +10,14 @@
     <title>DP-Design DP-Activation</title>
     <link rel="stylesheet" type="text/css" href="../public/css/main.css"/>
 </head>
-<body class="dp-activation">
+<body class="dp-activation" onload="DP.onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
 <div class="dp-activation-page">
     <div class="dp-activation-page-home">
         <div class="home-header">
@@ -42,575 +49,614 @@
                 </div>
             </div>
         </div>
-        <div class="home-max">
-            <div class="max-bg"
-                 style="background-image:url(http://activation-group.com/Upload/h_agency.jpg);"></div>
-            <div class="max-content">
-                We house a team of committed professionals that help our clients to build a strong presence in the
-                marketplace and to achieve desirable results.
-            </div>
-        </div>
-        <div class="home-main">
-            <div class="section-welcome">
-                <div class="welcome-content">
-                    <div class="content-right">
-                        <div class="header-item style-dark">
-                            - ABOUT US
-                        </div>
-                    </div>
-                    <div class="content-left"></div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/h_agency.jpg);"></div>
+                <div class="max-content">
+                    We house a team of committed professionals that help our clients to build a strong presence in the
+                    marketplace and to achieve desirable results.
                 </div>
-                <div class="welcome-content">
-                    <div class="content-right">
-                        <div class="for-content agency">
+            </div>
+            <div class="home-main">
+                <div class="section-welcome">
+                    <div class="welcome-content">
+                        <div class="content-right">
+                            <div class="header-item style-dark">
+                                - ABOUT US
+                            </div>
+                        </div>
+                        <div class="content-left"></div>
+                    </div>
+                    <div class="welcome-content">
+                        <div class="content-right">
+                            <div class="for-content agency">
+                                <div class="content-title">
+                                    Walk into our Agency
+                                </div>
+                                <div class="content-info">
+                                    We keep writing our great milestones in the journey we've been through since 2008
+                                    with
+                                    headquarter office selected to be located in Shanghai. Following by the years of
+                                    rapid
+                                    growth, ACTIVATION GROUP is seen as a preferential marketing partner in China with
+                                    15
+                                    years industry experience, ACTIVATION GROUP has grown into a privileged leading
+                                    marketing solution agency for luxury and premium brands.
+                                    <br>
+                                    <br>
+                                    From an event specialised agency to an organisation that provides full range of
+                                    marketing services, our solid industry expertise allows us to deliver one-stop
+                                    marketing
+                                    solutions across multiple disciplines.
+                                    <br>
+                                    <br>
+                                    Our offices in Shanghai, Beijing, Hong Kong and Singapore of wide coverage ensure
+                                    our
+                                    capability in supporting our clients' business development across Greater China and
+                                    Asia
+                                    Pacific region.
+                                    <br>
+                                    <br>
+                                    As an all-arounded player, we build a strong presence in the marketplace, our
+                                    comprehensive and outstanding business model allows us to bring services across
+                                    multiple
+                                    disciplines including Event, PR, Digital and sports & entertainment marketing
+                                    services
+                                    under one roof with seamless communications to our most valued clients.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-left for-content agency">
                             <div class="content-title">
-                                Walk into our Agency
+                                m
+                            </div>
+                            <div class="content-sub-title">MILESTONE
+                            </div>
+                            <div class="content-info label">
+                                Dec, 2016
                             </div>
                             <div class="content-info">
-                                We keep writing our great milestones in the journey we've been through since 2008 with
-                                headquarter office selected to be located in Shanghai. Following by the years of rapid
-                                growth, ACTIVATION GROUP is seen as a preferential marketing partner in China with 15
-                                years industry experience, ACTIVATION GROUP has grown into a privileged leading
-                                marketing solution agency for luxury and premium brands.
-                                <br>
-                                <br>
+                                CTIVATION GROUP won a World Luxury Award Gold Trophy for the Launch of Laliga Club in
+                                the
+                                Events category and the Finalist for Land Rover Never Stop Discovery in the Cars &
+                                Yachts
+                                category.
+                            </div>
+                            <div class="content-info label">
+                                Dec, 2016
+                            </div>
+                            <div class="content-info">
+                                CTIVATION GROUP won a World Luxury Award Gold Trophy for the Launch of Laliga Club in
+                                the
+                                Events category and the Finalist for Land Rover Never Stop Discovery in the Cars &
+                                Yachts
+                                category.
+                            </div>
+                            <div class="content-info label">
+                                Dec, 2016
+                            </div>
+                            <div class="content-info">
+                                CTIVATION GROUP won a World Luxury Award Gold Trophy for the Launch of Laliga Club in
+                                the
+                                Events category and the Finalist for Land Rover Never Stop Discovery in the Cars &
+                                Yachts
+                                category.
+                            </div>
+                            <div class="content-info label">
+                                Dec, 2016
+                            </div>
+                            <div class="content-info">
+                                CTIVATION GROUP won a World Luxury Award Gold Trophy for the Launch of Laliga Club in
+                                the
+                                Events category and the Finalist for Land Rover Never Stop Discovery in the Cars &
+                                Yachts
+                                category.
+                            </div>
+                            <div class="content-info label">
+                                Dec, 2016
+                            </div>
+                            <div class="content-info">
+                                CTIVATION GROUP won a World Luxury Award Gold Trophy for the Launch of Laliga Club in
+                                the
+                                Events category and the Finalist for Land Rover Never Stop Discovery in the Cars &
+                                Yachts
+                                category.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-banner">
+                <div class="banner-content">
+                    <div class="content-title">
+                        We work seamlessly with our clients to create professional yet exclusive resolutions.
+                    </div>
+                    <div class="content-info">
+                        As a marketing agency that provides full services for luxury and premium brands, we create cost
+                        effective and powerful marketing programs that set the industry benchmarks and enable our brands
+                        to
+                        realise the long-term ambition
+                    </div>
+                </div>
+                <div class="banner-bg"
+                     style="background-image:url('http://activation-group.com/Upload/full_agency.jpg')">
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome">
+                    <div class="welcome-content">
+                        <div class="content-left"></div>
+                        <div class="content-right">
+                            <div class="header-item">
+                                - DIVISIONS
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome-content">
+                        <div class="content-left for-content size-middle">
+                            <div class="content-title style-large">
+                                Integrated Marketing Expert
+                            </div>
+                            <div class="content-info">
                                 From an event specialised agency to an organisation that provides full range of
-                                marketing services, our solid industry expertise allows us to deliver one-stop marketing
-                                solutions across multiple disciplines.
-                                <br>
-                                <br>
-                                Our offices in Shanghai, Beijing, Hong Kong and Singapore of wide coverage ensure our
-                                capability in supporting our clients' business development across Greater China and Asia
-                                Pacific region.
-                                <br>
-                                <br>
-                                As an all-arounded player, we build a strong presence in the marketplace, our
-                                comprehensive and outstanding business model allows us to bring services across multiple
-                                disciplines including Event, PR, Digital and sports & entertainment marketing services
-                                under one roof with seamless communications to our most valued clients.
+                                marketing
+                                services, our solid industry expertise allows us to deliver one-stop marketing solutions
+                                across multiple disciplines.
                             </div>
                         </div>
-                    </div>
-                    <div class="content-left for-content agency">
-                        <div class="content-title">
-                            m
-                        </div>
-                        <div class="content-sub-title">MILESTONE
-                        </div>
-                        <div class="content-info label">
-                            Dec, 2016
-                        </div>
-                        <div class="content-info">
-                            CTIVATION GROUP won a World Luxury Award Gold Trophy for the Launch of Laliga Club in the
-                            Events category and the Finalist for Land Rover Never Stop Discovery in the Cars & Yachts
-                            category.
-                        </div>
-                        <div class="content-info label">
-                            Dec, 2016
-                        </div>
-                        <div class="content-info">
-                            CTIVATION GROUP won a World Luxury Award Gold Trophy for the Launch of Laliga Club in the
-                            Events category and the Finalist for Land Rover Never Stop Discovery in the Cars & Yachts
-                            category.
-                        </div>
-                        <div class="content-info label">
-                            Dec, 2016
-                        </div>
-                        <div class="content-info">
-                            CTIVATION GROUP won a World Luxury Award Gold Trophy for the Launch of Laliga Club in the
-                            Events category and the Finalist for Land Rover Never Stop Discovery in the Cars & Yachts
-                            category.
-                        </div>
-                        <div class="content-info label">
-                            Dec, 2016
-                        </div>
-                        <div class="content-info">
-                            CTIVATION GROUP won a World Luxury Award Gold Trophy for the Launch of Laliga Club in the
-                            Events category and the Finalist for Land Rover Never Stop Discovery in the Cars & Yachts
-                            category.
-                        </div>
-                        <div class="content-info label">
-                            Dec, 2016
-                        </div>
-                        <div class="content-info">
-                            CTIVATION GROUP won a World Luxury Award Gold Trophy for the Launch of Laliga Club in the
-                            Events category and the Finalist for Land Rover Never Stop Discovery in the Cars & Yachts
-                            category.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="home-banner">
-            <div class="banner-content">
-                <div class="content-title">
-                    We work seamlessly with our clients to create professional yet exclusive resolutions.
-                </div>
-                <div class="content-info">
-                    As a marketing agency that provides full services for luxury and premium brands, we create cost
-                    effective and powerful marketing programs that set the industry benchmarks and enable our brands to
-                    realise the long-term ambition
-                </div>
-            </div>
-            <div class="banner-bg" style="background-image:url('http://activation-group.com/Upload/full_agency.jpg')">
-            </div>
-        </div>
-        <div class="home-main">
-            <div class="section-welcome">
-                <div class="welcome-content">
-                    <div class="content-left"></div>
-                    <div class="content-right">
-                        <div class="header-item">
-                            - DIVISIONS
-                        </div>
-                    </div>
-                </div>
-                <div class="welcome-content">
-                    <div class="content-left for-content size-middle">
-                        <div class="content-title style-large">
-                            Integrated Marketing Expert
-                        </div>
-                        <div class="content-info">
-                            From an event specialised agency to an organisation that provides full range of marketing
-                            services, our solid industry expertise allows us to deliver one-stop marketing solutions
-                            across multiple disciplines.
-                        </div>
-                    </div>
-                    <div class="content-right">
-                        <div class="for-content size-middle">
-                            <div class="content-title">
-                                Preferential Partner for Luxury & Premium Brands
-                            </div>
-                            <div class="content-info">
-                                With our unique expertise in offering fully integrated marketing solution, ACTIVATION
-                                GROUP has gained significant industry recognition and is positioned as one of the most
-                                preferential partners for luxury and premium brands.
+                        <div class="content-right">
+                            <div class="for-content size-middle">
+                                <div class="content-title">
+                                    Preferential Partner for Luxury & Premium Brands
+                                </div>
+                                <div class="content-info">
+                                    With our unique expertise in offering fully integrated marketing solution,
+                                    ACTIVATION
+                                    GROUP has gained significant industry recognition and is positioned as one of the
+                                    most
+                                    preferential partners for luxury and premium brands.
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="home-group style-grey">
-            <div class="group-main style-dark">
-                <div class="main-title">
-                    ONE ACTIVATION ONE GROUP
+            <div class="home-group style-grey">
+                <div class="group-main style-dark">
+                    <div class="main-title">
+                        ONE ACTIVATION ONE GROUP
+                    </div>
+                    <div class="main-sub-title">
+                        OUR DIVISIONS
+                    </div>
+                    <div class="main-content">
+                        <div class="content-item">
+                            <div class="item-info">
+                                Event, Fashion Show, Exhibition,
+                                Gala Dinner, Party & Launch Ceremony
+                            </div>
+                            <div class="item-big">
+                                e
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="item-info">
+                                Public Relations, Media Relations, Celebrity & Retainer Services
+                            </div>
+                            <div class="item-big">
+                                p
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="item-info">
+                                Digital Strategies, Website, Mobile & Social CRM
+                            </div>
+                            <div class="item-big">
+                                d
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="item-info">
+                                Branding, Advertising, & Strategic/Communication Planning
+                            </div>
+                            <div class="item-big">
+                                b
+                            </div>
+                        </div>
+                        <div class="content-item">
+                            <div class="item-info">
+                                Event, Fashion Show, Exhibition,
+                                Gala Dinner, Party & Launch Ceremony
+                            </div>
+                            <div class="item-big">
+                                e
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="main-sub-title">
-                    OUR DIVISIONS
+            </div>
+            <div class="home-main">
+                <div class="section-images">
+                    <div class="images-item">
+                        <div class="item-image">
+                            <img src="http://activation-group.com/Upload/office1.jpg"/>
+                        </div>
+                        <div class="item-content">
+                            <div class="content-line title">
+                                SHANGHAI
+                            </div>
+                            <div class="content-line title">
+                                -
+                            </div>
+                            <div class="content-line info">
+                                Headquarter provides full
+                                <br>
+                                range of marketing solutions
+                            </div>
+                        </div>
+                        <div class="item-mask"></div>
+                    </div>
+                    <div class="images-item">
+                        <div class="item-image">
+                            <img src="http://activation-group.com/Upload/office2.jpg"/>
+                        </div>
+                        <div class="item-content">
+                            <div class="content-line title">
+                                BEIJING
+                            </div>
+                            <div class="content-line title">
+                                -
+                            </div>
+                            <div class="content-line info">
+                                Focus on creative
+                                <br>
+                                Automotive industry event
+                            </div>
+                        </div>
+                        <div class="item-mask"></div>
+                    </div>
+                    <div class="images-item">
+                        <div class="item-image">
+                            <img src="http://activation-group.com/Upload/office_hk2.jpg"/>
+                        </div>
+                        <div class="item-content">
+                            <div class="content-line title">
+                                HONG KONG
+                            </div>
+                            <div class="content-line title">
+                                -
+                            </div>
+                            <div class="content-line info">
+                                Mega event & PR in the region
+                                <br>
+                                hub to connect with Greater China
+                            </div>
+                        </div>
+                        <div class="item-mask"></div>
+                    </div>
+                    <div class="images-item">
+                        <div class="item-image">
+                            <img src="http://activation-group.com/Upload/office5.jpg"/>
+                        </div>
+                        <div class="item-content">
+                            <div class="content-line title">
+                                SINGAPORE
+                            </div>
+                            <div class="content-line title">
+                                -
+                            </div>
+                            <div class="content-line info">
+                                Marketing consultancy &
+                                <br>
+                                event expert
+                            </div>
+                        </div>
+                        <div class="item-mask"></div>
+                    </div>
                 </div>
-                <div class="main-content">
-                    <div class="content-item">
-                        <div class="item-info">
-                            Event, Fashion Show, Exhibition,
+                <div class="section-concat">
+                    <div class="concat-item">
+                        <div class="item-mark">
+                            01
+                            <div class="mark-mask">EVENT</div>
+                        </div>
+                        <div class="item-description">
+                            ACTIVATION EVENTS is specialized and dedicated to creating, developing and delivering highly
+                            impactful marketing promotion and event experiences. We host a team of competent and
+                            committed
+                            professionals specialized in marketing communications, event management, sound & light
+                            engineering and creative productions to provide unique expertise to cater the high
+                            expectation
+                            of our needs to clients.
+                            <br>
+                            <br>
+                            Our services include:
+                            Event, Store Opening, Fashion Show, Exhibition & Road Show,
                             Gala Dinner, Party & Launch Ceremony
                         </div>
-                        <div class="item-big">
-                            e
+                        <div class="item-footer">
+                            <div class="footer-text dark">
+                                &nbsp;&nbsp;DROP A LINE
+                            </div>
+                            <div class="footer-text">
+                                - Event Expert
+                            </div>
+                            <a href="mailto:hr@fanmaodong.com" class="footer-icon-wrapper">
+                                <i class="iconfont icon-email"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="content-item">
-                        <div class="item-info">
-                            Public Relations, Media Relations, Celebrity & Retainer Services
+                    <div class="concat-item">
+                        <div class="item-mark">
+                            02
+                            <div class="mark-mask">PR</div>
                         </div>
-                        <div class="item-big">
-                            p
-                        </div>
-                    </div>
-                    <div class="content-item">
-                        <div class="item-info">
-                            Digital Strategies, Website, Mobile & Social CRM
-                        </div>
-                        <div class="item-big">
-                            d
-                        </div>
-                    </div>
-                    <div class="content-item">
-                        <div class="item-info">
-                            Branding, Advertising, & Strategic/Communication Planning
-                        </div>
-                        <div class="item-big">
-                            b
-                        </div>
-                    </div>
-                    <div class="content-item">
-                        <div class="item-info">
-                            Event, Fashion Show, Exhibition,
-                            Gala Dinner, Party & Launch Ceremony
-                        </div>
-                        <div class="item-big">
-                            e
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="home-main">
-            <div class="section-images">
-                <div class="images-item">
-                    <div class="item-image">
-                        <img src="http://activation-group.com/Upload/office1.jpg"/>
-                    </div>
-                    <div class="item-content">
-                        <div class="content-line title">
-                            SHANGHAI
-                        </div>
-                        <div class="content-line title">
-                            -
-                        </div>
-                        <div class="content-line info">
-                            Headquarter provides full
+                        <div class="item-description">
+                            ACTIVATION LIQUID has a house of PR practitioners with over 15 years of experience in the
+                            market, has been remarkably seen as the market leading PR and event management agent in
+                            China.
+                            Together with solid experience working with luxury & premium brands, we establish strong
+                            connection of work with access to celebrity, lifestyle, arts & entertainment industries to
+                            create the best synergy to our clients.
                             <br>
-                            range of marketing solutions
-                        </div>
-                    </div>
-                    <div class="item-mask"></div>
-                </div>
-                <div class="images-item">
-                    <div class="item-image">
-                        <img src="http://activation-group.com/Upload/office2.jpg"/>
-                    </div>
-                    <div class="item-content">
-                        <div class="content-line title">
-                            BEIJING
-                        </div>
-                        <div class="content-line title">
-                            -
-                        </div>
-                        <div class="content-line info">
-                            Focus on creative
                             <br>
-                            Automotive industry event
+                            Our services include:
+                            Media Relations, Celebrities & Guest Management, PR Strategic Planning & Counseling, Media
+                            Pitching, Media Cooperation, Editorial Write-up, Fashion Shooting Arrangement, Press Sample
+                            Management, Seasonal Collection Media Preview, Media Invitation, Management Interview, Issue
+                            Management, etc.
+                        </div>
+                        <div class="item-footer">
+                            <div class="footer-text dark">
+                                &nbsp;&nbsp;DROP A LINE
+                            </div>
+                            <div class="footer-text">
+                                - PR Expert
+                            </div>
+                            <a href="mailto:hr@fanmaodong.com" class="footer-icon-wrapper">
+                                <i class="iconfont icon-email"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="item-mask"></div>
-                </div>
-                <div class="images-item">
-                    <div class="item-image">
-                        <img src="http://activation-group.com/Upload/office_hk2.jpg"/>
-                    </div>
-                    <div class="item-content">
-                        <div class="content-line title">
-                            HONG KONG
+                    <div class="concat-item">
+                        <div class="item-mark">
+                            03
+                            <div class="mark-mask">DIGITAL</div>
                         </div>
-                        <div class="content-line title">
-                            -
-                        </div>
-                        <div class="content-line info">
-                            Mega event & PR in the region
+                        <div class="item-description">
+                            ACTIVATION NODEPLUS works w ith China based and the world’s biggest brands to deliver
+                            integrated
+                            digital solutions which includes but not limited to web-broadcast, social CRM program and
+                            brand
+                            social communications. We believe in the power of creativity and we are passionate to turn
+                            big
+                            ideas and data into personal experiences. We endeavor to elevate our clients to win more
+                            loyal
+                            customers and create the biggest value for them.
                             <br>
-                            hub to connect with Greater China
-                        </div>
-                    </div>
-                    <div class="item-mask"></div>
-                </div>
-                <div class="images-item">
-                    <div class="item-image">
-                        <img src="http://activation-group.com/Upload/office5.jpg"/>
-                    </div>
-                    <div class="item-content">
-                        <div class="content-line title">
-                            SINGAPORE
-                        </div>
-                        <div class="content-line title">
-                            -
-                        </div>
-                        <div class="content-line info">
-                            Marketing consultancy &
                             <br>
-                            event expert
+                            Our services include:
+                            Digital Strategy, Social Strategy & Content Development,
+                            Digital Advertising and E-Commerce
+                        </div>
+                        <div class="item-footer">
+                            <div class="footer-text dark">
+                                &nbsp;&nbsp;DROP A LINE
+                            </div>
+                            <div class="footer-text">
+                                - Digital Expert
+                            </div>
+                            <a href="mailto:hr@fanmaodong.com" class="footer-icon-wrapper">
+                                <i class="iconfont icon-email"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="item-mask"></div>
-                </div>
-            </div>
-            <div class="section-concat">
-                <div class="concat-item">
-                    <div class="item-mark">
-                        01
-                        <div class="mark-mask">EVENT</div>
-                    </div>
-                    <div class="item-description">
-                        ACTIVATION EVENTS is specialized and dedicated to creating, developing and delivering highly
-                        impactful marketing promotion and event experiences. We host a team of competent and committed
-                        professionals specialized in marketing communications, event management, sound & light
-                        engineering and creative productions to provide unique expertise to cater the high expectation
-                        of our needs to clients.
-                        <br>
-                        <br>
-                        Our services include:
-                        Event, Store Opening, Fashion Show, Exhibition & Road Show,
-                        Gala Dinner, Party & Launch Ceremony
-                    </div>
-                    <div class="item-footer">
-                        <div class="footer-text dark">
-                            &nbsp;&nbsp;DROP A LINE
+                    <div class="concat-item">
+                        <div class="item-mark">
+                            04
+                            <div class="mark-mask">SPORTS & ENTERTAINMENT</div>
                         </div>
-                        <div class="footer-text">
-                            - Event Expert
+                        <div class="item-description">
+                            ACTIVATION ENTERTAINMENT has a professional team dedicated on Sports & Entertainment
+                            Marketing
+                            for years and we are the leading agency of the Sports & Entertainment Marketing in China
+                            Market.
+                            We already built up a strong relationship with Hollywood Studios and the movie industry in
+                            China, meanwhile, we leverage on the creative team and resource team to fully support our
+                            exciting project development in order to satisfy the diversified demands of our clients.
+                            <br>
+                            <br>
+                            Our services include:
+                            Provide exclusive Content to enhance brand personality
+                            Get in touch with potential customer with Entertainment platform
+                            roduct Licensing for further promotion in multiple channels
                         </div>
-                        <a href="mailto:hr@fanmaodong.com" class="footer-icon-wrapper">
-                            <i class="iconfont icon-email"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="concat-item">
-                    <div class="item-mark">
-                        02
-                        <div class="mark-mask">PR</div>
-                    </div>
-                    <div class="item-description">
-                        ACTIVATION LIQUID has a house of PR practitioners with over 15 years of experience in the
-                        market, has been remarkably seen as the market leading PR and event management agent in China.
-                        Together with solid experience working with luxury & premium brands, we establish strong
-                        connection of work with access to celebrity, lifestyle, arts & entertainment industries to
-                        create the best synergy to our clients.
-                        <br>
-                        <br>
-                        Our services include:
-                        Media Relations, Celebrities & Guest Management, PR Strategic Planning & Counseling, Media
-                        Pitching, Media Cooperation, Editorial Write-up, Fashion Shooting Arrangement, Press Sample
-                        Management, Seasonal Collection Media Preview, Media Invitation, Management Interview, Issue
-                        Management, etc.
-                    </div>
-                    <div class="item-footer">
-                        <div class="footer-text dark">
-                            &nbsp;&nbsp;DROP A LINE
-                        </div>
-                        <div class="footer-text">
-                            - PR Expert
-                        </div>
-                        <a href="mailto:hr@fanmaodong.com" class="footer-icon-wrapper">
-                            <i class="iconfont icon-email"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="concat-item">
-                    <div class="item-mark">
-                        03
-                        <div class="mark-mask">DIGITAL</div>
-                    </div>
-                    <div class="item-description">
-                        ACTIVATION NODEPLUS works w ith China based and the world’s biggest brands to deliver integrated
-                        digital solutions which includes but not limited to web-broadcast, social CRM program and brand
-                        social communications. We believe in the power of creativity and we are passionate to turn big
-                        ideas and data into personal experiences. We endeavor to elevate our clients to win more loyal
-                        customers and create the biggest value for them.
-                        <br>
-                        <br>
-                        Our services include:
-                        Digital Strategy, Social Strategy & Content Development,
-                        Digital Advertising and E-Commerce
-                    </div>
-                    <div class="item-footer">
-                        <div class="footer-text dark">
-                            &nbsp;&nbsp;DROP A LINE
-                        </div>
-                        <div class="footer-text">
-                            - Digital Expert
-                        </div>
-                        <a href="mailto:hr@fanmaodong.com" class="footer-icon-wrapper">
-                            <i class="iconfont icon-email"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="concat-item">
-                    <div class="item-mark">
-                        04
-                        <div class="mark-mask">SPORTS & ENTERTAINMENT</div>
-                    </div>
-                    <div class="item-description">
-                        ACTIVATION ENTERTAINMENT has a professional team dedicated on Sports & Entertainment Marketing
-                        for years and we are the leading agency of the Sports & Entertainment Marketing in China Market.
-                        We already built up a strong relationship with Hollywood Studios and the movie industry in
-                        China, meanwhile, we leverage on the creative team and resource team to fully support our
-                        exciting project development in order to satisfy the diversified demands of our clients.
-                        <br>
-                        <br>
-                        Our services include:
-                        Provide exclusive Content to enhance brand personality
-                        Get in touch with potential customer with Entertainment platform
-                        roduct Licensing for further promotion in multiple channels
-                    </div>
-                    <div class="item-footer">
-                        <div class="footer-text dark">
-                            &nbsp;&nbsp;DROP A LINE
-                        </div>
-                        <div class="footer-text">
-                            - Sports & Entertainment Marketing Experts
-                        </div>
-                        <a href="mailto:hr@fanmaodong.com" class="footer-icon-wrapper">
-                            <i class="iconfont icon-email"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="concat-item">
-                    <div class="item-mark">
-                        05
-                        <div class="mark-mask">BRANDING / ADVERTISING</div>
-                    </div>
-                    <div class="item-description">
-                        BRANDING + ADVERTISING
-                        ACTIVATION VIA specializes in developing media neutral creative assets across all touch points.
-                        Idea-centric, strategy-based and consumer-oriented, we are committed to creating campaignable
-                        assets that build brand values over time. We work with international and local directors and
-                        talents to turn ideas into world-class executions.
-                        <br>
-                        <br>
-                        Our services include :
-                        Creative assets development, film, print production, printed-matters.
-                        Integrated marketing campaign planning and execution
-                        Strategic planning
-                        VI and C
-                    </div>
-                    <div class="item-footer">
-                        <div class="footer-text dark">
-                            &nbsp;&nbsp;DROP A LINE
-                        </div>
-                        <div class="footer-text">
-                            - Branding Expert
-                        </div>
-                        <a href="mailto:hr@fanmaodong.com" class="footer-icon-wrapper">
-                            <i class="iconfont icon-email"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="home-clients">
-            <div class="clients-content">
-                <div class="content-title">
-                    OUR CLIENTS
-                </div>
-                <div class="content-description">
-                    We work with China and the world’s biggest brands to deliver winning integrated marketing solutions!
-                </div>
-                <div class="content-main">
-                    <div class="main-item">
-                        <div class="item-label">
-                            A - D
-                        </div>
-                        <div class="item-info">
-                            <span class="info-data">A.Lange &amp; Söhne</span><span
-                                class="info-data">ACTIVATION</span><span class="info-data">Adidas</span><span
-                                class="info-data">Akris</span><span
-                                class="info-data">Alexander McQueen</span><span
-                                class="info-data">ART021</span><span class="info-data">Audi</span><span
-                                class="info-data">Balenciaga</span><span class="info-data">Bazzar</span><span
-                                class="info-data">BLANCPAIN</span><span class="info-data">BMW</span><span
-                                class="info-data">BOBBI BROWN</span><span class="info-data">BVLGARI</span><span
-                                class="info-data">CANALI</span><span
-                                class="info-data">Carl F. Bucherer</span><span
-                                class="info-data">Cartier</span><span
-                                class="info-data">Chow Tai Fook </span><span
-                                class="info-data">Christian Dior</span><span class="info-data">Dior</span><span
-                                class="info-data">DOLCE&amp;GABBANA</span>
+                        <div class="item-footer">
+                            <div class="footer-text dark">
+                                &nbsp;&nbsp;DROP A LINE
+                            </div>
+                            <div class="footer-text">
+                                - Sports & Entertainment Marketing Experts
+                            </div>
+                            <a href="mailto:hr@fanmaodong.com" class="footer-icon-wrapper">
+                                <i class="iconfont icon-email"></i>
+                            </a>
                         </div>
                     </div>
-
-                    <div class="main-item">
-                        <div class="item-label">
-                            E - H
+                    <div class="concat-item">
+                        <div class="item-mark">
+                            05
+                            <div class="mark-mask">BRANDING / ADVERTISING</div>
                         </div>
-                        <div class="item-info">
-                            <span class="info-data">ETRO</span><span
-                                class="info-data">Fashion Asia</span><span
-                                class="info-data">Forevermark</span><span class="info-data">FRED</span><span
-                                class="info-data">GUCCI</span><span class="info-data">H&amp;M</span><span
-                                class="info-data">Harry Winston</span><span class="info-data">HUBLOT</span>
+                        <div class="item-description">
+                            BRANDING + ADVERTISING
+                            ACTIVATION VIA specializes in developing media neutral creative assets across all touch
+                            points.
+                            Idea-centric, strategy-based and consumer-oriented, we are committed to creating
+                            campaignable
+                            assets that build brand values over time. We work with international and local directors and
+                            talents to turn ideas into world-class executions.
+                            <br>
+                            <br>
+                            Our services include :
+                            Creative assets development, film, print production, printed-matters.
+                            Integrated marketing campaign planning and execution
+                            Strategic planning
+                            VI and C
                         </div>
-                    </div>
-
-                    <div class="main-item">
-                        <div class="item-label">
-                            I - L
-                        </div>
-                        <div class="item-info">
-                            <span class="info-data">I Do | Huan Art and Life Space </span><span
-                                class="info-data">INFINITI Launched</span><span
-                                class="info-data">initial</span><span class="info-data">JAGUAR</span><span
-                                class="info-data">Jean Paul Gaultier</span><span
-                                class="info-data">JIL SANDER</span><span
-                                class="info-data">kate spade new york</span><span
-                                class="info-data">KIKO MILANO</span><span
-                                class="info-data">LA MER</span><span class="info-data">LAB SERIES</span><span
-                                class="info-data">LaLiga Club</span><span
-                                class="info-data">Lane Crawford</span><span
-                                class="info-data">Le Tour de France</span><span
-                                class="info-data">LINCOLN</span><span class="info-data">LOEWE</span><span
-                                class="info-data">LOUIS VUITTON</span>
-                        </div>
-                    </div>
-
-                    <div class="main-item">
-                        <div class="item-label">
-                            M - P
-                        </div>
-                        <div class="item-info">
-                            <span class="info-data">Madame Tussaud</span><span
-                                class="info-data">Marc Jacobs</span><span
-                                class="info-data">Maserati</span><span class="info-data">Max Mara</span><span
-                                class="info-data">MCM</span><span class="info-data">Mercedes-Benz</span><span
-                                class="info-data">Michael Kors</span><span
-                                class="info-data">MO&amp;Co</span><span class="info-data">MONTBLANC</span><span
-                                class="info-data">M·A·C</span><span class="info-data">Nike</span><span
-                                class="info-data">OMEGA</span><span
-                                class="info-data">Peacebird</span><span class="info-data">PORTS</span><span
-                                class="info-data">Prada</span>
-                        </div>
-                    </div>
-
-                    <div class="main-item">
-                        <div class="item-label">
-                            Q - T
-                        </div>
-                        <div class="item-info">
-                            <span class="info-data">Roger Vivier</span><span
-                                class="info-data">Rolls Royce</span><span class="info-data">Roseonly</span><span
-                                class="info-data">Semir</span><span class="info-data">SHANGXIA</span><span
-                                class="info-data">Shenzhen Fashion Week</span><span
-                                class="info-data">Stella McCartney</span><span
-                                class="info-data">STUFISH ASIA</span><span
-                                class="info-data">TCL</span><span class="info-data">TDF</span><span class="info-data">The SANYA EDITION</span><span
-                                class="info-data">Tiffany &amp; Co. </span><span class="info-data">TOMMY HILFIGER</span><span
-                                class="info-data">TRENDIANO FOR ALL</span>
-                        </div>
-                    </div>
-
-                    <div class="main-item">
-                        <div class="item-label">
-                            U - Z
-                        </div>
-                        <div class="item-info">
-                            <span class="info-data">Valentino</span><span
-                                class="info-data">Van Cleef &amp; Arpels</span><span
-                                class="info-data">Vivo Mobile</span><span class="info-data">VOGUE</span><span
-                                class="info-data">Volvo</span><span class="info-data">ZHANG SHUAI</span>
-
-
+                        <div class="item-footer">
+                            <div class="footer-text dark">
+                                &nbsp;&nbsp;DROP A LINE
+                            </div>
+                            <div class="footer-text">
+                                - Branding Expert
+                            </div>
+                            <a href="mailto:hr@fanmaodong.com" class="footer-icon-wrapper">
+                                <i class="iconfont icon-email"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="home-group-footer">
-            <div class="footer-item white">
-                <div class="item-wrapper">
-                    <div class="item-title">
-                        TEAM
+            <div class="home-clients">
+                <div class="clients-content">
+                    <div class="content-title">
+                        OUR CLIENTS
                     </div>
-                    <div class="item-info">
-                        Find out more about our Culture, Leadership and Career
+                    <div class="content-description">
+                        We work with China and the world’s biggest brands to deliver winning integrated marketing
+                        solutions!
+                    </div>
+                    <div class="content-main">
+                        <div class="main-item">
+                            <div class="item-label">
+                                A - D
+                            </div>
+                            <div class="item-info">
+                                <span class="info-data">A.Lange &amp; Söhne</span><span
+                                    class="info-data">ACTIVATION</span><span class="info-data">Adidas</span><span
+                                    class="info-data">Akris</span><span
+                                    class="info-data">Alexander McQueen</span><span
+                                    class="info-data">ART021</span><span class="info-data">Audi</span><span
+                                    class="info-data">Balenciaga</span><span class="info-data">Bazzar</span><span
+                                    class="info-data">BLANCPAIN</span><span class="info-data">BMW</span><span
+                                    class="info-data">BOBBI BROWN</span><span class="info-data">BVLGARI</span><span
+                                    class="info-data">CANALI</span><span
+                                    class="info-data">Carl F. Bucherer</span><span
+                                    class="info-data">Cartier</span><span
+                                    class="info-data">Chow Tai Fook </span><span
+                                    class="info-data">Christian Dior</span><span class="info-data">Dior</span><span
+                                    class="info-data">DOLCE&amp;GABBANA</span>
+                            </div>
+                        </div>
+
+                        <div class="main-item">
+                            <div class="item-label">
+                                E - H
+                            </div>
+                            <div class="item-info">
+                                <span class="info-data">ETRO</span><span
+                                    class="info-data">Fashion Asia</span><span
+                                    class="info-data">Forevermark</span><span class="info-data">FRED</span><span
+                                    class="info-data">GUCCI</span><span class="info-data">H&amp;M</span><span
+                                    class="info-data">Harry Winston</span><span class="info-data">HUBLOT</span>
+                            </div>
+                        </div>
+
+                        <div class="main-item">
+                            <div class="item-label">
+                                I - L
+                            </div>
+                            <div class="item-info">
+                                <span class="info-data">I Do | Huan Art and Life Space </span><span
+                                    class="info-data">INFINITI Launched</span><span
+                                    class="info-data">initial</span><span class="info-data">JAGUAR</span><span
+                                    class="info-data">Jean Paul Gaultier</span><span
+                                    class="info-data">JIL SANDER</span><span
+                                    class="info-data">kate spade new york</span><span
+                                    class="info-data">KIKO MILANO</span><span
+                                    class="info-data">LA MER</span><span class="info-data">LAB SERIES</span><span
+                                    class="info-data">LaLiga Club</span><span
+                                    class="info-data">Lane Crawford</span><span
+                                    class="info-data">Le Tour de France</span><span
+                                    class="info-data">LINCOLN</span><span class="info-data">LOEWE</span><span
+                                    class="info-data">LOUIS VUITTON</span>
+                            </div>
+                        </div>
+
+                        <div class="main-item">
+                            <div class="item-label">
+                                M - P
+                            </div>
+                            <div class="item-info">
+                                <span class="info-data">Madame Tussaud</span><span
+                                    class="info-data">Marc Jacobs</span><span
+                                    class="info-data">Maserati</span><span class="info-data">Max Mara</span><span
+                                    class="info-data">MCM</span><span class="info-data">Mercedes-Benz</span><span
+                                    class="info-data">Michael Kors</span><span
+                                    class="info-data">MO&amp;Co</span><span class="info-data">MONTBLANC</span><span
+                                    class="info-data">M·A·C</span><span class="info-data">Nike</span><span
+                                    class="info-data">OMEGA</span><span
+                                    class="info-data">Peacebird</span><span class="info-data">PORTS</span><span
+                                    class="info-data">Prada</span>
+                            </div>
+                        </div>
+
+                        <div class="main-item">
+                            <div class="item-label">
+                                Q - T
+                            </div>
+                            <div class="item-info">
+                                <span class="info-data">Roger Vivier</span><span
+                                    class="info-data">Rolls Royce</span><span class="info-data">Roseonly</span><span
+                                    class="info-data">Semir</span><span class="info-data">SHANGXIA</span><span
+                                    class="info-data">Shenzhen Fashion Week</span><span
+                                    class="info-data">Stella McCartney</span><span
+                                    class="info-data">STUFISH ASIA</span><span
+                                    class="info-data">TCL</span><span class="info-data">TDF</span><span
+                                    class="info-data">The SANYA EDITION</span><span
+                                    class="info-data">Tiffany &amp; Co. </span><span
+                                    class="info-data">TOMMY HILFIGER</span><span
+                                    class="info-data">TRENDIANO FOR ALL</span>
+                            </div>
+                        </div>
+
+                        <div class="main-item">
+                            <div class="item-label">
+                                U - Z
+                            </div>
+                            <div class="item-info">
+                                <span class="info-data">Valentino</span><span
+                                    class="info-data">Van Cleef &amp; Arpels</span><span
+                                    class="info-data">Vivo Mobile</span><span class="info-data">VOGUE</span><span
+                                    class="info-data">Volvo</span><span class="info-data">ZHANG SHUAI</span>
+
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="footer-item grey">
-                <div class="item-wrapper">
-                    <div class="item-title">
-                        WORK
+            <div class="home-group-footer">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            TEAM
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
                     </div>
-                    <div class="item-info">
-                        Find out more about our Culture, Leadership and Career
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
                     </div>
                 </div>
             </div>

@@ -10,7 +10,14 @@
     <title>DP-Design DP-Activation</title>
     <link rel="stylesheet" type="text/css" href="../public/css/main.css"/>
 </head>
-<body class="dp-activation">
+<body class="dp-activation" onload="DP.onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
 <div class="dp-activation-page">
     <div class="dp-activation-page-home">
         <div class="home-header">
@@ -42,397 +49,418 @@
                 </div>
             </div>
         </div>
-        <div class="home-max">
-            <div class="max-bg"
-                 style="background-image:url(http://activation-group.com/Upload/h_team.jpg);"></div>
-            <div class="max-content">
-                We host an international team of competent and committed professionals.
-            </div>
-        </div>
-        <div class="home-main">
-            <div class="section-welcome">
-                <div class="welcome-banner">
-                    <div class="header-item">
-                        - DISCIPLINES
-                    </div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/h_team.jpg);"></div>
+                <div class="max-content">
+                    We host an international team of competent and committed professionals.
                 </div>
-                <div class="welcome-content">
-                    <div class="content-left for-content team agency">
-                        <div class="content-title">
-                            h
-                        </div>
-                        <div class="content-sub-title">PROTOTYPES
-                        </div>
-                        <div class="content-info">
-                            The head office established in Shanghai at 2008 is the first great milestone in the journey
-                            we've been through, followed by the rapid growth in recent years, ACTIVATION GROUP extended
-                            offices established in Beijing, Hong Kong and Singapore to provide the full coverage of
-                            services across the region.
-                            <br>
-                            <br>
-                            The acquisition of company that shares the same vision has been proven to bring in strong
-                            synergy to the group. We kept pushing the industry boundary by delivering one-stop marketing
-                            solutions across multiple disciplines. In order to stay ahead today's market's needs and our
-                            prestigious clients' expectation, ACTIVATION GROUP successfully acquired leading PR agency,
-                            Liquid Element in 2013 and Nodeplus, an award winning digital agency in 2014, to offer fully
-                            integrated marketing services in both brick-and-mortar as well as digital platforms.
+            </div>
+            <div class="home-main">
+                <div class="section-welcome">
+                    <div class="welcome-banner">
+                        <div class="header-item">
+                            - DISCIPLINES
                         </div>
                     </div>
-                    <div class="content-right">
-                        <div class="for-content agency team">
+                    <div class="welcome-content">
+                        <div class="content-left for-content team agency">
                             <div class="content-title">
-                                Diversity & Distinctive Minds
+                                h
+                            </div>
+                            <div class="content-sub-title">PROTOTYPES
                             </div>
                             <div class="content-info">
-                                Serving as the home base for some of the most brilliant minds across Greater China and
-                                Asia Pacific, We host an international team of competent and committed specialized
-                                professionals providing unique expertise across multiple disciplines.
+                                The head office established in Shanghai at 2008 is the first great milestone in the
+                                journey
+                                we've been through, followed by the rapid growth in recent years, ACTIVATION GROUP
+                                extended
+                                offices established in Beijing, Hong Kong and Singapore to provide the full coverage of
+                                services across the region.
                                 <br>
                                 <br>
-                                With the diverse backgrounds of our core team leaders, we are able to deliver thoroughly
-                                designed marketing solutions to cater needs of our clients. we not only strive to
-                                maintain a high standards of excellence in each proposal we deliver but also keep
-                                pushing the industry boundary by elevating our service to help our clients optimize
-                                marketing influence. The extensive industry connection and the excellent professional
-                                skills are our crucial assets that push us forward, together with our inexhaustible
-                                inspirations and inquisitive minds contributed by the ultimate team members, we are
-                                always ready for the next big challenge.
+                                The acquisition of company that shares the same vision has been proven to bring in
+                                strong
+                                synergy to the group. We kept pushing the industry boundary by delivering one-stop
+                                marketing
+                                solutions across multiple disciplines. In order to stay ahead today's market's needs and
+                                our
+                                prestigious clients' expectation, ACTIVATION GROUP successfully acquired leading PR
+                                agency,
+                                Liquid Element in 2013 and Nodeplus, an award winning digital agency in 2014, to offer
+                                fully
+                                integrated marketing services in both brick-and-mortar as well as digital platforms.
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content agency team">
+                                <div class="content-title">
+                                    Diversity & Distinctive Minds
+                                </div>
+                                <div class="content-info">
+                                    Serving as the home base for some of the most brilliant minds across Greater China
+                                    and
+                                    Asia Pacific, We host an international team of competent and committed specialized
+                                    professionals providing unique expertise across multiple disciplines.
+                                    <br>
+                                    <br>
+                                    With the diverse backgrounds of our core team leaders, we are able to deliver
+                                    thoroughly
+                                    designed marketing solutions to cater needs of our clients. we not only strive to
+                                    maintain a high standards of excellence in each proposal we deliver but also keep
+                                    pushing the industry boundary by elevating our service to help our clients optimize
+                                    marketing influence. The extensive industry connection and the excellent
+                                    professional
+                                    skills are our crucial assets that push us forward, together with our inexhaustible
+                                    inspirations and inquisitive minds contributed by the ultimate team members, we are
+                                    always ready for the next big challenge.
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="home-banner">
-            <div class="banner-content ">
-                <div class="content-title size-middle">
-                    Home to some of the brightest minds with offices spanning across Greater China and Asia Pacific, we
-                    host an international team of competent and committed branding practioners who are always devoted
-                    and passionate about the work.
+            <div class="home-banner">
+                <div class="banner-content ">
+                    <div class="content-title size-middle">
+                        Home to some of the brightest minds with offices spanning across Greater China and Asia Pacific,
+                        we
+                        host an international team of competent and committed branding practioners who are always
+                        devoted
+                        and passionate about the work.
+                    </div>
+                    <div class="content-info">
+                        Home to some of the brightest minds with offices spanning across Greater China and Asia Pacific,
+                        we
+                        host an international team of competent and committed branding practioners who are always
+                        devoted
+                        and passionate about the work.
+                        Meet our core team members.
+                    </div>
                 </div>
-                <div class="content-info">
-                    Home to some of the brightest minds with offices spanning across Greater China and Asia Pacific, we
-                    host an international team of competent and committed branding practioners who are always devoted
-                    and passionate about the work.
-                    Meet our core team members.
+                <div class="banner-bg" style="background-image:url('http://activation-group.com/Upload/full_team.jpg')">
                 </div>
             </div>
-            <div class="banner-bg" style="background-image:url('http://activation-group.com/Upload/full_team.jpg')">
-            </div>
-        </div>
-        <div class="home-main">
-            <div class="section-welcome">
-                <div class="welcome-banner">
-                    <div class="header-item size-small">
-                        - MANAGEMENT
+            <div class="home-main">
+                <div class="section-welcome">
+                    <div class="welcome-banner">
+                        <div class="header-item size-small">
+                            - MANAGEMENT
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="home-person">
-            <div class="person-line">
-                <div class="person">
-                    <div class="person-photo"
-                         style="background-image:url('http://activation-group.com/Upload/mem_stevelau.jpg')"></div>
-                    <div class="person-name">Steve Lau</div>
-                    <div class="person-role">
-                        -
-                        <br>
-                        Managing Director
-                        <br>
-                        Activation Group
-                    </div>
-                    <div class="person-mask"></div>
-                </div>
-                <div class="person dark">
-                    <div class="person-photo"
-                         style="background-image:url('http://activation-group.com/Upload/mem_johnnyng.jpg')"></div>
-                    <div class="person-name">Johnny Ng</div>
-                    <div class="person-role">
-                        -
-                        <br>
-                        Executive Director
-                        <br>
-                        Activation Group
-                    </div>
-                    <div class="person-mask"></div>
-                </div>
-                <div class="person style-white">
-                    <div class="person-title">
-                        Leadership
-                        <br>
-                        Team
-                    </div>
-                </div>
-                <div class="person dark">
-                    <div class="person-photo"
-                         style="background-image:url('http://activation-group.com/Upload/mem_frankieso.jpg')"></div>
-                    <div class="person-name">Frankie So</div>
-                    <div class="person-role">
-                        -
-                        <br>
-                        Executive Creative Director
-                        <br>
-                        Activation Group
-                    </div>
-                    <div class="person-mask"></div>
-                </div>
-            </div>
-            <div class="person-line">
-                <div class="person dark">
-                    <div class="person-photo"
-                         style="background-image:url('http://activation-group.com/Upload/mem_christine.jpg')"></div>
-                    <div class="person-name">Christine Low</div>
-                    <div class="person-role">
-                        -
-                        <br>
-                        General Manager
-                        <br>
-                        Activation Events
-                    </div>
-                    <div class="person-mask"></div>
-                </div>
-                <div class="person">
-                    <div class="person-photo"
-                         style="background-image:url('http://activation-group.com/Upload/mem_benchan.jpg')"></div>
-                    <div class="person-name">Ben Chan</div>
-                    <div class="person-role">
-                        -
-                        <br>
-                        General Manager
-                        <br>
-                        Activation Events
-                    </div>
-                    <div class="person-mask"></div>
-                </div>
-                <div class="person dark">
-                    <div class="person-photo"
-                         style="background-image:url('http://activation-group.com/Upload/mem_jacqueline.jpg')"></div>
-                    <div class="person-name">Jacqueline Wong</div>
-                    <div class="person-role">
-                        -
-                        <br>
-                        Executive Director
-                        <br>
-                        Activation Group
-                    </div>
-                    <div class="person-mask"></div>
-                </div>
-                <div class="person">
-                    <div class="person-photo"
-                         style="background-image:url('http://activation-group.com/Upload/mem_kathy.jpg')"></div>
-                    <div class="person-name">Kathy Zhou</div>
-                    <div class="person-role">
-                        -
-                        <br>
-                        General Manager
-                        <br>
-                        Activation Sport
-                    </div>
-                    <div class="person-mask"></div>
-                </div>
-            </div>
-            <div class="person-line">
-                <div class="person-max">
-                    <div class="max-content">
-                        <div class="content-title">GET IN TOUCH</div>
-                        <div class="content-main">
-                            SHANGHAI_ 5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+            <div class="home-person">
+                <div class="person-line">
+                    <div class="person">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/mem_stevelau.jpg')"></div>
+                        <div class="person-name">Steve Lau</div>
+                        <div class="person-role">
+                            -
                             <br>
+                            Managing Director
                             <br>
-                            BEIJING_ 798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao Yang
-                            District, Beijing, China
-                            <br>
-                            <br>
-                            HONG KONG_ 11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
-                            SINGAPORE_ 226B South Bridge Road Singapore
+                            Activation Group
                         </div>
-                        <a class="content-email">
-                            <i class="iconfont icon-email"></i>
-                        </a>
+                        <div class="person-mask"></div>
+                    </div>
+                    <div class="person dark">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/mem_johnnyng.jpg')"></div>
+                        <div class="person-name">Johnny Ng</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            Executive Director
+                            <br>
+                            Activation Group
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                    <div class="person style-white">
+                        <div class="person-title">
+                            Leadership
+                            <br>
+                            Team
+                        </div>
+                    </div>
+                    <div class="person dark">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/mem_frankieso.jpg')"></div>
+                        <div class="person-name">Frankie So</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            Executive Creative Director
+                            <br>
+                            Activation Group
+                        </div>
+                        <div class="person-mask"></div>
                     </div>
                 </div>
-                <div class="person-max">
-                    <div class="person-line">
-                        <div class="person dark">
-                            <div class="person-photo"
-                                 style="background-image:url('http://activation-group.com/Upload/mem_baoyifeng.jpg')"></div>
-                            <div class="person-name">Bao Yi Feng</div>
-                            <div class="person-role">
-                                -
-                                <br>
-                                General Manager
-
-                                <br>
-                                Activation Events
-                            </div>
-                            <div class="person-mask"></div>
+                <div class="person-line">
+                    <div class="person dark">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/mem_christine.jpg')"></div>
+                        <div class="person-name">Christine Low</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            General Manager
+                            <br>
+                            Activation Events
                         </div>
-                        <div class="person">
-                            <div class="person-photo"
-                                 style="background-image:url('http://activation-group.com/Upload/mem_welsontu.jpg')"></div>
-                            <div class="person-name">Welson Tu</div>
-                            <div class="person-role">
-                                -
+                        <div class="person-mask"></div>
+                    </div>
+                    <div class="person">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/mem_benchan.jpg')"></div>
+                        <div class="person-name">Ben Chan</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            General Manager
+                            <br>
+                            Activation Events
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                    <div class="person dark">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/mem_jacqueline.jpg')"></div>
+                        <div class="person-name">Jacqueline Wong</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            Executive Director
+                            <br>
+                            Activation Group
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                    <div class="person">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/mem_kathy.jpg')"></div>
+                        <div class="person-name">Kathy Zhou</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            General Manager
+                            <br>
+                            Activation Sport
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                </div>
+                <div class="person-line">
+                    <div class="person-max">
+                        <div class="max-content">
+                            <div class="content-title">GET IN TOUCH</div>
+                            <div class="content-main">
+                                SHANGHAI_ 5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
                                 <br>
-                                General Manager
-
                                 <br>
-                                Activation Nodeplus
+                                BEIJING_ 798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                                Yang
+                                District, Beijing, China
+                                <br>
+                                <br>
+                                HONG KONG_ 11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong
+                                Kong
+                                SINGAPORE_ 226B South Bridge Road Singapore
                             </div>
-                            <div class="person-mask"></div>
+                            <a class="content-email">
+                                <i class="iconfont icon-email"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="person-line">
-                        <div class="person">
-                            <div class="person-photo"
-                                 style="background-image:url('http://activation-group.com/Upload/mem_wintonchoi.jpg')"></div>
-                            <div class="person-name">Winton Choi</div>
-                            <div class="person-role">
-                                -
-                                <br>
-                                Director
+                    <div class="person-max">
+                        <div class="person-line">
+                            <div class="person dark">
+                                <div class="person-photo"
+                                     style="background-image:url('http://activation-group.com/Upload/mem_baoyifeng.jpg')"></div>
+                                <div class="person-name">Bao Yi Feng</div>
+                                <div class="person-role">
+                                    -
+                                    <br>
+                                    General Manager
 
-                                <br>
-                                Activation Nodeplus
+                                    <br>
+                                    Activation Events
+                                </div>
+                                <div class="person-mask"></div>
                             </div>
-                            <div class="person-mask"></div>
+                            <div class="person">
+                                <div class="person-photo"
+                                     style="background-image:url('http://activation-group.com/Upload/mem_welsontu.jpg')"></div>
+                                <div class="person-name">Welson Tu</div>
+                                <div class="person-role">
+                                    -
+                                    <br>
+                                    General Manager
+
+                                    <br>
+                                    Activation Nodeplus
+                                </div>
+                                <div class="person-mask"></div>
+                            </div>
                         </div>
-                        <div class="person dark">
-                            <div class="person-photo"
-                                 style="background-image:url('http://activation-group.com/Upload/mem_jemshaw.jpg')"></div>
-                            <div class="person-name">Jem Shaw</div>
-                            <div class="person-role">
-                                -
-                                <br>
-                                Director
-                                <br>
-                                Activation Events
+                        <div class="person-line">
+                            <div class="person">
+                                <div class="person-photo"
+                                     style="background-image:url('http://activation-group.com/Upload/mem_wintonchoi.jpg')"></div>
+                                <div class="person-name">Winton Choi</div>
+                                <div class="person-role">
+                                    -
+                                    <br>
+                                    Director
+
+                                    <br>
+                                    Activation Nodeplus
+                                </div>
+                                <div class="person-mask"></div>
                             </div>
-                            <div class="person-mask"></div>
+                            <div class="person dark">
+                                <div class="person-photo"
+                                     style="background-image:url('http://activation-group.com/Upload/mem_jemshaw.jpg')"></div>
+                                <div class="person-name">Jem Shaw</div>
+                                <div class="person-role">
+                                    -
+                                    <br>
+                                    Director
+                                    <br>
+                                    Activation Events
+                                </div>
+                                <div class="person-mask"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="person-line">
+                    <div class="person dark">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/mem_junecheng.jpg')"></div>
+                        <div class="person-name">June Cheng</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            Director
+                            <br>
+                            Activation Events
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                    <div class="person">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/2016060611472581606.png')"></div>
+                        <div class="person-name">Vincent Pang</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            Executive Creative Director
+
+                            <br>
+                            Activation VIA
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                    <div class="person dark">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/2016060611493053111.png')"></div>
+                        <div class="person-name">Alice Too</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            General Manager
+
+                            <br>
+                            Activation VIA
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                    <div class="person">
+                    </div>
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome">
+                    <div class="welcome-banner ">
+                        <div class="header-item for-left size-small">
+                            - CAREER
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="person-line">
-                <div class="person dark">
-                    <div class="person-photo"
-                         style="background-image:url('http://activation-group.com/Upload/mem_junecheng.jpg')"></div>
-                    <div class="person-name">June Cheng</div>
-                    <div class="person-role">
-                        -
-                        <br>
-                        Director
-                        <br>
-                        Activation Events
-                    </div>
-                    <div class="person-mask"></div>
-                </div>
-                <div class="person">
-                    <div class="person-photo"
-                         style="background-image:url('http://activation-group.com/Upload/2016060611472581606.png')"></div>
-                    <div class="person-name">Vincent Pang</div>
-                    <div class="person-role">
-                        -
-                        <br>
-                        Executive Creative Director
-
-                        <br>
-                        Activation VIA
-                    </div>
-                    <div class="person-mask"></div>
-                </div>
-                <div class="person dark">
-                    <div class="person-photo"
-                         style="background-image:url('http://activation-group.com/Upload/2016060611493053111.png')"></div>
-                    <div class="person-name">Alice Too</div>
-                    <div class="person-role">
-                        -
-                        <br>
-                        General Manager
-
-                        <br>
-                        Activation VIA
-                    </div>
-                    <div class="person-mask"></div>
-                </div>
-                <div class="person">
-                </div>
-            </div>
-        </div>
-        <div class="home-main">
-            <div class="section-welcome">
-                <div class="welcome-banner ">
-                    <div class="header-item for-left size-small">
-                        - CAREER
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="home-main">
-            <div class="section-welcome">
-                <div class="welcome-content">
-                    <div class="content-right">
-                        <div class="for-content agency team">
+            <div class="home-main">
+                <div class="section-welcome">
+                    <div class="welcome-content">
+                        <div class="content-right">
+                            <div class="for-content agency team">
+                                <div class="content-title">
+                                    Become Activationists
+                                </div>
+                                <div class="content-sub-title">
+                                    We believe that our every single achievement is shaped by our 'Activationist' that
+                                    we
+                                    are always proud of.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-left for-content team agency">
                             <div class="content-title">
-                                Become Activationists
+                                U
+                            </div>
+                            <div class="content-sub-title">WORK WITH US
+                            </div>
+                            <div class="content-info">
+                                Are you ready to work with us to most deliver excellent marketing solutions in the areas
+                                of
+                                event, PR, digital, social and brand communications working with China and the world's
+                                most
+                                renowned brands?
                             </div>
                             <div class="content-sub-title">
-                                We believe that our every single achievement is shaped by our 'Activationist' that we
-                                are always proud of.
+                                Any thoughts or enquiries? You are welcomed to drop us a line.
                             </div>
+                            <a class="content-icon-wrapper">
+                                <i class="iconfont icon-email"></i>
+                            </a>
                         </div>
                     </div>
-                    <div class="content-left for-content team agency">
-                        <div class="content-title">
-                            U
+                    <div class="welcome-footer">
+                        <div class="footer-info">
+                            -
+                            <br>
+                            Please note that the above available vacancies for candidates are full-time based job
+                            opportunities.
+                            <br>
+                            It is appreciated you pay attention to the job requirements and Working location, etc.
+                            before you submit your application to the job.
                         </div>
-                        <div class="content-sub-title">WORK WITH US
-                        </div>
-                        <div class="content-info">
-                            Are you ready to work with us to most deliver excellent marketing solutions in the areas of
-                            event, PR, digital, social and brand communications working with China and the world's most
-                            renowned brands?
-                        </div>
-                        <div class="content-sub-title">
-                            Any thoughts or enquiries? You are welcomed to drop us a line.
-                        </div>
-                        <a class="content-icon-wrapper">
-                            <i class="iconfont icon-email"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="welcome-footer">
-                    <div class="footer-info">
-                        -
-                        <br>
-                        Please note that the above available vacancies for candidates are full-time based job
-                        opportunities.
-                        <br>
-                        It is appreciated you pay attention to the job requirements and Working location, etc.
-                        before you submit your application to the job.
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="home-group-footer">
-            <div class="footer-item white">
-                <div class="item-wrapper">
-                    <div class="item-title">
-                        TEAM
-                    </div>
-                    <div class="item-info">
-                        Find out more about our Culture, Leadership and Career
+            <div class="home-group-footer">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            TEAM
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer-item grey">
-                <div class="item-wrapper">
-                    <div class="item-title">
-                        WORK
-                    </div>
-                    <div class="item-info">
-                        Find out more about our Culture, Leadership and Career
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
                     </div>
                 </div>
             </div>

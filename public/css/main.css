@@ -811,12 +811,100 @@ th {
   font-family: dp-activation;
   src: url('../../public/fonts/CenturyGothic.woff');
 }
+.dp-activation.hidden {
+  overflow: hidden;
+}
 .dp-activation-page {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+}
+.dp-activation-load {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1024;
+  background: #fff;
+  overflow: hidden;
+}
+.dp-activation-load .load-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(0, -100%);
+  -moz-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  -o-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  -o-transition: all 400ms;
+  transition: all 400ms;
+  opacity: 0;
+}
+.dp-activation-load .load-icon .icon-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #666;
+  font-size: 14px;
+  font-weight: bold;
+}
+.dp-activation-load .load-icon .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: #3f3f3f;
+  -webkit-transition: all 50ms;
+  -moz-transition: all 50ms;
+  -o-transition: all 50ms;
+  transition: all 50ms;
+}
+.dp-activation-load .load-icon.active {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.dp-activation-load .load-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: all 1000ms;
+  -moz-transition: all 1000ms;
+  -o-transition: all 1000ms;
+  transition: all 1000ms;
+  opacity: 0;
+  -webkit-transform: translate(0, 100%);
+  -moz-transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  -o-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+  background: #f5f5f5;
+}
+.dp-activation-load .load-mask.active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 .dp-activation .x-icon-menu {
   width: 20px;
@@ -887,6 +975,24 @@ th {
   right: 0;
   background: #fff;
   z-index: 999;
+  -webkit-transition: all 600ms;
+  -moz-transition: all 600ms;
+  -o-transition: all 600ms;
+  transition: all 600ms;
+  opacity: 0;
+  -webkit-transform: translate(0, -20px);
+  -moz-transform: translate(0, -20px);
+  -ms-transform: translate(0, -20px);
+  -o-transform: translate(0, -20px);
+  transform: translate(0, -20px);
+}
+.dp-activation-page-home .home-header.fadeIn {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1;
 }
 .dp-activation-page-home .home-header .header-menu {
   max-width: 1600px;
@@ -994,6 +1100,26 @@ th {
 }
 .dp-activation-page-home .home-header .header-menu .menu-item.item .item-menu:hover > a {
   color: #999;
+}
+.dp-activation-page-home .home-main-body {
+  -webkit-transition: all 600ms;
+  -moz-transition: all 600ms;
+  -o-transition: all 600ms;
+  transition: all 600ms;
+  opacity: 0;
+  -webkit-transform: translate(0, 20px);
+  -moz-transform: translate(0, 20px);
+  -ms-transform: translate(0, 20px);
+  -o-transform: translate(0, 20px);
+  transform: translate(0, 20px);
+}
+.dp-activation-page-home .home-main-body.fadeIn {
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+  opacity: 1;
 }
 .dp-activation-page-home .home-max {
   position: relative;
