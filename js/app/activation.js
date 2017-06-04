@@ -6,6 +6,7 @@
 ;(function () {
     var $loader = $('#loader');
     var shouldLoad = false;
+    var dpBack = null;
     if ($loader.length) {
         $loader.children('.load-icon').addClass('active');
         var index = 1;
@@ -63,6 +64,7 @@
                     if ($main.length) {
                         $main.addClass('fadeIn');
                     }
+                    dpBack && dpBack();
                 })
             }, 1000)
         } else {
@@ -71,7 +73,10 @@
     }
 
     window.DP = {
-        onload: function () {
+        onload: function (callback) {
+            if (callback) {
+                dpBack = callback;
+            }
             onload();
         }
     }

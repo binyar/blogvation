@@ -10,7 +10,14 @@
     <title>DP-Design DP-Activation</title>
     <link rel="stylesheet" type="text/css" href="../public/css/main.css"/>
 </head>
-<body class="dp-activation hidden">
+<body class="dp-activation hidden" onload="DP.onload(function(){animate(0)});" style="overflow: hidden">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
 <div class="dp-activation-page">
     <div class="dp-activation-page-init">
         <div class="init-bg"
@@ -117,6 +124,9 @@
     var $menus = $('.header-menu-item');
     var $bgs = $('.init-bg');
     var $contents = $('.init-content');
+    var init = function () {
+        animate(0);
+    }
     function animate(i) {
         if (i === $menus.length) {
             //跳转逻辑
@@ -155,8 +165,5 @@
             animate(i + 1)
         }, 4000)
     }
-    setTimeout(function () {
-        animate(0)
-    }, 100)
 </script>
 </html>
