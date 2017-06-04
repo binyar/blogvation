@@ -31,39 +31,25 @@
       .menu-item {
         text-transform: uppercase;
         position: relative;
+        .transition(all 400ms);
+        color: @black;
+        &:hover {
+          color: @grey-light;
+        }
         &.logo {
           .flex(4);
           .transition(all 400ms);
           cursor: pointer;
           font-size: 18px;
           font-weight: bold;
-          &:hover {
-            > a {
-              color: @grey-light;
-            }
-          }
           .right {
             color: @grey;
             margin-left: 10px;
           }
-          > a {
-            .transition(all 400ms);
-            color: @grey;
-          }
         }
         &.init {
           .flex(2);
-
           cursor: pointer;
-          &:hover {
-            > a {
-              color: @grey-light;
-            }
-          }
-          > a {
-            .transition(all 400ms);
-            color: @black;
-          }
         }
         &.item {
           .flex(1);
@@ -74,14 +60,10 @@
             .flex(1);
             cursor: pointer;
             text-align: center;
-            > a {
-              .transition(all 400ms);
-              color: @black;
-            }
+            .transition(all 400ms);
+            color: @black;
             &:hover {
-              > a {
-                color: @grey-light;
-              }
+              color: @grey-light;
             }
           }
         }
@@ -1313,6 +1295,106 @@
           right: 0;
           bottom: 0;
           text-align: center;
+        }
+      }
+    }
+  }
+  .home-menu-mask {
+    display: none;
+    .opacity(0);
+    .fixed-leftTop(0, 0);
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: rgba(26, 26, 26, 0.94);
+    color: #f2f2f2;
+    .mask-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 100%;
+      .flexbox();
+      .content-item {
+        .flex(1);
+        position: relative;
+        padding: 100px 40px 0;
+        &.separator {
+          &:after {
+            content: '';
+            .position-rightTop(0, 0);
+            bottom: 0;
+            width: 1px;
+            background: #383838;
+          }
+          .icon-wrapper {
+            .position-rightTop(-25px, 90px);
+            .size(50px, 90px);
+            line-height: 90px;
+            text-align: center;
+            font-size: 40px;
+            color: #383838;
+            z-index: 2;
+            &.close {
+              cursor: pointer;
+              &:before {
+                .rotate(45deg);
+                content: '';
+                background: rgb(242, 242, 242);
+                .transition(all 400ms);
+                .position-leftTop(20px, 40px);
+                right: 20px;
+                bottom: 40px;
+              }
+              &:after {
+                .rotate(45deg);
+                content: '';
+                background: rgb(242, 242, 242);
+                .transition(all 400ms);
+                .position-leftTop(20px, 40px);
+                right: 20px;
+                bottom: 40px;
+              }
+              &:hover {
+                &:after {
+                  top: 32px;
+                  bottom: 32px;
+                }
+                &:before {
+                  left: 12px;
+                  right: 12px;
+                }
+              }
+            }
+          }
+        }
+        .item-title {
+          color: rgb(242, 242, 242);
+          margin-bottom: 25px;
+          font-size: 48px;
+          display: block;
+          font-weight: bold;
+        }
+        .item-info {
+          color: #999;
+          font-size: 12px;
+          line-height: 16px;
+        }
+        .item-separator {
+          color: #fff;
+          font-size: 14px;
+          margin-top: 15px;
+        }
+        .item-footer {
+          margin-top: 25px;
+          .footer-item {
+            color: #999;
+            line-height: 16px;
+            font-size: 12px;
+            display: block;
+            &:hover {
+              color: #fff;
+            }
+            margin-top: 5px;
+          }
         }
       }
     }

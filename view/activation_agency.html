@@ -10,7 +10,7 @@
     <title>DP-Design DP-Activation</title>
     <link rel="stylesheet" type="text/css" href="../public/css/main.css"/>
 </head>
-<body class="dp-activation" onload="DP.onload();">
+<body class="dp-activation hidden" onload="DP.onload();">
 <div class="dp-activation-load" id="loader">
     <div class="load-icon">
         <div class="progress"></div>
@@ -22,24 +22,24 @@
     <div class="dp-activation-page-home">
         <div class="home-header">
             <div class="header-menu">
-                <div class="menu-item logo">
-                    <a href="./activation.html"> DP-ACTIVATION<span class="right">GROUP</span></a>
-                </div>
-                <div class="menu-item init"><a href="./activation_home.html">Integrated Marketing Agency For Premium
-                    Brands</a></div>
+                <a class="menu-item logo" href="./activation.html">
+                    DP-ACTIVATION<span class="right">GROUP</span>
+                </a>
+                <a href="./activation_home.html" class="menu-item init">Integrated Marketing Agency For Premium
+                    Brands</a>
                 <div class="menu-item item">
-                    <div class="item-menu">
-                        <a href="./activation_agency.html">AGENCY</a></div>
-                    <div class="item-menu">
-                        <a href="./activation_team.html">TEAM</a></div>
-                    <div class="item-menu">
-                        <a href="./activation_work.html">WORK</a></div>
+                    <a class="item-menu" href="./activation_agency.html">
+                        AGENCY</a>
+                    <a class="item-menu" href="./activation_team.html">
+                        TEAM</a>
+                    <a class="item-menu" href="./activation_work.html">
+                        WORK</a>
                 </div>
                 <div class="menu-item item">
                     <div class="item-menu"><i class="iconfont icon-xiajiantou"></i></div>
                     <div class="item-menu"><i class="iconfont icon-weibo"></i></div>
                     <div class="item-menu"><i class="iconfont icon-linkin"></i></div>
-                    <div class="item-menu">
+                    <div class="item-menu" id="item-menu">
                         <div class="x-icon-menu black">
                             <div class="menu-line top"></div>
                             <div class="menu-line middle"></div>
@@ -726,6 +726,62 @@
                     <div class="copy-right">
                         2017 (C) All Rights Reserved by DP-ACTIVATION GROUP.
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-menu-mask" id="menu-mask">
+            <div class="mask-content">
+                <div class="content-item separator">
+                    <a href="./activation_agency.html" class="item-title">Agency</a>
+                    <div class="item-info">
+                        We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                        and
+                        décor services for the premium brands. Welcome to learn more about us at our history,
+                        our
+                        workplaces and works of our clients
+                    </div>
+                    <div class="item-separator">-</div>
+                    <div class="icon-wrapper">
+                        ≠
+                    </div>
+                </div>
+                <div class="content-item separator">
+                    <a href="./activation_team.html" class="item-title">Team</a>
+                    <div class="item-info">
+                        Meet our management team and our multi-disciplinary team leaders. Check out the
+                        opportunity
+                        to join us!
+                        <br>
+                        Check out the opportunity to join us!
+                    </div>
+                    <div class="item-separator">-</div>
+                    <div class="icon-wrapper">
+                        ≠
+                    </div>
+                </div>
+                <div class="content-item separator">
+                    <a class="item-title" href="./activation_work.html">Work</a>
+                    <div class="item-info">Welcome to View our selected projects as featured below to share the
+                        joy
+                        and pride with us
+                    </div>
+                    <div class="item-separator">-</div>
+                    <div class="item-footer">
+                        <a class="footer-item">GUCCI 'No Longer/Not Yet' Exhibition</a>
+                        <a class="footer-item">Harry Winston Jewelry Exhibition & Private Dinner</a>
+                        <a class="footer-item">Mercedes-Benz Fashion Night 2015</a>
+                        <a class="footer-item">Watches & Wonders 2015 Exhibition</a>
+                        <a class="footer-item">Cartier & Versace cooperation with COLOR ME LOVE</a>
+                        <br>
+                        <a class="footer-item">2015 ART021 Shanghai Contemporary Art Fair</a>
+                        <a class="footer-item">Dior Beijing China Flagship Boutique</a>
+                        <a class="footer-item">Grand Opening of FRED's new boutique in Hong Kong</a>
+                        <a class="footer-item">initial Concept Store Grand Opening</a>
+                        <a class="footer-item">KIKO MILANO 1st Asia Concept Store Opening</a>
+                        <a class="footer-item">BOBBI BROWN Tmall Flagship Store</a>
+                        <a class="footer-item">Bvlgari Bloom with Mandala</a>
+                    </div>
+                    <div class="icon-wrapper close" id="menu-close"></div>
                 </div>
             </div>
         </div>
