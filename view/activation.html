@@ -10,19 +10,19 @@
     <title>DP-Design DP-Activation</title>
     <link rel="stylesheet" type="text/css" href="../public/css/main.css"/>
 </head>
-<body class="dp-activation">
+<body class="dp-activation hidden">
 <div class="dp-activation-page">
     <div class="dp-activation-page-init">
         <div class="init-bg"
              style="background-image: url('http://activation-group.com/Upload/2016060320133014115.png');"></div>
         <div class="init-bg"
-             style="background-image: url('http://activation-group.com/Upload/2016060320133014115.png');"></div>
+             style="background-image: url('http://activation-group.com/Upload/2017011108320217162.png');"></div>
         <div class="init-bg"
-             style="background-image: url('http://activation-group.com/Upload/2016060320133014115.png');"></div>
+             style="background-image: url('http://activation-group.com/Upload/2016060319271914318.png');"></div>
         <div class="init-bg"
-             style="background-image: url('http://activation-group.com/Upload/2016060320133014115.png');"></div>
+             style="background-image: url('http://activation-group.com/Upload/2016060223442230458.png');"></div>
         <div class="init-bg"
-             style="background-image: url('http://activation-group.com/Upload/2016060320133014115.png');"></div>
+             style="background-image: url('http://activation-group.com/Upload/2016060716545861849.png');"></div>
         <div class="init-menu-wrapper header">
             <div class="init-menu">
                 <div class="header-menu-item">EVENT</div>
@@ -36,13 +36,46 @@
             <div class="content-wrapper">
                 <div class="title">HANGXIA 2016 Autumn/Winter Collection Press Preview
                 </div>
-                <div class="sub-title">
-                    <div class="text-wrapper">
-                        <div class="text-main">
-                            VIEW DETAIL
-                        </div>
-                    </div>
+                <a href="./activation_detail.html" class="sub-title">
+                    VIEW DETAIL
+                </a>
+            </div>
+        </div>
+        <div class="init-content">
+            <div class="content-wrapper">
+                <div class="title">Max Mara MONOPOLIS! Shanghai 2016
                 </div>
+                <a href="./activation_detail.html" class="sub-title">
+                    VIEW DETAIL
+                </a>
+            </div>
+        </div>
+        <div class="init-content">
+            <div class="content-wrapper">
+                <div class="title">Kate spade sky lanterns
+                </div>
+                <a href="./activation_detail.html" class="sub-title">
+                    VIEW DETAIL
+                </a>
+            </div>
+        </div>
+        <div class="init-content">
+            <div class="content-wrapper">
+                <div class="title">
+                    Official Tour de France Events Launched In China
+                </div>
+                <a href="./activation_detail.html" class="sub-title">
+                    VIEW DETAIL
+                </a>
+            </div>
+        </div>
+        <div class="init-content">
+            <div class="content-wrapper">
+                <div class="title">Pradasphere Exhibition
+                </div>
+                <a href="./activation_detail.html" class="sub-title">
+                    VIEW DETAIL
+                </a>
             </div>
         </div>
         <div class="init-menu-wrapper footer">
@@ -81,22 +114,49 @@
 <script src="../public/js/js-common.js"></script>
 <script src="../public/js/activation.js"></script>
 <script>
-//    var $menus = $('.header-menu-item');
-//    var $bgs = $('.init-bg');
-//    function animate(i) {
-//        if (i === $menus.length) {
-//            //跳转逻辑
-//            return;
-//        }
-//        $menus.eq(i).addClass('active').siblings().removeClass('active');
-//        $('.fadeIn', $bgs).removeClass('fadeIn').addClass('fadeOut');
-//        $bgs.eq(i).removeClass('fadeOut').addClass('fadeIn').siblings().removeClass('fadeIn');
-//        setTimeout(function () {
-//            animate(i + 1)
-//        }, 4000)
-//    }
-//    setTimeout(function () {
-//        animate(0)
-//    }, 100)
+    var $menus = $('.header-menu-item');
+    var $bgs = $('.init-bg');
+    var $contents = $('.init-content');
+    function animate(i) {
+        if (i === $menus.length) {
+            //跳转逻辑
+            $('body').css('background', '#fff');
+            $('body').animate({
+                background: '#fff',
+                opacity: 0
+            }, 800, function () {
+                setTimeout(function () {
+                    window.location.href = './activation_home.html';
+                }, 200)
+            })
+            return;
+        }
+        $menus.eq(i).addClass('active').siblings().removeClass('active');
+        $bgs.eq(i).addClass('fadeIn').siblings().removeClass('fadeIn');
+        $contents.eq(i).addClass('active');
+        if (i !== 0) {
+            $contents.eq(i - 1).addClass('out');
+        }
+        switch (i % 4) {
+            case 1:
+                $bgs.eq(i).addClass('leftTop').siblings().removeClass('leftTop');
+                break;
+            case 2:
+                $bgs.eq(i).addClass('rightTop').siblings().removeClass('rightTop');
+                break;
+            case 3:
+                $bgs.eq(i).addClass('leftBottom').siblings().removeClass('leftBottom');
+                break;
+            default:
+                $bgs.eq(i).addClass('rightBottom').siblings().removeClass('rightBottom');
+                break;
+        }
+        setTimeout(function () {
+            animate(i + 1)
+        }, 4000)
+    }
+    setTimeout(function () {
+        animate(0)
+    }, 100)
 </script>
 </html>

@@ -2873,38 +2873,33 @@ th {
   left: 0;
   right: 0;
   bottom: 0;
-  background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
+  background-size: 100% auto;
   background-position: center center;
+  background-repeat: no-repeat;
   opacity: 0;
-  z-index: 0;
-  -webkit-transition: all 4s;
-  -moz-transition: all 4s;
-  -o-transition: all 4s;
-  transition: all 4s;
-  -webkit-transform: translate(20px, -20px);
-  -moz-transform: translate(20px, -20px);
-  -ms-transform: translate(20px, -20px);
-  -o-transform: translate(20px, -20px);
-  transform: translate(20px, -20px);
 }
 .dp-activation-page-init .init-bg.fadeIn {
   opacity: 1;
-  -webkit-transform: translate(0, 0);
-  -moz-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
-  transform: translate(0, 0);
 }
-.dp-activation-page-init .init-bg.fadeOut {
-  opacity: 0;
-  -webkit-transform: translate(-20px, 20px);
-  -moz-transform: translate(-20px, 20px);
-  -ms-transform: translate(-20px, 20px);
-  -o-transform: translate(-20px, 20px);
-  transform: translate(-20px, 20px);
+.dp-activation-page-init .init-bg.fadeIn.leftBottom {
+  -webkit-animation: inLeftBottom 4s;
+  -o-animation: inLeftBottom 4s;
+  animation: inLeftBottom 4s;
+}
+.dp-activation-page-init .init-bg.fadeIn.leftTop {
+  -webkit-animation: inLeftTop 4s;
+  -o-animation: inLeftTop 4s;
+  animation: inLeftTop 4s;
+}
+.dp-activation-page-init .init-bg.fadeIn.rightBottom {
+  -webkit-animation: inRightBottom 4s;
+  -o-animation: inRightBottom 4s;
+  animation: inRightBottom 4s;
+}
+.dp-activation-page-init .init-bg.fadeIn.rightTop {
+  -webkit-animation: inRightTop 4s;
+  -o-animation: inRightTop 4s;
+  animation: inRightTop 4s;
 }
 .dp-activation-page-init .init-menu-wrapper {
   position: absolute;
@@ -3074,6 +3069,32 @@ th {
   top: 30%;
   left: 0;
   right: 0;
+  -webkit-transform: translate(-30px, 0);
+  -moz-transform: translate(-30px, 0);
+  -ms-transform: translate(-30px, 0);
+  -o-transform: translate(-30px, 0);
+  transform: translate(-30px, 0);
+  opacity: 0;
+  -webkit-transition: all 1500ms;
+  -moz-transition: all 1500ms;
+  -o-transition: all 1500ms;
+  transition: all 1500ms;
+}
+.dp-activation-page-init .init-content.active {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.dp-activation-page-init .init-content.out {
+  -webkit-transform: translate(30px, 0);
+  -moz-transform: translate(30px, 0);
+  -ms-transform: translate(30px, 0);
+  -o-transform: translate(30px, 0);
+  transform: translate(30px, 0);
+  opacity: 0;
 }
 .dp-activation-page-init .init-content .content-wrapper {
   color: #fff;
@@ -3084,13 +3105,212 @@ th {
   font-size: 35px;
 }
 .dp-activation-page-init .init-content .content-wrapper .sub-title {
+  display: block;
   margin-top: 25px;
   font-size: 16px;
   cursor: pointer;
   position: relative;
+  color: #fff;
+  -webkit-transition: all 300ms;
+  -moz-transition: all 300ms;
+  -o-transition: all 300ms;
+  transition: all 300ms;
 }
 .dp-activation-page-init .init-content .content-wrapper .sub-title:hover {
   text-decoration: line-through;
+  color: #999;
+}
+@keyframes inLeftTop {
+  from {
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+  }
+  20% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    background-size: 110% auto;
+  }
+}
+@-webkit-keyframes inLeftTop {
+  from {
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+  }
+  20% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    background-size: 110% auto;
+  }
+}
+@keyframes inRightBottom {
+  from {
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    transform: rotate(1deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+  }
+  20% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    background-size: 110% auto;
+  }
+}
+@-webkit-keyframes inRightBottom {
+  from {
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    transform: rotate(1deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+  }
+  20% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    background-size: 110% auto;
+  }
+}
+@keyframes inRightTop {
+  from {
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+  }
+  20% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    background-size: 110% auto;
+  }
+}
+@-webkit-keyframes inRightTop {
+  from {
+    -webkit-transform: rotate(-1deg);
+    -moz-transform: rotate(-1deg);
+    -ms-transform: rotate(-1deg);
+    -o-transform: rotate(-1deg);
+    transform: rotate(-1deg);
+    -webkit-transform-origin: 0 100%;
+    -moz-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    -o-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+  }
+  20% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    background-size: 110% auto;
+  }
+}
+@keyframes inLeftBottom {
+  from {
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    transform: rotate(1deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+  }
+  20% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    background-size: 110% auto;
+  }
+}
+@-webkit-keyframes inLeftBottom {
+  from {
+    -webkit-transform: rotate(1deg);
+    -moz-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    transform: rotate(1deg);
+    -webkit-transform-origin: 100% 100%;
+    -moz-transform-origin: 100% 100%;
+    -ms-transform-origin: 100% 100%;
+    -o-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+  }
+  20% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  to {
+    background-size: 110% auto;
+  }
 }
 
 /*基础色*/
