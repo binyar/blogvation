@@ -1,6 +1,7 @@
 @import "../lib/core";
 
 @dp-d-home: dp-home;
+@mobile-width: 600px;
 .@{dp-d-home} {
   .user-select(none);
   &-section-home {
@@ -50,7 +51,6 @@
       }
       .im-wrapper {
         margin-top: 20px;
-        height: 60px;
         .im-item {
           margin-right: 15px;
           padding: 10px 5px;
@@ -59,11 +59,25 @@
           cursor: pointer;
           color: #fff;
           .transition(all 218ms);
+          display: inline-block;
+          margin-bottom: 10px;
           &:hover {
             color: #AAAAAA;
             border-top: 1px solid #AAAAAA;
             border-bottom: 1px solid #AAAAAA;
           }
+        }
+      }
+      @media screen and(max-width: @mobile-width) {
+        width: 320px;
+        .line {
+          font-size: 20px;
+          line-height: 20px;
+        }
+
+        .main {
+          font-size: 24px;
+          line-height: 40px;
         }
       }
     }
@@ -103,6 +117,9 @@
     }
     .menu-wrapper {
       .float-right(0);
+      @media screen and(max-width: @mobile-width) {
+        display: none;
+      }
       .menu-item {
         color: white;
         padding: 0 15px;
@@ -116,6 +133,52 @@
         }
       }
     }
+    .menu-wrapper-mobile {
+      display: none;
+      .position-rightTop(0, 0);
+      .size(80px, 80px);
+      line-height: 80px;
+      text-align: center;
+      overflow: visible;
+      @media screen and(max-width: @mobile-width) {
+        display: block;
+      }
+      > i {
+        font-size: 40px;
+        color: #fff;
+      }
+      .menu-content {
+        .position-rightTop(0, 100%);
+        width: 150px;
+        background: #202020;
+        z-index: 333;
+        .transition(all .3s);
+        padding: 0 15px;
+        .opacity(0);
+        visibility: hidden;
+        .translate(0, -15px);
+        .menu-item {
+          text-align: left;
+          font-weight: lighter;
+          color: #fff;
+          line-height: 50px;
+          display: block;
+          font-family: sans-serif;
+          text-transform: uppercase;
+          border-bottom: 1px solid #fff;
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+      &.active {
+        .menu-content {
+          visibility: visible;
+          .opacity(1);
+          .translate(0, 0);
+        }
+      }
+    }
   }
   &-section-title {
     background: url('http://opxdpusgg.bkt.clouddn.com/home_bg_deep.png');
@@ -126,7 +189,6 @@
       > i {
         color: white;
         position: relative;
-        font-family: fantasy;
         padding-left: 10px;
         &:before {
           content: '';
@@ -773,8 +835,7 @@
     }
   }
 
-  @-moz-keyframes translateLeft /* Firefox */
-  {
+  @-moz-keyframes translateLeft /* Firefox */ {
     from {
       background-position: 0 0;
     }
@@ -783,8 +844,7 @@
     }
   }
 
-  @-webkit-keyframes mymove /* Safari 和 Chrome */
-  {
+  @-webkit-keyframes mymove /* Safari 和 Chrome */ {
     from {
       background-position: 0 0;
     }
@@ -793,8 +853,7 @@
     }
   }
 
-  @-o-keyframes translateLeft /* Opera */
-  {
+  @-o-keyframes translateLeft /* Opera */ {
     from {
       background-position: 0 0;
     }

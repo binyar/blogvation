@@ -40,6 +40,17 @@
             <a class="menu-item" href="#the_blog">Blog</a>
             <a class="menu-item" href="#the_concat">contact</a>
         </div>
+        <div class="menu-wrapper-mobile" id="menu-wrapper-mobile">
+            <i class="icon-btn iconfont icon-menu"></i>
+            <div class="menu-content">
+                <a class="menu-item" href="#about_us">About Us</a>
+                <a class="menu-item" href="#the_team">The Team</a>
+                <a class="menu-item" href="#the_service">Services</a>
+                <a class="menu-item" href="#the_works">Works</a>
+                <a class="menu-item" href="#the_blog">Blog</a>
+                <a class="menu-item" href="#the_concat">contact</a>
+            </div>
+        </div>
     </div>
     <div class="dp-home-section-title" id="about_us">
         <div class="title-name">WHO <i>WE ARE ?</i></div>
@@ -916,17 +927,29 @@
             }
             $wall.eq(index).addClass('show').siblings().removeClass('show')
         }, 4000);
+        var $fixedMenu;
         $(window).scroll(function () {
-            var height = $(".dp-home-section-home").outerHeight(true) + 80;
+            $('.menu-wrapper-mobile').removeClass('active');
+            var height = $(".dp-home-section-home").outerHeight(true);
             var scrollTop = $('body').scrollTop() || $(document.documentElement).scrollTop();
             if (scrollTop >= height) {
-                if (!$('#dp-home-menu').hasClass('fixed')) {
-                    $('#dp-home-menu').addClass('fixed')
+                if (!$fixedMenu) {
+                    $fixedMenu = $('#dp-home-menu')
+                        .clone(true)
+                        .addClass('fixed')
+                        .appendTo('#main-container')
+                } else {
+                    $fixedMenu.show();
                 }
             } else {
-                $('#dp-home-menu').removeClass('fixed')
+                $fixedMenu && $fixedMenu.hide();
             }
         });
+        $('.menu-wrapper-mobile').on('click', 'i', function (e) {
+            $(e.target).closest('.menu-wrapper-mobile')
+                .toggleClass('active');
+        });
+
 
         $('.dp-home-section-home').css('height', $(window).height());
         $(window).resize(function () {
@@ -965,6 +988,7 @@
             }
         });
     });
+
     function onload() {
         $('#loading').remove();
         $('#home-waterfall').waterfall();
