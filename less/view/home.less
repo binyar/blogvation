@@ -206,6 +206,16 @@
       color: white;
       text-transform: uppercase;
     }
+    @media screen and(max-width: @mobile-width) {
+      padding: 60px 30px;
+      .title-name {
+        font-size: 24px;
+      }
+
+      .title-info {
+        font-size: 16px;
+      }
+    }
   }
   &-section-feature {
     background: url('http://opxdpusgg.bkt.clouddn.com/home_bg_ligher.png');
@@ -213,6 +223,9 @@
     .feature-wrapper {
       width: 950px;
       margin: 0 auto;
+      @media screen and(max-width: @mobile-width) {
+        width: 320px;
+      }
       .feature-item {
         background: url('http://opxdpusgg.bkt.clouddn.com/home_bg_deep.png');
         .box-shadow(0 2px 7px rgba(0, 0, 0, .4));
@@ -222,6 +235,10 @@
         padding: 0 20px;
         width: 450px;
         display: inline-block;
+        @media screen and(max-width: @mobile-width) {
+          width: 100%;
+          margin-left: 0;
+        }
         .item-title {
           font-size: 26px;
           color: white;
@@ -265,9 +282,15 @@
     .fun-container {
       width: 960px;
       margin: 0 auto;
+      @media screen and(max-width: @mobile-width) {
+        width: 320px;
+      }
       .fun-title {
         font-size: 40px;
         color: #EC572C;
+        @media screen and(max-width: @mobile-width) {
+          font-size: 24px;
+        }
       }
       .fun-description {
         margin-top: 40px;
@@ -279,6 +302,14 @@
         .wrapper-item {
           display: inline-block;
           width: 24%;
+          @media screen and(max-width: @mobile-width) {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
           .item-title {
             font-size: 52px;
             color: #e9e9e9;
@@ -301,7 +332,7 @@
     padding: 60px 0 100px 0;
     background: url('http://opxdpusgg.bkt.clouddn.com/parallax-2.jpg');
     background-attachment: fixed;
-    .background-size(100%, auto);
+    .background-size-cover();
     position: relative;
     .bg-cloud {
       background: url('http://opxdpusgg.bkt.clouddn.com/bg-clouds.png');
@@ -333,6 +364,9 @@
       color: #fff;
       font-size: 18px;
       line-height: 28px;
+      @media screen and(max-width: @mobile-width) {
+        width: 320px;
+      }
       .content-bottom {
         text-align: center;
         margin-top: 30px;
@@ -350,15 +384,21 @@
     .ui-content {
       width: 960px;
       margin: 0 auto;
+      @media screen and(max-width: @mobile-width) {
+        width: 320px;
+      }
       .content-item {
         display: inline-block;
         width: 49%;
         padding: 10px;
+        @media screen and(max-width: @mobile-width) {
+          width: 100%;
+        }
         .item-photo {
-          .size(100%, 500px);
+          .size(100%, auto);
           position: relative;
           > img {
-            .size(100%, 100%);
+            .size(100%, auto);
           }
           .photo-name {
             .position-leftBottom(0, 0);
@@ -412,10 +452,16 @@
       width: 960px;
       margin: 0 auto;
       color: #fff;
+      @media screen and(max-width: @mobile-width) {
+        width: 320px;
+      }
       .content-title {
         font-size: 30px;
         color: #EC572C;
         padding: 10px 0;
+        @media screen and(max-width: @mobile-width) {
+          font-size: 24px;
+        }
       }
       .content-info {
         padding: 10px 0;
@@ -426,6 +472,9 @@
         .skill-item {
           display: inline-block;
           width: 24%;
+          @media screen and(max-width: @mobile-width) {
+            width: 100%;
+          }
           .item-name {
             font-size: 24px;
             padding-bottom: 20px;
@@ -435,6 +484,9 @@
             position: relative;
             .border-radius(50%);
             border: 1px solid #fff;
+            @media screen and(max-width: @mobile-width) {
+              margin: 0 auto;
+            }
             .count-mark {
               .position-leftTop(50%, 50%);
               .translate(-50%, -50%);
@@ -463,7 +515,7 @@
   &-section-fliker {
     padding: 80px 0;
     background: url('http://opxdpusgg.bkt.clouddn.com/parallax-1.jpg');
-    background-size: 100% auto;
+    .background-size-cover();
     background-attachment: fixed;
     .fliker-title {
       text-align: center;
@@ -478,9 +530,11 @@
       margin: 80px auto 0;
       width: 950px;
       overflow: hidden;
-      height: 255px;
       font-size: 0;
       padding: 5px;
+      @media screen and(max-width: @mobile-width) {
+        width: 330px;
+      }
       .content-item {
         display: inline-block;
         .size(80px, 80px);
@@ -518,9 +572,16 @@
     .done-wrapper {
       width: 950px;
       margin: 0 auto;
+      @media screen and(max-width: @mobile-width) {
+        width: 320px;
+      }
       .wrapper-item {
         display: inline-block;
         width: 32%;
+        @media screen and(max-width: @mobile-width) {
+          width: 100%;
+          margin-bottom: 20px;
+        }
         .item-content {
           margin: 0 10px;
           background: url('http://opxdpusgg.bkt.clouddn.com/home_bg_deep.png');
@@ -570,10 +631,13 @@
     padding: 100px 0;
     background: url('http://opxdpusgg.bkt.clouddn.com/parallax-3.jpg');
     background-attachment: fixed;
-    background-size: 100% auto;
+    .background-size-cover();
     .loved-container {
       width: 950px;
       margin: 0 auto;
+      @media screen and(max-width: @mobile-width) {
+        width: 320px;
+      }
       .container-title {
         text-align: center;
         .title-text {
@@ -590,6 +654,18 @@
         .opacity(0.7);
         height: 150px;
         overflow: hidden;
+        @media screen and(max-width: @mobile-width) {
+          height: 80px;
+        }
+        .dp-ui-banding {
+          .banding-item-wrapper {
+            img {
+              @media screen and(max-width: @mobile-width) {
+                width: 100%;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -599,11 +675,16 @@
     .works-container {
       width: 960px;
       margin: 0 auto;
+      @media screen and(max-width: @mobile-width) {
+        width: 320px;
+      }
     }
   }
   &-section-news {
     padding: 80px 0;
     background: url('http://opxdpusgg.bkt.clouddn.com/parallax-4.jpg');
+    background-attachment: fixed;
+    .background-size-cover();
     .news-title {
       text-align: center;
       .title-text {
@@ -616,18 +697,24 @@
     .news-container {
       position: relative;
       margin-top: 60px;
-      height: 580px;
+      height: 500px;
       .background-size-cover();
+      @media screen and(max-width: @mobile-width) {
+        height: 1500px;
+      }
       .content-wrapper {
         .wrapper-item {
           display: inline-block;
           width: 33%;
           padding: 0 10px;
+          @media screen and(max-width: @mobile-width) {
+            width: 100%;
+            padding: 0 20px;
+          }
           .item-main {
             background: rgba(38, 38, 38, .96);
             .main-cover {
               position: relative;
-              height: 300px;
               &:hover {
                 .title-cover {
                   top: 0;
@@ -690,6 +777,9 @@
       margin: 0 auto;
       position: relative;
       overflow: hidden;
+      @media screen and(max-width: @mobile-width) {
+        width: 320px;
+      }
       .form-title {
         font-size: 30px;
         padding-bottom: 20px;
@@ -752,9 +842,16 @@
           font-size: 50px;
           color: #fff;
           text-transform: uppercase;
+          @media screen and(max-width: @mobile-width) {
+            font-size: 26px;
+            line-height: 60px;
+          }
           .special {
             color: #EC572C;
             font-size: 65px;
+            @media screen and(max-width: @mobile-width) {
+              font-size: 32px;
+            }
           }
         }
         &.show {
@@ -769,10 +866,16 @@
     .concat-container {
       width: 950px;
       margin: 0 auto;
+      @media screen and(max-width: @mobile-width) {
+        width: 320px;
+      }
       .container-item {
         width: 32%;
         display: inline-block;
         color: #fff;
+        @media screen and(max-width: @mobile-width) {
+          width: 100%;
+        }
         .item-title {
           font-size: 28px;
           padding: 20px 0;
@@ -785,16 +888,17 @@
     }
   }
   &-section-footer {
-    padding: 60px 0;
+    padding: 60px 20px;
     background: #202020;
     color: #fff;
     text-align: center;
     .copy-right {
       font-size: 16px;
+      line-height: 30px;
     }
     .friend-link {
       font-size: 16px;
-      margin-top: 40px;
+      margin-top: 20px;
       > a {
         color: #fff;
         margin: 0 10px;
@@ -809,6 +913,8 @@
         border-bottom: 1px solid #fff;
         cursor: pointer;
         color: #fff;
+        display: inline-block;
+        margin-bottom: 20px;
         .transition(all 218ms);
         &:hover {
           color: #AAAAAA;

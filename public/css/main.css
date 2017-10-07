@@ -3596,6 +3596,17 @@ th {
   color: white;
   text-transform: uppercase;
 }
+@media screen and (max-width: 600px) {
+  .dp-home-section-title {
+    padding: 60px 30px;
+  }
+  .dp-home-section-title .title-name {
+    font-size: 24px;
+  }
+  .dp-home-section-title .title-info {
+    font-size: 16px;
+  }
+}
 .dp-home-section-feature {
   background: url('http://opxdpusgg.bkt.clouddn.com/home_bg_ligher.png');
   padding: 50px 0;
@@ -3603,6 +3614,11 @@ th {
 .dp-home-section-feature .feature-wrapper {
   width: 950px;
   margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .dp-home-section-feature .feature-wrapper {
+    width: 320px;
+  }
 }
 .dp-home-section-feature .feature-wrapper .feature-item {
   background: url('http://opxdpusgg.bkt.clouddn.com/home_bg_deep.png');
@@ -3616,6 +3632,12 @@ th {
   padding: 0 20px;
   width: 450px;
   display: inline-block;
+}
+@media screen and (max-width: 600px) {
+  .dp-home-section-feature .feature-wrapper .feature-item {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 .dp-home-section-feature .feature-wrapper .feature-item .item-title {
   font-size: 26px;
@@ -3670,9 +3692,19 @@ th {
   width: 960px;
   margin: 0 auto;
 }
+@media screen and (max-width: 600px) {
+  .dp-home-section-fun .fun-container {
+    width: 320px;
+  }
+}
 .dp-home-section-fun .fun-container .fun-title {
   font-size: 40px;
   color: #EC572C;
+}
+@media screen and (max-width: 600px) {
+  .dp-home-section-fun .fun-container .fun-title {
+    font-size: 24px;
+  }
 }
 .dp-home-section-fun .fun-container .fun-description {
   margin-top: 40px;
@@ -3685,6 +3717,16 @@ th {
 .dp-home-section-fun .fun-container .fun-wrapper .wrapper-item {
   display: inline-block;
   width: 24%;
+}
+@media screen and (max-width: 600px) {
+  .dp-home-section-fun .fun-container .fun-wrapper .wrapper-item {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .dp-home-section-fun .fun-container .fun-wrapper .wrapper-item:last-child {
+    margin-bottom: 0;
+  }
 }
 .dp-home-section-fun .fun-container .fun-wrapper .wrapper-item .item-title {
   font-size: 52px;
@@ -3704,10 +3746,10 @@ th {
   padding: 60px 0 100px 0;
   background: url('http://opxdpusgg.bkt.clouddn.com/parallax-2.jpg');
   background-attachment: fixed;
-  background-size: 100% auto;
-  -moz-background-size: 100% auto;
-  -webkit-background-size: 100% auto;
-  -o-background-size: 100% auto;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
   position: relative;
 }
 .dp-home-section-client .bg-cloud {
@@ -3747,6 +3789,11 @@ th {
   font-size: 18px;
   line-height: 28px;
 }
+@media screen and (max-width: 600px) {
+  .dp-home-section-client .client-content {
+    width: 320px;
+  }
+}
 .dp-home-section-client .client-content .content-bottom {
   text-align: center;
   margin-top: 30px;
@@ -3764,19 +3811,29 @@ th {
   width: 960px;
   margin: 0 auto;
 }
+@media screen and (max-width: 600px) {
+  .dp-home-section-ui .ui-content {
+    width: 320px;
+  }
+}
 .dp-home-section-ui .ui-content .content-item {
   display: inline-block;
   width: 49%;
   padding: 10px;
 }
+@media screen and (max-width: 600px) {
+  .dp-home-section-ui .ui-content .content-item {
+    width: 100%;
+  }
+}
 .dp-home-section-ui .ui-content .content-item .item-photo {
   width: 100%;
-  height: 500px;
+  height: auto;
   position: relative;
 }
 .dp-home-section-ui .ui-content .content-item .item-photo > img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .dp-home-section-ui .ui-content .content-item .item-photo .photo-name {
   position: absolute;
@@ -3830,10 +3887,20 @@ th {
   margin: 0 auto;
   color: #fff;
 }
+@media screen and (max-width: 600px) {
+  .dp-home-section-skill .skill-content {
+    width: 320px;
+  }
+}
 .dp-home-section-skill .skill-content .content-title {
   font-size: 30px;
   color: #EC572C;
   padding: 10px 0;
+}
+@media screen and (max-width: 600px) {
+  .dp-home-section-skill .skill-content .content-title {
+    font-size: 24px;
+  }
 }
 .dp-home-section-skill .skill-content .content-info {
   padding: 10px 0;
@@ -3845,6 +3912,11 @@ th {
 .dp-home-section-skill .skill-content .content-skill .skill-item {
   display: inline-block;
   width: 24%;
+}
+@media screen and (max-width: 600px) {
+  .dp-home-section-skill .skill-content .content-skill .skill-item {
+    width: 100%;
+  }
 }
 .dp-home-section-skill .skill-content .content-skill .skill-item .item-name {
   font-size: 24px;
@@ -3858,6 +3930,11 @@ th {
   -moz-border-radius: 50%;
   border-radius: 50%;
   border: 1px solid #fff;
+}
+@media screen and (max-width: 600px) {
+  .dp-home-section-skill .skill-content .content-skill .skill-item .item-count {
+    margin: 0 auto;
+  }
 }
 .dp-home-section-skill .skill-content .content-skill .skill-item .item-count .count-mark {
   position: absolute;
@@ -3892,7 +3969,10 @@ th {
 .dp-home-section-fliker {
   padding: 80px 0;
   background: url('http://opxdpusgg.bkt.clouddn.com/parallax-1.jpg');
-  background-size: 100% auto;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
   background-attachment: fixed;
 }
 .dp-home-section-fliker .fliker-title {
@@ -3908,9 +3988,13 @@ th {
   margin: 80px auto 0;
   width: 950px;
   overflow: hidden;
-  height: 255px;
   font-size: 0;
   padding: 5px;
+}
+@media screen and (max-width: 600px) {
+  .dp-home-section-fliker .fliker-content {
+    width: 330px;
+  }
 }
 .dp-home-section-fliker .fliker-content .content-item {
   display: inline-block;
@@ -3961,9 +4045,20 @@ th {
   width: 950px;
   margin: 0 auto;
 }
+@media screen and (max-width: 600px) {
+  .dp-home-section-done .done-wrapper {
+    width: 320px;
+  }
+}
 .dp-home-section-done .done-wrapper .wrapper-item {
   display: inline-block;
   width: 32%;
+}
+@media screen and (max-width: 600px) {
+  .dp-home-section-done .done-wrapper .wrapper-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
 .dp-home-section-done .done-wrapper .wrapper-item .item-content {
   margin: 0 10px;
@@ -4019,11 +4114,19 @@ th {
   padding: 100px 0;
   background: url('http://opxdpusgg.bkt.clouddn.com/parallax-3.jpg');
   background-attachment: fixed;
-  background-size: 100% auto;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
 }
 .dp-home-section-loved .loved-container {
   width: 950px;
   margin: 0 auto;
+}
+@media screen and (max-width: 600px) {
+  .dp-home-section-loved .loved-container {
+    width: 320px;
+  }
 }
 .dp-home-section-loved .loved-container .container-title {
   text-align: center;
@@ -4042,6 +4145,16 @@ th {
   height: 150px;
   overflow: hidden;
 }
+@media screen and (max-width: 600px) {
+  .dp-home-section-loved .loved-container .container-main {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .dp-home-section-loved .loved-container .container-main .dp-ui-banding .banding-item-wrapper img {
+    width: 100%;
+  }
+}
 .dp-home-section-works {
   background: url('http://opxdpusgg.bkt.clouddn.com/home_bg_ligher.png');
   padding: 60px 0;
@@ -4050,9 +4163,19 @@ th {
   width: 960px;
   margin: 0 auto;
 }
+@media screen and (max-width: 600px) {
+  .dp-home-section-works .works-container {
+    width: 320px;
+  }
+}
 .dp-home-section-news {
   padding: 80px 0;
   background: url('http://opxdpusgg.bkt.clouddn.com/parallax-4.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
 }
 .dp-home-section-news .news-title {
   text-align: center;
@@ -4066,23 +4189,33 @@ th {
 .dp-home-section-news .news-container {
   position: relative;
   margin-top: 60px;
-  height: 580px;
+  height: 500px;
   background-size: cover;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
+}
+@media screen and (max-width: 600px) {
+  .dp-home-section-news .news-container {
+    height: 1500px;
+  }
 }
 .dp-home-section-news .news-container .content-wrapper .wrapper-item {
   display: inline-block;
   width: 33%;
   padding: 0 10px;
 }
+@media screen and (max-width: 600px) {
+  .dp-home-section-news .news-container .content-wrapper .wrapper-item {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
 .dp-home-section-news .news-container .content-wrapper .wrapper-item .item-main {
   background: rgba(38, 38, 38, 0.96);
 }
 .dp-home-section-news .news-container .content-wrapper .wrapper-item .item-main .main-cover {
   position: relative;
-  height: 300px;
 }
 .dp-home-section-news .news-container .content-wrapper .wrapper-item .item-main .main-cover:hover .title-cover {
   top: 0;
@@ -4148,6 +4281,11 @@ th {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+}
+@media screen and (max-width: 600px) {
+  .dp-home-section-submit .submit-container {
+    width: 320px;
+  }
 }
 .dp-home-section-submit .submit-container .form-title {
   font-size: 30px;
@@ -4229,9 +4367,20 @@ th {
   color: #fff;
   text-transform: uppercase;
 }
+@media screen and (max-width: 600px) {
+  .dp-home-section-submit .submit-container .container-success-wrapper .wrapper-text {
+    font-size: 26px;
+    line-height: 60px;
+  }
+}
 .dp-home-section-submit .submit-container .container-success-wrapper .wrapper-text .special {
   color: #EC572C;
   font-size: 65px;
+}
+@media screen and (max-width: 600px) {
+  .dp-home-section-submit .submit-container .container-success-wrapper .wrapper-text .special {
+    font-size: 32px;
+  }
 }
 .dp-home-section-submit .submit-container .container-success-wrapper.show {
   -webkit-transform: translate(0, 0);
@@ -4248,10 +4397,20 @@ th {
   width: 950px;
   margin: 0 auto;
 }
+@media screen and (max-width: 600px) {
+  .dp-home-section-concat .concat-container {
+    width: 320px;
+  }
+}
 .dp-home-section-concat .concat-container .container-item {
   width: 32%;
   display: inline-block;
   color: #fff;
+}
+@media screen and (max-width: 600px) {
+  .dp-home-section-concat .concat-container .container-item {
+    width: 100%;
+  }
 }
 .dp-home-section-concat .concat-container .container-item .item-title {
   font-size: 28px;
@@ -4262,17 +4421,18 @@ th {
   line-height: 28px;
 }
 .dp-home-section-footer {
-  padding: 60px 0;
+  padding: 60px 20px;
   background: #202020;
   color: #fff;
   text-align: center;
 }
 .dp-home-section-footer .copy-right {
   font-size: 16px;
+  line-height: 30px;
 }
 .dp-home-section-footer .friend-link {
   font-size: 16px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .dp-home-section-footer .friend-link > a {
   color: #fff;
@@ -4288,6 +4448,8 @@ th {
   border-bottom: 1px solid #fff;
   cursor: pointer;
   color: #fff;
+  display: inline-block;
+  margin-bottom: 20px;
   -webkit-transition: all 218ms;
   -moz-transition: all 218ms;
   -o-transition: all 218ms;

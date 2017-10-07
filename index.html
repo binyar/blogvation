@@ -972,6 +972,23 @@
             }
             return false;
         });
+
+        $('.menu-content', '.menu-wrapper-mobile').on('click', 'a', function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var id = href.substring(1, href.length);
+            var $target = $('#' + decodeURI(id));
+            if ($target.length > 0) {
+                $('body').animate({
+                    scrollTop: $target.offset().top - 80
+                }, 400);
+                $(document.documentElement).animate({
+                    scrollTop: $target.offset().top - 80
+                }, 400)
+            }
+            return false;
+        });
+
         $('#form-submit').click(function () {
             var name = $('#form-name').val();
             var phone = $('#form-phone').val();
