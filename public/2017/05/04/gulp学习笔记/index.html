@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <p>&emsp;&emsp;之前折腾过一篇<a href="http://www.fanmaodong.com/2016/12/26/webpack%E5%BC%80%E5%8F%91-%E7%94%9F%E6%88%90%E9%85%8D%E7%BD%AE/" target="_blank" rel="external">webpack</a>，主要是配合开发react的时候用到的，现在恰巧在做另一个项目的时候用不到react，于是乎就来体验体验传说中一种<strong>基于流的自动化打包构建工具</strong>，废话不多说，跟以往一样，本文也并不就只是讲述一五一十按部就班的讲述如何配置，而往往解决问题的过程应该更重要。</p>
+<a id="more"></a>
+<h2 id="gulp"><a href="#gulp" class="headerlink" title="gulp"></a>gulp</h2><p>&emsp;&emsp;作为一种打包工具，个人觉得<code>好用</code>和<code>易上手</code>这两点对于我这种初学者来说很重要，单从这两点来说，<a href="http://www.gulpjs.com.cn/" target="_blank" rel="external">gulp</a>可以说是很好的解决了这两个问题，先不管它所谓的基于流的构建（可能理解起来太复杂了，或者单纯的理解为其引入的资源都是在内存当中以数据流的形式存在，然后让插件进行操作（不是路经的形式？，吐槽一句这样操作肯定会快很多，某mongo不是这样？）），看看它解决了什么问题，以及对我们来说是如何解决的吧。</p>
+<p>&emsp;&emsp;首先肯定是可以将各个分散的文件打包在一起，然后通过指定的配置生成一个或者多个指定类型的文件。当然，所有的资源，例如js、less、图片等也都一个意思。除了常规的这些打包工具都具备的功能以外呢，gulp还可以监听文件的变动然后做相应的处理，比如我打包了某个js，然后我修改了这个js的某行代码，gulp可以监听到这个变动，然后完成自动的打包，页面刷新一下即可，而不必再次手动重新去build。当然，其插件也是很丰富实用的，比如有一个<code>gulp-live-server</code>的插件，可以启动一个小型的静态服务器，对于纯前端开发来说也是很方便的一个功能。可能听起来是挺丰富的，相比配置起来肯定也很复杂？当然不是，对比与grunt和webpack，个人觉得gulp是配置起来最简洁最灵活的一个工具了，甚至需要配置的命令可能永远就那么几个：<code>.src</code>、<code>.watch</code>、<code>.dest</code>、<code>.task</code>。</p>
+<p>&emsp;&emsp;gulp的好用体现在监听资源变动和优质丰富的插件上面，而易用性则体现在精简的API、易学的配置。一开始我也是什么都不会的，按照个人理解的话，无非就是资源打包嘛，如果是基于流的话，是不是会快很多，想象中的gulp应该会减少一些不必要的磁盘IO操作来提升流畅程度才对得起它的宣传，特别让我感兴趣的是，所谓的资源监听自动打包究竟有多神奇，真想撸个痛快，抱着试一试的心态，打开官网瞅一瞅便可知晓。</p>
+<h2 id="轻松上手"><a href="#轻松上手" class="headerlink" title="轻松上手"></a>轻松上手</h2><p>&emsp;&emsp;都是从安装xxx开始，gulp也不例外：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --global gulp</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然后新建一个gulpfile.js的文件，写入一下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'default'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">'gulp is starting...'</span>)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;最后直接在命令行输入指令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gulp</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;好了，so easy吧，虽然我们还什么文件都没开始打包，不过最基础的配置就是这样。接下来我们可以拿一个常规的基础项目<a href="https://github.com/binyar/dp-ui" target="_blank" rel="external">dp-ui</a>来练练手，学习几个核心的API。</p>
+<p>&emsp;&emsp;首先，我们项目的目录树是这个样子：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/gulp-demo-1.png" alt=""></p>
+<h3 id="src-globs"><a href="#src-globs" class="headerlink" title=".src(globs)"></a>.src(globs)</h3><p>&emsp;&emsp;这个API用于引入需要打包的资源文件，其参数就是资源的路经，可以是数组或者string：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gulp.src([<span class="string">'js/base/*.js'</span>, <span class="string">'js/components/*.js'</span>])<span class="comment">//将这两个目录下面所有的js都引入进来</span></div><div class="line">.pipe(concat(<span class="string">'dp-common.js'</span>)) <span class="comment">//引入一个合并js的插件，将上述js合并为一个名为dp-common.js的文件</span></div><div class="line">.pipe(gulp.dest(<span class="string">'public/js'</span>)) <span class="comment">//将上述合并的文件写入到目录public/js当中</span></div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;我们只需要看第一行代码，引入资源路经，后面的配置都是不断的pipe()，意思是把引入的这个资源要做什么处理，比如我们pipe(concat(‘xxx.js’))，就是把资源合并成一个，并且命名为xxx.js。</p>
+<h3 id="dest-path"><a href="#dest-path" class="headerlink" title=".dest(path)"></a>.dest(path)</h3><p>&emsp;&emsp;这个API用于“输出”处理完成之后的文件，将其写入到文件夹当中，其配置参数path就是需要写入的目录，例如上面的代码，最后一行，就是把最后我们需要的文件写入到指定文件夹当中，这里我们指定其最后写入到public文件目录下面的js文件夹当中，执行完毕之后我们就可以看到目录下面多了一个dp-common.js的文件。</p>
+<h3 id="watch-globs-fn"><a href="#watch-globs-fn" class="headerlink" title=".watch(globs,fn)"></a>.watch(globs,fn)</h3><p>&emsp;&emsp;监听资源的变化，然后做相应的操作：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">gulp.watch(<span class="string">'js/components/*.js'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'File '</span> + e.path + <span class="string">' was '</span> + e.type + <span class="string">');</span></div><div class="line"><span class="string">&#125;)</span></div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;如果我们直接把fn换成是gulp创建的task的名称，那么可以直接执行运行这个task，达到自动build的效果，例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> jsCommonPath = [<span class="string">'js/base/*.js'</span>, <span class="string">'js/components/*.js'</span>];</div><div class="line">gulp.task(<span class="string">'js-common'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; <span class="comment">//自定义一个名为js-common的task</span></div><div class="line">    gulp.watch(jsCommonPath,[<span class="string">'js-common'</span>]);   <span class="comment">//监听JSCommonPath路径下的文件变动，变动之后自动运行task</span></div><div class="line">    <span class="keyword">return</span> gulp.src(jsCommonPath )</div><div class="line">        .pipe(concat(<span class="string">'js-common.js'</span>))</div><div class="line">        .pipe(gulp.dest(<span class="string">'public/js'</span>))</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="task-name-fn"><a href="#task-name-fn" class="headerlink" title=".task(name,fn)"></a>.task(name,fn)</h3><p>&emsp;&emsp;自定义一个task，然后执行相应的代码逻辑，如上，我们自定义了一个名为‘js-common’的task，里面执行的内容就是将我们的js打包并被监听。</p>
+<p>&emsp;&emsp;核心的API就这几个了，看起来是很简洁，如果详细查看，还请移步隔壁。现在我们基本的API都有了，是时候来执行一个任务看看效果了。罗列一下我们的需求，最终我们想要页面有两个js，一个是类库的js，里面放入了jQuery等其他js类库，我们想把它打包在一起，生成一个；一个是我们自己写的js，里面包含组件基础目录和组件目录下面的所有js。还要有一个css，里面包含了所有需要用到的样式。所以按照一般思维，我们的js或许是可以长成这个样子：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</div><div class="line">    concat = <span class="built_in">require</span>(<span class="string">'gulp-concat'</span>),</div><div class="line">    less = <span class="built_in">require</span>(<span class="string">'gulp-less'</span>),</div><div class="line">    path = <span class="built_in">require</span>(<span class="string">'path'</span>),</div><div class="line">    cssmin = <span class="built_in">require</span>(<span class="string">'gulp-minify-css'</span>);</div><div class="line"><span class="keyword">var</span> cssPath = [<span class="string">'less/base/core.less'</span>, <span class="string">'less/components/*.less'</span>],</div><div class="line">    jsLibPath = [<span class="string">'js/lib/*.js'</span>],</div><div class="line">    jsCommonPath = [<span class="string">'js/base/*.js'</span>, <span class="string">'js/components/*.js'</span>];</div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * js类库</span></div><div class="line"><span class="comment"> */</span></div><div class="line">gulp.task(<span class="string">'js-lib'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> gulp.src(jsLibPath)</div><div class="line">        .pipe(concat(<span class="string">'js-lib.js'</span>))</div><div class="line">        .pipe(gulp.dest(<span class="string">'public/js'</span>))</div><div class="line">&#125;);</div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * js公共组件库</span></div><div class="line"><span class="comment"> */</span></div><div class="line">gulp.task(<span class="string">'js-common'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(jsCommonPath, [<span class="string">'js-common'</span>]);</div><div class="line">    <span class="keyword">return</span> gulp.src(jsCommonPath)</div><div class="line">        .pipe(concat(<span class="string">'js-common.js'</span>))</div><div class="line">        .pipe(gulp.dest(<span class="string">'public/js'</span>))</div><div class="line">&#125;);</div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * less打包处理</span></div><div class="line"><span class="comment"> */</span></div><div class="line">gulp.task(<span class="string">'less'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.watch(cssPath, [<span class="string">'less'</span>]);</div><div class="line">    <span class="keyword">return</span> gulp.src(cssPath)</div><div class="line">        .pipe(less(&#123;</div><div class="line">            paths: [path.join(__dirname, <span class="string">'less'</span>, <span class="string">'includes'</span>)]</div><div class="line">        &#125;))</div><div class="line">        .pipe(concat(<span class="string">'main.css'</span>))</div><div class="line">        .pipe(gulp.dest(<span class="string">'./public/css'</span>))</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 默认执行</span></div><div class="line"><span class="comment"> */</span></div><div class="line">gulp.task(<span class="string">'default'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.start(<span class="string">'js-lib'</span>, <span class="string">'js-common'</span>, <span class="string">'less'</span>)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;看起来很low逼，不过它满足了我们的需求，然而需求总是不断变化的，现在我们可能需要一个静态服务器，以便于我们前端的开发和调试，于是引入一个<code>gulp-live-server</code>的插件，并且新建一个task：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 服务器启动</span></div><div class="line"><span class="comment"> */</span></div><div class="line">gulp.task(<span class="string">'serve'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> server = gls.static(<span class="string">'public'</span>, <span class="number">8888</span>);</div><div class="line">    server.start();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然后在default任务的前面新加一个<code>server</code>的任务。然后我们设想产品上线了，代码需要作压缩处理，并且文件变动不被监听，于是我们再次引入一些压缩的插件，然后新加几个task，专门用于生产环境：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * js代码压缩处理</span></div><div class="line"><span class="comment"> */</span></div><div class="line">gulp.task(<span class="string">'js-ugl'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> gulp.src(jsAllPath)</div><div class="line">        .pipe(concat(<span class="string">'main.min.js'</span>))</div><div class="line">        .pipe(uglify())</div><div class="line">        .pipe(gulp.dest(<span class="string">'public/js'</span>))</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * css代码压缩</span></div><div class="line"><span class="comment"> */</span></div><div class="line">gulp.task(<span class="string">'less-ugl'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> gulp.src(cssPath)</div><div class="line">        .pipe(less(&#123;</div><div class="line">            paths: [path.join(__dirname, <span class="string">'less'</span>, <span class="string">'includes'</span>)]</div><div class="line">        &#125;))</div><div class="line">        .pipe(cssmin())</div><div class="line">        .pipe(concat(<span class="string">'core.min.css'</span>))</div><div class="line">        .pipe(gulp.dest(<span class="string">'./public/css'</span>))</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;最后我们命名一个名为<code>pro</code>的task，专门用于生成生成环境需要的文件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 代码压缩</span></div><div class="line"><span class="comment"> */</span></div><div class="line">gulp.task(<span class="string">'pro'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    gulp.start(<span class="string">'js-ugl'</span>, <span class="string">'less-ugl'</span>)</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;不看不知道，一看吓一跳，现在我们的代码已经撸到90行了，而且里面大部分都是重复的逻辑，虽然讲道理它也能满足我们的需求，不过怎么看都觉得不精简，但是又不知道从哪里下手。</p>
+<h2 id="进阶之路"><a href="#进阶之路" class="headerlink" title="进阶之路"></a>进阶之路</h2><p>&emsp;&emsp;仔细看看前面我们写的配置，最重要的问题在于，一个task里面只干了某一件事情（生成了某一个文件），如果我们最终需要三个文件，理论上讲就需要写三个task，如果生成和开发分开的话，就需要double一下了。后来经过同事 <code>@pool</code>的demo启发，为何不把这些task的公共部分提取出来写成一个function，通过某个循环，传入task需要的参数来执行。这样的话，就只需要一个入口task，然后其他的需求都可以通过循环来完成，某大神的源码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line"><span class="meta">'use strict'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</div><div class="line"><span class="keyword">const</span> concat = <span class="built_in">require</span>(<span class="string">'gulp-concat'</span>);</div><div class="line"><span class="keyword">const</span> uglify = <span class="built_in">require</span>(<span class="string">'uglify'</span>);</div><div class="line"></div><div class="line"><span class="keyword">const</span> jsConfig = &#123;</div><div class="line">    modules: [</div><div class="line">        &#123; <span class="attr">src</span>: [<span class="string">'1.js'</span>, <span class="string">'2.js'</span>], <span class="attr">dest</span>: <span class="string">'dest.js'</span> &#125;</div><div class="line">    ],</div><div class="line">    uglify: <span class="literal">false</span>,</div><div class="line">    watch: <span class="literal">true</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// 简化了，没考虑异步（需要考虑异步的话我再加）</span></div><div class="line"><span class="keyword">const</span> concatJs = <span class="function">(<span class="params">config</span>) =&gt;</span> &#123;</div><div class="line">    <span class="keyword">const</span> streams = [];</div><div class="line">    config.modules.forEach(<span class="function">(<span class="params"><span class="built_in">module</span></span>) =&gt;</span> &#123;</div><div class="line">        <span class="keyword">const</span> bundle = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">            <span class="comment">// 基础拼接</span></div><div class="line">            <span class="keyword">let</span> stream = gulp</div><div class="line">                .src(<span class="built_in">module</span>.src)</div><div class="line">                .pipe(concat(<span class="built_in">module</span>.dest));</div><div class="line"></div><div class="line">            <span class="comment">// 是否压缩</span></div><div class="line">            <span class="keyword">if</span> (config.uglify) &#123;</div><div class="line">                stream = stream.pipe(uglify());</div><div class="line">            &#125;</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        <span class="comment">// 是否监听变动</span></div><div class="line">        <span class="keyword">if</span> (config.watch) &#123;</div><div class="line">            gulp.watch(<span class="built_in">module</span>.src, () =&gt; bundle());</div><div class="line">        &#125;</div><div class="line">        bundle();</div><div class="line">    &#125;);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">gulp.task(<span class="string">'dev'</span>, () =&gt; &#123;</div><div class="line">    concatJs(jsConfig);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;看完之后确实大湖醍醐灌顶，并不是说代码写的如何，最要还是在于思想上，当然，这个还是懂的自然懂，不懂的，说了也不懂。不管怎么说，现在我们的代码可以改造成这种结构的模式了，最终整理成这样：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),</div><div class="line">    concat = <span class="built_in">require</span>(<span class="string">'gulp-concat'</span>),</div><div class="line">    uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>),</div><div class="line">    gls = <span class="built_in">require</span>(<span class="string">'gulp-live-server'</span>),</div><div class="line">    less = <span class="built_in">require</span>(<span class="string">'gulp-less'</span>),</div><div class="line">    path = <span class="built_in">require</span>(<span class="string">'path'</span>),</div><div class="line">    cssmin = <span class="built_in">require</span>(<span class="string">'gulp-minify-css'</span>);</div><div class="line"><span class="keyword">const</span> cssPath = [<span class="string">'less/base/core.less'</span>, <span class="string">'less/components/*.less'</span>],</div><div class="line">    jsLibPath = [<span class="string">'js/lib/*.js'</span>],</div><div class="line">    jsCommonPath = [<span class="string">'js/base/*.js'</span>, <span class="string">'js/components/*.js'</span>];</div><div class="line"></div><div class="line"><span class="keyword">const</span> jsDest = <span class="string">'public/js'</span>;</div><div class="line"><span class="keyword">const</span> cssDest = <span class="string">'./public/css'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> jsDevConfig = &#123;</div><div class="line">    modules: [&#123;</div><div class="line">        src: jsLibPath,</div><div class="line">        rename: <span class="string">'js-lib.js'</span></div><div class="line">    &#125;, &#123;</div><div class="line">        src: jsCommonPath,</div><div class="line">        rename: <span class="string">'js-common.js'</span></div><div class="line">    &#125;],</div><div class="line">    uglify: <span class="literal">false</span>,</div><div class="line">    watch: <span class="literal">true</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">const</span> cssDevConfig = &#123;</div><div class="line">    modules: [&#123;</div><div class="line">        src: cssPath,</div><div class="line">        rename: <span class="string">'main.css'</span></div><div class="line">    &#125;],</div><div class="line">    uglify: <span class="literal">false</span>,</div><div class="line">    watch: <span class="literal">true</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">const</span> jsProConfig = <span class="built_in">Object</span>.assign(&#123;&#125;, jsDevConfig, &#123;</div><div class="line">    uglify: <span class="literal">true</span>,</div><div class="line">    watch: <span class="literal">false</span></div><div class="line">&#125;);</div><div class="line"><span class="keyword">const</span> cssProConfig = <span class="built_in">Object</span>.assign(&#123;&#125;, cssDevConfig, &#123;</div><div class="line">    uglify: <span class="literal">true</span>,</div><div class="line">    watch: <span class="literal">false</span></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">const</span> buildJs = <span class="function">(<span class="params">config</span>) =&gt;</span> &#123;</div><div class="line">    config.modules.forEach(<span class="function">(<span class="params"><span class="built_in">module</span></span>) =&gt;</span> &#123;</div><div class="line">        <span class="keyword">const</span> bundle = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">            <span class="comment">// 基础拼接</span></div><div class="line">            <span class="keyword">let</span> stream = gulp</div><div class="line">                .src(<span class="built_in">module</span>.src)</div><div class="line">                .pipe(concat(<span class="built_in">module</span>.rename));</div><div class="line"></div><div class="line">            <span class="comment">// 是否压缩</span></div><div class="line">            <span class="keyword">if</span> (config.uglify) &#123;</div><div class="line">                stream.pipe(uglify());</div><div class="line">            &#125;</div><div class="line">            stream.pipe(gulp.dest(jsDest));</div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        <span class="comment">// 是否监听变动</span></div><div class="line">        <span class="keyword">if</span> (config.watch) &#123;</div><div class="line">            gulp.watch(<span class="built_in">module</span>.src, () =&gt; bundle());</div><div class="line">        &#125;</div><div class="line">        bundle();</div><div class="line">    &#125;);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">const</span> buildCss = <span class="function">(<span class="params">config</span>) =&gt;</span> &#123;</div><div class="line">    config.modules.forEach(<span class="function">(<span class="params"><span class="built_in">module</span></span>) =&gt;</span> &#123;</div><div class="line">        <span class="keyword">const</span> bundle = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">            <span class="comment">// 基础拼接</span></div><div class="line">            <span class="keyword">let</span> stream = gulp</div><div class="line">                .src(<span class="built_in">module</span>.src)</div><div class="line">                .pipe(less(&#123;</div><div class="line">                    paths: [path.join(__dirname, <span class="string">'less'</span>, <span class="string">'includes'</span>)]</div><div class="line">                &#125;))</div><div class="line">                .pipe(concat(<span class="built_in">module</span>.rename));</div><div class="line"></div><div class="line">            <span class="comment">// 是否压缩</span></div><div class="line">            <span class="keyword">if</span> (config.uglify) &#123;</div><div class="line">                stream.pipe(cssmin());</div><div class="line">            &#125;</div><div class="line">            stream.pipe(gulp.dest(cssDest));</div><div class="line">        &#125;;</div><div class="line">        <span class="comment">// 是否监听变动</span></div><div class="line">        <span class="keyword">if</span> (config.watch) &#123;</div><div class="line">            gulp.watch(<span class="built_in">module</span>.src, () =&gt; bundle());</div><div class="line">        &#125;</div><div class="line">        bundle();</div><div class="line">    &#125;);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * 服务器启动</span></div><div class="line"><span class="comment"> */</span></div><div class="line">gulp.task(<span class="string">'serve'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">const</span> server = gls.static(<span class="string">'public'</span>, <span class="number">8888</span>);</div><div class="line">    server.start();</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'dev'</span>, () =&gt; &#123;</div><div class="line">    buildJs(jsDevConfig);</div><div class="line">    buildCss(cssDevConfig);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">gulp.task(<span class="string">'proc'</span>, () =&gt; &#123;</div><div class="line">    buildJs(jsProConfig);</div><div class="line">    buildCss(cssProConfig);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;如上，无论是目录结构还是代码结构，都比之前的要清晰了不少，不过可以改进的地方还是有的。</p>
+
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#gulp"><span class="toc-number">1.</span> <span class="toc-text">gulp</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#轻松上手"><span class="toc-number">2.</span> <span class="toc-text">轻松上手</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#src-globs"><span class="toc-number">2.1.</span> <span class="toc-text">.src(globs)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dest-path"><span class="toc-number">2.2.</span> <span class="toc-text">.dest(path)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#watch-globs-fn"><span class="toc-number">2.3.</span> <span class="toc-text">.watch(globs,fn)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#task-name-fn"><span class="toc-number">2.4.</span> <span class="toc-text">.task(name,fn)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进阶之路"><span class="toc-number">3.</span> <span class="toc-text">进阶之路</span></a></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

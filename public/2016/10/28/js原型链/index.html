@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <p>&emsp;&emsp;所谓行如逆水行舟，不进则退，敲代码想必更是如此。匆匆忙忙荏苒一年，虽然时常都会遇到些原型链的问题，但是却从来都没有过仔细的思考思考，作为js的核心，更是魅力所在，想要三言两语说清楚也是不可能的，在此只是谈谈自己的一些见解。<br><a id="more"></a></p>
+<p>&emsp;&emsp;一切皆对象，万物皆空。一开始什么都没有的，为null，如果一直都是什么都没有的话怎么coding呢，后来从null开始引入了12个内置对象，有String、Date、boolean等等（当然es6之后又新增了Promise等等），当然如果这些都不够用，我们可以自己新建一个function然后再实例化这个对象即可。或许此时可以停留三秒钟想一下，我们是通过function来创建类然后再实例化的，这已有的这些内置对象是什么呢，就是function嘛（Math和JSON除外，这两个没法实例化，它们其实就只是Object而已，只不过是内置的）。而每个function都有一个默认的属性，叫做prototype，本质上讲这个属性也是一个Object，Object也有prototype，而它的__proto__可以指向它的上一级，可以直接在控制台打印出来看看，发现直接就是null。</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/object-01.png" alt=""></p>
+<p>&emsp;&emsp;说到这里还是感觉就是在故弄玄虚，不知道是个什么鬼，毕竟要把这个问题说明白说通说透，原谅我的能力还远远不够。理解原型链之前，有几个重要的点需要着重说明一下。</p>
+<h3 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h3><p>&emsp;&emsp;每个function都有一个prototype属性，这个是默认的，在你创建function的时候就有了，既然prototype作为一个对象，会不会有默认一些属性呢，答案是有的，如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/object-02.png" alt=""></p>
+<p>&emsp;&emsp;上面有一个constructor属性，也就是通常我们所说的构造函数，这个构造函数我们打印出来发现，它实际上就是a自己：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/object-03.png" alt=""></p>
+<p>&emsp;&emsp;从本质上讲，构造函数也是一个函数，只是调用方式不同，它是通过new 关键字来调用。</p>
+<p>&emsp;&emsp;既然新建的function有了prototype属性，我们就可以在这上面做更多的操作了，比如新增一些其他的属性或者方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">A</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">   A.prototype.name=name;</div><div class="line">   A.prototype.say=<span class="function"><span class="keyword">function</span>(<span class="params">word</span>)</span>&#123;</div><div class="line">       <span class="built_in">console</span>.log(A.prototype.name+<span class="string">' say:'</span>+word)</div><div class="line">   &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> b=<span class="keyword">new</span> A(<span class="string">'wahaha'</span>);</div><div class="line">b.say(<span class="string">'hello'</span>);<span class="comment">// wahaha say:hello</span></div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这也就能够理解了为什么我们每次创建对象都是从function开始了。我们称这个新建的function A为原型对象。</p>
+<h3 id="proto"><a href="#proto" class="headerlink" title="__proto__"></a>__proto__</h3><p>&emsp;&emsp;这是被实例化的对象才会有的一个属性，这个属性指向它的原型对象，比如上面的b就是一个被实例化的对象，它的原型对象就是A。我们需要知道的是，这个实例化的工程究竟是怎么来的，就是var b=new A()这简单的一行代码究竟发生了什么事情：</p>
+<ul>
+<li>1、内存为b新开了一个地址空间，称之为新建了一个对象，但是此时还什么都没有，只有一个__proto__属性；</li>
+<li>2、b对象的__proto__指向了构造它的函数的prototype，也就是说此时b的__proto__和A的prototype实际上是一样的，A具备什么样的属性和方法，在b上面也是存在的;</li>
+<li>3、通过A的prototype的constructor构造函数完成b对象的实例化，此时b完全具备A的所有属性和方法，而且和A已经分离开来，比如我改变了b的某个属性，A是不会受到影响的，反过来也如此。</li>
+</ul>
+<p>&emsp;&emsp;这个__proto__属性就是所谓的原型链</p>
+<h3 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h3><p>&emsp;&emsp;从上面的例子中，我们知道了可以从实例化对象的__proto__追溯它的原型对象是什么，那么原型对象的原型对象的原型对象又是什么，怎么知道呢？当然就是通过原型对象的__proto__的追溯它的原型对象了，这里我们打印出来看一下，发现A的原型对象是一个空function，没毛病，这个Function是所有function的原型对象嘛，而Function的原型对象是什么呢？是Object，而Object的原型对象呢？是null。</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/object-04.png" alt=""></p>
+<p>&emsp;&emsp;每当我们创建一个对象属性的时候，js引擎会通过它的__proto__查找具体的值，如果没有的话就查找它的原型对象，原型对象的原型对象，以此类推，直到找到为止，比如b.__proto__.prototype.__proto__，这就是所谓的js原型链，所有的对象都是通过这些原型链连接起来的，所以说js只是一种弱关系类型语言，硬要把它搞得像Java那样反而会显得有些不伦不类。</p>
+
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#prototype"><span class="toc-number">1.</span> <span class="toc-text">prototype</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#proto"><span class="toc-number">2.</span> <span class="toc-text">__proto__</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#原型链"><span class="toc-number">3.</span> <span class="toc-text">原型链</span></a></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

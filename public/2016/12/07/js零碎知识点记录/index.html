@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <p>&emsp;&emsp;零散的记录一些js相关的知识点，方便以后遗忘的时候翻出来看看。<br><a id="more"></a></p>
+<h2 id="如何让一个div绑定focus和blur事件？"><a href="#如何让一个div绑定focus和blur事件？" class="headerlink" title="如何让一个div绑定focus和blur事件？"></a>如何让一个div绑定focus和blur事件？</h2><p>&emsp;&emsp;在div里面加入tabindex属性就可以了让其绑定focus和blur事件了，然后可以实现点击当前div的其他区域（即blur）的事件绑定了。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span>  <span class="attr">id</span>=<span class="string">'demo'</span> <span class="attr">tabindex</span>=<span class="string">"1"</span> <span class="attr">style</span>=<span class="string">"width:100px;height:100px;border:1px solid red;"</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'#demo'</span>).on(<span class="string">'focus'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'focus........'</span>)</div><div class="line">    &#125;).on(<span class="string">'blur'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'blur............'</span>)</div><div class="line">        &#125;)</div></pre></td></tr></table></figure>
+<h2 id="jquery深拷贝和浅拷贝"><a href="#jquery深拷贝和浅拷贝" class="headerlink" title="jquery深拷贝和浅拷贝"></a>jquery深拷贝和浅拷贝</h2><ul>
+<li>$.extend(true,{},source)//深拷贝，即会遍历对象的每一层然后拷贝，而不是第一层；</li>
+<li>$.extend({},source)//浅拷贝，只会遍历第一层，对象里面的对象将会只是一个引用；</li>
+</ul>
+<p>例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ob1 = &#123;</div><div class="line">    widget: &#123;</div><div class="line">        visible: <span class="literal">false</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> ob2 = $.extend(&#123;&#125;, ob1);<span class="comment">//浅拷贝</span></div><div class="line">ob2.widget.visible = <span class="literal">true</span></div><div class="line"><span class="built_in">console</span>.log(ob1)<span class="comment">//&#123;widget:&#123;visible:true&#125;&#125;</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> ob1 = &#123;</div><div class="line">    widget: &#123;</div><div class="line">        visible: <span class="literal">false</span></div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> ob2 = $.extend(<span class="literal">true</span>, &#123;&#125;, ob1);<span class="comment">//深拷贝</span></div><div class="line">ob2.widget.visible = <span class="literal">false</span></div><div class="line"><span class="built_in">console</span>.log(ob1)<span class="comment">//&#123;widget:&#123;visible:false&#125;&#125;</span></div></pre></td></tr></table></figure>
+<h2 id="document-ready-和onload"><a href="#document-ready-和onload" class="headerlink" title="document.ready()和onload"></a>document.ready()和onload</h2><p>&emsp;&emsp;document.ready是指当前文档已经加载完毕（不包含css、图片等静态资源）； onload是指所有资源都已经加载完毕。例如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span> <span class="attr">onload</span>=<span class="string">"xxxxfunc()"</span>&gt;</span></div><div class="line">    </div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+<h2 id="js闭包"><a href="#js闭包" class="headerlink" title="js闭包"></a>js闭包</h2><p>&emsp;&emsp;在函数中定义一个函数，然后让另一个函数访问这个函数中定义的私有变量。</p>
+<ul>
+<li>闭包会自己执行</li>
+<li>闭包可以缓存数据(后台数据或者其他数据)和当前对象</li>
+<li>闭包可以实现封装和模块化</li>
+<li>避免变量污染</li>
+</ul>
+<p>&emsp;&emsp;也是一个老生常谈的话题啊，就像一千个读者有一千个哈姆雷特一样，可能每个人的说辞都不太一样吧，上面那句话是我自己写的，我可不敢说精辟，只是一方说辞而已。闭包的用意应该是作用于变量的作用域的，js变量有两种，一种是全局变量，就是在哪都可以被访问到的；还有一种是局部变量，只能够被某一个代码块内被访问。如果想让某个函数的局部变量被另一个函数所访问，常规的方法是办不到的，这时候就可以用闭包了，在函数中定义一个函数，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> a=<span class="number">123</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">         <span class="built_in">console</span>.log(a);<span class="comment">//可以访问到f1()中的局部变量了</span></div><div class="line">    &#125;</div><div class="line">    f2();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;实际开发一般都是会用到jquery的，可以把上面的代码稍微包装一下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">;(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</div><div class="line">       <span class="keyword">var</span> a=<span class="number">123</span>;</div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>)</span>&#123;</div><div class="line">           <span class="built_in">console</span>.log(a);</div><div class="line">       &#125;</div><div class="line">       f2();</div><div class="line">   &#125;)(jQuery);</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这时你会发现代码已经被自动执行了，而且这时候的变量a是一直存在于内存当中的，这也就可以理解我说闭包意义的前两条了。如果我再写一个闭包作为另一个业务模块，里面也定义了一个变量a，因为实际开发都是团队协作开发的，你永远也不知道你的同伴会定义什么变量名。最后把这两个模块打包在一起会发生什么呢？</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">;(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</div><div class="line">       <span class="comment">/**</span></div><div class="line"><span class="comment">       *这是另一个业务模块</span></div><div class="line"><span class="comment">       */</span></div><div class="line">       <span class="keyword">var</span> a=<span class="number">321</span>;</div><div class="line">       <span class="function"><span class="keyword">function</span> <span class="title">f3</span>(<span class="params"></span>)</span>&#123;</div><div class="line">           <span class="built_in">console</span>.log(a);<span class="comment">//321</span></div><div class="line">       &#125;</div><div class="line">       f2();</div><div class="line">   &#125;)(jQuery);</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;当然这就是我所谓模块化开发的雏形，实际项目中当然是会做封装和继承的，这属于本文的内容，回到主题，会发现下面那个模块的变量名称并不会受到上面一个模块的影响，而是保持原值。这就是所谓的避免变量污染了。</p>
+
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何让一个div绑定focus和blur事件？"><span class="toc-number">1.</span> <span class="toc-text">如何让一个div绑定focus和blur事件？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jquery深拷贝和浅拷贝"><span class="toc-number">2.</span> <span class="toc-text">jquery深拷贝和浅拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#document-ready-和onload"><span class="toc-number">3.</span> <span class="toc-text">document.ready()和onload</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#js闭包"><span class="toc-number">4.</span> <span class="toc-text">js闭包</span></a></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

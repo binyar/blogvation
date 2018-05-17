@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <p>&emsp;&emsp;粗略记录一下自己在日常工作中用到频率比较高的一些数组的操作方法<br><a id="more"></a></p>
+<h2 id="join"><a href="#join" class="headerlink" title="join()"></a>join()</h2><p>&emsp;&emsp;将一个数组转换成字符串，传入的参数就是连接数组的字符。例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>];</div><div class="line">arr.join(<span class="string">'-'</span>); <span class="comment">//'a-b-c'</span></div></pre></td></tr></table></figure>
+<h2 id="reverse"><a href="#reverse" class="headerlink" title="reverse()"></a>reverse()</h2><p>&emsp;&emsp;把一个数组倒序排列，会直接改变该数组。例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">5</span>];</div><div class="line">arr.reverse();</div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[5,2,1]</span></div></pre></td></tr></table></figure>
+<h2 id="sort"><a href="#sort" class="headerlink" title="sort()"></a>sort()</h2><p>&emsp;&emsp;数组的排序，接收一个函数，该函数有两个参数，用于所有相邻数组的比较，需要注意的是，如果不传参数，是将元素转换成string，然后按照该string的ASC码进行排序的。例如：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">3</span>];</div><div class="line">arr.sort();</div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[1, 10, 2, 3, 9]：因为字符串'10'的ASC码在'2'的前面。</span></div><div class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">x,y</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> x&gt;y;<span class="comment">//返回true表示相邻元素交换位置，此时的用法是将arr从小到大排列</span></div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[1,2,3,9,10]</span></div></pre></td></tr></table></figure></p>
+<h2 id="concat"><a href="#concat" class="headerlink" title="concat()"></a>concat()</h2><p>&emsp;&emsp;将两个数组合并成一个数组，返回一个新的数组，需要注意的是，原数组并不会改变。例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr1=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>];</div><div class="line"><span class="keyword">var</span> arr2=[<span class="number">5</span>,<span class="number">6</span>,<span class="number">8</span>];</div><div class="line"><span class="keyword">var</span> arr3=arr1.concat(arr2);</div><div class="line"><span class="built_in">console</span>.log(arr1);<span class="comment">//[1,2,4]此时arr1并没有发生改变;</span></div><div class="line"><span class="built_in">console</span>.log(arr3);<span class="comment">//[1,2,4,5,6,8];</span></div></pre></td></tr></table></figure>
+<h2 id="reduce"><a href="#reduce" class="headerlink" title="reduce()"></a>reduce()</h2><p>&emsp;&emsp;将一个函数作用于该数组，最终返回一个值。这个函数会接收两个参数，用于数组的累加，该累加方法用于数组中的各个元素，例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>];</div><div class="line"><span class="keyword">var</span> ret=arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">x,y</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> x+<span class="string">'-'</span>+y;</div><div class="line">&#125;);</div><div class="line"><span class="built_in">console</span>.log(ret);<span class="comment">//a-b-c-d</span></div></pre></td></tr></table></figure>
+<h2 id="slice-part1-part2"><a href="#slice-part1-part2" class="headerlink" title="slice(part1,part2)"></a>slice(part1,part2)</h2><p>&emsp;&emsp;将一个数组进行切分，切分的开始位置是part1，结束位置是part2，返回切分的数组（即从part1到part2），需要注意的是，此时原数组并没有被改变，常用于数组的拷贝。例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr1=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]</div><div class="line"><span class="keyword">var</span> arr2=arr1.slice(<span class="number">2</span>,<span class="number">4</span>);</div><div class="line"><span class="built_in">console</span>.log(arr1);<span class="comment">//[1,2,3,4,5,6,7]</span></div><div class="line"><span class="built_in">console</span>.log(arr2);<span class="comment">//[3,4]</span></div></pre></td></tr></table></figure>
+<h2 id="splice-part1-part2"><a href="#splice-part1-part2" class="headerlink" title="splice(part1,part2)"></a>splice(part1,part2)</h2><p>&emsp;&emsp;<em>直接修改原数组</em>，修改原素组的属性，从part1开始删除part2个元素，如果part2为0的话表示不删除，常用于<em>删除数组元素</em></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr1=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>];</div><div class="line"><span class="keyword">var</span> arr2=arr1.splice(<span class="number">2</span>,<span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log(arr1);<span class="comment">//[1,2,5];</span></div><div class="line"><span class="built_in">console</span>.log(arr2);<span class="comment">//[3,4];</span></div></pre></td></tr></table></figure>
+<h2 id="map"><a href="#map" class="headerlink" title="map()"></a>map()</h2><p>&emsp;&emsp;把一个函数作用于该数组，使其遍历</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>]</div><div class="line">arr.map(<span class="function"><span class="keyword">function</span>(<span class="params">val,index</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(val);<span class="comment">//a,b,c,d</span></div><div class="line">    <span class="built_in">console</span>.log(index);<span class="comment">//0,1,2,3</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h2 id="filter"><a href="#filter" class="headerlink" title="filter()"></a>filter()</h2><p>&emsp;&emsp;遍历数组，过滤数组中的某个元素，返回一个新的数组，原素组不会被改变</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>,<span class="string">'d'</span>,<span class="string">'a'</span>,<span class="string">'c'</span>];</div><div class="line"><span class="keyword">var</span> ret=arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">val</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> val!==<span class="string">'a'</span>;<span class="comment">//返回true表示该元素保留，否则过滤掉，此处是过滤掉arr中所以值为'a'的元素；</span></div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log(arr)</div><div class="line"><span class="built_in">console</span>.log(ret)</div></pre></td></tr></table></figure>
+<h2 id="some"><a href="#some" class="headerlink" title="some()"></a>some()</h2><p>&emsp;&emsp;将一个函数作用于数组对其进行遍历，判断该数组中的元素是否满足某个条件，返回一个boolean，例如：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</div><div class="line"><span class="keyword">var</span> bool=arr.some(<span class="function"><span class="keyword">function</span>(<span class="params">val</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> val===<span class="number">1</span>;<span class="comment">//判断arr中是否包含1</span></div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log(bool);<span class="comment">//true</span></div></pre></td></tr></table></figure>
+<h2 id="every"><a href="#every" class="headerlink" title="every()"></a>every()</h2><p>&emsp;&emsp;与some()类似，只不过every是判断该数组中是否每个元素都满足函数中的判断条件，同样也是返回一个boolean:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>];</div><div class="line"><span class="keyword">var</span> bool=arr.every(<span class="function"><span class="keyword">function</span>(<span class="params">val</span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> val===<span class="number">1</span>;<span class="comment">//判断arr中是否每个元素都为1</span></div><div class="line">&#125;)</div><div class="line"><span class="built_in">console</span>.log(bool);<span class="comment">//false</span></div></pre></td></tr></table></figure>
+<h2 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h2><p>&emsp;&emsp;其实数组的去重实现方式有多种，这里只介绍个人认为最简单精炼的去重方式：new Set(arr)。不过此时的key值是symbol类型，不可以直接使用，只能枚举，如果想调用的话请再次转换为array：Array.from(set)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>,<span class="number">2</span>,<span class="number">1</span>];</div><div class="line"><span class="keyword">var</span> ret=<span class="keyword">new</span> <span class="built_in">Set</span>(arr);</div><div class="line"><span class="built_in">console</span>.log(arr);<span class="comment">//[1,2,4,6,2,1]</span></div><div class="line"><span class="built_in">console</span>.log(ret);<span class="comment">//&#123;1,2,4,6&#125;</span></div><div class="line"><span class="keyword">var</span> arr2=<span class="built_in">Array</span>.from(ret);</div><div class="line"><span class="built_in">console</span>.log(arr2);<span class="comment">//[1,2,4,6];</span></div></pre></td></tr></table></figure>
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#join"><span class="toc-number">1.</span> <span class="toc-text">join()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reverse"><span class="toc-number">2.</span> <span class="toc-text">reverse()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sort"><span class="toc-number">3.</span> <span class="toc-text">sort()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#concat"><span class="toc-number">4.</span> <span class="toc-text">concat()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#reduce"><span class="toc-number">5.</span> <span class="toc-text">reduce()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#slice-part1-part2"><span class="toc-number">6.</span> <span class="toc-text">slice(part1,part2)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#splice-part1-part2"><span class="toc-number">7.</span> <span class="toc-text">splice(part1,part2)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#map"><span class="toc-number">8.</span> <span class="toc-text">map()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#filter"><span class="toc-number">9.</span> <span class="toc-text">filter()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#some"><span class="toc-number">10.</span> <span class="toc-text">some()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#every"><span class="toc-number">11.</span> <span class="toc-text">every()</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组去重"><span class="toc-number">12.</span> <span class="toc-text">数组去重</span></a></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

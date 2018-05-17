@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <p>&emsp;&emsp;好久没写点东西了，定睛一看，哎呦我去，距离最后一次提交都过了一个多月了，说好的一周一文呢，这脸打的啪啪啪。闲话不扯了，这次想给大家推荐一款前端开发的调试神器——Fiddler，当然是面向纯新手入门级的小白。<br><a id="more"></a></p>
+<p>&emsp;&emsp;本文主要是针对<strong>移动端（<code>IOS</code>、<code>Android]</code>）</strong>来讲述的，如果是PC端的话可以移步一下之前写过的一问<a href="http://www.fanmaodong.com/2016/11/12/Chrome%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/" target="_blank" rel="external">chrome的调试</a>，当然，主要是PC可以直接在浏览器里面通过开发工具来实现，而移动端是没有，常规意义上讲，此处我们的思路应该是，借助于PC的浏览器开发工具来实现，之前的文章里面也提到过可以通过android的USB连接到PC电脑，在chrome中调试，问题在于如果是微信内置的所谓X5内核牛逼轰轰的浏览器以及钉钉等等等等呢？好吧，大家也都知道他们官网上面也提供了相应的调试方式，或许本文到此就可以结束了，好吧，大家散了吧。等等，我提一个问题，如果想在win环境下调试IOS的网页，能办到吗？呵呵吧。</p>
+<h2 id="需求是什么"><a href="#需求是什么" class="headerlink" title="需求是什么"></a>需求是什么</h2><p>&emsp;&emsp;首先确定一下自己的开发环境，win7系统、一台android手机和iphone5，chrome浏览器。只有这些设备，我们想要达到一下效果：</p>
+<ul>
+<li>查看android或者iPhone里面微信里面某个web页面请求的参数和返回参数；</li>
+<li>修改android或者iPhone里面微信里面某个web页面里面的DOM结构，调整其样式结构；</li>
+<li>覆盖android或者iPhone里面微信里面某个web页面js的代码；</li>
+<li>往android或者iPhone里面微信里面某个web页面添加js代码。</li>
+</ul>
+<p>&emsp;&emsp;先就这几条吧，其他的想到了再补充（这里都是以微信举例说明，其他的APP，像是钉钉、淘宝也是同理）。</p>
+<h2 id="如何解决"><a href="#如何解决" class="headerlink" title="如何解决"></a>如何解决</h2><p>&emsp;&emsp;如果只是需要调试android端的问题的话，上面这些问题都可以解决，我们只需要按照官方文档来做，打开安装好的开发工具，USB连接到电脑：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/fiddler1.png" alt=""></p>
+<p>&emsp;&emsp;切换到移动调试面板，微信扫码，允许XXX勾上，然后“开始调试”：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/fiddler2.png" alt=""></p>
+<p>&emsp;&emsp;点击inspect：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/fiddler3.png" alt=""></p>
+<p>&emsp;&emsp;一切的一起看起都是那么的熟悉，调试起来当然没有任何问题。问题是，如果想要调试IOS呢，是不是要去买个MBP，然后再走一遍以上流程？代价有点大啊。又或者由于种种原因（被墙，usb 驱动装不上等等）导致usb调试搞不起来怎么办呢？这时候就可以请出我们的神器了——Fiddler。</p>
+<h2 id="Fiddler"><a href="#Fiddler" class="headerlink" title="Fiddler"></a>Fiddler</h2><p>&emsp;&emsp;一开始我也是不知道这个玩意的，某次微信的接口调试需要，也是<code>@胡大师</code>的带领下，算是有了一个初步的认识。当时也是没太在意，时隔快一年，由于工作的某些需要，才又把这个老家伙给搬出来了。</p>
+<p>&emsp;&emsp;这是一个代理服务器软件，打开运行它之后，可以让其他设备（比如我们的手机）连接进来，然后让其所有的网络请求都通过经过我们的电脑来进行中转，在这个中转的过程中，我们就可以看到所有的数据了。最简单的说，我在某宝上面买了个表，通过快递送到我家，这个快递就是代理，由他把表（数据）带给我，当然，这个快递在传送的过程中也可以查看这个表长什么样子，什么颜色等等，甚至可以把表带给我卸了（数据被篡改了）然后再给我。当然，这种代理服务器软件想想也有很多的，只是说fiddler从众多软件中脱颖而出，想必也是有它的理由的（简单易上手啊\手动笑哭）</p>
+<h3 id="查看网络请求"><a href="#查看网络请求" class="headerlink" title="查看网络请求"></a>查看网络请求</h3><p>&emsp;&emsp;也算是一个大众软件，随便百度一下就可以下载了。打开软件之后就已经启动了这个代理服务器，如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/fiddler4.png" alt=""></p>
+<p>&emsp;&emsp;打开浏览器浏览任意网页就可以查看所有的网络请求了，不过这时候还只能查看http的请求，如果想要查看https的请求，只需要简单设置一下，找到tool菜单，选择菜单中的 <code>Fiddler Options..</code>选项，打开设置窗口如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/fiddler5.png" alt=""></p>
+<p>&emsp;&emsp;切换到https选项面板，勾选如上图所示的三个选项，注意下拉选项里是选择 <code>from all process</code>，然后切换到 connetctions面板，勾选如下图所示的三个选项：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/fiddler6.png" alt=""></p>
+<p>&emsp;&emsp;在输入框里可以设置一个代理端口号，默认是8888，可以不用修改。修改完毕之后点击 ‘ok’ 关闭窗口，关闭fiddler再打开，此时设置就生效，可以看到https的请求了。选中某个请求 ，右边会显示这个请求的相关参数，对于web调试来说非常方便。</p>
+<p>&emsp;&emsp;当然，明显可以看到，fiddler里面还有很多各种各样的设置，都可以自己去尝试一下，这里只是做了必要的说明而已。</p>
+<h3 id="手机端设置代理"><a href="#手机端设置代理" class="headerlink" title="手机端设置代理"></a>手机端设置代理</h3><p>&emsp;&emsp;前提，手机需要打开连接WiFi，使<strong>手机端的ip地址和电脑的ip保持在一个网段</strong>，这很容易办到，打开路由器，电脑和手机都连接这个路由器就行了。以我的电脑为例，电脑是192.168.1.110，手机连接WiFi之后，在WLAN选项那里查看到时192.168.1.100。当然，这里手机端设置代理，android和ios以及不同的版本可能有些差异，不过原理都是一样的，就是在WLAN那里设置点击已连接WiFi的左边那个小的感叹号进去，如下：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/fiddler7.png" alt=""></p>
+<p>&emsp;&emsp;点击代理设置，将代理的服务器地址设置为电脑的ip地址，端口号为刚刚填写的fiddler的端口号，如下：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/fiddler8.png" alt=""></p>
+<p>&emsp;&emsp;保存之后，打开浏览器，访问 电脑ip地址+端口号，如：192.168.1.110:8888，如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/fiddler9.jpg" alt=""></p>
+<p>&emsp;&emsp;点击如图所示的位置，<strong>下载安装安全证书</strong>。安装完毕之后，我们再次访问任意网页，无论是android还是ios，所有的请求就可以在fiddler里面看到了。</p>
+<h3 id="断点调试、脚本注入、文件替换"><a href="#断点调试、脚本注入、文件替换" class="headerlink" title="断点调试、脚本注入、文件替换"></a>断点调试、脚本注入、文件替换</h3><p>&emsp;&emsp;断点调试在web端很容易，debugger一下就可以了，但是如果在无法“调试”的手机端呢？通过fiddler来进行吧。</p>
+<p>&emsp;&emsp;这里的断点由两种情况，第一种是在请求之前进行断点设置（就是说请求的内容还没有发出去）；第二种是请求返回之后的断点。依次在菜单目录中找到<code>Rules</code>–&gt;<code>Automatc Breakpoints</code>，这里有几个选项，默认为<code>disabled</code>，意思是不设置断点，其中<code>Before Request</code>就是请求之前的，<code>After Response</code>就是返回之后的。以请求之前设置断点为例子（请求返回之后的断点也是一个意思），点击<code>Befoore Request</code>，然后我们进入某个网站的登录页面（以<code>简道云</code>为例子），点击登录按钮，我们可以看到fiddler左边的请求变成红色了，然后选择右边的面板，如下图进行请求参数的修改：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/fiddler10.png" alt=""></p>
+<p>&emsp;&emsp;脚本注入和文件替换（直接把某个请求的文件内容替换掉，替换成我们自定义的文件），相对来说就复杂一点了，这里需要用到fiddler script，需要写点脚本代码。</p>
+<p>&emsp;&emsp;首先选择菜单栏中 <code>Rules</code> –&gt; <code>Customize Rules</code>，打开脚本编辑窗口，如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/fiddler11.png" alt=""></p>
+<p>&emsp;&emsp;可以看见这是一个java语言写的一个类，可以找到一个叫做<code>OnBeforeResponse</code>的静态方法，然后在方法体里面添加以下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (oSession.HostnameIs(<span class="string">"www.jiandaoyun.com"</span>)||oSession.uriContains(<span class="string">'www.jiandaoyun.com'</span>) &amp;&amp; oSession.oResponse.headers.ExistsAndContains(<span class="string">"Content-Type"</span>,<span class="string">"text/html"</span>))&#123;</div><div class="line">			oSession.utilDecodeResponse();</div><div class="line">			oSession.utilReplaceInResponse(<span class="string">'&lt;/head&gt;'</span>,<span class="string">'&lt;script&gt;alert("hello JDY!")&lt;/script&gt;&lt;/head&gt;'</span>);</div><div class="line">		&#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;意思是，所有来自www.jiandaoyun.com的请求，在response之后我们都会往页面里面塞入一个js的脚本内容（具体内容可以自定定义）。注意Ctrl+s保存代码。</p>
+<p>&emsp;&emsp;如果想要直接替换掉某个文件，例如，我知道某个网站是会引入了某个xxx.js（具体如何知道，上述已告知），我想要把这个xxx.js替换成电脑本地的某个ooo.js，如何办到呢（这个就很厉害了，例如我大致知道某个线上的代码是有问题的，但是由于是生产环境，本地无法模拟，我却又不是很确定我的改动是否一定生效，总不可能把生产环境拿来debug吧？通过这种方式就可以很轻松的办到）？同样是找到那个名为<code>OnBeforeResponse</code>的静态方法，在方法体里面添加如下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (oSession.uriContains(<span class="string">"xxx.min.js"</span>)) &#123;</div><div class="line">			oSession[<span class="string">"x-replywithfile"</span>] =<span class="string">"D:/workspace/xxx/ooo.min.js"</span>;</div><div class="line">		&#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;ctrl+s保存一下，手机（ios或者android均可）刷新一下，立竿见影的效果杠杠的。</p>
+<h3 id="关于fiddler4的https"><a href="#关于fiddler4的https" class="headerlink" title="关于fiddler4的https"></a>关于fiddler4的https</h3><p>最近升级到fiddler4之后，发现设置HTTPS之后直接会报错，错误提示为：<code>creation of the root certificate was not successful</code>，通过进入安转的根目录，在cmd中执行以下代码解决：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">makecert.exe -r -ss my -n <span class="string">"CN=DO_NOT_TRUST_FiddlerRoot, O=DO_NOT_TRUST, OU=Created by http://www.fiddler2.com"</span> -sky signature -eku 1.3.6.1.5.5.7.3.1 -h 1 -cy authority -a sha1 -m 120 -b 09/05/2012</div></pre></td></tr></table></figure>
+<p>执行完毕之后不会报错了，但是发现HTTPS的请求也都获取不到了，原理肯定是跟HTTPS相关的协议证书什么的相关，不过这里没有必要详情说明这些，解决方法是需要安装一个额外fiddler证书的程序——<a href="http://ohe30hsc1.bkt.clouddn.com/fiddlercertmaker.exe" target="_blank" rel="external">fiddlercertmaker.exe</a>，安装完毕之后需要重新在浏览器中下载证书进行认证，方法同上，直接输入本机IP+设置的端口号即可，下载完毕之后直接安装新的证书。</p>
+<p>附：fiddler4下载地址：<a href="http://ohe30hsc1.bkt.clouddn.com/fiddlersetup.exe" target="_blank" rel="external">http://ohe30hsc1.bkt.clouddn.com/fiddlersetup.exe</a></p>
+<hr>
+<p>&emsp;&emsp;<strong>后记：</strong>就个人经验来谈，学习的过程真的主要还是要靠自己。凭良心说，我压根就不知道fiddler还可以干这些事，只是我个人在想，既然作为一个代理服务器，怎么说也应该可以进行脚本注入才对吧。然后偶然发现还有一个fiddler script的选项（虽然打开之后发现是个java写的类，一脸懵逼，自定读读，大致都能够根据它的注释和方法命名看出来这段代码干了什么事情），联想一下，应该是通过修改这个script文件来达到我的需求才对，然后就各种百度、segment大法，如果是理所当然顺理成章的事，方法终究是能找到的。</p>
+
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#需求是什么"><span class="toc-number">1.</span> <span class="toc-text">需求是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何解决"><span class="toc-number">2.</span> <span class="toc-text">如何解决</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fiddler"><span class="toc-number">3.</span> <span class="toc-text">Fiddler</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#查看网络请求"><span class="toc-number">3.1.</span> <span class="toc-text">查看网络请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#手机端设置代理"><span class="toc-number">3.2.</span> <span class="toc-text">手机端设置代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#断点调试、脚本注入、文件替换"><span class="toc-number">3.3.</span> <span class="toc-text">断点调试、脚本注入、文件替换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#关于fiddler4的https"><span class="toc-number">3.4.</span> <span class="toc-text">关于fiddler4的https</span></a></li></ol></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

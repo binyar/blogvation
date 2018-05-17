@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <p>css布局无非就是让页面中的元素按照指定的规则来“排版”，最终实现某个视觉效果。比如我要让一个页面实现左右结构（这就是效果），左边一个内容区域，宽度占20%，右边的占80%（这就是规则）。<br><a id="more"></a></p>
+<p>&emsp;&emsp;如果要按照规则来实现某个效果，首先需要知道的是这些所谓基本的规则。布局都是某一块一块的内容区域，这些个区域都是某个元素，这些大家都知道，所以第一需要知道的这些元素有些是天生就独自占领一行，而又的却并不是的</p>
+<h2 id="元素的分类"><a href="#元素的分类" class="headerlink" title="元素的分类"></a>元素的分类</h2><h3 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h3><p>&emsp;&emsp;像是div、p、form、h1~6、ul、li、header、footer、section等等，这些元素天生就是独自占领一行的</p>
+<ul>
+<li>独自占一行</li>
+<li>宽高都可设置</li>
+<li>默认宽度是100%</li>
+</ul>
+<h3 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h3><p>&emsp;&emsp;像是span、label、input、a、img之类的元素，它们并不能独自占一行，而是和其他元素一起，左右挨个挨个的存在的</p>
+<ul>
+<li>和其他元素一起在一行；</li>
+<li>宽高以及距离顶部或者底部的距离不可设置；</li>
+<li>宽度为内容宽度；</li>
+</ul>
+<h3 id="行内块元素"><a href="#行内块元素" class="headerlink" title="行内块元素"></a>行内块元素</h3><p>&emsp;&emsp;就如名字那样，这是让某个行内元素变成块级元素的方式，直接设置display:inline-block;相比于直接的行内元素，还是有区别的</p>
+<ul>
+<li>和其他元素在一行；</li>
+<li>宽高和距离顶部和底部的距离可设置；</li>
+</ul>
+<p>&emsp;&emsp;现在知道了元素的基本规则，剩下的无非就是让这个元素“固定”在某个位置的问题咯，这就需要用到元素的定位属性：position。总的来说呢，定位无非就是经典的“绝对定位”和“相对定位”了，可能会不太好理解，也可能会一直都不太好理解，需要自己亲自动手去瞅瞅究竟是个怎么回事才会有体会。所以本文并不会详细的讲诉什么是绝对定位什么是相对定位什么是fixed什么是流动布局巴拉巴拉，<strong>css布局的核心思想就是通过定位来布局元素</strong>，这你还真别笑。当然网上教程实在太多了，老生常谈的就不再重复了。</p>
+<h2 id="相对定位：relative"><a href="#相对定位：relative" class="headerlink" title="相对定位：relative"></a>相对定位：relative</h2><p>&emsp;&emsp;<strong>relative</strong>，相对于该元素本身应该出现的位置来定位。比如一个万金油的div里面塞了一个div，子元素div的position:relative，这就是相对定位了对吧，相对于谁呢？“本应该出现的位置”，这个div本身就应该出现在外层的那个div里面啊，剩下的无非就是上下左右的问题咯，比如:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.father-div</span>&#123;</div><div class="line">    <span class="attribute">border</span>: <span class="number">2px</span> solid black;</div><div class="line">    <span class="attribute">width</span>: <span class="number">500px</span>;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">100px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.child-div</span>&#123;</div><div class="line">    <span class="attribute">position</span>:relative;</div><div class="line">    <span class="attribute">top</span>:<span class="number">50px</span>;</div><div class="line">    <span class="attribute">left</span>:<span class="number">50px</span>;</div><div class="line">    <span class="attribute">right</span>:<span class="number">100px</span>;</div><div class="line">    <span class="attribute">bottom</span>:<span class="number">30px</span>;</div><div class="line">    <span class="attribute">height</span>:<span class="number">200px</span>;</div><div class="line">    <span class="attribute">border</span>:<span class="number">1px</span> solid red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/position-demo.png" alt="position:relative"></p>
+<p>&emsp;&emsp;细心的人可能发现了，我这里即设置了left又设置了right，而最终的效果却只有left生效，top和bottom一样的。</p>
+<h2 id="绝对定位：absolute"><a href="#绝对定位：absolute" class="headerlink" title="绝对定位：absolute"></a>绝对定位：absolute</h2><p>&emsp;&emsp;<strong>absolute</strong>，定位于第一个有定位属性的父级元素，如果都没有的话，那就定位于body层。比如同上，一个div里面塞了一个div，但是父元素div定位属性relative，那么子div就会找父级，发现有定位元素，于是设置上下左右：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.father-div</span>&#123;</div><div class="line"> <span class="attribute">border</span>: <span class="number">2px</span> solid black;</div><div class="line"><span class="attribute">position</span>: relative;</div><div class="line"><span class="attribute">top</span>: <span class="number">100px</span>;</div><div class="line"><span class="attribute">left</span>: <span class="number">100px</span>;</div><div class="line"><span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line"><span class="attribute">width</span>: <span class="number">500px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.child-div</span>&#123;</div><div class="line"><span class="attribute">position</span>: absolute;</div><div class="line"><span class="attribute">top</span>: <span class="number">50px</span>;</div><div class="line"><span class="attribute">left</span>: <span class="number">50px</span>;</div><div class="line"><span class="attribute">right</span>: <span class="number">100px</span>;</div><div class="line"><span class="attribute">bottom</span>: <span class="number">10px</span>;</div><div class="line"><span class="attribute">border</span>: <span class="number">1px</span> solid red;    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/position-demo2.png" alt="position-absolute"></p>
+<p>&emsp;&emsp;如果把父元素的position去掉呢？子元素就会找父元素的父元素直到有position属性或者body来定位，效果如下：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/position-demo3.png" alt="position-absolute"></p>
+<p>&emsp;&emsp;细心的人会发现，这里的top/left/bottom/right都是有效果的，如果设置子元素的宽高为固定的呢？还有效果嘛，还是部分有效果呢？</p>
+<h2 id="position-fixed"><a href="#position-fixed" class="headerlink" title="position:fixed"></a>position:fixed</h2><p>&emsp;&emsp;无论出现在哪都是定位于body层，然后设置上下左右，实用于固定某个元素在页面的某个位置的场景，比如按钮无论页面怎么滚动，都是永远出现在页面底部</p>
+<hr>
+<h2 id="轮播布局"><a href="#轮播布局" class="headerlink" title="轮播布局"></a>轮播布局</h2><p>&emsp;&emsp;轮播是什么这里就不再说明了吧，这里结合上面的讲解说一下两种思路，当然，实际可能并不是只有这两种方案，而且不一定好。DOM层级结构都是一样的，父元素里面塞三个子元素，不一样的是父元素和子元素的定位方式。</p>
+<p>&emsp;&emsp;方法1：父元素绝对定位，top和left设置为0，然后宽度为子元素个数*100%；子元素不用定位元素，只需要设置它为行内块级元素：display:inline-block;然后宽度（当然也可以高度）为10除以子元素，比如三个的话，就是10/3=0.333..，这里设置为33.33%（转百分比）。这个时候出现的是第一个子元素，想要切换到第二个子元素的话，只需要transform：translate(-100%,0)，如果你要问我什么是translate，还请自行百度。其他的以此类推</p>
+<p>&emsp;&emsp;方法2：父元素相对布局，子元素绝对不局，子元素left:0;width:100%;height:100%；只是为了撑满父元素（也可以考虑其他实现方式），第一个子元素top:0，第二个top:100%;其他的以此类推，依照实际情况，也可以是left以此类推，原理都一样，最后都是设置父元素的transform:translate(-100%*(第几个元素-1),0)代码如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.father-div</span>&#123;</div><div class="line"><span class="attribute">border</span>: <span class="number">2px</span> solid black;</div><div class="line"><span class="attribute">position</span>: relative;</div><div class="line"><span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.child-div</span>&#123;</div><div class="line"><span class="attribute">position</span>: absolute;</div><div class="line"><span class="attribute">top</span>: <span class="number">0</span>;</div><div class="line"><span class="attribute">left</span>: <span class="number">0</span>;</div><div class="line"><span class="attribute">border</span>: <span class="number">1px</span> solid red;</div><div class="line"><span class="attribute">text-align</span>: center;</div><div class="line"><span class="attribute">font-size</span>: <span class="number">20px</span>;</div><div class="line"><span class="attribute">width</span>: <span class="number">100%</span>;</div><div class="line"><span class="attribute">height</span>: <span class="number">100%</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.child-div</span>：<span class="selector-tag">nth-child</span>(2)&#123;</div><div class="line">    <span class="attribute">top</span>:<span class="number">100%</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.child-div</span>：<span class="selector-tag">nth-child</span>(3)&#123;</div><div class="line">    <span class="attribute">top</span>:<span class="number">200%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/轮播1.png" alt="轮播"></p>
+<p>&emsp;&emsp;当然这并不是我们所想要的，这时只需要在父div外面再包裹一层div，并且使其overflow:hidden就可以了，效果如下：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/轮播2.png" alt="轮播"></p>
+<p>&emsp;&emsp;剩下的就是我们再设置父元素的transform:translate(0,-100%)就可以基本实现一个轮播的框子了</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/轮播3.png" alt="轮播"></p>
+
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#元素的分类"><span class="toc-number">1.</span> <span class="toc-text">元素的分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#块级元素"><span class="toc-number">1.1.</span> <span class="toc-text">块级元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行内元素"><span class="toc-number">1.2.</span> <span class="toc-text">行内元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#行内块元素"><span class="toc-number">1.3.</span> <span class="toc-text">行内块元素</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相对定位：relative"><span class="toc-number">2.</span> <span class="toc-text">相对定位：relative</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#绝对定位：absolute"><span class="toc-number">3.</span> <span class="toc-text">绝对定位：absolute</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#position-fixed"><span class="toc-number">4.</span> <span class="toc-text">position:fixed</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#轮播布局"><span class="toc-number">5.</span> <span class="toc-text">轮播布局</span></a></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

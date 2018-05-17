@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <p>组件周期函数作为React的核心构建，大致可分为：渲染(Mounting)、更新(Updating)、移除(Unmouting)三个阶段，而每个阶段都有自己的一些钩子函数，这些钩子函数的组合最终呈现了React Lifecycle的完整状态。</p>
+<a id="more"></a>
+<h2 id="组件生命周期-lifecycle"><a href="#组件生命周期-lifecycle" class="headerlink" title="组件生命周期(lifecycle)"></a>组件生命周期(lifecycle)</h2><h3 id="渲染阶段"><a href="#渲染阶段" class="headerlink" title="渲染阶段"></a>渲染阶段</h3><p>组件首次被即将渲染的时候，会依次执行如下钩子函数：</p>
+<h4 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor()"></a>constructor()</h4><p>最为组件的构造函数，接收Props和State两个参数，如果要使用这个函数的话，要做的第一件事一定是要声明Props和State，如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">constructor</span>(props,state)&#123;</div><div class="line">	<span class="keyword">super</span>(props,state);<span class="comment">//如果不做声明处理，Props和State将都称为undefined</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>构造函数里面是最适合初始化state的地方，如果想要<strong>初始化State</strong>，可以在这里进行；如果不需要State，完全就可以不使用这个函数：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">constructor</span>(props,state)&#123;</div><div class="line">	<span class="keyword">super</span>(props,state);</div><div class="line">	<span class="keyword">this</span>.state=&#123;</div><div class="line">		 active:<span class="literal">true</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="componentWillMount"><a href="#componentWillMount" class="headerlink" title="componentWillMount()"></a>componentWillMount()</h4><p>顾名思义，这是在组件初始化之后、渲染执行之前的一个被执行的钩子函数。</p>
+<h4 id="render"><a href="#render" class="headerlink" title="render()"></a>render()</h4><p>React的灵魂所在，之所以React有那么高的渲染性能，完全就在这个方法里面体现得淋淋尽致。React一套自己的虚拟DOM的最小Diff算法，最终渲染到页面里面只是渲染被更改的那一部分真实DOM，可想而知，如果数据变动了，是更新这个DOM好些还是只更新与数据变动有关的那一小部分好些呢？普通的Diff算法时间复杂度为O(n3)，而React能够把这个复杂度降低到O(n)的关键在于，结合到浏览器的DOM节点这个具体的场景。<strong>具体原理还请自行查阅</strong>，这里列举两点，供大家参考：</p>
+<blockquote>
+<p>如果新、旧两个节点元素的类型不同，比如<div>成了<p>，那么就认为这完全是两个不同的节点，子元素也不需要再做任何的比较，直接全部重新渲染；</p>
+<p>同一个列表的子元素是有唯一标识的key值，这样在做更新的时候，可以根据这些key值直接做比较，插入、删除、或者更新元素。</p>
+</div></p></blockquote>
+<h4 id="componentDidMount"><a href="#componentDidMount" class="headerlink" title="componentDidMount()"></a>componentDidMount()</h4><p>这个钩子函数将在组件初次渲染完成之后（render();）立即执行，注意，这只会被执行一次，而不是每次更改State或者Props都会触发。这个函数里面最适合请求网络数据，然后根据请求到的数据做具体的一些State的处理，当然，官方也是推荐在这个函数里面进行网络请求。</p>
+<h3 id="更新阶段"><a href="#更新阶段" class="headerlink" title="更新阶段"></a>更新阶段</h3><p>如果Props或者State被更改了，会依次执行如下钩子函数：</p>
+<h4 id="componentWillReceiveProps"><a href="#componentWillReceiveProps" class="headerlink" title="componentWillReceiveProps()"></a>componentWillReceiveProps()</h4><p>这个函数接受新的props（一般命名为nextProps）作为参数，如果State是跟随Props的变动而变动的话，在这里处理就再适合不过了。将nextProps与旧的props（this.props）做一个结合自己业务需求的比较，一般比较之后都会更新State，然后this.setState()，不过这里不需要担心setState会不会又触法componentWillReceiveProps函数和render函数，React会把这些setState合并在一起成为一次，最终只会执行一次render函数。一般情况下setState都会执行这两个函数，唯独在这个钩子函数里面执行setState不会重复触发render。</p>
+<h4 id="shouldComponentUpdate"><a href="#shouldComponentUpdate" class="headerlink" title="shouldComponentUpdate()"></a>shouldComponentUpdate()</h4><p>这个函数之所为作为React组件性能优化的关键所在，是需要结合自己业务的一些判断来返回，毕竟我们完全可以不处理这个函数，默认返回true即可（如果返回false将不会执行下面所有的狗子函数）。之所为称之为性能优化，就是结合一些场景来进行返回，减少一些不必要的计算和渲染。</p>
+<p>官方提出了一个所谓React.PureComponent的可继承类，如果继承这个类，在执行到这个函数的时候，会自行比较Props和State是否和接收到的两个参数（nextProps，nextState）是否存在差异，但是这只是一个浅比较的过程，只会比较对象的第一层属性，如果不同的话，则返回true。这里列举一个特别容易让人犯错的典型例子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> &#123;items&#125;=<span class="keyword">this</span>.state;</div><div class="line"><span class="keyword">this</span>.setState(&#123;</div><div class="line">	items:items.push(<span class="string">'wahaha'</span>)<span class="comment">//这里直接使用push方法，并没有改变state任何状态，改变的只是定义的items的值</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>执行完毕之后，你会发现并没有执行到render函数，原因就在于，items只是一个对象引用，在做比较的时候并不会发生变化，React.PureComponent会认为这是相等的，所以并不会执行render方法。</p>
+<h4 id="componentWillUpdate"><a href="#componentWillUpdate" class="headerlink" title="componentWillUpdate()"></a>componentWillUpdate()</h4><p>如果Props或者State改变，会触发这个钩子函数，但是，请不要在这里调用setState()；，如果需要调用，那么请在componentWillReceiveProps()；里面进行，而不是这里。当然，如果shouldComponentUpdate()返回false的话，这个函数也不会执行。</p>
+<h4 id="render-1"><a href="#render-1" class="headerlink" title="render()"></a>render()</h4><p>请参考上面render的介绍。</p>
+<h4 id="componentDidUpdate"><a href="#componentDidUpdate" class="headerlink" title="componentDidUpdate()"></a>componentDidUpdate()</h4><p>这个函数是在Props或者State发生改变，并且shouldComponentUpdate()返回true的情况下才会被执行到。注意，初始化组件的时候并不会触发这个函数。跟componentDidMout有异曲同工之处在于，这个钩子函数里面也是非常适合做网络请求，例如需要结合请求改变State之类的，在这里处理就很合适。</p>
+<h3 id="被移除阶段"><a href="#被移除阶段" class="headerlink" title="被移除阶段"></a>被移除阶段</h3><p>当组件被销毁时，会执行以下钩子函数：</p>
+<h4 id="componentWillUnmount"><a href="#componentWillUnmount" class="headerlink" title="componentWillUnmount()"></a>componentWillUnmount()</h4><p>这里需要做一些由组件自己产生的一些副作用的对象的清理，例如各种setTimeout带来的timer，或者一些额外创建的DOM元素等等，需要在这里全部清除掉。</p>
+<hr>
+<p>初一咋看，是不是被那么多的函数给吓到了，其实不然，理解一下这里面的含义就能明白为什么会有这些函数，一个组件无非就是三个阶段，创建、更新、销毁，每个阶段又可以细分为几个小的阶段，直接从命名中就可读其具体的含义。</p>
+<h2 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h2><p>第一次使用React的事件绑定处理的话，可能会直接像如下那样处理：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span>()</span>&#123;</div><div class="line">	<span class="keyword">constructor</span>(props)&#123;</div><div class="line">		<span class="keyword">super</span>(props);</div><div class="line">		<span class="keyword">this</span>.state=&#123;</div><div class="line">			open:<span class="literal">true</span></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	handleClick()&#123;</div><div class="line">		<span class="keyword">this</span>.setState(<span class="function">(<span class="params">prevState</span>)=&gt;</span>(&#123;</div><div class="line">			open:!prevState.open</div><div class="line">		&#125;))</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	render()&#123;</div><div class="line">		<span class="keyword">return</span> (</div><div class="line">			&lt;button onClick=&#123;<span class="keyword">this</span>.handleClick&#125;&gt;click me&lt;<span class="regexp">/button&gt;</span></div><div class="line"><span class="regexp">		)</span></div><div class="line"><span class="regexp">	&#125;</span></div><div class="line"><span class="regexp">&#125;</span></div></pre></td></tr></table></figure>
+<p>然后就发现代码报错了，不会执行State的更新。原因很简单，这是js的语法结构所决定，毕竟在这个click的事件处理里面，this指代并非这个组件本身，而是button元素本身。要解决这个问题，官方的写法是，直接在contractor中声明绑定事件，例如：<code>this.handleClick=this.handleClick.bind(this)</code>，不过个人觉得这中写法代码有些冗余，毕竟还是要在节点上面写一下<code>onClick={this.handleClick}</code>个人推荐如下写法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">render()&#123;</div><div class="line">	<span class="keyword">return</span> (</div><div class="line">		&lt;button onClick=&#123;<span class="keyword">this</span>.handleClick.bind(<span class="keyword">this</span>)&#125;&gt;click me&lt;<span class="regexp">/button&gt;</span></div><div class="line"><span class="regexp">	)</span></div><div class="line"><span class="regexp">&#125;</span></div></pre></td></tr></table></figure>
+<p>如果需要其他的一些绑定的参数，也可以直接在<code>.bind(this)</code>后面直接添加，然后在具体的处理函数里面，接受到的参数第一个必须是event（当然这里就不需要赘述什么是event对象了），后面的参数都是在bind之后传入的参数，很方便直接使用。</p>
+
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#组件生命周期-lifecycle"><span class="toc-number">1.</span> <span class="toc-text">组件生命周期(lifecycle)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#渲染阶段"><span class="toc-number">1.1.</span> <span class="toc-text">渲染阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#constructor-NaN"><span class="toc-number">1.1.1.</span> <span class="toc-text">constructor()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#componentWillMount"><span class="toc-number">1.1.2.</span> <span class="toc-text">componentWillMount()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#render"><span class="toc-number">1.1.3.</span> <span class="toc-text">render()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#componentDidMount"><span class="toc-number">1.1.4.</span> <span class="toc-text">componentDidMount()</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新阶段"><span class="toc-number">1.2.</span> <span class="toc-text">更新阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#componentWillReceiveProps"><span class="toc-number">1.2.1.</span> <span class="toc-text">componentWillReceiveProps()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#shouldComponentUpdate"><span class="toc-number">1.2.2.</span> <span class="toc-text">shouldComponentUpdate()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#componentWillUpdate"><span class="toc-number">1.2.3.</span> <span class="toc-text">componentWillUpdate()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#render-1"><span class="toc-number">1.2.4.</span> <span class="toc-text">render()</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#componentDidUpdate"><span class="toc-number">1.2.5.</span> <span class="toc-text">componentDidUpdate()</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#被移除阶段"><span class="toc-number">1.3.</span> <span class="toc-text">被移除阶段</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#componentWillUnmount"><span class="toc-number">1.3.1.</span> <span class="toc-text">componentWillUnmount()</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件绑定"><span class="toc-number">2.</span> <span class="toc-text">事件绑定</span></a></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

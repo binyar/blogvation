@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <p>&emsp;&emsp;作为本系列文章的第二篇，将延续前一篇内容（<a href="http://www.fanmaodong.com/2017/08/17/canvas%E5%8A%A8%E7%94%BB%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%BC%83%E7%96%97/" target="_blank" rel="external">canvas动画从入门到弃疗</a>），在之前变速动画的基础上进阶一下，由<strong>一个</strong>物体运动改变为<strong>多个物体</strong>的重复运动。<br><a id="more"></a></p>
+<p>&emsp;&emsp;同样在此声明，本文绝大部分的材料均参考了sf上<strong><a href="https://github.com/supperjet" target="_blank" rel="external">某大神君</a></strong>–<a href="https://segmentfault.com/a/1190000004852668" target="_blank" rel="external">《每周一点canvas动画》</a>这个系列的文章。我是在阅读完这个系列的文章之后，在已有基础上进一步改进一些结构而作此文。</p>
+<p>&emsp;&emsp;本文所有demo的github地址：<a href="https://github.com/binyar/canvas-study" target="_blank" rel="external">https://github.com/binyar/canvas-study</a>，技术栈<code>ES6</code>+<code>webpack</code>，简洁明了易上手，厚颜无耻求star。虽然做不到为人性僻耽佳句、语不惊人死不休，基本的逻辑是会说清楚的。</p>
+<h2 id="水草摆动"><a href="#水草摆动" class="headerlink" title="水草摆动"></a>水草摆动</h2><p>&emsp;&emsp;先上图，最终我们将要实现的效果如下，当然重点肯定在于动画的效果不是匀速，而是具有一定波动起伏性。</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/canvas_section2_demo3.gif" alt=""></p>
+<p>&emsp;&emsp;由简到繁，如果我们只是画一条垂直的水草，那还是好办的：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">	drawLine()&#123;</div><div class="line">	    <span class="keyword">const</span> o=<span class="keyword">this</span>.options,&#123;canvas&#125;=o;</div><div class="line">	    <span class="keyword">const</span> ctx=<span class="keyword">this</span>.ctx;</div><div class="line">	    ctx.save();</div><div class="line">	    ctx.beginPath();</div><div class="line">	    ctx.lineWidth=o.lineWidth();</div><div class="line">	    ctx.lineCap=<span class="string">'round'</span>;</div><div class="line">	    ctx.globalAlpha=o.alpha;</div><div class="line">	    ctx.strokeStype=o.color;</div><div class="line">	    ctx.beginPath();</div><div class="line">	    ctx.moveTo(<span class="number">100</span>,canvas.height);</div><div class="line">	    ctx.lineTo(<span class="number">100</span>,canvas.height/<span class="number">2</span>);</div><div class="line">	    ctx.stroke();</div><div class="line">	    ctx.closePath();</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;但是这条水草是垂直的，我们想要它有一定的弯曲，这时候就需要用到canvas的<code>二次贝塞尔曲线</code>的API了，详情还请自行查阅，放到我们上面的代码里，只需要把lineTo的方法给成如下即可：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ctx.quadraticCurveTo(<span class="number">100</span>,canvas.height<span class="number">-120</span>,<span class="number">90</span>,canvas.height<span class="number">-150</span>)</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;想要让水草动起来，最关键的地方显然就是动态改变这个函数的第三个参数了，这个参数可以控制水草左右摇摆的距离，而具体的动画快慢则是通过我们上一期所讲的，用Math.sin（）函数来控制。例如一条水草，我们假设它左右摇摆的距离为50，那么我们的第三个参数就是50*Math.sin(某个阈值)。而这个阈值也是上一期所讲到，是通过时间来控制的。</p>
+<p>&emsp;&emsp;当然这里只是一条水草，如果是多条呢？显而易见，我们只需要传入一个包含水草坐标的数组进去即可，遍历一遍，每条水草的实现代码都是一样的，到这里，思路就都清晰了，首先是初始化水草的坐标，因为水草高低不一致，左右摇摆的距离也是不一致，所以加入随机函数来生成一定的偏差值：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">constructor</span>(options) &#123;</div><div class="line">    <span class="keyword">this</span>.options = <span class="built_in">Object</span>.assign(&#123;</div><div class="line">        canvas: <span class="literal">null</span>,</div><div class="line">        color: <span class="string">'#6CA6CD'</span>,</div><div class="line">        lineWidth: <span class="number">14</span>,</div><div class="line">        alpha: <span class="number">0.8</span>,</div><div class="line">        num: <span class="number">80</span></div><div class="line">    &#125;, options);</div><div class="line">    <span class="keyword">this</span>.ctx = <span class="keyword">this</span>.options.canvas.getContext(<span class="string">'2d'</span>);</div><div class="line">    <span class="keyword">this</span>.startPoint = [];</div><div class="line">    <span class="keyword">this</span>.endPointY = [];</div><div class="line">    <span class="keyword">this</span>.amp = [];</div><div class="line">    <span class="keyword">this</span>.start = <span class="number">0</span>;</div><div class="line">    <span class="keyword">this</span>.lastTime = +<span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">    <span class="keyword">this</span>.init();</div><div class="line">&#125;</div><div class="line"></div><div class="line">	init() &#123;</div><div class="line">    <span class="keyword">const</span> o = <span class="keyword">this</span>.options;</div><div class="line">    <span class="keyword">let</span> i = <span class="number">0</span>;</div><div class="line">    <span class="keyword">while</span> (i &lt; o.num) &#123;</div><div class="line">        <span class="keyword">this</span>.startPoint[i] = <span class="built_in">Math</span>.random() * <span class="number">20</span> + i * <span class="number">10</span>;</div><div class="line">        <span class="keyword">this</span>.endPointY[i] = o.canvas.height * <span class="number">0.6</span> - <span class="built_in">Math</span>.random() * <span class="number">50</span>;</div><div class="line">        <span class="keyword">this</span>.amp[i] = <span class="built_in">Math</span>.random() * <span class="number">10</span> + <span class="number">40</span>;</div><div class="line">        i++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">this</span>.draw();</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">draw() &#123;</div><div class="line">    <span class="keyword">const</span> self = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">let</span> temp = +<span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">    <span class="keyword">let</span> gap = temp - self.lastTime;</div><div class="line">    self.lastTime = temp;</div><div class="line">    self.clear();</div><div class="line">    self.doDraw(gap);</div><div class="line">    requestAnimationFrame(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">        self.draw();</div><div class="line">    &#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line">doDraw(gap) &#123;</div><div class="line">    <span class="keyword">const</span> o = <span class="keyword">this</span>.options, canvas = o.canvas;</div><div class="line">    <span class="keyword">const</span> ctx = <span class="keyword">this</span>.ctx;</div><div class="line">    ctx.save();</div><div class="line">    ctx.lineWidth = o.lineWidth;</div><div class="line">    ctx.strokeStyle = o.color;</div><div class="line">    ctx.globalAlpha = o.alpha;</div><div class="line">    ctx.lineCap = <span class="string">'round'</span>;</div><div class="line">    <span class="keyword">let</span> i = <span class="number">0</span>;</div><div class="line">    <span class="keyword">this</span>.start += gap * <span class="number">0.001</span>;</div><div class="line">    <span class="keyword">let</span> l = <span class="built_in">Math</span>.sin(<span class="keyword">this</span>.start);</div><div class="line">    <span class="keyword">while</span> (i &lt; o.num) &#123;</div><div class="line">        ctx.beginPath();</div><div class="line">        ctx.moveTo(<span class="keyword">this</span>.startPoint[i], canvas.height);</div><div class="line">        <span class="keyword">let</span> endX = <span class="keyword">this</span>.startPoint[i] + <span class="keyword">this</span>.amp[i] * l;</div><div class="line">        ctx.quadraticCurveTo(<span class="keyword">this</span>.startPoint[i], canvas.height - <span class="number">120</span>, endX, <span class="keyword">this</span>.endPointY[i]);</div><div class="line">        ctx.stroke();</div><div class="line">        ctx.closePath();</div><div class="line">        i++;</div><div class="line">    &#125;</div><div class="line">    ctx.restore();</div><div class="line">&#125;</div><div class="line"></div><div class="line">clear() &#123;</div><div class="line">    <span class="keyword">const</span> o = <span class="keyword">this</span>.options, canvas = o.canvas;</div><div class="line">    <span class="keyword">const</span> ctx = <span class="keyword">this</span>.ctx;</div><div class="line">    ctx.clearRect(<span class="number">0</span>, <span class="number">0</span>, canvas.width, canvas.height);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="小球跳动"><a href="#小球跳动" class="headerlink" title="小球跳动"></a>小球跳动</h2><p>&emsp;&emsp;先上最终实现的效果图，如下：</p>
+<p> <img src="http://ohe30hsc1.bkt.clouddn.com/canvas_section2_demo1.gif" alt=""></p>
+<p> &emsp;&emsp;这次我们实现如上效果有两个重点问题一定是被聪明的你一眼就发现了：</p>
+<ul>
+<li>小球落地的之后的回弹高度是有变动的；</li>
+<li><p>整体的小球落地有远近层次感的3D视觉效果；</p>
+<p>&emsp;&emsp;首先我们还是从简单的开始，如果只是一个简单的小球的话，相信这肯定难不倒大家，问题在于，这个小球“碰到地面”的话，会反弹，这里就涉及到两个问题，第一，所谓地面是哪条线；第二，反弹距离应该是多少。因为是从最简单的开始，所以，我们假设地面就是canvas的最下面，而高度就是第一次高度的一半。初步构思，我们的代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"> <span class="class"><span class="keyword">class</span> <span class="title">Ball</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(options) &#123;</div><div class="line">        <span class="keyword">this</span>.options = <span class="built_in">Object</span>.assign(&#123;</div><div class="line">            canvas: <span class="literal">null</span>,</div><div class="line">            color: <span class="string">'#6CA6CD'</span>,</div><div class="line">            r: <span class="number">10</span>,</div><div class="line">            gravity: <span class="number">0.2</span>,</div><div class="line">            bounce: <span class="number">-0.5</span></div><div class="line">        &#125;, options);</div><div class="line">        <span class="keyword">this</span>.ctx = <span class="keyword">this</span>.options.canvas.getContext(<span class="string">'2d'</span>);</div><div class="line">        <span class="keyword">this</span>.x = <span class="keyword">this</span>.options.canvas.width / <span class="number">2</span>;</div><div class="line">        <span class="keyword">this</span>.y = <span class="number">0</span>;</div><div class="line">        <span class="keyword">this</span>.xpos = <span class="number">0</span>;</div><div class="line">        <span class="keyword">this</span>.ypos = <span class="number">0</span>;</div><div class="line">        <span class="keyword">this</span>.vx = <span class="built_in">Math</span>.random() * <span class="number">5</span> - <span class="number">5</span>;</div><div class="line">        <span class="keyword">this</span>.vy = <span class="built_in">Math</span>.random() * <span class="number">10</span> - <span class="number">5</span>;</div><div class="line">        <span class="keyword">this</span>.init();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    init() &#123;</div><div class="line">        <span class="keyword">const</span> self = <span class="keyword">this</span>, &#123;canvas, gravity, r&#125; = <span class="keyword">this</span>.options;</div><div class="line">        <span class="keyword">this</span>.vy += gravity;</div><div class="line">        <span class="keyword">this</span>.ypos += <span class="keyword">this</span>.vy;</div><div class="line">        <span class="keyword">this</span>.xpos += <span class="keyword">this</span>.vx;</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.ypos &gt; canvas.height - r) &#123;</div><div class="line">            <span class="keyword">this</span>.ypos = canvas.height - r;</div><div class="line">            <span class="keyword">this</span>.vy *= <span class="keyword">this</span>.options.bounce;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">this</span>.clear();</div><div class="line">        <span class="keyword">this</span>.draw();</div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.xpos + <span class="keyword">this</span>.x &lt; <span class="number">0</span> || <span class="keyword">this</span>.xpos + <span class="keyword">this</span>.x &gt; canvas.width) &#123;</div><div class="line">            <span class="keyword">this</span>.xpos = <span class="number">0</span>;</div><div class="line">            <span class="keyword">this</span>.ypos = <span class="number">0</span>;</div><div class="line">            <span class="keyword">this</span>.vx = <span class="built_in">Math</span>.random() * <span class="number">5</span> - <span class="number">5</span>;</div><div class="line">            <span class="keyword">this</span>.vy = <span class="built_in">Math</span>.random() * <span class="number">10</span> - <span class="number">5</span>;</div><div class="line">        &#125;</div><div class="line">        requestAnimationFrame(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">            self.init();</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    draw() &#123;</div><div class="line">        <span class="keyword">const</span> &#123;ctx&#125; = <span class="keyword">this</span>;</div><div class="line">        <span class="keyword">const</span> o = <span class="keyword">this</span>.options;</div><div class="line">        ctx.save();</div><div class="line">        ctx.beginPath();</div><div class="line">        ctx.fillStyle = o.color;</div><div class="line">        ctx.arc(<span class="keyword">this</span>.x + <span class="keyword">this</span>.xpos, <span class="keyword">this</span>.y + <span class="keyword">this</span>.ypos, o.r, <span class="number">0</span>, <span class="built_in">Math</span>.PI * <span class="number">2</span>);</div><div class="line">        ctx.fill();</div><div class="line">        ctx.closePath();</div><div class="line">        ctx.restore();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    clear() &#123;</div><div class="line">        <span class="keyword">const</span> o = <span class="keyword">this</span>.options, canvas = o.canvas;</div><div class="line">        <span class="keyword">const</span> ctx = <span class="keyword">this</span>.ctx;</div><div class="line">        ctx.clearRect(<span class="number">0</span>, <span class="number">0</span>, canvas.width, canvas.height);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> Ball;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>&emsp;&emsp;此效果如下：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/canvas_section2_demo4.gif" alt=""></p>
+<p>&emsp;&emsp;让人反复玩味的一个地方在于，当我们的小球碰到底线时，此时会反弹，而反弹的距离是下落距离的一半，所以我们看到有个很巧妙的做法，小球Y轴方向的偏差值直接*-0.5，仔细品味，并且小球Y轴方向的值直接变为底线，按照这个函数，小球碰地后一开始会有一段较大距离的反弹（这也符合重力学原理），然后缓慢上升，当我们的阈值（this.vy）由负数变为正数的时候，小球再下落，如此循环可为妙哉妙哉。核心代码再次查看如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.vy += gravity;</div><div class="line">     <span class="keyword">this</span>.ypos += <span class="keyword">this</span>.vy;</div><div class="line">     <span class="keyword">this</span>.xpos += <span class="keyword">this</span>.vx;</div><div class="line">     <span class="keyword">if</span> (<span class="keyword">this</span>.ypos &gt; canvas.height - r) &#123;</div><div class="line">         <span class="keyword">this</span>.ypos = canvas.height - r;</div><div class="line">         <span class="keyword">this</span>.vy *= <span class="keyword">this</span>.options.bounce;</div><div class="line">     &#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;如此，我们解决了第一个问题，至于第二个问题，需要一点点立体空间想象力，我们把整个画布当成立体空间，其中的一部分是一个水平面，如下图所示：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/canvas_section2_demo2.png" alt=""></p>
+<p>&emsp;&emsp;然后我们的小球通过<code>scale()</code>API放大缩小，距离屏幕近一点的就放大一些，远一些的就缩小，如此一来就有空间层次感了。最后我们结合上面所学习的由单个小球变为多个的方法，就实现了我们最初的效果，最终代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div></pre></td><td class="code"><pre><div class="line"> <span class="keyword">import</span> &#123;parseColor&#125; <span class="keyword">from</span> <span class="string">'../base/utils'</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Ball3D</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(options) &#123;</div><div class="line">        <span class="keyword">this</span>.options = <span class="built_in">Object</span>.assign(&#123;</div><div class="line">            canvas: <span class="literal">null</span>,</div><div class="line">            r: <span class="number">5</span>,</div><div class="line">            num: <span class="number">200</span>,</div><div class="line">            gravity: <span class="number">0.2</span>,</div><div class="line">            bounce: <span class="number">-0.5</span></div><div class="line">        &#125;, options);</div><div class="line">        <span class="keyword">const</span> &#123;canvas&#125; = <span class="keyword">this</span>.options;</div><div class="line">        <span class="keyword">this</span>.ctx = canvas.getContext(<span class="string">'2d'</span>);</div><div class="line">        <span class="keyword">this</span>.floor = canvas.height / <span class="number">2</span>;</div><div class="line">        <span class="keyword">this</span>.zFloor = canvas.height * <span class="number">0.7</span>;</div><div class="line">        <span class="keyword">this</span>.vx = canvas.width / <span class="number">2</span>;</div><div class="line">        <span class="keyword">this</span>.vy = canvas.height / <span class="number">2</span>;</div><div class="line">        <span class="keyword">this</span>.init();</div><div class="line">        <span class="keyword">this</span>.draw();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    init() &#123;</div><div class="line">        <span class="keyword">const</span> o = <span class="keyword">this</span>.options;</div><div class="line">        <span class="keyword">this</span>.balls = [];</div><div class="line">        <span class="keyword">let</span> i = <span class="number">0</span>;</div><div class="line"></div><div class="line">        <span class="keyword">while</span> (i &lt; o.num) &#123;</div><div class="line">            <span class="keyword">let</span> ball = &#123;</div><div class="line">                x: <span class="number">0</span>,</div><div class="line">                y: <span class="number">0</span>,</div><div class="line">                z: <span class="number">0</span>,</div><div class="line">                xpos: <span class="number">0</span>,</div><div class="line">                ypos: <span class="number">-100</span>,</div><div class="line">                zpos: <span class="number">0</span>,</div><div class="line">                vx: <span class="built_in">Math</span>.random() * <span class="number">10</span> - <span class="number">5</span>,</div><div class="line">                vy: <span class="built_in">Math</span>.random() * <span class="number">10</span> - <span class="number">5</span>,</div><div class="line">                vz: <span class="built_in">Math</span>.random() * <span class="number">10</span> - <span class="number">5</span>,</div><div class="line">                scaleX: <span class="number">1</span>,</div><div class="line">                scaleY: <span class="number">1</span>,</div><div class="line">                color: parseColor(<span class="built_in">Math</span>.random() * (<span class="number">0xffffff</span>))</div><div class="line">            &#125;;</div><div class="line">            <span class="keyword">this</span>.balls.push(ball);</div><div class="line">            i++;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    draw() &#123;</div><div class="line">        <span class="keyword">const</span> &#123;balls&#125; = <span class="keyword">this</span>;</div><div class="line">        <span class="keyword">const</span> self = <span class="keyword">this</span>, o = <span class="keyword">this</span>.options;</div><div class="line">        <span class="keyword">this</span>.clear();</div><div class="line">        balls.map(<span class="function">(<span class="params">ball, index</span>) =&gt;</span> &#123;</div><div class="line">            ball.vy += o.gravity;</div><div class="line">            ball.xpos += ball.vx;</div><div class="line">            ball.ypos += ball.vy;</div><div class="line">            ball.zpos += ball.vz;</div><div class="line">            <span class="keyword">if</span> (ball.ypos &gt; self.floor) &#123;</div><div class="line">                ball.ypos = self.floor;</div><div class="line">                ball.vy *= o.bounce;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (ball.zpos &gt; -self.zFloor) &#123;</div><div class="line">                <span class="keyword">let</span> scale = self.zFloor / (self.zFloor + ball.zpos);</div><div class="line">                ball.scaleX = scale;</div><div class="line">                ball.scaleY = scale;</div><div class="line">                ball.x = self.vx + ball.xpos * scale;</div><div class="line">                ball.y = self.vy + ball.ypos * scale;</div><div class="line">                self.drawBall(ball);</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                balls.splice(index, <span class="number">1</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">        requestAnimationFrame(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">            <span class="keyword">if</span> (balls.length &lt; o.num * <span class="number">0.6</span>) &#123;</div><div class="line">                self.init();</div><div class="line">            &#125;</div><div class="line">            self.draw();</div><div class="line">        &#125;)</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    drawBall(ball) &#123;</div><div class="line">        <span class="keyword">const</span> o = <span class="keyword">this</span>.options;</div><div class="line">        <span class="keyword">const</span> &#123;ctx&#125; = <span class="keyword">this</span>;</div><div class="line">        ctx.save();</div><div class="line">        ctx.translate(ball.x, ball.y);</div><div class="line">        ctx.scale(ball.scaleX, ball.scaleY);</div><div class="line">        ctx.fillStyle = ball.color;</div><div class="line">        ctx.beginPath();</div><div class="line">        ctx.arc(<span class="number">0</span>, <span class="number">0</span>, o.r, <span class="number">0</span>, <span class="built_in">Math</span>.PI * <span class="number">2</span>);</div><div class="line">        ctx.fill();</div><div class="line">        ctx.closePath();</div><div class="line">        ctx.restore();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    clear() &#123;</div><div class="line">        <span class="keyword">const</span> &#123;canvas&#125; = <span class="keyword">this</span>.options;</div><div class="line">        <span class="keyword">const</span> &#123;ctx&#125; = <span class="keyword">this</span>;</div><div class="line">        ctx.clearRect(<span class="number">0</span>, <span class="number">0</span>, canvas.width, canvas.height);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> Ball3D;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;本章节的重点还是在于自己慢慢体会，所以代码贴的比较多，毕竟实践出真知，说一千句不如自己动手去做一下。学完本节之后，想必大家如果想做一个常规的动画应该都不会被难倒了吧，下面的章节中，我们将进一步学习稍微复杂一些的图形的动画，不过原理都是无非如此。</p>
+
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#水草摆动"><span class="toc-number">1.</span> <span class="toc-text">水草摆动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#小球跳动"><span class="toc-number">2.</span> <span class="toc-text">小球跳动</span></a></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

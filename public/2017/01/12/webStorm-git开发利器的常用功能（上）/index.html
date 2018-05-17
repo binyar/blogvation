@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <p>工欲善其事，必先利其器</p>
+<a id="more"></a>
+<p>&emsp;&emsp;git是一个版本控制工具，webStorm是一个IDE，这应该都没什么问题吧，具体怎么安装，基本的概念想必这里就没必要做详细的说明了。这里有一份百年经典的廖学峰老师的<a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">git权威教程</a>，有兴趣可以点击看看。什么？为什么要使用git，为什么要使用webStorm？呀，自信惭愧，心有余而力不足，说不清楚，真心的。唯一能说的，就是记不住或者不想记git的那么多命令嘛，特别是冲突的时候，要死人吖，汗！当然本文只讲两个东西，在webstorm中使用git、webstorm的一些常见设置。</p>
+<p>&emsp;&emsp;本篇主要写些git在webstorm中的基础使用，而实际项目中的团队协作时的git使用放在第二篇当中<a href="http://fanmaodong.duapp.com/2017/01/13/webStorm+git开发利器的常用功能（中）" target="_blank" rel="external">webStorm+git开发利器的常用功能（中）</a>，而webstorm的一些常见配置则放在了第三篇 <a href="http://fanmaodong.duapp.com/2017/01/14/webStorm+git开发利器的常用功能（下）" target="_blank" rel="external">webStorm+git开发利器的常用功能（下）</a></p>
+<h2 id="webStorm中使用git的基础操作"><a href="#webStorm中使用git的基础操作" class="headerlink" title="webStorm中使用git的基础操作"></a>webStorm中使用git的基础操作</h2><p>&emsp;&emsp;需要知道的是，我们最终想要达到的目的是什么：拉取远程代码，修改完毕之后提交代码保存到远程。这说明的够简单了的吧，其实git所有的指令无碍乎都是围绕着这两个核心功能展开的吧。</p>
+<h3 id="拉取代码"><a href="#拉取代码" class="headerlink" title="拉取代码"></a>拉取代码</h3><p>&emsp;&emsp;首先的要有一个远程仓库对不，远程仓库得有个地址吧？好，那么我们直接依次展开IDE菜单栏的vcs…到git（已经打开某个项目的界面是这样，如果初次打开，也可直接选择checkout from version control，然后选择git），如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/git-demo1.png" alt=""></p>
+<p>&emsp;&emsp;点击之后我们选择存放在本地的目录，然后直接点击按钮“clone”：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/git-demo2.png" alt=""></p>
+<p>&emsp;&emsp;进入如下界面时，说明我们已经把代码从远程clone下来了，点击project展开文件目录：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/git-demo3.png" alt=""></p>
+<h3 id="修改文件（也包括增加或者删除）"><a href="#修改文件（也包括增加或者删除）" class="headerlink" title="修改文件（也包括增加或者删除）"></a>修改文件（也包括增加或者删除）</h3><p>&emsp;&emsp;这时候项目中还什么代码都没有，我们新建一个demo.js试试：直接在项目名称文件夹右键，New–&gt;JavaScript File，然后输入名称demo，在创建的js中任意输入一些代码，最终如下截图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/git-demo4.png" alt=""></p>
+<p>&emsp;&emsp;我们可以看到这时候的文件是红色的，说明它还没有被提交嘛，只存在于这个项目中，既没有推送到自己的本地仓库，也没有推送到远程的仓库当中，这时候我们可以直接在文件名称右键，git–&gt;Add。这时候我们发现颜色变成绿色的了，ok，讲道理最后我们只需要把这个刚刚添加的文件提交就完事了，如何提交呢：</p>
+<p>&emsp;&emsp;直接点击最右上角那个有VCS字样绿色向上的箭头就可以了，如下图所示：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/git-demo5.png" alt=""></p>
+<p>&emsp;&emsp;这个时候我们只需要在写入提交的信息（这次提交更改了什么内容），然后选择commit and push ，在弹出的对话框依次确认“commit”，“push”就可以了：如下</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/git-demo6.png" alt=""></p>
+<p>&emsp;&emsp;稍等片刻代码提交完毕，webstorm最左下角会提示push successFully，如图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/git-demo7.png" alt=""></p>
+<h3 id="更新文件"><a href="#更新文件" class="headerlink" title="更新文件"></a>更新文件</h3><p>&emsp;&emsp;直接点击右上角那个蓝色向下带有vcs的箭头，如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/git-demo8.png" alt=""></p>
+<p>&emsp;&emsp;点击之后在初次弹出的对话框点ok就行了，然后webstorm最下面点击那个version control可以查看本次的修改记录，点击修改到的文件右键还可以查看具体的修改内容（前台是本次修改是有内容的），如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/git-demo9.png" alt=""></p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/git-demo10.png" alt=""></p>
+<h2 id="webStorm中使用git操作分支"><a href="#webStorm中使用git操作分支" class="headerlink" title="webStorm中使用git操作分支"></a>webStorm中使用git操作分支</h2><p>&emsp;&emsp;首先需要知道的是，分支是有两种类型的，一种是本地的分支，一种是远程仓库的分支，一般都是在本地的分支上修改，然后提交到远程的分支。按照上面的步骤来进行的话，是在master的分支上面的，在webstorm最右下角有个分支信息，如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/git-demo-1.png" alt=""></p>
+<p>&emsp;&emsp;这个时候如果我们想要检出一个分支的话，直接点击那个当前正在所处的分支，就可以看到所有的本地分支以及远程分支了，当然前提是你远程是有额外分支的，至于在远程怎么创建分支那就不属于本文的内容了。如果想要从远程检出（checkout）某条分支作为本地分支，直接点击那条分支名称，然后checkout as a new branch，在弹出的对话框中输入新的本地分支的名称，如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/git-demo-2.png" alt=""></p>
+<p>&emsp;&emsp;这个时候我们再看右下角的分支信息，就可以看到我们现在是处于刚刚检出的那条分支了，这时候也可以看到所有的本地分支和所有的远程分支：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/git-demo-3.png" alt=""></p>
+<p>&emsp;&emsp;想要检出哪条分支，直接按照上面的步骤来就行了，想要删除哪条分支，也是同样的操作，只是点击分之后是选择“delete”就行了，需要注意的是，如果你删除的是远程分支，远程分支可就真的就没了，远程的git界面刷新一下你就会发现它真的没了。</p>
+
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#webStorm中使用git的基础操作"><span class="toc-number">1.</span> <span class="toc-text">webStorm中使用git的基础操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#拉取代码"><span class="toc-number">1.1.</span> <span class="toc-text">拉取代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改文件（也包括增加或者删除）"><span class="toc-number">1.2.</span> <span class="toc-text">修改文件（也包括增加或者删除）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#更新文件"><span class="toc-number">1.3.</span> <span class="toc-text">更新文件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#webStorm中使用git操作分支"><span class="toc-number">2.</span> <span class="toc-text">webStorm中使用git操作分支</span></a></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

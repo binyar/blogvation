@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <p>&emsp;&emsp;css的一些基础概念和知识点，不写下来怕哪天忘了找不着了，共勉之<br><a id="more"></a></p>
+<h2 id="盒子模型"><a href="#盒子模型" class="headerlink" title="盒子模型"></a>盒子模型</h2><p>&emsp;&emsp;一个普通的块级元素从最里边到最外边由四部分组成：content（内容层）、padding（填充）、border（边框）、margin（边距），需要注意的是，当你设置了元素的宽高时，只是设置了内容层（content）的宽高，而实际的宽高还需要考虑它的填充、边框和边距。</p>
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2><ul>
+<li>元素选择，直接写标签名称就行了：a</li>
+<li>类选择，‘.’+类名：.class-name</li>
+<li>id选择，‘#’+id:#demo</li>
+<li>子元素选择，‘&gt;’：ul&gt;li</li>
+</ul>
+<p>&emsp;&emsp;当然还有更多选择，比如属性选择、伪类选择之类的就不再一一说明</p>
+<h2 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h2><p>&emsp;&emsp;如果一个元素的class定义了某个属性，然后id里面又定义了这个属性，那么最终显示的效果会是以哪个为准呢（当然实际的开发过程中肯定不可能这么简单的）？这里就涉及到了权重的问题，权重值越大的，就以它为最终显示效果：</p>
+<ul>
+<li>标签的权重为：1；</li>
+<li>class的权重为：10；</li>
+<li>id的权重为：100；</li>
+</ul>
+<p>&emsp;&emsp;比如<em>p#demo1</em>，它的权重为1+100=101；<em>.demo2 .demo3</em> 它的权重为10+10=20；如果demo1、demo2、demo3里面都设置了color属性，只是值不同，而<em>p</em>既有<em>id=demo1</em>又有<em>class=”demo2 demo3”</em>，那么它最终的color将会是demo1设置的值。</p>
+<h2 id="居中"><a href="#居中" class="headerlink" title="居中"></a>居中</h2><h3 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.demo</span>&#123;</div><div class="line">   <span class="attribute">margin</span>:<span class="number">0</span> auto;</div><div class="line">   <span class="attribute">width</span>:<span class="number">100px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p> &emsp;&emsp;或者</p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.demo</span>&#123;</div><div class="line">   <span class="attribute">position</span>:absolute;</div><div class="line">   <span class="attribute">transform</span>:<span class="built_in">translate</span>(0,50%);</div><div class="line">   <span class="attribute">left</span>:-<span class="number">50%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="垂直居中"><a href="#垂直居中" class="headerlink" title="垂直居中"></a>垂直居中</h3><h4 id="已知元素的高度："><a href="#已知元素的高度：" class="headerlink" title="已知元素的高度："></a>已知元素的高度：</h4> <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.demo</span>&#123;</div><div class="line">    <span class="attribute">position</span>:absolute;</div><div class="line">    <span class="attribute">width</span>:<span class="number">100px</span>;</div><div class="line">    <span class="attribute">height</span>:<span class="number">200px</span>;</div><div class="line">    <span class="attribute">top</span>:<span class="number">50%</span>;</div><div class="line">    <span class="attribute">margin-top</span>:-<span class="number">100px</span>;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<h4 id="未知元素的高度："><a href="#未知元素的高度：" class="headerlink" title="未知元素的高度："></a>未知元素的高度：</h4> <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.demo</span>&#123;</div><div class="line">    <span class="attribute">position</span>:absolute;</div><div class="line">    <span class="attribute">top</span>:<span class="number">50%</span>;</div><div class="line">    <span class="attribute">transform</span>:<span class="built_in">translate</span>(0,-50%)</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<h2 id="浮动"><a href="#浮动" class="headerlink" title="浮动"></a>浮动</h2><p> &emsp;&emsp;元素A里面嵌入了两个子元素，两个子元素的均使用了float属性，此时元素A的高度并不会被子元素的内容撑起来，因为子元素脱离了元素A（当前标准文档流），它们是“漂浮”在元素A的上面的。</p>
+<p> &emsp;&emsp; 解决方式：</p>
+<ul>
+<li>父元素高度写死，比如100px;</li>
+<li>父元素overflow：hidden；</li>
+<li>加入一个class，less编译：</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&amp;<span class="selector-pseudo">:after</span>,&amp;<span class="selector-pseudo">:before</span>&#123;</div><div class="line">        <span class="attribute">content</span>: <span class="string">" "</span>;</div><div class="line">        <span class="attribute">visibility</span>: hidden;</div><div class="line">        <span class="attribute">display</span>: block;</div><div class="line">        <span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">        <span class="attribute">clear</span>: both;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+<h2 id="css伪类双冒号和单冒号的区别"><a href="#css伪类双冒号和单冒号的区别" class="headerlink" title="css伪类双冒号和单冒号的区别"></a>css伪类双冒号和单冒号的区别</h2><p> &emsp;&emsp; 单冒号是元素的伪类，双冒号是伪元素的伪类</p>
+<h2 id="外边距合并"><a href="#外边距合并" class="headerlink" title="外边距合并"></a>外边距合并</h2><p>&emsp;&emsp;首先我们需要知道，在w3c的规定中，文档流的形式有三种，分别是普通文档流、浮动文档流、绝对文档。而盒子模型的外边距合并只存在于普通文档流当中。这里简单举个普通文档流中外边距合并的例子</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="css"><span class="selector-class">.item</span>&#123;</span></div><div class="line"><span class="css"><span class="selector-tag">width</span><span class="selector-pseudo">:100px</span>;</span></div><div class="line"><span class="css"><span class="selector-tag">height</span><span class="selector-pseudo">:100px</span>;</span></div><div class="line"><span class="css"><span class="selector-tag">margin-top</span><span class="selector-pseudo">:100px</span>;</span></div><div class="line"><span class="css"><span class="selector-tag">margin-bottom</span><span class="selector-pseudo">:100px</span>;</span></div><div class="line"><span class="undefined">&#125;</span></div><div class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"item"</span>/&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/css-base-1.png" alt=""></p>
+<p>&emsp;&emsp;两个div之间的间距并不是200px，而是100px，也就是说被合并了。当然，为什么会被合并并不需要在这里介绍和分析，我们需要知道的是，什么情况下会出现这种情况、合并规则、防止合并。</p>
+<h3 id="外边框合并的情形"><a href="#外边框合并的情形" class="headerlink" title="外边框合并的情形"></a>外边框合并的情形</h3><p>两个或者多个毗邻的普通文档流的块级元素垂直方向的margin会出现合并。</p>
+<ul>
+<li>毗邻<br>  &emsp;&emsp;直白的说，两个元素是挨着的，就说是毗邻的，并且没有被非空内容、padding、border 或 clear 分隔开。也就是说，即便是两个“挨着”的元素，如果其中上一个设置了类似于border:1px solid;这样的属性的话，也是不会触发合并的。这里以两种情况来分别说明：<br>  &emsp;&emsp;1、两个普通的同级div，如上面所举的例子，它们之间的margin（不管top或者bottom）会被合并；<br>  &emsp;&emsp;2、一个普通的父元素div包含了一个子元素div，代码如下：<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#parent</span> &#123;</div><div class="line">       <span class="attribute">background</span>: red;</div><div class="line">       <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">       <span class="attribute">height</span>: <span class="number">200px</span>;</div><div class="line">   &#125;</div><div class="line">   <span class="selector-id">#child</span> &#123;</div><div class="line">       <span class="attribute">background</span>: green;</div><div class="line">       <span class="attribute">width</span>: <span class="number">50px</span>;</div><div class="line">       <span class="attribute">height</span>: <span class="number">50px</span>;</div><div class="line">       <span class="attribute">margin-top</span>: <span class="number">50px</span>;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>&emsp;&emsp;其结果如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/css-base-2.png" alt=""></p>
+<p>&emsp;&emsp;我么可以清楚的看到，我们明明是设置的子元素的margin-top，最终的结果却变成了父元素margin-top:50px。如果理解了上面那句话也就很容易解释了，因为这两个元素满足合并的条件，它们的margin被合并了。</p>
+<ul>
+<li><p>普通文档流块级元素<br>  &emsp;&emsp;元素必须为块级元素，并且是处于普通文档流当中的，如果有float属性或者display:inline-block等等其他属性改变了它，就不会有合并的现象了。</p>
+</li>
+<li><p>垂直方向<br>  &emsp;&emsp;字面意思，也就是只有margin-top和margin-bottom才会被合并，而margin-left和margin-right是不会受到影响的。</p>
+</li>
+</ul>
+<h3 id="合并规则"><a href="#合并规则" class="headerlink" title="合并规则"></a>合并规则</h3><ul>
+<li><p>两个元素的margin都为正数的时候取较大值；<br>&emsp;&emsp;这也就解释了上面那个例子中，为什么父元素距离顶部会有50px，如果是父元素margin-top:10px的话，最终的结果还是距离顶部50px；而如果是父元素margin-top:100px的话，结果就是距离顶部100px了。</p>
+</li>
+<li><p>两个元素的margin都为负数的时候，取绝对值较大值；</p>
+</li>
+<li>两个元素margin一正一负的时候，结果为二者相加。</li>
+</ul>
+<h3 id="防止合并"><a href="#防止合并" class="headerlink" title="防止合并"></a>防止合并</h3><p>&emsp;&emsp;显而易见，知道了原理，我们只需要设置某种条件来破坏他们满足合并的规则就行了，例如<code>BFC</code>（下文会提到），或者设置border，clear等等，方法并不统一。</p>
+<h2 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h2><p>&emsp;&emsp;定义这种事还是交给官方来做吧，我也谈不上说什么是BFC，只能说说自己的理解：页面中凡是独立的内容区域块，就是BFC。意味着，只要这个内容区域块是独立的，它并不会受到上下文的影响，那么它就是BFC。最典型的理解就是某个元素positio:fixed。不过别的元素怎么变化，都不会影响到它的变化，它就是一个BFC。一般说来，满足以下条件，就是BFC：</p>
+<ul>
+<li>根元素；</li>
+<li>float的值不为none；</li>
+<li>overflow的值不为visible；</li>
+<li>display的值不为block；</li>
+<li>position的值为absolute或fixed。</li>
+</ul>
+<p>&emsp;&emsp;其实我们在日常的开发中经常会用到BFC，只是我们没有给它特定的取个名字而已。有了BFC，我们就可以轻松的解决一些问题了，比如上面所说道的margin合并问题，我们只需要触发一下BFC就可以轻松搞定了，再比如说，清除浮动（上文已提到），我们只需要让父元素触发BFC的条件，比如overflow:hidden，就可以轻松搞定了。</p>
+
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#盒子模型"><span class="toc-number">1.</span> <span class="toc-text">盒子模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择器"><span class="toc-number">2.</span> <span class="toc-text">选择器</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#权重"><span class="toc-number">3.</span> <span class="toc-text">权重</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#居中"><span class="toc-number">4.</span> <span class="toc-text">居中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#水平居中"><span class="toc-number">4.1.</span> <span class="toc-text">水平居中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#垂直居中"><span class="toc-number">4.2.</span> <span class="toc-text">垂直居中</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#已知元素的高度："><span class="toc-number">4.2.1.</span> <span class="toc-text">已知元素的高度：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#未知元素的高度："><span class="toc-number">4.2.2.</span> <span class="toc-text">未知元素的高度：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#浮动"><span class="toc-number">5.</span> <span class="toc-text">浮动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#css伪类双冒号和单冒号的区别"><span class="toc-number">6.</span> <span class="toc-text">css伪类双冒号和单冒号的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#外边距合并"><span class="toc-number">7.</span> <span class="toc-text">外边距合并</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#外边框合并的情形"><span class="toc-number">7.1.</span> <span class="toc-text">外边框合并的情形</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#合并规则"><span class="toc-number">7.2.</span> <span class="toc-text">合并规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#防止合并"><span class="toc-number">7.3.</span> <span class="toc-text">防止合并</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BFC"><span class="toc-number">8.</span> <span class="toc-text">BFC</span></a></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

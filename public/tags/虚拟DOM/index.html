@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<!--<ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fiddler/">Fiddler</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proto/">__proto__</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/">canvas</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/component/">component</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/debug/">debug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/events/">events</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flex/">flex</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gulp/">gulp</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jquery/">jquery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/props/">props</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/prototype/">prototype</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/">react</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reactTransitionGroup/">reactTransitionGroup</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redux/">redux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/state/">state</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webstorm/">webstorm</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/window/">window</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/worker/">worker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/事件委托/">事件委托</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/事件绑定/">事件绑定</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/冒泡/">冒泡</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端导航/">前端导航</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/动画/">动画</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/原型链/">原型链</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/图片压缩/">图片压缩</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/圓角/">圓角</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/布局/">布局</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/手机调试/">手机调试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/打包/">打包</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/抓包/">抓包</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/拖动事件/">拖动事件</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/拷贝/">拷贝</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数组/">数组</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/最小diff/">最小diff</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/权重/">权重</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/构造函数/">构造函数</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/流程图/">流程图</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生命周期/">生命周期</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/盒子模型/">盒子模型</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动端调试/">移动端调试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/继承/">继承</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/脚本替换/">脚本替换</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/脚本注入/">脚本注入</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/虚拟DOM/">虚拟DOM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/调试工具/">调试工具</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/轮播/">轮播</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/输入框/">输入框</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/选择器/">选择器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/闭包/">闭包</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/高阶组件/">高阶组件</a><span class="tag-list-count">1</span></li></ul>-->
+<!--<div>-->
+<!--虚拟DOM-->
+<!--</div>-->
+<!---->
+<!---->
+<!--<div>react学习笔记</div>-->
+<!--<a href="/2016/10/22/react学习笔记/">react学习笔记</a>-->
+<!---->
+<!---->
+
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/h_team.jpg);"></div>
+                <div class="max-content">
+                    We host an international tags of competent and committed professionals.
+                </div>
+            </div>
+            <div class="home-main  home-section-loader not-load">
+                <div class="section-welcome">
+                    <div class="welcome-banner">
+                        <div class="header-item">
+                            - DISCIPLINES
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content team agency">
+                            <div class="content-title">
+                                h
+                            </div>
+                            <div class="content-sub-title">PROTOTYPES
+                            </div>
+                            <div class="content-info">
+                                The head office established in Asian  is the first great milestone in the
+                                journey
+                                we've been through, followed by the rapid growth in recent years, DP-BLOG
+                                extended
+                                offices established in Hong Kong and Singapore to provide the full coverage of
+                                services across the region.
+                                <br>
+                                <br>
+                                The acquisition of company that shares the same vision has been proven to bring in
+                                strong
+                                synergy to the group. We kept pushing the industry boundary by delivering one-stop
+                                marketing
+                                solutions across multiple disciplines. In order to stay ahead today's market's needs and
+                                our
+                                prestigious clients' expectation, DP-BLOG GROUP successfully acquired leading PR
+                                agency,
+                                Liquid Element in 2013 and Nodeplus, an award winning digital agency in 2014, to offer
+                                fully
+                                integrated marketing services in both brick-and-mortar as well as digital platforms.
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content agency team">
+                                <div class="content-title">
+                                    Diversity & Distinctive Minds
+                                </div>
+                                <div class="content-info">
+                                    Serving as the home base for some of the most brilliant minds across Greater China
+                                    and
+                                    Asia Pacific, We host an international team of competent and committed specialized
+                                    professionals providing unique expertise across multiple disciplines.
+                                    <br>
+                                    <br>
+                                    With the diverse backgrounds of our core team leaders, we are able to deliver
+                                    thoroughly
+                                    designed marketing solutions to cater needs of our clients. we not only strive to
+                                    maintain a high standards of excellence in each proposal we deliver but also keep
+                                    pushing the industry boundary by elevating our service to help our clients optimize
+                                    marketing influence. The extensive industry connection and the excellent
+                                    professional
+                                    skills are our crucial assets that push us forward, together with our inexhaustible
+                                    inspirations and inquisitive minds contributed by the ultimate team members, we are
+                                    always ready for the next big challenge.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-banner  home-section-loader not-load">
+                <div class="banner-content ">
+                    <div class="content-title size-middle">
+                        Home to some of the brightest minds with offices spanning across Greater China and Asia Pacific,
+                        we
+                        host an international team of competent and committed branding practioners who are always
+                        devoted
+                        and passionate about the work.
+                    </div>
+                    <div class="content-info">
+                        Home to some of the brightest minds with offices spanning across Greater China and Asia Pacific,
+                        we
+                        host an international team of competent and committed branding practioners who are always
+                        devoted
+                        and passionate about the work.
+                        Meet our core team members.
+                    </div>
+                </div>
+                <div class="banner-bg" style="background-image:url('http://activation-group.com/Upload/full_team.jpg')">
+                </div>
+            </div>
+            <div class="home-main  home-section-loader not-load">
+                <div class="section-welcome">
+                    <div class="welcome-banner">
+                        <div class="header-item size-small">
+                            - MANAGEMENT
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-person  home-section-loader not-load">
+                <div class="person-line">
+                    <div class="person">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/mem_stevelau.jpg')"></div>
+                        <div class="person-name">Steve Lau</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            Managing Director
+                            <br>
+                            Activation Group
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                    <div class="person dark">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/mem_johnnyng.jpg')"></div>
+                        <div class="person-name">Johnny Ng</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            Executive Director
+                            <br>
+                            Activation Group
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                    <div class="person style-white">
+                        <div class="person-title">
+                            Leadership
+                            <br>
+                            Team
+                        </div>
+                    </div>
+                    <div class="person dark">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/mem_frankieso.jpg')"></div>
+                        <div class="person-name">Frankie So</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            Executive Creative Director
+                            <br>
+                            Activation Group
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                </div>
+                <div class="person-line">
+                    <div class="person dark">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/mem_christine.jpg')"></div>
+                        <div class="person-name">Christine Low</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            General Manager
+                            <br>
+                            Activation Events
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                    <div class="person">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/mem_benchan.jpg')"></div>
+                        <div class="person-name">Ben Chan</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            General Manager
+                            <br>
+                            Activation Events
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                    <div class="person dark">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/mem_jacqueline.jpg')"></div>
+                        <div class="person-name">Jacqueline Wong</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            Executive Director
+                            <br>
+                            Activation Group
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                    <div class="person">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/mem_kathy.jpg')"></div>
+                        <div class="person-name">Kathy Zhou</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            General Manager
+                            <br>
+                            Activation Sport
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                </div>
+                <div class="person-line">
+                    <div class="person-max">
+                        <div class="max-content">
+                            <div class="content-title">GET IN TOUCH</div>
+                            <div class="content-main">
+                                SHANGHAI_ 5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                                <br>
+                                <br>
+                                BEIJING_ 798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                                Yang
+                                District, Beijing, China
+                                <br>
+                                <br>
+                                HONG KONG_ 11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong
+                                Kong
+                                SINGAPORE_ 226B South Bridge Road Singapore
+                            </div>
+                            <a class="content-email">
+                                <i class="iconfont icon-email"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="person-max">
+                        <div class="person-line">
+                            <div class="person dark">
+                                <div class="person-photo"
+                                     style="background-image:url('http://activation-group.com/Upload/mem_baoyifeng.jpg')"></div>
+                                <div class="person-name">Bao Yi Feng</div>
+                                <div class="person-role">
+                                    -
+                                    <br>
+                                    General Manager
+
+                                    <br>
+                                    Activation Events
+                                </div>
+                                <div class="person-mask"></div>
+                            </div>
+                            <div class="person">
+                                <div class="person-photo"
+                                     style="background-image:url('http://activation-group.com/Upload/mem_welsontu.jpg')"></div>
+                                <div class="person-name">Welson Tu</div>
+                                <div class="person-role">
+                                    -
+                                    <br>
+                                    General Manager
+
+                                    <br>
+                                    Activation Nodeplus
+                                </div>
+                                <div class="person-mask"></div>
+                            </div>
+                        </div>
+                        <div class="person-line">
+                            <div class="person">
+                                <div class="person-photo"
+                                     style="background-image:url('http://activation-group.com/Upload/mem_wintonchoi.jpg')"></div>
+                                <div class="person-name">Winton Choi</div>
+                                <div class="person-role">
+                                    -
+                                    <br>
+                                    Director
+
+                                    <br>
+                                    Activation Nodeplus
+                                </div>
+                                <div class="person-mask"></div>
+                            </div>
+                            <div class="person dark">
+                                <div class="person-photo"
+                                     style="background-image:url('http://activation-group.com/Upload/mem_jemshaw.jpg')"></div>
+                                <div class="person-name">Jem Shaw</div>
+                                <div class="person-role">
+                                    -
+                                    <br>
+                                    Director
+                                    <br>
+                                    Activation Events
+                                </div>
+                                <div class="person-mask"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="person-line">
+                    <div class="person dark">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/mem_junecheng.jpg')"></div>
+                        <div class="person-name">June Cheng</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            Director
+                            <br>
+                            Activation Events
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                    <div class="person">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/2016060611472581606.png')"></div>
+                        <div class="person-name">Vincent Pang</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            Executive Creative Director
+
+                            <br>
+                            Activation VIA
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                    <div class="person dark">
+                        <div class="person-photo"
+                             style="background-image:url('http://activation-group.com/Upload/2016060611493053111.png')"></div>
+                        <div class="person-name">Alice Too</div>
+                        <div class="person-role">
+                            -
+                            <br>
+                            General Manager
+
+                            <br>
+                            Activation VIA
+                        </div>
+                        <div class="person-mask"></div>
+                    </div>
+                    <div class="person empty">
+                    </div>
+                </div>
+            </div>
+            <div class="home-main  home-section-loader not-load">
+                <div class="section-welcome">
+                    <div class="welcome-banner ">
+                        <div class="header-item for-left size-small">
+                            - CAREER
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-main  home-section-loader not-load">
+                <div class="section-welcome">
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-right">
+                            <div class="for-content agency team">
+                                <div class="content-title">
+                                    Become Activationists
+                                </div>
+                                <div class="content-sub-title">
+                                    We believe that our every single achievement is shaped by our 'Activationist' that
+                                    we
+                                    are always proud of.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content-left for-content team agency">
+                            <div class="content-title">
+                                U
+                            </div>
+                            <div class="content-sub-title">WORK WITH US
+                            </div>
+                            <div class="content-info">
+                                Are you ready to work with us to most deliver excellent marketing solutions in the areas
+                                of
+                                event, PR, digital, social and brand communications working with China and the world's
+                                most
+                                renowned brands?
+                            </div>
+                            <div class="content-sub-title">
+                                Any thoughts or enquiries? You are welcomed to drop us a line.
+                            </div>
+                            <a class="content-icon-wrapper">
+                                <i class="iconfont icon-email"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="welcome-footer">
+                        <div class="footer-info">
+                            -
+                            <br>
+                            Please note that the above available vacancies for candidates are full-time based job
+                            opportunities.
+                            <br>
+                            It is appreciated you pay attention to the job requirements and Working location, etc.
+                            before you submit your application to the job.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer  home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            <a href="/categories">CATEGORY</a>
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            <a href="/archives">ARCHIVE</a>
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage()
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

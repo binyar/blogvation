@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <p>&emsp;&emsp;JavaScript作为一种弱类型语言，其本身没有特别的提出一种实现类和继承的机制，于是各路大神纷至沓来各显神通，大有八仙过海之势。结果就是，继承的实现方式会有多种多样，而本文且之谈<code>类继承</code>和<code>原型式继承</code>两种方式。<br><a id="more"></a></p>
+<h2 id="关于类和继承"><a href="#关于类和继承" class="headerlink" title="关于类和继承"></a>关于类和继承</h2><p>&emsp;&emsp;关于类、实例、以及类的继承、封装、多态相关概念这里直接略过了，我们先直接来一个基础的类和它的继承：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>)</span>&#123;</div><div class="line">		<span class="keyword">this</span>.name=name;</div><div class="line">		<span class="keyword">this</span>.age=age;</div><div class="line">		<span class="keyword">this</span>.friends=[<span class="string">'a'</span>,<span class="string">'b'</span>];</div><div class="line">&#125;</div><div class="line">Person.prototype=&#123;</div><div class="line">	sayHello:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="string">'hello,I am '</span>+<span class="keyword">this</span>.name;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,age,id</span>)</span>&#123;</div><div class="line">	<span class="keyword">this</span>.name=name;</div><div class="line">	<span class="keyword">this</span>.age=age;</div><div class="line">	<span class="keyword">this</span>.id=id;</div><div class="line">&#125;</div><div class="line"></div><div class="line">Student.prototype=<span class="keyword">new</span> Person()</div><div class="line"></div><div class="line"><span class="keyword">var</span> s1=<span class="keyword">new</span> Student(<span class="string">'jack'</span>,<span class="number">12</span>,<span class="string">'111'</span>);</div><div class="line"><span class="built_in">console</span>.log(s1);<span class="comment">//&#123;name:'jack',age:12,id:'111'&#125;</span></div><div class="line"><span class="built_in">console</span>.log(s1.sayHello());<span class="comment">//'hellow I am jack'</span></div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;看似简单粗糙又微妙的寥寥几行代码，我们只做了几件事，新建了一个Person()类，新建了一个Student()类并使其继承至Person()类，享有父类的一些方法，最后实例化了一个Student()类并调用了其中的一个方法。这里只是“强硬”的实现了我们的需求，问题比较多：</p>
+<ul>
+<li>代码结构太乱了，不利于维护和阅读；</li>
+<li>子类无法调用父类的constructor，导致在子类中又再一次对属性重复声明；</li>
+<li>子类还未实例化就已经对父类进行实例化了（Student.prototype=new Person()），这是非常不优雅的做法；</li>
+<li>子类同名方法会覆盖父类同名方法；<br>…</li>
+</ul>
+<p>&emsp;&emsp;也可能有其它未知的问题，总之就是问题多多啊，正式如此，才会有层出不穷的先驱们对此乐此不疲地提出一次又一次的改进方案。</p>
+<p>&emsp;&emsp;当然，本文不会逐一去阐述这些方案的具体实现机制，只就其中两种有代表性的方案进行说明，提出一些浅薄的见解。</p>
+<h2 id="类继承"><a href="#类继承" class="headerlink" title="类继承"></a>类继承</h2><p>&emsp;&emsp;类继承就是通过关键字 new 来创建对象。当使用new关键字时，如上，执行Student类的构造函数时，系统做的第一步是创建一个新对象，这个对象会继承自构造函数Student的原型对象。再将this关键字绑定到新对象上，再返回该新对象，新对象的原型就是构造函数的prototype属性。</p>
+<p>&emsp;&emsp;这里啰嗦两句，如果创建一个函数可以被用作实例化对象，那么这个函数就称之为<code>构造函数</code>，上述的Student和Person均为构造函数，因为他们可以被实例化（new 关键字来进行）；当我们创建函数的时候，默认会有一个<code>prototype</code>属性，这个属性就是<code>原型对象</code>；当我们实例化对象之后，这个对象会有一个<code>constructor</code>属性，而它的constructor指向创建它的构造函数。讲道理的话，我们上述例子中实例化的s1的constructor就应该是指向Student这个构造函数才对，也就是说：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">s1.constructor===Student <span class="comment">//false</span></div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;然而遗憾的是，这里并不是true。为什么会这样呢，因为其中我们有一行代码是这样写的：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Student.prototype=<span class="keyword">new</span> Person()</div></pre></td></tr></table></figure>
+<h3 id="修正constructor指向"><a href="#修正constructor指向" class="headerlink" title="修正constructor指向"></a>修正constructor指向</h3><p>&emsp;&emsp;按照我们上述的理解，Student原型对象的constructor已经指向了Person（constructor指向创建当前对象的构造函数，Person在此为Student的构造函数），我们在实例化Student的时候，它继承了Student的原型对象，而这个原型对象的constructor已经指向了Person。想要修复这个问题也很简单，直接覆盖掉就行了（当然，处理方式不是很优雅），即：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Student.prototype.constructor=Student;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;但是，还有一个问题是，子类会共享引用类型的值，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(s1.friends.join(<span class="string">','</span>));<span class="comment">//a,b</span></div><div class="line"><span class="keyword">var</span> s2=<span class="keyword">new</span> Student();</div><div class="line">s2.friends.push(<span class="string">'c'</span>);</div><div class="line"><span class="built_in">console</span>.log(s1.friends.join(<span class="string">','</span>));<span class="comment">//a,b,c</span></div></pre></td></tr></table></figure>
+<h3 id="属性覆盖"><a href="#属性覆盖" class="headerlink" title="属性覆盖"></a>属性覆盖</h3><p>&emsp;&emsp;我们并没有操作s1的任何属性，而它自己却莫名其妙的被另一个实例化的对象改变了。想要解决这个问题，就需要借用构造函数了，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>)</span>&#123;</div><div class="line">		<span class="keyword">this</span>.name=name;</div><div class="line">		<span class="keyword">this</span>.age=age;</div><div class="line">		<span class="keyword">this</span>.friends=[<span class="string">'a'</span>,<span class="string">'b'</span>];</div><div class="line">&#125;</div><div class="line">Person.prototype=&#123;</div><div class="line">	sayHello:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="string">'hello,I am '</span>+<span class="keyword">this</span>.name;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Student</span>(<span class="params">name,age,id</span>)</span>&#123;</div><div class="line">	Person.apply(<span class="keyword">this</span>,<span class="built_in">arguments</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">Student.prototype=<span class="keyword">new</span> Person()</div><div class="line"></div><div class="line"><span class="keyword">var</span> s1=<span class="keyword">new</span> Student(<span class="string">'alex'</span>);</div><div class="line"><span class="built_in">console</span>.log(s1.friends.join(<span class="string">','</span>));<span class="comment">//a,b</span></div><div class="line"><span class="keyword">var</span> s2=<span class="keyword">new</span> Student();</div><div class="line">s2.friends.push(<span class="string">'c'</span>);</div><div class="line"><span class="built_in">console</span>.log(s1.friends.join(<span class="string">','</span>));<span class="comment">//a,b</span></div><div class="line"><span class="built_in">console</span>.log(s1.constructor===Student);<span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.log(s1.sayHello());<span class="comment">//hello,I am alex</span></div></pre></td></tr></table></figure>
+<h3 id="多次调用构造函数的改造"><a href="#多次调用构造函数的改造" class="headerlink" title="多次调用构造函数的改造"></a>多次调用构造函数的改造</h3><p>&emsp;&emsp;我们看到，不仅不再使子类共享引用类型的值，而且实例化对象的constructor指向也对了，也不需要重复赋值了，但是啊，哎，问题总是不断的出现，我们可以看到，继承的时候还是需要实例化父类，而且实例化子类对象的时候还需要调用父类的构造函数，这当然不是我们想看到的。关键的问题是处在Student.prototype=new Person();这里，而我们最终想要的只是Student.prototype指向Person.prototype，于是我们稍微改造一下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line">F.prototype=Person.prototype;</div><div class="line">Student.prototype=<span class="keyword">new</span> F();</div></pre></td></tr></table></figure>
+<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><p>&emsp;&emsp;这样就不用在继承的时候实例化父类了，但是代码有些零散，于是我们再次封装一个工具方法，专门用来继承：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">extend</span>(<span class="params">parent,child</span>)</span>&#123;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line">	F.prototype=parent.prototype;</div><div class="line">	<span class="keyword">var</span> prototype = <span class="keyword">new</span> F();</div><div class="line">    prototype.constructor = child;</div><div class="line">    child.prototype = prototype;</div><div class="line">&#125;</div><div class="line">extend(Person,Student);</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;于是，我们每次继承的时候只需要extend一下就可以了，不过使用起来还是有些奇怪，最后我们再做一次封装：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">extend</span>(<span class="params">parent,ext</span>)</span>&#123;</div><div class="line">		<span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line">		F.prototype=parent.prototype;</div><div class="line">		<span class="keyword">var</span> prototype = <span class="keyword">new</span> F();</div><div class="line">		<span class="function"><span class="keyword">function</span> <span class="title">SF</span>(<span class="params"></span>)</span>&#123;</div><div class="line">			parent.apply(<span class="keyword">this</span>,<span class="built_in">arguments</span>);</div><div class="line">		&#125;</div><div class="line">	    prototype.constructor = SF;</div><div class="line">	    SF.prototype = prototype;</div><div class="line">	    <span class="built_in">Object</span>.assign(SF.prototype,ext)</div><div class="line">		<span class="keyword">return</span> SF;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name,age</span>)</span>&#123;</div><div class="line">		<span class="keyword">this</span>.name=name;</div><div class="line">		<span class="keyword">this</span>.age=age;</div><div class="line">		<span class="keyword">this</span>.friends=[<span class="string">'a'</span>,<span class="string">'b'</span>];</div><div class="line">&#125;</div><div class="line">Person.prototype=&#123;</div><div class="line">	sayHello:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="string">'hello,I am '</span>+<span class="keyword">this</span>.name;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> Student=extend(Person,&#123;</div><div class="line">	sayAge:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(<span class="keyword">this</span>.age+<span class="string">'!'</span>)</div><div class="line">	&#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> s1=<span class="keyword">new</span> Student(<span class="string">'alex'</span>,<span class="number">13</span>);</div><div class="line"><span class="built_in">console</span>.log(s1.friends.join(<span class="string">','</span>));<span class="comment">//a,b</span></div><div class="line"><span class="keyword">var</span> s2=<span class="keyword">new</span> Student();</div><div class="line">s2.friends.push(<span class="string">'c'</span>);</div><div class="line"><span class="built_in">console</span>.log(s1.friends.join(<span class="string">','</span>));<span class="comment">//a,b</span></div><div class="line"><span class="built_in">console</span>.log(s1.constructor===Student);<span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.log(s1.sayHello());<span class="comment">//hello,I am alex</span></div><div class="line"><span class="built_in">console</span>.log(s1.sayAge());<span class="comment">//13!</span></div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;相对来说，这种方式看起来就比较“正规”一些了。总之，我们上述代码实现的继承就是所谓的类继承，这种继承方式看起来总有种面向对象的感觉，像“Java一样中规中矩”，比较能够让人所理解。</p>
+<h2 id="原型式继承"><a href="#原型式继承" class="headerlink" title="原型式继承"></a>原型式继承</h2><p>&emsp;&emsp;原型式继承重点在于原型链上面，这种继承方式的实现并不需要定义一个父类的构造函数，这里的“父类”只是一个一直存在的静态对象，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">	<span class="keyword">var</span> Person=&#123;</div><div class="line">	name:<span class="string">'jack'</span>,</div><div class="line">	age:<span class="string">'12'</span>,</div><div class="line">	sayHello:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="string">'Hello I am '</span>+<span class="keyword">this</span>.name</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> Student=<span class="function"><span class="keyword">function</span>(<span class="params">name,age</span>)</span>&#123;</div><div class="line">	<span class="keyword">this</span>.name=name;</div><div class="line">	<span class="keyword">this</span>.age=age;</div><div class="line">&#125;</div><div class="line">Student.prototype=Person;</div><div class="line"></div><div class="line"><span class="keyword">var</span> s1=<span class="keyword">new</span> Student(<span class="string">'Alex'</span>,<span class="string">'18'</span>);</div><div class="line">s1.sayHello(); <span class="comment">//"Hello I am Alex";</span></div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;主要是利用js原型链，直接将构造函数的原型对象指向了“父类”，使其享有“父类”的一些属性和方法而并不需要实例化“父类”。不过上述方法有些重复性的代码，我们可以封装成一个函数，将原型对象作为参数传入，然后返回一个空的、原型对象指向传入原型对象的构造函数：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Person=&#123;</div><div class="line">	name:<span class="string">'jack'</span>,</div><div class="line">	friends:[<span class="string">'a'</span>,<span class="string">'b'</span>],</div><div class="line">	sayHello:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="string">'Hello I am '</span>+<span class="keyword">this</span>.name</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">clone</span>(<span class="params">obj</span>)</span>&#123;</div><div class="line">	<span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line">	F.prototype=obj;</div><div class="line">	<span class="keyword">return</span> <span class="keyword">new</span> F();</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> Student=clone(Person);</div><div class="line">Student.sayHello(); <span class="comment">//"Hello I am jack";</span></div></pre></td></tr></table></figure></p>
+<p>&emsp;&emsp;这样也有个缺陷，所有的类对象都共享了引用类型的值，比如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Student.friends.push(<span class="string">'c'</span>);</div><div class="line"><span class="built_in">console</span>.log(Person.friends.join(<span class="string">','</span>));<span class="comment">//a,b,c;</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> Student2=clone(Person);</div><div class="line"><span class="built_in">console</span>.log(Student2.friends.join(<span class="string">','</span>));<span class="comment">//a,b,c;</span></div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;原型对象的属性值被clone它的对象改变了，导致下一次clone出来的对象不再是最开始的那个原型对象，这可能并不是我们想要看到的。不过实用性还是比较高的，像是一些重复性属性复用比较高的场景就很适用。</p>
+
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于类和继承"><span class="toc-number">1.</span> <span class="toc-text">关于类和继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#类继承"><span class="toc-number">2.</span> <span class="toc-text">类继承</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#修正constructor指向"><span class="toc-number">2.1.</span> <span class="toc-text">修正constructor指向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性覆盖"><span class="toc-number">2.2.</span> <span class="toc-text">属性覆盖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多次调用构造函数的改造"><span class="toc-number">2.3.</span> <span class="toc-text">多次调用构造函数的改造</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#封装"><span class="toc-number">2.4.</span> <span class="toc-text">封装</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原型式继承"><span class="toc-number">3.</span> <span class="toc-text">原型式继承</span></a></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

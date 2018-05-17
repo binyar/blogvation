@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <p>&emsp;&emsp;react作为一个UI视图层的渲染框架，强调组件化的开发，各组件之间的调用关系是通过<code>Props</code>来传值通信、使用<code>State</code>来呈现UI的状体形式，而非传统的继承式，按照官方的说法：</p>
+<p>Props and composition give you all the flexibility you need to customize a component’s look and behavior in an explicit and safe way. </p>
+<p>&emsp;&emsp;这里，我们或许并不需要拘泥于这两者之间有什么优劣、共性、比较，个人认为，js是一种若类型语言的链式写法，归结到底都是在原型链上面实现的，只是语法糖的一些区别而已。</p>
+<a id="more"></a>
+<p>&emsp;&emsp;组件的类型大致上可以分为两个类型，一个是容器类的组件（container component<br>），一个是展示类的组件（presentational component）。</p>
+<p>&emsp;&emsp;容器类型的组件主要负责业务逻辑的处理，包括源数据的请求，请求之后数据的处理以及发送网络请求之前数据的封装等等，其最终的目的在于将这些处理好的数据通过<code>props</code>的形式传递给展示类型的组件。而展示类型的组件通过props接收到了这些被处理过后的数据之后，只需要关心一个问题，就是把这些数据通过一定的方式呈现出来，完全不用关心业务上面的逻辑，所以，它一定是一个具有高类聚、很纯粹的组件、函数。</p>
+<h2 id="组件的基本写法"><a href="#组件的基本写法" class="headerlink" title="组件的基本写法"></a>组件的基本写法</h2><p>&emsp;&emsp;React组件的写法其实就有三种形式，分别是：</p>
+<ul>
+<li>无状态的函数式写法；</li>
+<li>React.createClass</li>
+<li>extends React.Component</li>
+</ul>
+<p>&emsp;&emsp;前两种写法就直接过滤掉了，这里直接使用es6语法创建一个简单的组件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">	<span class="keyword">import</span> React, &#123;Component, PropTypes&#125; <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> propTypes = &#123;</div><div class="line">    text: PropTypes.string</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">const</span> defaultProps = &#123;</div><div class="line">    text: <span class="string">'Nico'</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">export</span>  <span class="keyword">default</span>  <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">constructor</span>(props, state) &#123;</div><div class="line">        <span class="keyword">super</span>(props, state);</div><div class="line">        <span class="keyword">this</span>.state = &#123;&#125;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            &lt;h1&gt;&#123;<span class="string">`Hello,<span class="subst">$&#123;<span class="keyword">this</span>.props.text&#125;</span>`</span>&#125;&lt;<span class="regexp">/h1&gt;</span></div><div class="line"><span class="regexp">        )</span></div><div class="line"><span class="regexp">    &#125;</span></div><div class="line"><span class="regexp">&#125;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">MyComponent.propTypes = propTypes;</span></div><div class="line"><span class="regexp">MyComponent.defaultProps = defaultProps;</span></div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;关于defaultProps的写法，有两种形式，由于在React16以后，Proptypes被抽离出来作为一个单独的依赖包，如果需要使用的话就要单独引用（是不是突然想起了当年的ReactDom被抽离出来的情景！）。一种是如上形式，偏传统、可读性可理解性比较强，毕竟都是组织在一个文件里面的，代码结构也比较的清晰，但是如果属性较多，十几二三十个的话看起来可能就比较凌乱了，毕竟只是一个单独的组件，里面既写了该组件的相关代码，还包含了其默认的一些属性和配置，看起来比较的臃肿。<a href="https://ant.design" target="_blank" rel="external">ant-design</a>的做法是，采用es7的一个语法糖interface，具体代码参考如下：</p>
+<p>&emsp;&emsp;index.js:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> React <span class="keyword">from</span> <span class="string">'react'</span>;</div><div class="line"><span class="keyword">import</span> BasePropTypes <span class="keyword">from</span> <span class="string">'./PropTypes'</span>;</div><div class="line"></div><div class="line"><span class="keyword">export</span> interface MyPropTypes extends BasePropTypes&#123;</div><div class="line">    className?: string;</div><div class="line">    text?: string;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span>  <span class="keyword">default</span>  <span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span>&lt;<span class="title">MyPropTypes</span>,<span class="title">any</span>&gt; </span>&#123;</div><div class="line">    <span class="keyword">static</span> defaultProps = &#123;</div><div class="line">        text:<span class="string">'Nico'</span></div><div class="line">    &#125;;</div><div class="line">    <span class="keyword">constructor</span>(props, state) &#123;</div><div class="line">        <span class="keyword">super</span>(props, state);</div><div class="line">        <span class="keyword">this</span>.state = &#123;&#125;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            &lt;h1&gt;&#123;<span class="string">`Hello,<span class="subst">$&#123;<span class="keyword">this</span>.props.text&#125;</span>`</span>&#125;&lt;<span class="regexp">/h1&gt;</span></div><div class="line"><span class="regexp">        )</span></div><div class="line"><span class="regexp">    &#125;</span></div><div class="line"><span class="regexp">&#125;</span></div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;同级目录的PropTypes.js</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">interface MyProps &#123;</div><div class="line">    text?: string;</div><div class="line">    style?: any;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> MyProps;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这种高逼格儿、浓浓java风格的写法可能会备受一部分人喜爱吧（看看java帝国阿里就知道了～），特别是对于多属性、组件嵌套的场景会比较有优势，正所谓萝卜青菜各有所爱，采用适合自己的才是最好的。</p>
+<h2 id="关于State-amp-amp-Props"><a href="#关于State-amp-amp-Props" class="headerlink" title="关于State&amp;&amp;Props"></a>关于State&amp;&amp;Props</h2><p>&emsp;&emsp;要完全靠文字描述就把这两个问题说清楚，还是有很大难度的，起码官方自己好像都没有特别的说明这两个的关系，既然都只是一个数据状态，为什么要特别地分开来写，什么时候该用<code>Props</code>，什么时候该用<code>State</code>以及这两个各自有什么特点，还是需要自己在项目中多加体会。这里引出一个简单的话题，我们在做文本输入框类型的组件的时候，其输入框的值是采用props好呢，还是State？为什么？</p>
+<h3 id="Props"><a href="#Props" class="headerlink" title="Props"></a>Props</h3><p>&emsp;&emsp;官方是这样解释的：</p>
+<p>Components let you split the UI into independent, reusable pieces, and think about each piece in isolation.<br>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
+<p>&emsp;&emsp;Props作为反应UI呈现状态的参数，其任意的变动都会触犯render();等渲染相关的函数，而在组件中的使用一定是<strong>只读</strong>的，唯一改变props来反映UI变化的方法应该是通过父组件的改变来触发。</p>
+<h3 id="State"><a href="#State" class="headerlink" title="State"></a>State</h3><p>&emsp;&emsp;State同样也是一个反映组件状态的参数，跟Props不同之处在于，它只存在于组件内部，只反映组建内部的变化，是可改变的，并且它的改变同样会出发render();等渲染相关的函数。而它在具体的使用过程中，经常会被滥用而导致一些不可预料的问题出现：</p>
+<blockquote>
+<p>不要通过直接赋值this.state的形式来改变state</p>
+</blockquote>
+<pre><code>如下做法是一定不允许的：
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.state=&#123;<span class="attr">name</span>:<span class="string">'xxx'</span>&#125;</div></pre></td></tr></table></figure>
+
+正确的做法应该是：
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.setState(&#123;</div><div class="line">	name:<span class="string">'xxx'</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+</code></pre><blockquote>
+<p>setState是一个异步的过程</p>
+</blockquote>
+<p>&emsp;&emsp;在具体的代码里面，不能直接依赖于修改之后的State，因为它可能还有没有更新过来（貌似React处于性能考虑，会把同时进行的多个setSstate合并成一个），正确的处理应该是在<code>componentDidMount();</code>周期函数中进行（下面会提到），或者在setState的第二个参数（[callback]）中进行，本人提倡后者，直接易读：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.setState(&#123;</div><div class="line">	name:<span class="string">'xxx'</span></div><div class="line">&#125;,()=&gt;&#123;</div><div class="line">	<span class="comment">//something</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.setState(<span class="function">(<span class="params">prevState,props</span>)=&gt;</span>(&#123;</div><div class="line">	name:<span class="string">'xxx'</span>+prevState.name</div><div class="line">&#125;))</div></pre></td></tr></table></figure>
+<blockquote>
+<p>setState只是一个浅合并(Shallow Merge)</p>
+</blockquote>
+<p>&emsp;&emsp;更新State的时候，我们不需要把整个State的所有数据都写全，我们只需要写入需要更新的那一部分即可：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.state=&#123;   <span class="comment">//state的数据结构</span></div><div class="line">	widget:&#123;<span class="attr">label</span>:<span class="string">'xxx'</span>&#125;,</div><div class="line">	content:&#123;<span class="attr">name</span>:<span class="string">'ooo'</span>&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">this</span>.setState(&#123; <span class="comment">//更新State</span></div><div class="line">	content:&#123;<span class="attr">name</span>:<span class="string">'nico'</span>&#125;   <span class="comment">//只需要更新content部分，不需要把widget部分也写入进入</span></div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;React倡导State应该是一个不可变的对象，例如，state.name=’xxx’，[name]对象应该是一个字符串，在更新State的时候，我们不应该改变它原有的对象类型，不能有修改name={title:’xxx’}；这样的逻辑。而在我们项目实践的过程中，结合具体的场景可以做如下的划分，这里感谢<code>苍山沭河</code>的一篇总结的文章——<a href="https://segmentfault.com/a/1190000010304533" target="_blank" rel="external">深入理解React 组件状态（State）</a>，归纳的比较全面，这里就直接引用一下了。</p>
+<h4 id="State类型为数字，字符串，布尔值，null，-undefined"><a href="#State类型为数字，字符串，布尔值，null，-undefined" class="headerlink" title="State类型为数字，字符串，布尔值，null， undefined"></a>State类型为数字，字符串，布尔值，null， undefined</h4><p>&emsp;&emsp;这个可以直接赋一个新值就可了。</p>
+<h4 id="State类型为数组"><a href="#State类型为数组" class="headerlink" title="State类型为数组"></a>State类型为数组</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.state=&#123;</div><div class="line">	items:[<span class="string">'aa'</span>,<span class="string">'bb'</span>]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;添加state.items，有如下三种形式：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1</span></div><div class="line"><span class="keyword">let</span> &#123;items&#125;=<span class="keyword">this</span>.state;</div><div class="line"><span class="keyword">this</span>.setState(&#123;</div><div class="line">	items:items.concat([<span class="string">'cc'</span>])</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//2</span></div><div class="line"><span class="keyword">this</span>.setState(<span class="function">(<span class="params">prevState,props</span>)=&gt;</span>(&#123;</div><div class="line">	items:prevState.items.concat([<span class="string">'cc'</span>])</div><div class="line">&#125;))</div><div class="line"></div><div class="line"><span class="comment">//3</span></div><div class="line"><span class="keyword">this</span>.setState(&#123;prevState,props&#125;=&gt;(&#123;</div><div class="line">	items:[...prevState.items,<span class="string">'cc'</span>]</div><div class="line">&#125;))</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;修改state.items，可以参考如下形式：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//1</span></div><div class="line"><span class="keyword">let</span> &#123;items&#125;=<span class="keyword">this</span>.state;</div><div class="line"><span class="keyword">this</span>.setState(&#123;</div><div class="line">	items:items.slice(<span class="number">0</span>,<span class="number">1</span>)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//2</span></div><div class="line"><span class="keyword">this</span>.setState(&#123;prevState&#125;=&gt;(&#123;</div><div class="line">	items:prevState.slice(<span class="number">0</span>,<span class="number">1</span>)</div><div class="line">&#125;))</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这里一定需要特别注意一下这个问题，<strong>不要直接使用pop();push();unshift();splice();等直接修改原数组的方法</strong>，这样会直接修改state，导致一些不可预料的问题出现。</p>
+<h4 id="State为普通Object"><a href="#State为普通Object" class="headerlink" title="State为普通Object"></a>State为普通Object</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">this</span>.state=&#123;</div><div class="line">	content:&#123;</div><div class="line">		name:<span class="string">'xxx'</span>,</div><div class="line">		title:<span class="string">'gggg'</span></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;如果想要修改state，有两种形式可以参考，一种是Object.assign();另一种是ES6的对象扩展符…，如下</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//1</span></div><div class="line"><span class="keyword">let</span> &#123;content&#125;=<span class="keyword">this</span>.state;</div><div class="line"><span class="keyword">this</span>.setState(&#123;</div><div class="line">	content:<span class="built_in">Object</span>.assign(content,&#123;</div><div class="line">		name:<span class="string">'ooo'</span></div><div class="line">	&#125;)</div><div class="line">&#125;)</div><div class="line"></div><div class="line"><span class="comment">//2</span></div><div class="line"><span class="keyword">let</span> &#123;content&#125;=<span class="keyword">this</span>.state;</div><div class="line"><span class="keyword">this</span>.setState(&#123;</div><div class="line">		content:&#123;...content,&#123;</div><div class="line">			name:<span class="string">'ooo'</span></div><div class="line">		&#125;&#125;</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<hr>
+<p>&emsp;&emsp;说了这么多，具体什么情况下使用使用State，相比也还是没一个标准，这里提供以下规则仅供参考：</p>
+<blockquote>
+<p>这个变量是否是可以从Props中直接获取，如果是，那么它不是一个State；<br>这个变量是否在整个周期函数中都保持不变，如果死，那么它不是一个State；<br>这个变量是否是可以通过其他State或者Props计算得到，如果是，那么它不是一个State；<br>这个变量是否在render函数中被使用到了，如果没有，那么它不是个State。</p>
+</blockquote>
+<p>如果你需要用到的变量既不是State，也不是Props，这时候应该可以直接在this上面进行数据绑定，而不是强行Props或者State。</p>
+<p>&emsp;&emsp;在下一篇文章中，将继续介绍组件的生命周期（lifecycle）和事件绑定处理</p>
+
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#组件的基本写法"><span class="toc-number">1.</span> <span class="toc-text">组件的基本写法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于State-amp-amp-Props"><span class="toc-number">2.</span> <span class="toc-text">关于State&&Props</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Props"><span class="toc-number">2.1.</span> <span class="toc-text">Props</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#State"><span class="toc-number">2.2.</span> <span class="toc-text">State</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#State类型为数字，字符串，布尔值，null，-undefined"><span class="toc-number">2.2.1.</span> <span class="toc-text">State类型为数字，字符串，布尔值，null， undefined</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#State类型为数组"><span class="toc-number">2.2.2.</span> <span class="toc-text">State类型为数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#State为普通Object"><span class="toc-number">2.2.3.</span> <span class="toc-text">State为普通Object</span></a></li></ol></li></ol></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

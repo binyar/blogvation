@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <h2 id="高阶组件（Higher-Order-Components）"><a href="#高阶组件（Higher-Order-Components）" class="headerlink" title="高阶组件（Higher-Order Components）"></a>高阶组件（Higher-Order Components）</h2><p>相比于高阶函数接受函数作为参数，返回一个函数，高阶组件接收组件作为Props，并且也是返回一个组件，本质上说也就是高阶函数。</p>
+<a id="more"></a>
+<p>注意，这只是一个函数，并不是一个新的React提供的API，甚至可以说跟React没有必然联系，只是React官方推荐采用这种模式来解决一些问题。</p>
+<p>高阶组件主要的目的在于，封装一些组件通用性的方法（Cross-Cutting Concerns）。早起React提倡的是采用Mixins的技术来解决这个问题，不过后来放弃了这项技术，如官方所说：</p>
+<p>We previously recommended mixins as a way to handle cross-cutting concerns. We’ve since realized that mixins create more trouble than they are worth.</p>
+<p>Mixins带来的问题可能远大于它创造价值。</p>
+<p>也有可能会被马上反驳说，如果是封装组件的通用方法，何采用父子组件的形式来进行呢？其实也很容易理解，组件更多的强调的是视图层的渲染，注重的UI逻辑，而我们所说的组件间的通用性方法更多的是侧重于业务逻辑，可以说两个侧重点不同，揉杂在一起会显得代码逻辑混乱。</p>
+<h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p>这里举个可能不是很好的例子（不过为了方便理解，组件的写法可以暂时忽略）:</p>
+<p>假设有一个文本类型的控件，在即将被渲染的时候需要从DataSource（假设为整个APP的一个数据源管理对象）获取控件的默认值（当然，实际业务肯定不会那么简单，甚至会做一些联动处理的逻辑等等）:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Text</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line"></div><div class="line">    componentWillMount()&#123;</div><div class="line">         <span class="comment">//处理控件的数据值</span></div><div class="line">        DataSource.getValue();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;input /&gt;</div><div class="line">            &lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">        )</span></div><div class="line"><span class="regexp">    &#125;</span></div><div class="line"><span class="regexp">&#125;</span></div></pre></td></tr></table></figure>
+<p>假设又有一个数字类型的控件，业务上面我们同样需要获取控件的值:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Number</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line"></div><div class="line">    componentWillMount()&#123;</div><div class="line">        <span class="comment">//处理控件的数据值</span></div><div class="line">        DataSource.getValue();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;input type=<span class="string">"number"</span>/&gt;</div><div class="line">            &lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">        )</span></div><div class="line"><span class="regexp">    &#125;</span></div><div class="line"><span class="regexp">&#125;</span></div></pre></td></tr></table></figure>
+<p>很明显， 两个组件在componentWillMout方法处理都是一致的，我们能不能把两个组件的这个公共方法提取出来呢？比如写一个函数，传入一个组件，然后输出一个组件，而在这个组件内，可以处理一些公共的逻辑，比如如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">withDataSource</span>(<span class="params">WrapperComponent</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">			componentWillMount()&#123;</div><div class="line">				 <span class="comment">//处理控件的数据值</span></div><div class="line">        		DataSource.getValue();</div><div class="line">			&#125;</div><div class="line"></div><div class="line">        render() &#123;</div><div class="line">            <span class="keyword">return</span> (</div><div class="line">                &lt;WrapperComponent &#123;...this.props&#125;/&gt;</div><div class="line">            )</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这个函数接收一个组件类型的参数（WrapperComponent），然后返回一个做了自己业务处理的Component，接下来，我们的组件就可以这样写了：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Text</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">    render() &#123;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            &lt;div&gt;</div><div class="line">                &lt;input /&gt;</div><div class="line">            &lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">        )</span></div><div class="line"><span class="regexp">    &#125;</span></div><div class="line"><span class="regexp">&#125;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">class Number extends Component &#123;</span></div><div class="line"><span class="regexp">    render() &#123;</span></div><div class="line"><span class="regexp">        return (</span></div><div class="line"><span class="regexp">            &lt;div&gt;</span></div><div class="line"><span class="regexp">                &lt;input type="number"/</span>&gt;</div><div class="line">            &lt;<span class="regexp">/div&gt;</span></div><div class="line"><span class="regexp">        )</span></div><div class="line"><span class="regexp">    &#125;</span></div><div class="line"><span class="regexp">&#125;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">const WithDataSourceText = withDataSource(Text)</span></div><div class="line"><span class="regexp">const WithDataSourceNumber = withDataSource(Number)</span></div></pre></td></tr></table></figure>
+<p>当然，我们肯定需要根据不同的参数来判断各自的业务，一般都需要传入一个参数（key），而为了让代码看起来更公正，也是遵守同一套规范，我们可以按照官方的写法（<code>HOC([param])([WrappedComponent])</code>）来改善一下封装函数的写法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> withDataSource = <span class="function">(<span class="params">key</span>) =&gt;</span> (WrapperComponent) =&gt; &#123;</div><div class="line">    <span class="keyword">return</span> <span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">        componentWillMount()&#123;</div><div class="line">             <span class="comment">//处理控件的数据值</span></div><div class="line">            DataSource.getValue(key);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        render() &#123;</div><div class="line">            <span class="keyword">return</span> (</div><div class="line">                &lt;WrapperComponent &#123;...this.props&#125;/&gt;</div><div class="line">            )</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> WithDataSourceText = withDataSource(<span class="string">'text'</span>)(Text)</div><div class="line"><span class="keyword">const</span> WithDataSourceNumber = withDataSource(<span class="string">'number'</span>)(<span class="built_in">Number</span>)</div></pre></td></tr></table></figure>
+<p>这种高阶组件的写法在社区还是比较常见，比如<code>React-Redux</code>（Redux的<code>connect()</code>方法就是一个典型的高阶组件的实现例子）、<code>React-Router</code>之类的，都是使用高阶组件，例如React-Router的withRouter源码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> withRouter = <span class="function">(<span class="params">Component</span>) =&gt;</span> &#123;</div><div class="line"></div><div class="line">    <span class="comment">// 创建中间组件</span></div><div class="line">    <span class="keyword">const</span> C = <span class="function">(<span class="params">props</span>) =&gt;</span> &#123;</div><div class="line">        <span class="keyword">const</span> &#123; wrappedComponentRef, ...remainingProps &#125; = props;</div><div class="line">        <span class="keyword">return</span> (</div><div class="line">            &lt;Route render=&#123;routeComponentProps =&gt; (</div><div class="line">                <span class="comment">// wrappedComponentRef 用来解决高阶组件无法正确获取到ref的问题</span></div><div class="line">                &lt;Component &#123;...remainingProps&#125; &#123;...routeComponentProps&#125; ref=&#123;wrappedComponentRef&#125;/&gt;</div><div class="line">            )&#125;/&gt;</div><div class="line">        )</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    C.displayName = <span class="string">`withRouter(<span class="subst">$&#123;Component.displayName || Component.name&#125;</span>)`</span>;</div><div class="line">    C.WrappedComponent = Component;</div><div class="line">    C.propTypes = &#123;</div><div class="line">        wrappedComponentRef: PropTypes.func</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// hoistStatics类似于Object.assign，用于解决基础组件因为高阶组件的包裹而丢失静态方法的问题</span></div><div class="line">    <span class="keyword">return</span> hoistStatics(C, Component);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> withRouter;</div></pre></td></tr></table></figure>
+<p>在以上基础上，让我们做一个简单的假想，如果是高价组件的嵌套使用又是怎样一种情景呢？</p>
+<h3 id="进阶–嵌套写法、代码拉平"><a href="#进阶–嵌套写法、代码拉平" class="headerlink" title="进阶–嵌套写法、代码拉平"></a>进阶–嵌套写法、代码拉平</h3><p>现在我们有三个高阶组件的方法，分别是，a();b();c();同样的，我们有一个最基础的组件Text，那么问题来了，如何编写这行代码呢？按照我们上面的处理的话，最终应该是这样子（假设每个方法还需要传递一个参数作为判断条件）：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> WithWrapperText = c(&#123;<span class="attr">name</span>: <span class="string">'3'</span>&#125;)(b(&#123;<span class="attr">name</span>: <span class="string">'2'</span>&#125;)(a(&#123;<span class="attr">name</span>: <span class="string">'1'</span>&#125;)(Text)));</div></pre></td></tr></table></figure>
+<p>很明显，代码看起来很吃力，结构不清楚。很多类库其实都实现了一个方法的封装来专门简化这种写法，比如<code>loadash</code>的<code>flowRight()</code>，<code>Redux</code>的<code>compose()</code>等等。这里把redux的源码直接扒过来借用用一下，如下所示：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"><span class="comment"> * Composes single-argument functions from right to left. The rightmost</span></div><div class="line"><span class="comment"> * function can take multiple arguments as it provides the signature for</span></div><div class="line"><span class="comment"> * the resulting composite function.</span></div><div class="line"><span class="comment"> *</span></div><div class="line"><span class="comment"> * @param &#123;...Function&#125; funcs The functions to compose.</span></div><div class="line"><span class="comment"> * @returns &#123;Function&#125; A function obtained by composing the argument functions</span></div><div class="line"><span class="comment"> * from right to left. For example, compose(f, g, h) is identical to doing</span></div><div class="line"><span class="comment"> * (...args) =&gt; f(g(h(...args))).</span></div><div class="line"><span class="comment"> */</span></div><div class="line"></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="function"><span class="keyword">function</span> <span class="title">compose</span>(<span class="params">...funcs</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span> (funcs.length === <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="function"><span class="params">arg</span> =&gt;</span> arg</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (funcs.length === <span class="number">1</span>) &#123;</div><div class="line">        <span class="keyword">return</span> funcs[<span class="number">0</span>]</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> funcs.reduce(<span class="function">(<span class="params">a, b</span>) =&gt;</span> (...args) =&gt; a(b(...args)))</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>有了这个神级方法，接下来我们封装组件写法的时候就变得非常简单，并且结构明了了：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> WrapperText = compose(c(&#123;<span class="attr">name</span>: <span class="string">'3'</span>&#125;),</div><div class="line">    b(&#123;<span class="attr">name</span>: <span class="string">'2'</span>&#125;),</div><div class="line">    a(&#123;<span class="attr">name</span>: <span class="string">'1'</span>&#125;)</div><div class="line">)(Text);</div></pre></td></tr></table></figure>
+<hr>
+<p>必须要特别说明一下，高阶组件也不是万能的，不仅在使用中有一些需要<strong>特别注意事项</strong>，而且稍微使用不当，很有可能造成一些不可预料的错误，不要为了高阶而高阶。官方还给出了一些意见，例如在render方法中应该根据传入的值来过滤掉Props中的一些参数等等，具体可移步<a href="https://facebook.github.io/react/docs/higher-order-components.html" target="_blank" rel="external">官网</a>自行查阅</p>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li><p>1、不要在render方法中使用高阶组件<br>不能在render方法中使用高阶组件、也不要在其他生命周期函数里面使用。具体请参考官方的说明<a href="https://facebook.github.io/react/docs/higher-order-components.html" target="_blank" rel="external">https://facebook.github.io/react/docs/higher-order-components.html</a></p>
+</li>
+<li><p>2、静态方法在高阶组件中将会丢失<br>静态方法都会在高阶组件中被丢失掉，最简单（BEN）的方法就是把静态方法拷贝一份，不过这样并不通用，写起来很麻烦，官方有一个专门的包<code>hoist-non-react-statics</code>用于拷贝这些静态方法，例如结合上面的例子，我们可以直接改造一下：</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> hoistNonReactStatic <span class="keyword">from</span> <span class="string">'hoist-non-react-statics'</span>;</div><div class="line"></div><div class="line"><span class="keyword">const</span> withHOC = <span class="function">(<span class="params">key</span>) =&gt;</span> (WrapperComponent) =&gt; &#123;</div><div class="line">    <span class="class"><span class="keyword">class</span> <span class="title">Enhance</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">        componentWillMount() &#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'this is withHOC'</span>, key)</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        render() &#123;</div><div class="line">            <span class="keyword">return</span> (</div><div class="line">                &lt;WrapperComponent &#123;...this.props&#125;/&gt;</div><div class="line">            )</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    hoistNonReactStatic(Enhance, WrapperComponent)</div><div class="line">    <span class="keyword">return</span> Enhance;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>3、refs将会在高阶组件中失效<br>尽管在高阶组件中我们可以把所有的Props都传递过去，但是由于refs并不属于React（React对它进行了特殊的处理，这只是一个假的属性），所以在里面将会被丢失掉（其实官方也不推荐使用refs，一般情况下还是请慎用）。可以参考如上中React-Router的<code>withRouter()</code>写法或者直接移步官网。</li>
+</ul>
+
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#高阶组件（Higher-Order-Components）"><span class="toc-number">1.</span> <span class="toc-text">高阶组件（Higher-Order Components）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本用法"><span class="toc-number">1.1.</span> <span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进阶–嵌套写法、代码拉平"><span class="toc-number">1.2.</span> <span class="toc-text">进阶–嵌套写法、代码拉平</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注意事项"><span class="toc-number">1.3.</span> <span class="toc-text">注意事项</span></a></li></ol></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <p> &emsp;&emsp;一个普通的流程图，由无数逻辑节点和节点之间连线组成，初步设想，我们只要知道了这些的节点的坐标（当然这是肯定必要条件），从而就可以根据两点之间生成一条连线，一切都ok了，显而易见的是，这两点之间的连线该如何生成呢？</p>
+<a id="more"></a>
+<p>&emsp;&emsp;例行惯例，开篇还是想扯一点题外话。某个功能的实现，思考探索其实现思路的过程，个人觉得是更有意义的一件事。当然，本文更多的只是在平淡的描述这个功能逻辑的探索过程，重在过程，并不会大片大片的贴代码，然后可以直接拿去撸。</p>
+<p>&emsp;&emsp;我们最终将要实现的流程图大概会长什么样子呢？这里有兴趣的旁友可以PC电脑戳一下<a href="https://www.jiandaoyun.com/" target="_blank" rel="external">简道云</a>，登录一个账号新建一张流程表单，然后亲手去体验一下这个流程图的制作过程。下面是我做好的一张流程图</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-00.png" alt=""></p>
+<p>&emsp;&emsp;一目了然，整张图无非就是五个节点以及节点之间的连线组成的，每个节点是一个固定宽高的矩形方块，其位置的坐标是一定可以知道的，最后就是从几个节点的上下左右某一个面连线到节点的另外一个面。当，为了保持连线的美观，我们规定连线只能是横线或者垂直的竖线，这只是我们的临时想到的某一个规定。</p>
+<h2 id="连线规定"><a href="#连线规定" class="headerlink" title="连线规定"></a>连线规定</h2><p>&emsp;&emsp;这里所有一切的规定，都是为了保持一个目标——整体界面的美观、清晰。毕竟这是一个流程图，要是整个图看起来就“乱糟糟”的话可能并不能达到流程图本身的目的。</p>
+<ul>
+<li>连线只能是横线和竖线；</li>
+<li>连线要避免穿过节点四周往外15px的范围；</li>
+<li>连线拐点要保持最少；</li>
+<li>连线以等分为最优、连线方向以左、上为最优。</li>
+</ul>
+<h3 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h3><p>@(节点)<br>&emsp;&emsp;<strong>一个矩形方块形成的一个区域，称之为一个节点</strong></p>
+<p>@(起点、终点)<br>&emsp;&emsp;<strong>节点四边等分形成的坐标点，如下图</strong></p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-01.png" alt=""></p>
+<p>@(拐点)<br>&emsp;&emsp;<strong>从起点到终点的连线可能需要“拐”个弯弯，这个拐弯的那个点，就是拐点</strong></p>
+<p>@(坐标)<br>&emsp;&emsp;<strong>注所有的坐标都是以整个图的左上角为零点坐标，向左是X轴正数，向下是Y轴正数。</strong></p>
+<p>&emsp;&emsp;先来解读一下这些规定，第一条基本都能理解，第二点的话，即是说节点四周都要往外延长15px的距离，连线不能穿过这个范围；第三点也容易理解；第四点归纳为左上等分原则，比如上图，从“流程发起节点”到“新建节点1”的连线，从起点到第一个拐点的y坐标，讲道理可以是在某一个范围内的都是满足规定的，也就是说不是唯一的，但是有了这条等分原则，我们这个拐点就可以确定了，它必须位于起始节点的y坐标和结束节点的y中标的中间（等分）。</p>
+<p>&emsp;&emsp;有了这些规则，我们在进行两点之间的连线的时候，就可以画出一条唯一一条美观、清晰的连线了。</p>
+<h2 id="理所当然的初步分析"><a href="#理所当然的初步分析" class="headerlink" title="理所当然的初步分析"></a>理所当然的初步分析</h2><p>&emsp;&emsp;好了，有了这些规定之后我们就可以进行理所当然的分析了。首先我们来一个简单的分析：两个节点直接如果连线位置是固定的，比如一定是从一个节点的上边到另一个节点的下边，但是这两个节点的位置不固定，最终导致这两个点的连线不一致；如果是两个节点的位置固定，但是连线的方向不固定，比如可以从一个节点左边到另一节点上下左右任意一边，导致最终的连线都不一致（特别说明一下，这里所有说的连线不一致一定不是单纯的只是效果图不一样，当然效果图肯定不一样，而是指生成连线的思路都不一样），顺理成章，我们接下来需要做的就是分析连线位置和节点位置的不同情况。</p>
+<h3 id="节点位置"><a href="#节点位置" class="headerlink" title="节点位置"></a>节点位置</h3><p>&emsp;&emsp;现在我们有两个节点，他们之间连线的位置都是确定不变的，假设是从一个节点的下面到另一个节点的上面。由于两个节点的相对位置不固定，我们生成连线的方式也是不一样的。比如垂直的时候，如果起始结点在结束节点上面，那么他们的连线脑补一下都知道，就只是一条垂直的直线而已；但是如果是在下面呢？就需要“绕行”，按照规定绕过结束节点四周，显然这两种生成连线的方式肯定是不一样的。</p>
+<p>&emsp;&emsp;上述我们只考虑垂直的两种情况，如果水平呢，或者说右上、左上？当然，这些肯定都难不倒聪明的你，如果归纳一下，一个节点固定的情况下，另一个节点无非就是位于这个节点的<code>上边</code>、<code>右边</code>、<code>下边</code>、<code>左边</code>、<code>左上</code>、<code>右上</code>、<code>右下</code>、<code>左下</code>八个方位，我们需要做的就是看这八种情况生成连线的方式是什么就行了，举个例子，如果是左下，连线的第一个拐点X轴和起点X轴不变，Y轴为起点和终点Y轴相加除以二（等分），第二个点Y轴为第一个的Y轴，而X轴肯定是终点的X轴。<br>无论如何，只要确定了位置，具体的连线算法肯定是有迹可循的。下面是我们所想要的理想的连线：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-02.gif" alt=""></p>
+<h3 id="连线位置"><a href="#连线位置" class="headerlink" title="连线位置"></a>连线位置</h3><p>&emsp;&emsp;现在我们有两个固定位置的节点，比如位于垂直方向的两个节点，起始结点在上、结束节点在下，但是我们不确定这两个节点的连线位置，比如，可以是从起始结点的下边连接到结束节点的上边，脑补一下很容易理解，最终只是一条垂直的连线；但是如果是从起始结点的下边到结束节点的下边呢？这时候又需要绕行了，必须绕过结束节点四周才能满足规则。</p>
+<p>&emsp;&emsp;同样的道理，上述我们也只是考了两种情况，剩下的还有哪些可能？排列组合一下，无非就是<code>上</code>、<code>下</code>、<code>左</code>、<code>右</code>四个方位，4*4=16种情况。无论是哪种情况，只要连线的位置确定，他们之间的生成思路一定是固定并且有迹可循的，这里也举个简单的例子，上述情况中，从起始结点的左边到结束节点的左边，那么第一个拐点X坐标就是起点X坐标减去偏移的15px（规则2），Y坐标则是起点的Y坐标；第二个拐点的X坐标为上一个拐点的X坐标，Y坐标为终点的Y坐标。下面是我们理想的连线：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-03.gif" alt=""></p>
+<p>&emsp;&emsp;分析完所有连线的生成逻辑了，好了，一切OK，我们只需要按照上面这些条件，采用最笨拙的方式，不断的If else就行了，理论上讲是这样没错的吧？第一步判断两个节点的位置关系（8种），第二部判断两个节点连线的位置（16种），然后针对每一种情况写一个连线的生成规则不就行了，我们来算一下，无非就是16<em>8=128种情况，苦力一点的话也是可行的，经过实践验证（抱歉啊，本文作者不才，只写到第3种情况就是在感觉恶心的想吐了），生成连线是没有问题的，问题就是，逻辑太过复杂，代码过于冗余了，而且似乎，想想是不是有点太生硬了，如果想扩展一下（例如，两个节点垂直或者水平面对面的连线，本来逻辑是一条线就可以了，但是有一个节点范围15px的原则，两个节点间的距离如果小于15</em>2=30px的话，是不是又要考虑另外的生成算法了），可能改起来会非常麻烦甚至无从下手。</p>
+<p>&emsp;&emsp;为了解决这个问题，我们尝试从另外一个角度开始出发考虑实现思路。</p>
+<h2 id="从第一个点出发，寻找下一个拐点"><a href="#从第一个点出发，寻找下一个拐点" class="headerlink" title="从第一个点出发，寻找下一个拐点"></a>从第一个点出发，寻找下一个拐点</h2><p>&emsp;&emsp;我们现在来分析一下刚刚实现的思路，是在分析完毕所有节点和连线的位置的情况下，针对每一种情况作出不同的连线算法，如果我们换一个角度出发，所谓的连线，无非就是几个拐点连接起点和终点最终形成的一条线，问题的关键就在于找些拐点的坐标。首先我们是知道<strong>第一个拐点一定是起始结点的某一面外网延伸的直线上面，结束节点也不例外</strong>，这也就意味着无论怎么变化，第一个拐点和最后一个拐点它一定是遵循某个规律的，有了这个思想，我们接着往下走。</p>
+<p>&emsp;&emsp;一个具体的实例化场景，如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-04.png" alt=""><br>&emsp;&emsp;<br>从起始结点的下面连接到结束节点的上面，按照我们上面的思路，第一个拐点一定是在起始结点往外的延长线上面的，最后一个拐点也不例外，如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-05.png" alt=""></p>
+<p>&emsp;&emsp;现在我们有了两条延长线顺理成章的，可以看看它们之间会不会有交点，如果有一个交点，可想而知，那它一定是可以把起点和终点连起来的那个点，如下；</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-06.png" alt=""></p>
+<p>&emsp;&emsp;如果超过一个交点，说明两条连线之间是存在某个范围的交集的，这时候根本就不需要拐点，他们之间的连线直接就是这个交集，如下：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-07.png" alt=""></p>
+<p>&emsp;&emsp;如果这个时候没有任何交点呢，正如我们这个场景，从图中直接就可以看出来，这时候第一个拐点X坐标一定是已知的（也就是起点的X坐标），而为了满足规则，我们首先可以直接将起点和终点的Y坐标等分，看看具体是多少，如果这个值大于起点的Y坐标加上往外延长的15px（这里刚好是起始结点往下连线），说明这个等分的Y坐标是符合规则的，如果不是，显然，我们不能用这个等分的坐标，剩下的就只能是起始结点的Y坐标加上往外延长的15px了，无论如何这个Y坐标都是合乎逻辑的。</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-08.png" alt=""></p>
+<p>&emsp;&emsp;上面我们从两条延长直线是否有交点的思路中找到了可以确定的第一个拐点，这是从起点往外的延长线和终点往外的延长线种得到的，我们可以封装一个方法，专门用来判断两条直线之间是否有交点，这个方法需要传入两个参数，分别是第一条直线起点的坐标和终点坐标，第二个参数当然是第二条直线的起点和终点坐标，无论怎么传参，最后我们想要得到的只是它们之间是否有交点，有几个交点而已。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">_getRangePoints</span>(<span class="params">range1,range2</span>)</span>&#123;</div><div class="line">	...</div><div class="line">	<span class="keyword">return</span> [points]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;现在我们第一个拐点通过以上方法确定了，开始寻找第二个拐点。那么我们的第二条延长线在哪里呢？这个场景中我们看到，第一条延长线是垂直往下的，而终点的延长线在起点的右边，再次顺理成章，应该是刚刚的拐点开始水平往右，如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-09.png" alt=""></p>
+<p>&emsp;&emsp;这时候我们再按照同样的思路往外连线，嘿嘿，按照上述两条连线是否有交点的方法我们得到了一个交点，这个交点就是我们要找的第二个拐点，最后剩下的事无非就是把这两个交点以及起点和终点连接起来的事了。如果没有交点，我们可以接着按照这个方法继续往下走，直到有一个交点为止。</p>
+<p>&emsp;&emsp;大致有了这个思路，一切都变得那么明朗起来了，无非就是代码上面的实现罢了。</p>
+<h2 id="从点开始寻找下一个拐点，结合最后一个点逆向寻找"><a href="#从点开始寻找下一个拐点，结合最后一个点逆向寻找" class="headerlink" title="从点开始寻找下一个拐点，结合最后一个点逆向寻找"></a>从点开始寻找下一个拐点，结合最后一个点逆向寻找</h2><p>&emsp;&emsp;上面我们只是举了个例子，只涉及到了128种场景中的一种，如果我们换个场景，如下呢？这时候会发现，会进入一个很糟糕的情况，如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-10.png" alt=""></p>
+<p>&emsp;&emsp;前进的道路总是充满了很多未知，问题是出在哪里呢？冷静下来分析一下， 会发现，第二个拐点就已经走远了。但是我们的第一个拐点一定是没有问题的，这个拐点是从起点和终点的延长线上面得到的，由此启发，我们的最后一个拐点（从终点开始的前面一个拐点）也应该是可以确定的才对吧。而且方法，应该是完全和求得第一个拐点的方法一样，只是“起点”和“终点”调换了一下位置。如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-11.png" alt=""></p>
+<p>&emsp;&emsp;得到最后一个拐点之后，这时候最后一个拐点往外的延长线同样一定也是有迹可循的，这个场景中由于结束节点往右，而起始结点在结束节点的上面，所有最后一个拐点的延长线一定是垂直往上。这个时候我们再次搬出上面封装好的，两条直线是否有交点的方法，直接就可以得到一个交点，好了，再次想成功迈进了一步，如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-12.png" alt=""></p>
+<p>&emsp;&emsp;问题到这里，可不可能存在某个情况，第一个拐点的延长线和最后一个拐点的延长线上面没有交点，答案是肯定可能存在的，例如下面这个场景：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-13.png" alt=""></p>
+<p>&emsp;&emsp;而这个时候，按照我们上述的思路，再次从第一个拐点出发寻找下一个拐点，然后往外延长线和最后一个拐点进行延长线的交点实验，也是能够找到的，如果没有再次寻找即可（实践证明，我们最多只能是四个拐点，也就是说，无论我们怎么连线，从第二个拐点出发的时候肯定能找到最后一个拐点，也就是第三个拐点），似乎一切看起来都没什么问题了，因为找不到的话可以直接递归一下就行了，无论我们如何想象，这个时候应该都是完美合理的思路了。</p>
+<h2 id="还有偏差？起点和终点首末倒置，再次计算对比"><a href="#还有偏差？起点和终点首末倒置，再次计算对比" class="headerlink" title="还有偏差？起点和终点首末倒置，再次计算对比"></a>还有偏差？起点和终点首末倒置，再次计算对比</h2><p>&emsp;&emsp;实践真的出真知，当我们高高兴兴码了半天的代码想象中应该已经可行来的时候，问题又来了，似乎这个问题无法想象，如下场景，如果我们是上述思路的话，最终的连线应该是这样的：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-14.png" alt=""></p>
+<p>&emsp;&emsp;而我们的实际想要的应该是这样的：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-15.png" alt=""></p>
+<p>&emsp;&emsp;哎，怎么就多了那么几个拐点呢？但是如果我们再次逆向思维，把“起点”和“终点”颠倒一下来按照这个思路来进行计算呢，嘿嘿，恭喜你中奖了，最终完全可以画出符合我们规定的连线了。所以，我们需要把上述的方法封装一下，只需要传入两个节点的位置和方向，就可以得到所有拐点的坐标。我们分两次计算，最终拐点数目少的那个结果一定就是我们想要的结果了。</p>
+<p>&emsp;&emsp;最终，我们写一个延迟函数来检验一下这128种情况是否都符合我们预期的结果，效果就如下图所示了：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/flowchart-demo-final.gif" alt=""></p>
+<p>&emsp;&emsp;可能你会觉得这怎么这么麻烦这么复杂，但是老铁啊，我想跟你说一句话，很有可能的情况是，你在需要做这个功能的时候，甚至不会有人告诉你这些连线的具体规则是什么的（或者只会有一个大概的描述），那我们是不是应该更加绝望了呢。这里在下不才，也是讲不出什么大道理来，不过我知道的是，我们需要有这么一个功能，仅此而已。</p>
+<hr>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>&emsp;&emsp;连线完成之后，或许我们还需要节点的拖拽，也就是事件的绑定处理，如果之前没做个相关的逻辑的话，可能还不是那么的好处理，这里也是提供一种思路给大家参考：现在我们有一个DOM元素了，我们想要拖动它，这种需求的场景，绝大多数应该都是absolute的布局，也就是说，我们拖动的时候只需要改变它的top和left就够了，剩下的就是怎么处理事件了，如下代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">	<span class="comment">//假设此$dom是absolute的布局</span></div><div class="line">	$dom.on(<span class="string">'mousedown'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">	<span class="keyword">var</span> pageX=e.pageX,y=e.pageY;</div><div class="line">	<span class="keyword">var</span> $el=$(<span class="keyword">this</span>);</div><div class="line">	$(<span class="built_in">document</span>).on(&#123;</div><div class="line">		<span class="string">'mousemove.dom'</span>:<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">			e.preventDefault();</div><div class="line">			e.stopPropagation();</div><div class="line">			<span class="keyword">var</span> x=e.pageX-pageX,y=e.pageY-pageY;</div><div class="line">			$el.css(&#123;</div><div class="line">				left:x,</div><div class="line">				top:y</div><div class="line">			&#125;)</div><div class="line">		&#125;,</div><div class="line">		<span class="string">'mouseup.dom'</span>:<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">			$(<span class="built_in">document</span>).off(<span class="string">'mousemove.dom'</span>);</div><div class="line">			$(<span class="built_in">document</span>).off(<span class="string">'mouseup.dom'</span>);</div><div class="line">			<span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">		&#125;</div><div class="line">	&#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;代码也就寥寥几行，没什么难度，结合到实际的应用中，稍微调整一下添加一下逻辑判断也是没有什么问题的。</p>
+
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#连线规定"><span class="toc-number">1.</span> <span class="toc-text">连线规定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#名词解释"><span class="toc-number">1.1.</span> <span class="toc-text">名词解释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#理所当然的初步分析"><span class="toc-number">2.</span> <span class="toc-text">理所当然的初步分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#节点位置"><span class="toc-number">2.1.</span> <span class="toc-text">节点位置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#连线位置"><span class="toc-number">2.2.</span> <span class="toc-text">连线位置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从第一个点出发，寻找下一个拐点"><span class="toc-number">3.</span> <span class="toc-text">从第一个点出发，寻找下一个拐点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#从点开始寻找下一个拐点，结合最后一个点逆向寻找"><span class="toc-number">4.</span> <span class="toc-text">从点开始寻找下一个拐点，结合最后一个点逆向寻找</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#还有偏差？起点和终点首末倒置，再次计算对比"><span class="toc-number">5.</span> <span class="toc-text">还有偏差？起点和终点首末倒置，再次计算对比</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后记"><span class="toc-number">6.</span> <span class="toc-text">后记</span></a></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

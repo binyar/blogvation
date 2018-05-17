@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <p>一个有追求的前端一定是怀揣着艺术的冲动在寻找自己的精神家园。</p>
+<p><strong>尼古拉斯·查理士多德</strong></p>
+<p>&emsp;&emsp;挖坑之前都先给自己立一个flag。本文主要详细介绍canvas动画的原理以及一些基础的效果，重在想法，理论为主、代码为辅。<br><a id="more"></a></p>
+<p>&emsp;&emsp;特此声明，本系列文章绝大部分的材料均参考于sf上<strong><a href="https://github.com/supperjet" target="_blank" rel="external">某大神君</a></strong>–<a href="https://segmentfault.com/a/1190000004852668" target="_blank" rel="external">《每周一点canvas动画》</a>这个系列的文章，不过原题主好像不太满意自己的文章，已经很长一段时间没有更新，并且删除了自己之前写的绝大部分博文。好吧，作为启蒙，虽然有些瑕疵（比如错别字、代码逻辑错误、结构不严谨、表述不清……），总体而言，也算是无可厚非的入门经典了。我是在阅读完这个系列的文章之后，在已有基础上进一步改进一些结构而作此文。</p>
+<p>&emsp;&emsp;本系列文章所有demo的github地址：<a href="https://github.com/binyar/canvas-study" target="_blank" rel="external">https://github.com/binyar/canvas-study</a>，技术栈<code>ES6</code>+<code>webpack</code>，简洁明了易上手，厚颜无耻的欢迎来star、issues。</p>
+<h2 id="所谓动画"><a href="#所谓动画" class="headerlink" title="所谓动画"></a>所谓动画</h2><p>&emsp;&emsp;如果一个画布上的图案以每秒60帧（甚至更高）的频率变换，基本是我们就感觉不到这个画布上图案的变动，而是一种很流程的“动画”的感觉，这是一个大家能够达成的共识。这里说的canvas动画就是基于此来进行的。我们以一定的频率，在每秒之间不断的重绘画布中图案，这样就实现了canvas的动画效果。</p>
+<p>&emsp;&emsp;早起的浏览器中，我们要实现如上效果，都是通过时间函数<code>setTimeout</code>来进行的，不过这样会有一个问题，例如我的电脑性能太差，我设置了每隔10ms（当然在时间较短的情况下并非真正的10ms，就好比setTimeout(0)  也并非真正的0ms一样，跟自己机器性能相关的）依次重绘的方法，但是我下一次重绘的时候，上一次绘制都没有彻底完成，因为时间太短了，从而会造成卡顿、不流程的现象。</p>
+<p>&emsp;&emsp;为了解决如上问题，w3c新推出了一个新型的API，叫做<code>requestAnimationFrame</code>，基础用法和setTimeout无太大差异，不过这个api会在重绘完成之后才回调，这也就意味着，我们需要做的canvas逐帧动画可以完全不脱帧了，可以说是量身为动画打造的接口。</p>
+<p>&emsp;&emsp;可能还是有些朋友一开始不太理解这个动画的原理，这里再啰嗦的补充一个例子，我们每天都面对的电脑显示屏，实际上这个屏幕每秒钟都在以你看不见的速度不断的进行重绘，而重绘的结果就是你眼睛看到的屏幕所有变动的图案。当然这个电脑的性能是紧密相关的。而我们所谓的canvas动画也是这个原理，不过是借助于系统重绘回调，最终实现图案的变幻，真的没有什么特别高大上的地方。</p>
+<h2 id="实践出真知"><a href="#实践出真知" class="headerlink" title="实践出真知"></a>实践出真知</h2><p>&emsp;&emsp;<strong>本文默认你已经掌握了canvas基本的API使用</strong></p>
+<h3 id="基础——匀速动画"><a href="#基础——匀速动画" class="headerlink" title="基础——匀速动画"></a>基础——匀速动画</h3><p>&emsp;&emsp;先看一个实际的效果图，如下：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/canvas-circle-demo.gif" alt=""></p>
+<p>&emsp;&emsp;要实现如上效果，无非是有一个底色的圆环，然后盖上一层深色的圆环，随着时间的推移，那一层深色的圆环慢慢的填充，而这个填充的过程就是我们所谓的动画。</p>
+<p>&emsp;&emsp;首先我们下来写个生成圆环的函数，传入参数为，圆环的颜色、宽度、进度（我们假设圆环被分成了100份，利于计算），如下 ：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">draw(opt) &#123;</div><div class="line">       <span class="keyword">const</span> o = <span class="keyword">this</span>.options;</div><div class="line">       opt = <span class="built_in">Object</span>.assign(&#123;</div><div class="line">           color: o.color,</div><div class="line">           lineWidth: <span class="number">14</span>,</div><div class="line">           step: <span class="number">100</span></div><div class="line">       &#125;, opt);</div><div class="line">       <span class="keyword">const</span> ctx = <span class="keyword">this</span>.ctx;</div><div class="line">       ctx.save();</div><div class="line">       ctx.beginPath();</div><div class="line">       ctx.strokeStyle = opt.color;</div><div class="line">       ctx.lineWidth = opt.lineWidth;</div><div class="line">       ctx.arc(o.x, o.y, o.r, -<span class="built_in">Math</span>.PI / <span class="number">2</span>, -<span class="built_in">Math</span>.PI / <span class="number">2</span> + opt.step * o.step);</div><div class="line">       ctx.stroke();</div><div class="line">       ctx.closePath();</div><div class="line">       ctx.restore();</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;接下来我们进行一些必要的配置，比如圆环的颜色啊、宽度、半径之类的，当然肯定是写到构造函数里面的：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">constructor</span>(options) &#123;</div><div class="line">       <span class="keyword">this</span>.options = <span class="built_in">Object</span>.assign(&#123;</div><div class="line">           canvas: <span class="literal">null</span>,</div><div class="line">           r: <span class="number">100</span>,</div><div class="line">           color: <span class="string">'#FFF0F5'</span>,</div><div class="line">           deep: <span class="string">'#FF6EB4'</span>,</div><div class="line">           step: <span class="built_in">Math</span>.PI * <span class="number">2</span> / <span class="number">100</span>,</div><div class="line">           lineWidth: <span class="number">12</span>,</div><div class="line">           x: <span class="number">200</span>,</div><div class="line">           y: <span class="number">200</span>,</div><div class="line">           amp: <span class="number">0.2</span></div><div class="line">       &#125;, options);</div><div class="line">       <span class="keyword">this</span>.ctx = <span class="keyword">this</span>.options.canvas.getContext(<span class="string">'2d'</span>);</div><div class="line">       <span class="keyword">this</span>.start = <span class="number">0</span>;</div><div class="line">       <span class="keyword">this</span>.init();</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;剩下的事就简单了，我们直接初始化，先把第一次需要的内容绘制出来，然后在requestAnimationFrame中递归即可，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">init() &#123;</div><div class="line">       <span class="keyword">const</span> o = <span class="keyword">this</span>.options, self = <span class="keyword">this</span>;</div><div class="line">       <span class="keyword">if</span> (<span class="keyword">this</span>.start &gt; <span class="number">100</span>) &#123;</div><div class="line">           <span class="keyword">this</span>.start = <span class="number">0</span>;</div><div class="line">       &#125;</div><div class="line">       <span class="keyword">this</span>.start += o.amp;</div><div class="line">       <span class="keyword">this</span>.clear();</div><div class="line">       <span class="keyword">this</span>.draw();</div><div class="line">       <span class="keyword">this</span>.draw(&#123;</div><div class="line">           color: o.deep,</div><div class="line">           step: <span class="keyword">this</span>.start</div><div class="line">       &#125;);</div><div class="line">       requestAnimationFrame(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">           self.init();</div><div class="line">       &#125;)</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;至此，由于是重绘，我们每次都是把当前画布清空之后再绘制的，于是需要一个清空当前画布的方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">clear() &#123;</div><div class="line">       <span class="keyword">const</span> ctx = <span class="keyword">this</span>.ctx;</div><div class="line">       <span class="keyword">const</span> canvas = <span class="keyword">this</span>.options.canvas;</div><div class="line">       ctx.clearRect(<span class="number">0</span>, <span class="number">0</span>, canvas.width, canvas.height);</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;export default 然后import 到主文件运行一下，就可以出现以上效果图了。当然这只是一个基础的应用，麻雀虽小五脏俱全，里面涵盖了我们canvas动画的灵魂，就是每次把画布清空然后重绘然后再清空再重绘，循环往复，只是重绘的内容相比于上次有那么一点点的改变，以至于肉眼看起来有动画的效果。</p>
+<h3 id="进阶——变速动画"><a href="#进阶——变速动画" class="headerlink" title="进阶——变速动画"></a>进阶——变速动画</h3><p>&emsp;&emsp;效果图如下：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/canvas-circle-demo2.gif" alt=""></p>
+<p>&emsp;&emsp;看起来很简单，甚至有些粗糙，不过这并不影响我们的学习，关键在于这个动画相比于上面的圆环进度，有一个明显的区别是，动画不再是匀速的，而是有起伏，有一种呼吸的感觉。先不谈变速，假设这个动画是匀速的，要实现这个效果也不能，按照我们上面的思路，只是不断的改变这个圆形的半径即可，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">draw(gap) &#123;</div><div class="line">       <span class="keyword">const</span> o = <span class="keyword">this</span>.options, r = o.r;</div><div class="line">       <span class="keyword">const</span> &#123;ctx&#125; = <span class="keyword">this</span>;</div><div class="line">       ctx.save();</div><div class="line">       ctx.beginPath();</div><div class="line">       ctx.fillStyle = o.color;</div><div class="line">       ctx.arc(<span class="number">200</span>, <span class="number">200</span>, r + gap, <span class="number">0</span>, <span class="built_in">Math</span>.PI * <span class="number">2</span>);</div><div class="line">       ctx.fill();</div><div class="line">       ctx.restore();</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这时，我们通过控制变量gap，简单的实现这个圆形的半径变换，如果想要变速的改变，针对的点就在改变这个圆形半径的参数上面了。于是我们引入了<code>Math.sin()</code>，这个数学函数，使其返回值在改变量gap一定的情况下，返回一个不是线性函数的值，代码的关键部分如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> max = o.max;<span class="comment">//此为圆形变化的最大幅度值</span></div><div class="line"><span class="keyword">this</span>.start += gap * <span class="number">0.002</span>;</div><div class="line">   <span class="keyword">let</span> l = <span class="built_in">Math</span>.sin(<span class="keyword">this</span>.start);</div><div class="line">   ctx.arc(<span class="number">200</span>, <span class="number">200</span>, r + max * l, <span class="number">0</span>, <span class="built_in">Math</span>.PI * <span class="number">2</span>);</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;剩下的事就是配置一下，并且初始化，关键代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">	init() &#123;</div><div class="line">    <span class="keyword">const</span> self = <span class="keyword">this</span>;</div><div class="line">    <span class="keyword">let</span> temp = +<span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">    <span class="keyword">let</span> gap = temp - <span class="keyword">this</span>.lastTime;</div><div class="line">    <span class="keyword">this</span>.lastTime = temp;</div><div class="line">    <span class="keyword">this</span>.clear();</div><div class="line">    self.draw(gap);</div><div class="line">    requestAnimationFrame(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">        self.init(gap);</div><div class="line">    &#125;)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>&emsp;&emsp;至此，我们学会了canvas动画的一些基本原理和基础操作，量不大复杂度也不高，但是核心思想已经说的很通透了。接下来的几篇文章里，将进一步深入学习，波形运动、加速动画等，复杂度也会稍微上一个台阶，不再只是一个图案的变幻，而是引入多个相同的随机图案。</p>
+
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#所谓动画"><span class="toc-number">1.</span> <span class="toc-text">所谓动画</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实践出真知"><span class="toc-number">2.</span> <span class="toc-text">实践出真知</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础——匀速动画"><span class="toc-number">2.1.</span> <span class="toc-text">基础——匀速动画</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进阶——变速动画"><span class="toc-number">2.2.</span> <span class="toc-text">进阶——变速动画</span></a></li></ol></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

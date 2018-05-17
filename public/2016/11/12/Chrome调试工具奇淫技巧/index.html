@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <p>&emsp;&emsp;相关的介绍网上已经有太多太多了，这里只记录一些自己开发中用到的常用技巧。<br><a id="more"></a></p>
+<p>&emsp;&emsp;任意输入一个网站的URL进行访问，<strong>f12</strong>调出控制台，最上面那一排工具栏有很多菜单，最要就是这些工具的使用。</p>
+<h2 id="elements"><a href="#elements" class="headerlink" title="elements"></a>elements</h2><p>&emsp;&emsp;从最左开始，第一个有个指针的那个小图标是选取元素的，选取元素后可以在最右边的面板改变这个元素的所有属性，面板之间还可以切换，比如查看这个元素最终的所有属性等等，第二个把当前页面用移动设备模拟访问。都是很常用的，自己体会。</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/chrome-tool-0.png" alt=""></p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/chrome-tool-1.png" alt=""></p>
+<h2 id="console"><a href="#console" class="headerlink" title="console"></a>console</h2><p>&emsp;&emsp;控制台的输入，输入之后回车就会立马执行。常用的的API有.log()/.error()/.table()/.group()等等，如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/chrome-tool-000.png" alt=""></p>
+<h2 id="sources"><a href="#sources" class="headerlink" title="sources"></a>sources</h2><p>&emsp;&emsp;资源面板，左边的目录是资源的地址目录，单击选择某个文件之后可以在右边的空白区域预览该文件，如果查看的js文件是被压缩过的，还支持格式化代码，方便直接查看</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/chrome-tool-3.png" alt=""></p>
+<p>&emsp;&emsp;预览js代码的时候，看到区域最左边的行号了吗？可以直接单击一下这个行号，刷新一下就可以debugger代码了。再次单击那个行号，debugger就去掉了。</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/chrome-tool-001.png" alt=""></p>
+<p>&emsp;&emsp;这里补充一下，如果想要改变这个js的某个逻辑，也就是修改js代码，如何才能生效呢？直接把这个js全部复制过来，然后自己在额外的一个编辑器中打开，修改你所需要修改的代码，修改完毕之后全部复制，粘贴到控制台中回车，嘿嘿，修改的代码生效了。</p>
+<h2 id="network"><a href="#network" class="headerlink" title="network"></a>network</h2><p>&emsp;&emsp;网络面板，可以看到这个网页所有的请求，请求的耗时，请求的资源的大小，点击不同的资源类型，可以查看到这个类型的所有请求：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/chrome-tool-4.png" alt=""></p>
+<p>&emsp;&emsp;XHR，这个太常用了，可以查看到发送的请求体，返回的报文信息，支持格式化查看返回参数等等</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/chrome-tool-10.png" alt=""></p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/chrome-tool-11.png" alt=""></p>
+<h2 id="application"><a href="#application" class="headerlink" title="application"></a>application</h2><p>&emsp;&emsp;应用面案，可以看到最左边的目录是一级目录Application和一级目录Storage，我们先看Application，里面有三个子目录，maniFest和Service Worker都是HTML5新引入的特性。当然因为种种原因，在实际的项目中用到的还是比较少的，毕竟动辄IE678想想都是吓死人的。这里简单的介绍一下：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/chrome-tool-5.png" alt=""></p>
+<h3 id="maniFest"><a href="#maniFest" class="headerlink" title="maniFest"></a>maniFest</h3><p>&emsp;&emsp;一个存在于网站目录的文件，它的作用是当我们失去网络连接的时候同样可以进行访问到这个网站，也就是所谓的离线访问，里面的配置信息大致都是配置哪些这个网站的哪些文件是可以被离线访问到的，什么时候过期等等</p>
+<h3 id="worker"><a href="#worker" class="headerlink" title="worker"></a>worker</h3><p>&emsp;&emsp;Service Worker的作用是新开一个线程，独立于当前主线程，然后执行某些程序。因为我们知道js都是单线程的，如果我们让两个程序同时执行的话，就可以用到worker了。通过引用一个外部js，在这个js中通过postMessage方法传递一个参数；在引用的页面中创建一个work对象，实现onmessage事件监听之后就可接收到work传过来的数据数据然后执行程序。局限性：</p>
+<ul>
+<li>不能跨域加载JS</li>
+<li>worker内代码不能访问DOM</li>
+<li>各个浏览器对Worker的实现不大一致，例如FF里允许worker中创建新的worker,而Chrome中就不行</li>
+<li>不是每个浏览器都支持这个新特性</li>
+</ul>
+<p>&emsp;&emsp;回到正题，我们的第二个一级目录是Storage，像是localStorage和sessionStorage以及cookie之类的存储信息都可以在这里查看，当然，查看了之后可不可修改呢，当然是可以的</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/chrome-tool-5.png" alt=""></p>
+<hr>
+<h2 id="移动端调试"><a href="#移动端调试" class="headerlink" title="移动端调试"></a>移动端调试</h2><p>&emsp;&emsp;首先的首先，你的手机或者设备得是Android系统，然后里面得装个chrome浏览器，别问我为什么。然后依展开如图所示的目录，点击目录中的”remote devices”</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/chrome-tool-5.png" alt=""></p>
+<p>&emsp;&emsp;插上自己手机的USB数据线到电脑，然后然后手机chrome中任意打开一个网站。这时候手机连接有两点要注意：</p>
+<p>1 连接方式选择“传输文件”（不同的版本和系统可能问题提示信息不一样，不过大致都是这个意思）；<br>2 开启USB调试。</p>
+<p>&emsp;&emsp;现在的手机系统USB调试默认都是找不到的，因为在“开发者选项”里面。首先你需要找到手机的系统信息，连续点击6次“版本信息”，注意是版本信息不是Android版本，如图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/chrome-tool-22.png" alt=""></p>
+<p>&emsp;&emsp;开启之后一般返回上一级菜单设置，就可以找到开发者选项了，然后开启USB调试，如图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/chrome-tool-23.png" alt=""></p>
+<p>&emsp;&emsp;准备工作都完成之后就来的如下界面了：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/chrome-tool-24.png" alt=""></p>
+<p>&emsp;&emsp;这个时候需要勾选上Setting面板的discover USB devices选项，然后就可以在上面的目录中找到自己的设备了，找到之后直接点击，如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/chrome-tool-25.png" alt=""></p>
+<p>&emsp;&emsp;这个时候只需呀点击面板最右边的“inspect”按钮，就出现了移动端包含控制台的的访问界面，要问我具体怎么调试，呃呃，上文都写都有的，唯一的疑问可能是半天没反应，因为国内被墙壁的缘故，这个大家都懂的吧，具体怎么FAN QIANG我想就不用多说了吧。如果实在还是连接不上，请参考官方文档 <a href="https://developers.google.com/chrome-developer-tools/docs/remote-debugging" target="_blank" rel="external">remote debugger</a>，最终如下图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/chrome-tool-26.png" alt=""></p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>&emsp;&emsp;chrome调试远远不止这些功能，所谓的二八定理，这都这是冰山一角，比如还可以模拟手机网速2G/3G/4G，还可以分析cpu的占用，渲染速度等等，这些就需要自己去发现了。</p>
+
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#elements"><span class="toc-number">1.</span> <span class="toc-text">elements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#console"><span class="toc-number">2.</span> <span class="toc-text">console</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sources"><span class="toc-number">3.</span> <span class="toc-text">sources</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#network"><span class="toc-number">4.</span> <span class="toc-text">network</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#application"><span class="toc-number">5.</span> <span class="toc-text">application</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#maniFest"><span class="toc-number">5.1.</span> <span class="toc-text">maniFest</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#worker"><span class="toc-number">5.2.</span> <span class="toc-text">worker</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动端调试"><span class="toc-number">6.</span> <span class="toc-text">移动端调试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后记"><span class="toc-number">7.</span> <span class="toc-text">后记</span></a></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>

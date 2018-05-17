@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge; chrome=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta name="description" content="international front end blogs">
+    <title>DP-BLOG</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/jquery-3.3.1.min.js"></script>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<body class="dp-activation hidden" onload="onload();">
+<div class="dp-activation-load" id="loader">
+    <div class="load-icon">
+        <div class="progress"></div>
+        <div class="icon-text"></div>
+    </div>
+    <div class="load-mask"></div>
+</div>
+<div class="dp-activation-page">
+    <div class="dp-activation-page-home">
+        <div class="home-header">
+    <div class="header-menu">
+        <div class="header-content">
+            <a class="menu-item logo" href="/">
+                DP-BLOG
+            </a>
+            <div class="menu-item item">
+                <div class="item-content">
+                    <a class="item-menu" href="/home">
+                        HOME</a>
+                    <a class="item-menu" href="/categories">
+                        CATEGORY</a>
+                    <a class="item-menu" href="/tags">
+                        TAG</a>
+                    <a class="item-menu" href="/archives">
+                        ARCHIVE</a>
+                    <div class="item-menu"><i class="iconfont icon-github"></i></div>
+                    <div class="item-menu"><i class="iconfont icon-wechat"></i></div>
+                    <div class="item-menu" id="item-menu">
+                        <div class="x-icon-menu black">
+                            <div class="menu-line top"></div>
+                            <div class="menu-line middle"></div>
+                            <div class="menu-line bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-main-body">
+            <div class="home-max">
+                <div class="max-bg"
+                     style="background-image:url(http://activation-group.com/Upload/2016060319351297299.png);"></div>
+                <div class="max-content">
+                    <div class="sub">
+                        December 21, 2015
+                    </div>
+                    Dior Beijing China Flagship Boutique
+                </div>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left">
+                            - SELECTED WORK
+                        </div>
+                    </div>
+                    <div class="welcome-content content-wrapper">
+                        <div class="content-left for-content detail">
+                            <div class="content-title">
+                                Christian Dior announced the opening of a brand new Dior boutique in Beijing on December
+                                21,
+                                2015. It stands out with its double layer glass façade that emulates fine feminine
+                                fabric in
+                                the iconic Dior 'Cannage' print.
+                            </div>
+                            <div class="content-info">
+                                -
+                            </div>
+                            <div class="content-info">
+                                Date: December 21, 2015
+                                <br>
+                                Type: PR - Store Opening
+                            </div>
+                        </div>
+                        <div class="content-right">
+                            <div class="for-content detail">
+                                <div class="content-title-super">~</div>
+                                <div class="content-title">
+                                    RECAP
+                                </div>
+                                <div class="content-info">
+                                    Christian Dior announced the opening of a brand new Dior boutique in Beijing on
+                                    December
+                                    21, 2015. It stands out with its double layer glass façade that emulates fine
+                                    feminine
+                                    fabric in the iconic Dior 'Cannage' print. The two-level bouique is the largest
+                                    Christian Dior Flaship in mainland China, as well as the third boutique in Beijing
+                                    offering the exclusive world of Dior women's collections including ready-to-wear,
+                                    leather goods, accessories, shoes, fine jewelry, timepieces and a VIP lounge.
+                                </div>
+                                <div class="content-footer">
+                                    <div class="footer-icon">
+                                        <div class="icon-wrapper">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-max-image home-section-loader not-load">
+                <img src="http://activation-group.com/Upload/Dior_Beijing_Flagship_hero_1900x900_pr.jpg"/>
+            </div>
+            <div class="home-main">
+                <div class="section-welcome auto-width home-section-loader not-load">
+                    <div class="welcome-banner">
+                        <div class="header-item for-left float-left"> - DETAILS</div>
+                    </div>
+                </div>
+                <div class="section-show home-section-loader not-load">
+                    <div class="show-wrapper">
+                        <p>&emsp;&emsp; .on()?.click()?.bind()?.delegate()?什么？还有.live()…？可能吧，但或许你听都没听说过，为什么有那么多啊，各个API之间有什么区别，实际项目中我究竟该用哪个呢？额，抱歉，我也不知道，讲道理所有的事件绑定都是一个.on()就搞定了？<br> <a id="more"></a><br> &emsp;&emsp;当然，理论上来说，其他的都不管，只要记住一个.on()是绑定，.off()是取消绑定就可以了，其他的API其底层写法也都是调用这两个来实现的，只是参数不同而已。那或许文章到这里就可以结束了，没必要再写下去了？每当这个时候我们就会抛出一个问题“那你知道XXX的核心原理和具体实现方式嘛？”的问题，然后回答道“我只管用就行了，怎么实现的who care”。好像一切都是那么顺理成章，我也没有什么特别强悍能够说服你的理由，只是个人觉得，人都已经笨成这样了，天赋不够，只有勤能补拙是良训，一分辛苦一分才来安慰一下自己了。或许这也忒被动了，但是稍作了解，你会发现jquery的事件处理机制是多么的巧妙、精细，特别是拜读了大神<a href="http://www.cnblogs.com/aaronjs/" target="_blank" rel="external">艾伦</a>的<a href="http://www.cnblogs.com/aaronjs/p/3444874.html" target="_blank" rel="external">解密jquery事件核心</a>一文，大有醍醐灌顶、豁然开朗之势。</p>
+<p> &emsp;&emsp;多说无益，先从零基础的API开始说起吧。</p>
+<h2 id="jquery常用事件绑定处理器"><a href="#jquery常用事件绑定处理器" class="headerlink" title="jquery常用事件绑定处理器"></a>jquery常用事件绑定处理器</h2><h3 id="on"><a href="#on" class="headerlink" title=".on()"></a>.on()</h3><p> &emsp;&emsp;.on( events ,[selector ] ,[ data ], handler(eventObject))</p>
+<p> &emsp;&emsp;这个算是最常用的了，第一个参数必填——标准事件名称，允许多绑定多个事件，以空格来分割；第二个参数选填，jquery的DOM选择，例如’.class-a’；第三个参数选填，传入到事件里面的数据，通过回调的event.data来获取；第四个参数必填，事件的处理函数。没什么好说的，第二个参数不填就代表是直接处理，填了就代表是委托事件处理什么的都不说了（后面再说），补充两点无关紧要的，如果只想要传入data参数，那么第二个参数填写false就可以了；事件是可以有自己的命名空间的，比如你传入的事件名称是click.me，这个‘.me’就是这个事件的命名空间，如果想要取消绑定<strong>这个事件</strong>，直接调用.off(‘click.me’)就行了，其他的想到了再补充。</p>
+ <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.body</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">120px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">120px</span>;</div><div class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid red;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">20px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.body</span> &gt; <span class="selector-class">.body-content</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">80px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid blue;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        $(<span class="string">'.body'</span>).on(<span class="string">'mouseover click.me'</span>, <span class="string">'.body-content'</span>, <span class="string">'wahaha'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'the data is :'</span> + <span class="built_in">JSON</span>.stringify(e.data));</div><div class="line">            <span class="keyword">switch</span> (e.type) &#123;</div><div class="line">                <span class="keyword">case</span> <span class="string">'click'</span>:</div><div class="line">                    <span class="built_in">console</span>.log(<span class="string">'click?'</span>);</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">case</span> <span class="string">'mouseover'</span>:</div><div class="line">                    <span class="built_in">console</span>.log(<span class="string">'mouse events?'</span>);</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                <span class="keyword">default</span>:</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;);</div><div class="line">        setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            $(<span class="string">'.body'</span>).off(<span class="string">'click.me'</span>);</div><div class="line">        &#125;, <span class="number">5000</span>)</div><div class="line">    &#125;);</div><div class="line">    <span class="comment">//    the data is :"wahaha"</span></div><div class="line"><span class="comment">//    mouse events?</span></div><div class="line"><span class="comment">//    the data is :"wahaha"</span></div><div class="line"><span class="comment">//    click?</span></div></pre></td></tr></table></figure>
+<h3 id="bind"><a href="#bind" class="headerlink" title=".bind()"></a>.bind()</h3><p>&emsp;&emsp;.bind( eventType [eventData ], handler(eventObject))</p>
+<p>&emsp;&emsp;为一个指定的<strong>已经存在的元素</strong>绑定一个或者多个事件。第一个参数是标准事件名称，如果是多个，以空格分隔；第二个参数选填，是绑定的数据（这里吐槽一下，发现在zepto-1.1.6中，参数是一个纯字符串的话是没法触发回调的，如果是{a:’a’}这样的Object的话就可以？jquery倒是正常的，难道是BUG？），在回调函数的参数中获取（.data）；第三个参数是回调函数处理。这里可以补充一下，有两种绑定的写法：第一种是直接.on()那样直接写，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'.body'</span>).bind(<span class="string">'click mouseenter'</span>, <span class="string">'xx'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(event.type);</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;第二种像是对象那种写法（原谅我的叫法奇怪），比如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'.body'</span>).bind(&#123;</div><div class="line">        <span class="string">'click'</span>:<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'click....'</span>)</div><div class="line">        &#125;,</div><div class="line">        <span class="string">'mouseenter'</span>:<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">            <span class="built_in">console</span>.log(<span class="string">'mouse...'</span>)</div><div class="line">        &#125;</div><div class="line">    &#125;)</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;基本上没什么大的区别，用的时候看心情。同样也是支持命名空间的，取消绑定的时候.unbind(‘click.xxx’)就可以了。</p>
+<h3 id="one"><a href="#one" class="headerlink" title=".one()"></a>.one()</h3><p>&emsp;&emsp;.one( events [data ], handler(eventObject))</p>
+<p>&emsp;&emsp;为一个给定的元素（已经存在，或者将来会存在，将来会存在的意思就是暂时不存在，但是会以.appendTo()等其他方式添加到DOM节点）绑定一个或者多个事件，具体参数和.bind()没有区别，唯一的区别是，这些事件只会生效一次就自动取消了，虽然本质上讲和调用.unbind()没啥区别，不过工具嘛，总是本着大道至简的道理来设计的，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        $(<span class="string">'&lt;div class="body"/&gt;'</span>)</div><div class="line">            .one(<span class="string">'click mouseover'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">                <span class="built_in">console</span>.log(e.type)<span class="comment">//事件只会触发一次</span></div><div class="line">            &#125;)</div><div class="line">            .appendTo(<span class="string">'body'</span>)</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;当然还有很多的事件处理jquery的<a href="http://www.jquery123.com/category/events/event-handler-attachment/" target="_blank" rel="external">事件绑定处理器</a>，这里不可能再一一赘述，记得好像是.live()已经被弃用了在1.7以上的版本就被弃用了，.delegate()在3.0以上还是什么版本也被弃用了，至于为什么，后面会阐述。</p>
+<h2 id="事件处理的由来"><a href="#事件处理的由来" class="headerlink" title="事件处理的由来"></a>事件处理的由来</h2><p>&emsp;&emsp;当然，说“由来”这种事，对于我这种小菜鸟来说特别有装逼的嫌疑，动辄大谈历史上下五千年巴拉巴拉。。。不好意思，目前只能据我自己所了解的来说。</p>
+<p>&emsp;&emsp;虽然我们都知道，jquery这些所有的事件绑定处理器归根到底都是element.addEventListener(‘event’,handler)来实现的，那我们干嘛不直接这样用呢？可以是可以，不过试想一下，如果有100个dom节点要绑定怎么办呢？如果这个节点是动态生成的呢？如果想取消某一个节点的某一个事件呢？问题总是会随着业务的发展变得越来越多，想必再用原生js来写就比较麻烦了吧，所以用jquery，它实现了这些事件绑定的封装，如上，基本上能够满足大部分的需求了。那么问题来了，这么多处理机制，它究竟是如何处理的如此的有条不紊，使我们用起来的时候觉得非常方便的呢？</p>
+<h3 id="DOM事件流"><a href="#DOM事件流" class="headerlink" title="DOM事件流"></a>DOM事件流</h3><p>&emsp;&emsp;首先，我们需要了解一下DOM的事件处理模型，简单地说就三个阶段，事件捕获、获取事件目标、事件冒泡。这里借个图：</p>
+<p><img src="http://ohe30hsc1.bkt.clouddn.com/jquery-event-00.jpg" alt=""></p>
+<p>&emsp;&emsp;标准的DOM事件都是有这三个阶段的（当然极少数不会冒泡），以click事件为例，假设现在我的页面就只有一个button，我给它绑定了一个click事件，那么整个事件的流程就是这样的：</p>
+<p>&emsp;&emsp;浏览器会首先从document查找，然后再到body层，然后再往body层往下查找，直到找到绑定事件的那个元素为止，这个查找的过程就是事件捕获阶段；现在绑定事件的目标节点找到了，就是这个button，此时讲道理的话顺理成章的我们可以开始执行这个事件处理的函数了，因为目标已经找到了，直接执行就可以了，这个阶段就是获取事件目标阶段；最后这个事件会沿着之前查找的方向从里到外开始“冒泡”，比如我们刚刚绑定的button，会先往上找到body，然后再往上找到document，不作处理的话，会直到冒泡到document为止，这个阶段就是事件的冒泡。</p>
+<p>&emsp;&emsp;有人在想，如果我不想在获取到目标节点的时候执行回调，而是在冒泡阶段，冒泡到某个指定节点才执行回调可以吗？听上去理论上可行的，这个就是常说的“事件委托”。</p>
+<h3 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h3><p>&emsp;&emsp;何为委托呢？就是说这件事本身应该由你来办理，但是出于某种情况的考虑，你不想办理这件事情了，你让别人来帮你做，这就叫委托了。同样的道理，上面我们提到的场景，一个页面里面就一个button，现在我不在获取目标事件的时候就执行回调，而是根据事件的冒泡原理，在冒泡到某一个指定节点比如（body层）的时候再执行。原生的js可没有提供这样的接口，不过jquery帮我们封装好了，比如.on()方法，我们可以这样写：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'body'</span>).on(<span class="string">'click'</span>,<span class="string">'button'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'click.....'</span>)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这样我们就可以直接把事件委托给body层处理了。为什么要这样做？额，很容易理解吧，比如我们现在body里面有1000个button，每个button都要绑定一个事件，如果不用委托的话，我们可以直接选择button元素然后绑定事件，注意，实际上这里已经绑定了1000个事件。但是如果我们用事件委托来处理的话，效果就不一样了，我们只在body上面绑了一个事件而已。两种方式的内存开销想必是可想而知的吧。再容易理解一点的话，就是现在公司有100个人，都有需要快递签收，是这100个人排队挨个去签收效率高呢还是统一委托给前台小妹一个人效率高呢。</p>
+<p>&emsp;&emsp;大致了解了事件委托机制的话，对jquery的一些事件绑定机制就不难理解了，比如.live()方法，是把所有的事件都委托给document对象来执行的，可想而知，事件冒泡的时间是不是太长了，因为要冒泡到document，而且某些事件（比如submit）还不支持冒泡，关键是，一个取消document的绑定，所有的绑定就都失效了，问题可能还不止这些，毕竟把所有的事情都交给一个人来做，如果简单的话还好，一旦复杂了，难免会出各种各样的问题，以至于后来这个api直接被砍掉了。</p>
+<p>&emsp;&emsp;jquery的事件绑定都是通过调用.on()来实现的，如果想进一步深入了解，入读.on()的源码即可，将来某个时间想起来了再写写吧。</p>
+
+                    </div>
+                    <div class="show-menu">
+                        <div class="dp-activation-toc" id="toc">
+                            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#jquery常用事件绑定处理器"><span class="toc-number">1.</span> <span class="toc-text">jquery常用事件绑定处理器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#on"><span class="toc-number">1.1.</span> <span class="toc-text">.on()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#bind"><span class="toc-number">1.2.</span> <span class="toc-text">.bind()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#one"><span class="toc-number">1.3.</span> <span class="toc-text">.one()</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#事件处理的由来"><span class="toc-number">2.</span> <span class="toc-text">事件处理的由来</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#DOM事件流"><span class="toc-number">2.1.</span> <span class="toc-text">DOM事件流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#事件委托"><span class="toc-number">2.2.</span> <span class="toc-text">事件委托</span></a></li></ol></li></ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-page home-section-loader not-load" id="post-footer">
+                    <div class="page prev">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="page-arrow-wrapper">
+                            <div class="page-arrow">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <div class="info-title">
+                            Projects under
+                        </div>
+                        <div class="info-title">
+                            archive-
+                        </div>
+                        <div class="info-title">
+                            4/121
+                        </div>
+                        <div class="info-info">
+                            We bring our ideas alive.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-group-footer home-section-loader not-load">
+                <div class="footer-item white">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            AGENCY
+                        </div>
+                        <div class="item-info">
+                            Find out more information about our agency
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-item grey">
+                    <div class="item-wrapper">
+                        <div class="item-title">
+                            WORK
+                        </div>
+                        <div class="item-info">
+                            Find out more about our Culture, Leadership and Career
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-footer">
+    <div class="footer-content">
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title large">CONTACT</div>
+                <div class="info">For enquiries related to human resources, please contact:
+                    <a href="mailto:hr@fanmaodong.com">hr@fanmaodong.com</a>
+                </div>
+                <div class="info">For other enquiries, please contact:
+                    <a href="mailto:info@fanmaodong.com">info@fanmaodong.com</a></div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SHANGHAI</div>
+                <div class="info">5/F & 8/F, No. 399A Liu Zhou Rd, Xu Hui District, Shanghai, China
+                    PO. 200235
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">BEIJING</div>
+                <div class="info">798 Art District (Seven Star Middle Street). No. 4, Jiu Xian Qiao Road, Chao
+                    Yang District, Beijing, China
+                    PO. 100015
+                </div>
+                <div class="info">TEL. +8621 6248 8023</div>
+            </div>
+            <div class="line-item">
+                <div class="title">HONG KONG</div>
+                <div class="info">11/F, Gold Union Commercial Building, No. 70-72 Connaught Road West, Hong Kong
+                </div>
+                <div class="info">TEL. +852 3468 6918</div>
+            </div>
+        </div>
+        <div class="content-line">
+            <div class="line-item">
+                <div class="title">SINGAPORE</div>
+                <div class="info">226B South Bridge Road Singapore
+                    PO.058775
+                </div>
+                <div class="info">TEL. +65 6221 6818</div>
+            </div>
+            <div class="line-item empty">
+
+            </div>
+            <div class="line-item empty">
+
+            </div>
+        </div>
+    </div>
+    <div class="footer-wrapper">
+        <div class="footer-copyright">
+            <div class="item">
+                <a href="/categories">CATEGORY</a>
+            </div>
+            <div class="item">
+                <a href="/tags">TAG</a>
+            </div>
+            <div class="item">
+                <a href="/archives">ARCHIVE</a>
+            </div>
+            <div class="copy-right">
+                2018 (C) All Rights Reserved by DP-BLOG GROUP.
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="home-menu-mask" id="menu-mask">
+    <div class="mask-content">
+        <div class="content-item separator">
+            <a href="/categories" class="item-title">Category</a>
+            <div class="item-info">
+                We are a fully integrated marketing agency focusing on event, Public Relations, digital
+                and
+                décor services for the premium brands. Welcome to learn more about us at our history,
+                our
+                workplaces and works of our clients
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a href="/tags" class="item-title">Tag</a>
+            <div class="item-info">
+                Meet our management team and our multi-disciplinary team leaders. Check out the
+                opportunity
+                to join us!
+                <br>
+                Check out the opportunity to join us!
+            </div>
+            <div class="item-separator">-</div>
+            <div class="icon-wrapper">
+                ≠
+            </div>
+        </div>
+        <div class="content-item separator">
+            <a class="item-title" href="/archives">Archive</a>
+            <div class="item-info">Welcome to View our selected projects as featured below to share the
+                joy
+                and pride with us
+            </div>
+            <div class="item-separator">-</div>
+            <div class="item-footer">
+                
+                
+                
+                <a class="footer-item" href="/2017/10/12/一行文本输入框引发的思考/">由一行文本输入框引发的思考</a>
+                
+                <a class="footer-item" href="/2017/09/20/React基础向导（三）/">react基础向导（三）</a>
+                
+                <a class="footer-item" href="/2017/09/11/React基础向导（二）/">react基础向导（二）</a>
+                
+                <a class="footer-item" href="/2017/09/10/React基础向导（一）/">React基础向导（一）</a>
+                
+                <a class="footer-item" href="/2017/08/30/canvas动画从入门到弃疗（二）/">canvas动画从入门到弃疗（二）</a>
+                
+                <br>
+                
+                <a class="footer-item" href="/2017/06/23/从无到有摸索一个常规流程图制作的核心思路/">从无到有摸索一个常规流程图制作的核心思路</a>
+                
+                <a class="footer-item" href="/2017/05/04/gulp学习笔记/">gulp学习笔记</a>
+                
+                <a class="footer-item" href="/2017/04/21/web调试利器——Fiddler/">前端调试利器——Fiddler</a>
+                
+                <a class="footer-item" href="/2017/03/17/浅谈js继承的两种实现方式/">浅谈js继承的两种实现方式</a>
+                
+                <a class="footer-item" href="/2017/03/11/jquery事件绑定（一）——基础用法/">jquery事件绑定（一）——基础用法</a>
+                
+                <a class="footer-item" href="/2017/02/25/redux学习笔记（基础篇）/">redux学习笔记（基础篇）</a>
+                
+                <a class="footer-item" href="/2017/01/14/webStorm-git开发利器的常用功能（下）/">webStorm+git开发利器的常用功能（下）</a>
+                
+            </div>
+            <div class="icon-wrapper close" id="menu-close"></div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+
+<script>
+    var onload = function () {
+        $('#loader').data('plugin_dpPage').onload();
+    }
+    $(document).ready(function () {
+        var $max = $('.home-max');
+        if ($max.length) {
+            var height = 100;
+            if ($(window).width() < 768) {
+                height = 60;
+            }
+            $max.css('height', $(window).height() - height)
+        }
+        $('#loader').dpPage();
+        $('figure table').each(function (i, e) {
+            hljs.highlightBlock(e)
+        });
+        var $toc = $('#toc');
+        var $links = $('.toc-link', $toc);
+        if ($links && $links.length) {
+            $links.eq(0).addClass('active');
+        }
+        $links.click(function (e) {
+            e.preventDefault();
+            var href = $(e.currentTarget).attr('href');
+            var $target = $(href);
+            if ($target.length > 0) {
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 120
+                }, 400);
+            }
+            return false;
+        });
+        var $cloneToc = $toc
+            .clone(true)
+            .removeAttr('id')
+            .addClass('fixed hidden')
+            .css({
+                left: parseInt($toc.offset().left, 10) + 'px',
+                top: '120px',
+                right: 'auto',
+                width: $toc.outerWidth()
+            })
+            .appendTo('body');
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop() + 120;
+            if (scrollTop > $toc.offset().top) {
+                $cloneToc.removeClass('hidden');
+                $toc.addClass('hidden');
+            } else {
+                $cloneToc.addClass('hidden');
+                $toc.removeClass('hidden');
+            }
+        });
+    })
+</script>
+<script src="/js/page.js"></script>
+</html>
